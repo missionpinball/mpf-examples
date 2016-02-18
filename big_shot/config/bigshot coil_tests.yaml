@@ -1,0 +1,103 @@
+    1:
+        event: coil_test
+        params:
+            coil_name: player1_10k
+    shift-1:
+        event: coil_test
+        params:
+            coil_name: player1_10k
+            pulse_change: -1
+    ctrl-1:
+        event: coil_test
+        params:
+            coil_name: player1_10k
+            pulse_change: 1
+    2:
+        event: coil_test
+        params:
+            coil_name: player1_1k
+    shift-2:
+        event: coil_test
+        params:
+            coil_name: player1_1k
+            pulse_change: -1
+    ctrl-2:
+        event: coil_test
+        params:
+            coil_name: player1_1k
+            pulse_change: 1
+
+    3:
+        event: coil_test
+        params:
+            coil_name: player1_100
+    shift-3:
+        event: coil_test
+        params:
+            coil_name: player1_100
+            pulse_change: -1
+    ctrl-3:
+        event: coil_test
+        params:
+            coil_name: player1_100
+            pulse_change: 1
+
+    4:
+        event: coil_test
+        params:
+            coil_name: player1_10
+    shift-4:
+        event: coil_test
+        params:
+            coil_name: player1_10
+            pulse_change: -1
+    ctrl-4:
+        event: coil_test
+        params:
+            coil_name: player1_10
+            pulse_change: 1
+
+    5:
+        event: coil_test
+        params:
+            coil_name: player2_10k
+    shift-5:
+        event: coil_test
+        params:
+            coil_name: player2_10k
+            pulse_change: -1
+    ctrl-5:
+        event: coil_test
+        params:
+            coil_name: player2_10k
+            pulse_change: 1
+        
+    6:
+        event: coil_test
+        params:
+            coil_name: diverter
+    shift-6:
+        event: coil_test
+        params:
+            coil_name: diverter
+            pulse_change: -1
+    ctrl-6:
+        event: coil_test
+        params:
+            coil_name: diverter
+            pulse_change: 1
+
+    7:
+        event: coil_test
+        params:
+            coil_name: troughEject
+    alt-7:
+        event: coil_test
+        params:
+            coil_name: troughEject
+            pulse_change: -1
+    ctrl-7:
+        event: coil_test
+        params:
+            coil_name: troughEject
+            pulse_change: 1

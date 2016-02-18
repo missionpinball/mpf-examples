@@ -1,0 +1,313 @@
+Hardware:
+    Platform: p_roc
+    DriverBoards: sternSAM
+
+Scriptlets:
+    attract.Attract
+
+OSC:
+    machine_ip: 127.0.0.1
+
+Plugins:
+    - osc.OSC
+    - auditor.Auditor
+    - logic_blocks.LogicBlocks
+    - auditor.Auditor
+    - shots.ShotController
+    - scoring.ScoreController
+    - sound.SoundController
+
+Machine:
+    HZ: 60
+    Balls Installed: 4
+    Min Balls: 1
+    Max Balls: 4
+
+Game:
+    player_controlled_eject_tag: launch
+
+DMD:
+    physical: yes
+    width: 128
+    height: 32
+    shades: 16
+    fps: auto
+
+Switches:
+    # Direct
+    s_leftCoin:
+        number: SD1
+    s_centerCoin:
+        number: SD2
+    s_rightCoin:
+        number: SD3
+    s_fourthCoin:
+        number: SD4
+    s_fifthCoin:
+        number: SD5
+    s_fireButton:
+        number: SD7
+        tags: launch
+    s_leftFlipper:
+        number: SD9
+    s_leftFlipperEOS:
+        number: SD10
+    s_rightFlipper:
+        number: SD11
+    s_rightFlipperEOS:
+        number: SD12
+    s_upperRightFlipper:
+        number: SD15
+    s_tilt:
+        number: SD18
+    s_ticketNotch:
+        number: SD19
+    s_serviceBack:
+        number: SD21
+    s_serviceDown:
+        number: SD22
+    s_serviceUp:
+        number: SD23
+    s_serviceEnter:
+        number: SD24
+
+    # Matrix
+    s_BEAMmeup:
+        number: S1
+    s_beamMEup:
+        number: S2
+    s_beammeUP:
+        number: S4
+    s_rightBankTop:
+        number: S7
+    s_rightBankCenter:
+        number: S8
+    s_rightBankBottom:
+        number: S9
+    s_leftEject:
+        number: S10
+    s_centerDropTarget:
+        number: S11
+    s_spinner:
+        number: S12
+    s_warpRampEnter:
+        number: S13
+    s_leftRampEnter:
+        number: S14
+    s_tournamentStart:
+        number: S15
+    s_start:
+        number: S16
+    s_trough4: # left side
+        number: S18
+    s_trough3:
+        number: S19
+    s_trough2:
+        number: S20
+    s_trough1: # right side
+        number: S21
+    s_troughJam:
+        number: S22
+    s_shooterLane:
+        number: S23
+    s_trek_t:
+        number: S24
+    s_trek_r:
+        number: S25
+    s_leftSling:
+        number: S26
+    s_rightSling:
+        number: S27
+    s_trek_e:
+        number: S28
+    s_trek_k:
+        number: S29
+    s_leftPop:
+        number: S30
+    s_rightPop:
+        number: S31
+    s_bottomPop:
+        number: S32
+    s_centerLockBottom:
+        number: S33
+    s_centerLockTop:
+        number: S34
+    s_leftRampExit:
+        number: S35
+    s_warpRampExit:
+        number: S36
+    s_rightRampEntrance:
+        number: S37
+    s_rightRampExit:
+        number: S38
+    s_centerBankTop:
+        number: S39
+    s_centerBankCenter:
+        number: S40
+    s_centerBankBottom:
+        number: S41
+    s_leftBankTop:
+        number: S42
+    s_leftBankBottom:
+        number: S43
+    s_behindUpperFlipper:
+        number: S44
+    s_redTarget1:
+        number: S45
+    s_redTarget2:
+        number: S46
+    s_redTarget3:
+        number: S47
+    s_bigRedTarget:
+        number: S48
+    s_redTarget5:
+        number: S49
+    s_redTarget6:
+        number: S50
+    s_rightOrbit:
+        number: S51
+    s_leftOrbit:
+        number: S52
+    s_shipCrash:
+        number: S53
+
+Coils:
+    c_troughEject:
+        number: C1
+        pulse_ms: 20
+    c_autoLaunch:
+        number: C2
+        pulse_ms: 20
+    c_magnet:
+        number: C3
+        pulse_ms: 20
+    c_dropTargetUp:
+        number: C4
+        pulse_ms: 20
+    c_dropTargetDown:
+        number: C5
+        pulse_ms: 20
+    c_leftEject:
+        number: C6
+        pulse_ms: 20
+    c_vengreanceKickBack:
+        number: C7
+        pulse_ms: 20
+    c_leftPop:
+        number: C9
+        pulse_ms: 20
+    c_rightPop:
+        number: C10
+        pulse_ms: 20
+    c_bottomPop:
+        number: C11
+        pulse_ms: 20
+    c_upperRightFlipper:
+        number: C12
+        pulse_ms: 20
+    c_leftSlingShot:
+        number: C13
+        pulse_ms: 20
+    c_rightSlingShot:
+        number: C14
+        pulse_ms: 20
+    c_leftFlipper:
+        number: C15
+        pulse_ms: 20
+    c_rightFlipper:
+        number: C16
+        pulse_ms: 20
+    c_laserMotor:
+        number: C22
+        allow_enable: True
+
+Flippers:
+    leftFlipper:
+        main_coil: c_leftFlipper
+        activation_switch: s_leftFlipper
+        eos_switch: s_leftFlipperEOS
+    rightFlipper:
+        main_coil: c_rightFlipper
+        activation_switch: s_rightFlipper
+        eos_switch: s_rightFlipperEOS
+    upperRightFlipper:
+        main_coil: c_upperRightFlipper
+        activation_switch: s_upperRightFlipper
+        eos_switch: s_upperRightFlipperEOS
+
+BallDevices:
+    bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_troughJam
+        entrance_count_delay: 300ms
+        eject_coil: c_troughEject
+        confirm_eject_type: target
+        target_device: bd_plunger
+        tags: trough, home, drain
+        exit_count_delay: 2s
+        ball_capacity: 4
+    bd_plunger:
+        ball_switches: s_shooterLane
+        entrance_count_delay: 300ms
+        exit_count_delay: 1s
+        eject_switch: s_shooterLane
+        eject_coil: c_autoLaunch
+        confirm_eject_type: target
+        tags: ball_add_live
+
+DMD:
+    physical: yes
+    width: 128
+    height: 32
+
+Window:
+    title: My Awesome Game!
+    elements:
+        onscreen_dmd:
+            type: VirtualDMD
+            width: 512
+            height: 128
+            h_pos: center
+            v_pos: center
+            pixel_color: ff6600
+            dark_color: 220000
+            pixel_spacing: 1
+        dmd_frame:
+            type: Shape
+            shape: box
+            width: 516
+            height: 132
+            color: aaaaaa
+            thickness: 2
+        Title:
+            type: Text
+            font: tall title
+            text: MY AWESOME GAME
+            h_pos: center
+            v_pos: top
+            y: 60
+            size: 100
+            antialias: yes
+            layer: 1
+            color: ee9900
+
+SlidePlayer:
+    ball_live_added:
+        type: Text
+        text: BALL LIVE!
+    ball_started:
+        type: Text
+        text: PLAYER %player BALL %ball
+    player_add_success:
+        type: Text
+        text: PLAYER %num ADDED
+
+Images:
+    mpf_logo:
+        file: mission_pinball_flag_dmd.png
+        alpha_color: 0
+        target: dmd
+
+Animations:
+    rolling_ball:
+        file: rolling_ball.dmd
+        alpha_color: 15

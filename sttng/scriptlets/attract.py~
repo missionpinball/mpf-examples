@@ -1,0 +1,42 @@
+# Attract mode Scriptlet for STTNG
+
+from mpf.system.scriptlet import Scriptlet
+from mpf.system.show_controller import Playlist
+
+
+class Attract(Scriptlet):
+
+    def on_load(self):
+        self.machine.events.add_handler('machineflow_Attract_start', self.start)
+        self.machine.events.add_handler('machineflow_Attract_stop', self.stop)
+                # Register the switch handler for the diverter PWM testing switch
+        self.machine.switch_controller.add_switch_handler(
+            switch_name='s_buyIn', state=1, ms=0,
+            callback=self.enable_diverter)
+        self.machine.switch_controller.add_switch_handler(
+            switch_name='s_buyIn', state=0, ms=0,
+            callback=self.disable_diverter)
+        
+    def start(self):
+#        self.machine.lights['lt_jackpot'].off()
+
+#        for gi in self.machine.gi:
+#            print("&&&&&& ", gi.name)
+#            gi.off()
+
+#        self.machine.lights['lt_jackpot'].on()
+
+        for gi in self.machine.gi:
+            gi.on()
+        
+#        print "&&&&&&&&&&&&&&&&&&&&&&&"
+        
+    def stop(self):
+        pass
+
+    def enable_diverter(self):
+        self.hardware.coils['c_underDivertorBottom'].pwm(1,2)
+
+    def disable_diverter(self):
+        self.hardware.coils['c_underDivertorBottom'].disable()
+

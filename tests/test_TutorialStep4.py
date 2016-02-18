@@ -1,6 +1,5 @@
 
-from tests.MpfTestCase import MpfTestCase
-from mock import MagicMock
+from mpf.tests.MpfTestCase import MpfTestCase
 
 
 class TestTutorialStep4(MpfTestCase):
@@ -9,7 +8,7 @@ class TestTutorialStep4(MpfTestCase):
         return 'step4.yaml'
 
     def getMachinePath(self):
-        return 'tutorial'
+        return self.get_abs_path('tutorial')
 
     def get_platform(self):
         return 'smart_virtual'

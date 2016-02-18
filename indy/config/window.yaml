@@ -1,0 +1,28 @@
+#config_version=3
+window:
+    title: Indiana Jones
+    elements:
+      - type: virtualdmd
+        width: 512
+        height: 128
+        h_pos: center
+        v_pos: center
+        pixel_color: ff6600
+        dark_color: 220000
+        pixel_spacing: 1
+      - type: shape
+        shape: box
+        width: 520
+        height: 136
+        color: aaaaaa
+        thickness: 2
+      - type: text
+        font: tall title
+        text: INDIANA JONES
+        h_pos: center
+        v_pos: top
+        y: 60
+        size: 100
+        antialias: yes
+        layer: 1
+        color: ff6600

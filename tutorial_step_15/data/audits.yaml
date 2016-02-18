@@ -1,6 +1,6 @@
 events:
-  game_ended: 3
-  game_started: 3
+  game_ended: 4
+  game_started: 4
 player:
   score:
     average: 0.0
@@ -8,7 +8,8 @@ player:
     - 0
     - 0
     - 0
-    total: 3
+    - 0
+    total: 4
 switches:
   s_always_closed: 0
   s_bottom_popper: 0
@@ -28,7 +29,7 @@ switches:
   s_claw_super_jets: 0
   s_coin_door_closed: 0
   s_down: 0
-  s_eject: 3
+  s_eject: 4
   s_elevator_hold: 0
   s_elevator_index: 0
   s_enter: 0
@@ -39,7 +40,7 @@ switches:
   s_flipper_upper_right: 0
   s_flipper_upper_right_eos: 0
   s_fourth_coin: 0
-  s_launch: 9
+  s_launch: 12
   s_left_coin: 0
   s_left_flipper: 0
   s_left_flipper_eos: 0
@@ -54,12 +55,12 @@ switches:
   s_left_slingshot: 0
   s_lower_rebound: 0
   s_plumb_bob: 0
-  s_plunger_lane: 9
+  s_plunger_lane: 12
   s_right_coin: 0
   s_right_flipper: 0
   s_right_flipper_eos: 0
   s_right_freeway: 0
-  s_right_inlane: 6
+  s_right_inlane: 8
   s_right_jet: 0
   s_right_outlane: 0
   s_right_ramp_enter: 0
@@ -77,7 +78,7 @@ switches:
   s_start: 0
   s_top_popper: 0
   s_top_slingshot: 0
-  s_trough1: 9
+  s_trough1: 12
   s_trough2: 0
   s_trough3: 0
   s_trough4: 0

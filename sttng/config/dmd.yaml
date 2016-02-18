@@ -1,0 +1,8 @@
+#config_version=2
+DMD:
+    physical: yes
+    width: 128
+    height: 32
+    shades: 16
+    fps: auto
+    color: no

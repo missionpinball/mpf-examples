@@ -1,0 +1,61 @@
+#config_version=2
+Sound_System:
+    tracks:
+        voice:
+            priority: 2
+            simultaneous_sounds: 1
+            preload: no
+        sfx:
+            priority: 1
+            ducking: -5
+            preload: no
+            simultaneous_sounds: 3
+    stream:
+        name: music
+        priority: 0
+        ducking: -10
+
+    buffer: 512
+    bits: -16
+    frequency: 44100
+    channels: 1
+    initial_volume: 50
+    volume_steps: 20
+
+Sounds:
+    music:
+        intro_loop:
+            file: waiting to plunge loop.ogg
+            preload: True
+    sfx:
+        slingshot:
+            file: slingshot.ogg
+        ball_launch_motorcycle:
+            file: ball launch motorcycle.ogg
+        main_loop:
+            file: main song loop.wav
+    voice:
+
+
+
+Sound_Player:
+    pluger_lane_ball_start:
+        sound: intro_loop
+        start_events: ball_starting
+        stop_events: ball_live_added
+        duration:
+        loops: -1
+        priority:
+        fade_in: 0
+        fade_out: 0
+    ball_launch_motorcycle:
+        sound: ball_launch_motorcycle
+        start_events: sw_launch
+    slingshot:
+        sound: slingshot
+        start_events: shot_Slingshot
+    main_loop:
+        sound: main_loop
+        start_events: player_eject_request
+        loops: -1
+        stop_events: ball_ending

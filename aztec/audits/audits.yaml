@@ -1,0 +1,38 @@
+events:
+  ball_search_begin_phase1: 0
+  game_ended: 1
+  game_started: 14
+player:
+  score:
+    average: 440
+    top:
+    - 440
+    total: 1
+shots:
+  slings: 53
+switches:
+  balllock: 0
+  bottompop: 0
+  leftflipper: 0
+  leftinlane: 0
+  leftorbit: 0
+  leftoutlane: 0
+  leftpop: 0
+  leftsling: 28
+  rightflipper: 0
+  rightinlane: 0
+  rightoutlane: 0
+  rightpop: 0
+  rightsling: 4
+  spinner: 0
+  standupmiddle: 0
+  standupmidleft1: 0
+  standupmidleft2: 0
+  standupmidright1: 0
+  standupmidright2: 0
+  standuptopleft: 0
+  start: 0
+  toplaneleft: 0
+  toplanemiddle: 0
+  toplaneright: 0
+  trough: 5

@@ -1,0 +1,5 @@
+# config_version=3
+slide_player:
+    mode_attract_started:
+        type: text
+        text: PRESS START

@@ -1,0 +1,9 @@
+#config_version=3
+light_player:
+  mode_attract_started:
+    - show: bouncing_bells
+      repeat: yes
+      tocks_per_sec: 7
+  mode_attract_stopped:
+    - show: bouncing_bells
+      action: stop

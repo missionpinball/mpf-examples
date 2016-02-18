@@ -1,0 +1,32 @@
+- tocks: 1
+  lights:
+    bell_1: ff
+    bell_2: 00
+- tocks: 1
+  lights:
+    bell_2: ff
+    bell_1: 00
+- tocks: 1
+  lights:
+    bell_3: ff
+    bell_2: 00
+- tocks: 1
+  lights:
+    bell_4: ff
+    bell_3: 00
+- tocks: 1
+  lights:
+    bell_5: ff
+    bell_4: 00
+- tocks: 1
+  lights:
+    bell_4: ff
+    bell_5: 00
+- tocks: 1
+  lights:
+    bell_3: ff
+    bell_4: 00
+- tocks: 1
+  lights:
+    bell_2: ff
+    bell_3: 00

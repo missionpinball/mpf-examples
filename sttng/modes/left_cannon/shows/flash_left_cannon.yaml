@@ -1,0 +1,6 @@
+- tocks: 1
+  lights:
+    l_kickback: ff
+- tocks: 1
+  lights:
+    l_kickback: 00

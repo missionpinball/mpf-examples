@@ -1,0 +1,201 @@
+Mode:
+    start_events: start_mode_time_rift
+    stop_events: timer_mode_timer_complete, ball_ending, sw_end_mission #the sw_end_mission switch is just for testing
+    code: time_rift.TimeRift
+    priority: 500
+
+Slide_Player:
+    mode_time_rift_started:
+      - type: Text
+        text: "Time Rift Mission!"
+        v_pos: bottom
+      - type: text
+        text: "Time: %time_rift_mode_timer_tick%"
+        v_pos: top
+        h_pos: right
+        font: small
+      - type: Text
+        text: "%score%"
+        number_grouping: true
+        double_zeroes: true
+        v_pos: top
+        h_pos: left
+        font: small
+    player_time_rift_mode_timer_tick:
+      - type: Text
+        text: "Time Rift Mission!"
+        v_pos: bottom
+      - type: text
+        text: "Time: %time_rift_mode_timer_tick%"
+        v_pos: top
+        h_pos: right
+        font: small
+      - type: Text
+        text: "%score%"
+        number_grouping: true
+        double_zeroes: true
+        v_pos: top
+        h_pos: left
+        font: small
+    player_score:
+      - type: Text
+        text: "Time Rift Mission!"
+        v_pos: bottom
+      - type: text
+        text: "Time: %time_rift_mode_timer_tick%"
+        v_pos: top
+        h_pos: right
+        font: small
+      - type: Text
+        text: "%score%"
+        number_grouping: true
+        min_digits: 2
+        v_pos: top
+        h_pos: left
+        font: small
+
+    player_time_rift_shot_timer_tick:
+      - type: Text
+        text: "WAAAAAA! Time Rift!"
+        v_pos: center
+        expire: 1.5s
+        slide_priority: 1
+
+
+
+Timers:
+    mode_timer:
+        start_value: 25
+        end_value: 0
+        max_value: 25
+        direction: down
+        tick_interval: 1.5s
+        control_events:
+          - event: sw_subway_enter
+            action: pause
+            value: 0
+          - event: playfield_ball_count_change
+            action: start
+          - event: time_rift_reset_timer #will use code to determine when to fire this event
+            action: add
+            value: 25
+          - event: time_rift_increase_timer
+            action: add
+            value: 7
+
+ShowPlayer:
+    mode_time_rift_started:
+      - show: flash_all_shots
+        repeat: yes
+        tocks_per_sec: 4
+    mode_time_rift_stopped:
+      - show: flash_all_shots
+        action: stop
+
+Scoring:
+    shot_rightRamp:
+        Score: 10000000
+        Block: yes
+    shot_rightOrbit:
+        Score: 10000000
+        Block: yes
+    shot_leftOrbit:
+        Score: 10000000
+        Block: yes
+    shot_leftRamp:
+        Score: 10000000
+        Block: yes
+    shot_middleRamp:
+        Score: 10000000
+        Block: yes
+    shot_commandDecision:
+        Score: 10000000
+        Block: yes
+    shot_startMission:
+        Score: 10000000
+        Block: yes
+
+LogicBlocks:
+    Accruals:
+        lb_time_rifting:
+            # Works, but only once. Doesn't reset when complete
+            events:
+              - shot_rightRamp
+                shot_rightOrbit
+                shot_leftOrbit
+                shot_leftRamp
+                shot_middleRamp
+                shot_commandDecision
+                shot_startMission
+            events_when_complete: time_rifting
+            enable_events: mode_time_rift_started
+            reset_each_ball: yes
+            restart_on_complete: yes
+            disable_on_complete: no
+
+    Counters:
+        lb_time_rift_switches_hit:
+            # Works completely
+            count_events: sw_time, sw_rift
+            event_when_hit: time_rift_reset_timer
+            count_complete_value: 3
+            events_when_complete: time_rift_stop_resetting_time, time_rift_stop_adding_points
+            enable_events: mode_time_rift_started
+            disable_events: time_rift_stop_resetting_time
+            multiple_hit_window: 500ms
+            reset_each_ball: yes
+
+        lb_stop_adding_time:
+            # Don't know if this works or not
+            count_events: time_rift_increase_timer
+            event_when_hit: stop_adding_time_hit
+            count_complete_value: 3
+            events_when_complete: time_rift_stop_adding_time
+            enable_events: mode_time_rift_started
+            disable_events: time_rift_stop_adding_time
+            multiple_hit_window: 500ms
+            reset_each_ball: yes
+
+        lb_increase_time_rift_timer_by_shot:
+            #  Only works for first completion (2 shots). Doesn't reset when complete
+            count_events: time_rifting
+                #shot_rightRamp
+                #shot_rightOrbit
+                #shot_leftOrbit
+                #shot_leftRamp
+                #shot_middleRamp
+                #shot_commandDecision
+                #shot_startMission
+            event_when_hit: increase_time_rift_timer_hit
+            count_complete_value: 2
+            events_when_complete: time_rift_increase_timer
+            multiple_hit_window: 500ms
+            reset_each_ball: yes
+            disable_events: time_rift_stop_adding_time
+            reset_events: time_rift_increase_timer
+            restart_on_complete: yes
+            disable_on_complete: no
+
+
+
+
+        ### The others are good...this is a test
+        ### This one will increase time 6 times, once per every shot
+        ### hit after a 7s timer expires between shots.
+        ###
+        ### Turning this on takes the place of both Counter blocks above
+
+        #increase_time_rift_timer:
+        #    count_events:
+        #      - shot_rightRamp
+        #        shot_rightOrbit
+        #        shot_leftOrbit
+        #        shot_leftRamp
+        #        shot_middleRamp
+        #        shot_commandDecision
+        #        shot_startMission
+        #    event_when_hit: time_rift_increase_timer
+        #    count_complete_value: 6
+        #    events_when_complete: time_rift_stop_adding_time
+        #    multiple_hit_window: 7s
+        #    reset_each_ball: yes

@@ -1,0 +1,16 @@
+Mode:
+    start_events: start_mode_qs_challenge
+    stop_events: sw_end_mission, ball_ending #the sw_end_mission switch is just for testing
+    code: qs_challenge.QsChallenge
+    priority: 500
+
+Slide_Player:
+    mode_qs_challenge_started:
+      - type: Text
+        text: "Q Challenges Thee"
+        number_grouping: true
+        double_zeros: true
+        v_pos: center
+        transition:
+            type: move_in
+            direction: top

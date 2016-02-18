@@ -1,0 +1,12 @@
+- tocks: 1
+  lights:
+    indy_I: ff
+    indy_n: 00
+    indy_d: ff
+    indy_y: 00
+- tocks: 1
+  lights:
+    indy_I: 00
+    indy_n: ff
+    indy_d: 00
+    indy_y: ff

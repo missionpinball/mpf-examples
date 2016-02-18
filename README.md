@@ -16,11 +16,11 @@ More details about MPF are here: https://missionpinball.com/mpf/
 [![Coverage Status](https://coveralls.io/repos/missionpinball/mpf-examples/badge.svg?branch=dev&service=github)](https://coveralls.io/github/missionpinball/mpf-examples?branch=dev)
 [![Build Status](https://travis-ci.org/missionpinball/mpf-examples.svg?branch=dev)](https://travis-ci.org/missionpinball/mpf-examples)
 
-demo_man
---------
-Runnable MPF configuration for a 1994 Williams Demolition Man machine. Note that no copyrighted information or
-intellectual property from Williams is included. It is not a recreation of an original Demolition Man machine, rather,
-it's a new MPF game which happens to run on Demolition Man hardware.
+
+Description of Examples
+=======================
+The following folders contain helpful things and learning examples you can use as you create your own machine and learn
+MPF.
 
 mc_demo
 -------
@@ -40,6 +40,71 @@ follow along with the step-by-step tutorial at https://missionpinball.com/tutori
 wpc_template
 --------------------
 Contains a template config which you can use as a starting point for a WPC-era machine.
+
+
+Real Machine Examples
+=====================
+We've used MPF on lots of physical machines, including WPC-era, Stern SAM, System 11, and some older machines. Each
+folder here contains some kind of config for a real machine. None of these are complete, and in fact many are nothing
+more than the hardware config files, but they might be helpful if you have one of these machines or just to see how
+different things are setup in MPF.
+
+Note that no copyrighted information or intellectual property from the original pinball manufacturer or any original
+license holder is in any of these folders. There are no reproductions of original games here, rather, these projects
+contain sample MPF code and configs that can run on original hardware.
+
+aztec
+-----
+Configuration for a 1976 Williams Aztec machine. This is the "portable pinball" machine you might have seen in the FAST
+Pinball booth at a show.
+
+big_shot
+--------
+Configuration for a 1974 Gottlieb Big Shot EM machine which was converted to P-ROC and MPF for the Pinball Expo 2014.
+More info about this project is [here](https://missionpinball.com/blog/category/games/big-shot-em-conversion/).
+
+bullseye
+--------
+Configuration for a 1986 Grand Products 301/Bulls Eye machine (originally sold as a conversion kit for early 1980s Bally
+machines).
+
+demo_man
+--------
+Configuration for a 1994 Williams Demolition Man machine. This is one of the machines we use to test MPF on, so it's
+kept pretty up-to-date. More info on this project is [here](https://missionpinball.com/blog/category/games/building-demo-man/).
+
+hurricane
+---------
+Configuration for a 1991 Williams Hurricane machine. This is a good example of a pre-fliptronics config as well as an
+early solid-state / "pre trough" config.
+
+indy
+----
+Configuration for a 1994 Williams Indian Jones: The Pinball Adventure machine. This is another dev machine we use for
+MPF, and it's kept fairly up-to-date.
+
+jd
+--
+Configuration for a 1993 Williams Judge Dredd machine. This was one of the early machines we used to develop MPF.
+
+jokerz
+------
+Configuration for a 1989 Williams Jokerz machine. This folder pretty much just contains the hardware config, but it's an
+example of a System 11 machine using Snux's System 11 interface board.
+
+pinbot
+------
+Configuration for a 1986 Williams PIN*BOT machine. This folder pretty much just contains the hardware config, but it's
+another example of a System 11 machine using Snux's System 11 interface board.
+
+stle
+----
+Configuration for a 2013 Stern Star Trek. This config demonstrates a Stern SAM machine being controlled by a P-ROC.
+([Demo Video](https://www.youtube.com/watch?v=q7IE3rzp-88))
+
+sttng
+-----
+Configuration for a 1993 Williams Star Trek: The Next Generation machine.
 
 License
 =======

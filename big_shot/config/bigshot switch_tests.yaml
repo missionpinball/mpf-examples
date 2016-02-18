@@ -1,0 +1,66 @@
+
+
+    1:
+        switch: score_1p_10k_0
+        toggle: True
+        start_active: False
+    shift-1:
+        switch: score_1p_10k_9
+        toggle: True
+        start_active: False
+    2:
+        switch: score_1p_1k_0
+        toggle: True
+        start_active: False
+    shift-2:
+        switch: score_1p_1k_9
+        toggle: True
+        start_active: False
+    3:
+        switch: score_1p_100_0
+        toggle: True
+        start_active: False
+    shift-3:
+        switch: score_1p_100_9
+        toggle: True
+        start_active: False
+    4:
+        switch: score_1p_10_0
+        toggle: True
+        start_active: False
+    shift-4:
+        switch: score_1p_10_9
+        toggle: True
+        start_active: False
+    5:
+        switch: score_2p_10k_0
+        toggle: True
+        start_active: True
+    shift-5:
+        switch: score_2p_10k_9
+        toggle: True
+        start_active: False
+    6:
+        switch: score_2p_1k_0
+        toggle: True
+        start_active: True
+    shift-6:
+        switch: score_2p_1k_9
+        toggle: True
+        start_active: False
+    7:
+        switch: score_2p_100_0
+        toggle: True
+        start_active: True
+    shift-7:
+        switch: score_2p_100_9
+        toggle: True
+        start_active: False
+    8:
+        switch: score_2p_10_0
+        toggle: True
+        start_active: True
+    shift-8:
+        switch: score_2p_10_9
+        toggle: True
+        start_active: False

@@ -1,0 +1,273 @@
+# config_version=3
+mode:
+  start_events: ball_starting
+  priority: 100
+
+drop_target_banks:
+  ent:
+    reset_events:
+      ent_drop_target_down_complete: 1s
+
+shot_groups:
+  indy_lanes:
+    rotate_left_events: left_flipper_active
+    rotate_right_events: right_flipper_active
+    reset_events:
+      indy_lanes_default_lit_complete: 1s
+    #enable_events: ball_started
+    #disable_events: ball_ending
+    #profile: indy_lanes
+  ure:
+    shots: adventure_u, adventure_r, adventure_e2
+    profile: test_10
+    debug: yes
+
+shot_profiles:
+    indy_lanes:
+        states:
+          - name: unlit
+            light_script: "off"
+          - name: lit
+            light_script: flash_to_on
+            repeat: no
+            hold: yes
+            tocks_per_sec: 10
+
+light_scripts:
+  flash_to_on:
+    - tocks: 1
+      color: ff
+    - tocks: 1
+      color: 0
+    - tocks: 2
+      color: ff
+    - tocks: 2
+      color: 0
+    - tocks: 4
+      color: ff
+    - tocks: 4
+      color: 0
+    - tocks: 1
+      color: ff
+
+event_player:
+  player_add_success:
+    player_1_multiplayer_slide
+  player_1_ball_started:
+    player_1_multiplayer_slide
+
+slide_player:
+  single_player_ball_started:
+    - type: text
+      text: "%score%"
+      number_grouping: true
+      min_digits: 2
+      v_pos: center
+      h_pos: center
+      y: -2
+      slide: score_display
+      #persist_slide: yes
+      font: tall title
+    - type: text
+      text: BALL %ball%    FREE PLAY
+      v_pos: bottom
+      font: small
+
+  player_1_multiplayer_slide:
+    - type: text
+      text: "%player1|score%"
+      #font: medium
+      number_grouping: true
+      min_digits: 2
+      v_pos: top
+      h_pos: left
+    - type: text
+      text: "%player2|score%"
+      font: medium
+      v_pos: top
+      h_pos: right
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player3|score%"
+      font: medium
+      v_pos: bottom
+      h_pos: left
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player4|score%"
+      font: medium
+      v_pos: bottom
+      h_pos: right
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: BALL %ball%    FREE PLAY
+      v_pos: bottom
+      font: small
+
+  player_2_ball_started:
+    - type: text
+      text: "%player1|score%"
+      font: medium
+      number_grouping: true
+      min_digits: 2
+      v_pos: top
+      h_pos: left
+    - type: text
+      text: "%player2|score%"
+#      font: medium
+      v_pos: top
+      h_pos: right
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player3|score%"
+      font: medium
+      v_pos: bottom
+      h_pos: left
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player4|score%"
+      font: medium
+      v_pos: bottom
+      h_pos: right
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: BALL %ball%    FREE PLAY
+      v_pos: bottom
+      font: small
+
+  player_3_ball_started:
+    - type: text
+      text: "%player1|score%"
+      font: medium
+      number_grouping: true
+      min_digits: 2
+      v_pos: top
+      h_pos: left
+    - type: text
+      text: "%player2|score%"
+      font: medium
+      v_pos: top
+      h_pos: right
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player3|score%"
+#      font: medium
+      v_pos: bottom
+      h_pos: left
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player4|score%"
+      font: medium
+      v_pos: bottom
+      h_pos: right
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: BALL %ball%    FREE PLAY
+      v_pos: bottom
+      font: small
+
+  player_4_ball_started:
+    - type: text
+      text: "%player1|score%"
+      font: medium
+      number_grouping: true
+      min_digits: 2
+      v_pos: top
+      h_pos: left
+    - type: text
+      text: "%player2|score%"
+      font: medium
+      v_pos: top
+      h_pos: right
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player3|score%"
+      font: medium
+      v_pos: bottom
+      h_pos: left
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: "%player4|score%"
+#      font: medium
+      v_pos: bottom
+      h_pos: right
+      y: -10
+      number_grouping: true
+      min_digits: 2
+    - type: text
+      text: BALL %ball%    FREE PLAY
+      v_pos: bottom
+      font: small
+
+  ball_save_default_saving_ball:
+    type: text
+    text: BALL SAVED
+    expire: 2s
+
+sound_player:
+  waiting_to_launch_a_ball:
+    sound: waiting_to_launch_a_ball
+    start_events: mode_base_started
+    stop_events: sw_plunger
+    loops: -1
+#    volume: 0.5
+  main_theme:
+    sound: main_theme
+    start_events: gun_trigger_active
+    loops: -1
+  gun_trigger:
+    sound: shotgun_1
+    start_events: gun_trigger_active
+
+scoring:
+  indy_lanes_default_unlit_hit:
+    score: 5000
+  indy_lanes_default_lit_hit:
+    score: 100
+  indy_lanes_default_lit_complete:
+    score: 10000
+
+light_player:
+  indy_lanes_default_lit_complete:
+    show: indy_Lanes_complete
+    tocks_per_sec: 20
+    repeat: yes
+    num_repeats: 10
+    priority: 1
+  ball_save_default_enabled:
+    script: flash
+    lights: shoot_again
+    tocks_per_sec: 10
+    key: ball_saves
+  ball_save_default_disabled:
+    key: ball_saves
+    action: stop
+
+ball_saves:
+  default:
+    active_time: 10s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_plunger_lane_ball_eject_success
+    auto_launch: yes
+    balls_to_save: 1
+    debug: yes

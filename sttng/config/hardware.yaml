@@ -1,0 +1,1068 @@
+# ---------------------------------------------------
+# MIGRATION WARNING:
+# This file contains a "targets" section which underwent major changes in config_version=2.
+# You will have to read the docs and re-do this section.
+# New documentation for this section is here:
+# https://missionpinball.com/docs/configuration-file-reference/targets/
+
+# When you're done, delete this message so #config_version=2 is the first line in this file.
+# ---------------------------------------------------
+#config_version=2
+# STTNG Hardware
+
+# Sections in this config file
+
+# Machine
+
+# Switches
+# Coils
+# MatrixLights
+# Flashers
+# GIs
+
+# DropTargets
+# Diverters
+# Autofire Coils
+# Flippers
+# Ball Devices
+
+
+Machine:
+    HZ: 60
+    Balls Installed: 6
+    Min Balls: 1
+    Max Balls: 6
+
+Hardware:
+    DriverBoards: wpc
+
+Keyboard:
+    s:
+        switch: s_startButton
+    1:
+        switch: s_trough1
+        start_active: True
+        toggle: True
+    2:
+        switch: s_trough2
+        start_active: True
+        toggle: True
+    3:
+        switch: s_trough3
+        start_active: True
+        toggle: True
+    i:
+        switch: s_underLeftLock1
+        start_active: True
+        toggle: True
+    o:
+        switch: s_underLeftGun1
+        start_active: True
+        toggle: True
+    p:
+        switch: s_underRightGun1
+        start_active: True
+        toggle: True
+    l:
+        switch: s_rightFire
+    t:
+        switch: s_time
+    r:
+        switch: s_rift
+    b:
+        switch: s_underBorgHole
+    m:
+        switch: s_leftOuterLoop
+    v:
+        switch: s_q
+    8:
+        switch: s_shooter
+        toggle: yes
+
+Switches:
+# Direct Switches
+    s_leftCoinChute:
+        number: SD1
+        label: Left Coin Chute
+        tags: credit
+    s_centerCoinChute:
+        number: SD2
+        label: Center Coin Chute
+        tags: credit
+    s_rightCoinChute:
+        number: SD3
+        label: Right Coin Chute
+        tags: credit
+    s_fourthCoinChute:
+        number: SD4
+        label: 4th Coin Chute
+        tags: credit
+    s_escape:
+        number: SD5
+        label: Service Menu Escape (or add credit)
+        tags:
+    s_down:
+        number: SD6
+        label: Service Menu Down (or volume down)
+        tags:
+    s_up:
+        number: SD7
+        label: Service Menu Up (or volume up)
+        tags:
+    s_enter:
+        number: SD8
+        label: Service Menu Enter (or begin test)
+        tags:
+    s_lowerRightEOS:
+        number: SF1
+        label: Lower Right Flipper EOS
+        tags:
+    s_lowerRightOpto:
+        number: SF2
+        label: Lower Right Flipper Opto
+        tags: flipper, player
+    s_lowerLeftEOS:
+        number: SF3
+        label: Lower Left Flipper EOS
+        tags:
+    s_lowerLeftOpto:
+        number: SF4
+        label: Lower Left Flipper Opto
+        tags: flipper, player, left_flipper
+    s_upperRightEOS:
+        number: SF5
+        label: Upper Right Flipper EOS
+        tags:
+    s_upperRightOpto:
+        number: SF6
+        label: Upper Right Flipper Opto
+        tags: flipper, player, right_flipper
+    s_spinner:
+        number: SF7
+        label: Spinner
+        tags: playfield_active
+
+# Matrix Switches
+    s_buyIn:
+        number: S11
+        label: Buy-in button
+        tags: buyIn, start_mission
+    s_rightFire:
+        number: S12
+        label: Launch button
+        tags: launch
+    s_startButton:
+        number: S13
+        label: Start button
+        tags: start, player
+    s_plumbBobTilt:
+        number: S14
+        label: Tilt
+        tags: tilt
+    s_leftOutlane:
+        number: S15
+        label: Left outlane
+        tags: playfield_active, kickback
+    s_leftReturnLane:
+        number: S16
+        label: Left inlane
+        tags: playfield_active
+    s_rightReturnLane:
+        number: S17
+        label: Right inlane
+        tags: playfield_active
+    s_rightOutlane:
+        number: S18
+        label: Right outlane
+        tags: playfield_active
+    s_slamTilt:
+        number: S21
+        label: Slam Tilt
+        tags:
+    s_coinDoorClosed:
+        number: S22
+        label: Coin Door Closed
+        tags:
+    s_madeMiddleRamp:
+        number: S23
+        label: Made Middle Ramp
+        tags: playfield_active
+    s_alwaysClosed:
+        number: S24
+        label: WMS Always Closed
+        tags:
+    s_enterRightRamp:
+        number: S25
+        label: Right Ramp entrance
+        tags: playfield_active
+    s_left45degTarget:
+        number: S26
+        label: Neutral Zone Left
+        tags: playfield_active
+    s_center45degTarget:
+        number: S27
+        label: Neutral Zone Center
+        tags: playfield_active
+    s_right45degTarget:
+        number: S28
+        label: Neutral Zone Right
+        tags: playfield_active
+# Optos next two columns
+    s_borgLock:
+        number: S31
+        label: Confirm ball locked in Borg Ship
+        tags:
+        type: NC
+    s_underLeftGun2:
+        number: S32
+        label: Under left cannon, 2nd position
+        tags:
+        type: NC
+    s_underRightGun2:
+        number: S33
+        label: Under right cannon, 2nd position
+        tags:
+        type: NC
+    s_rightGunShooter:
+        number: S34
+        label: Inside right cannon, ready to shoot
+        tags: right_cannon_loaded
+        type: NC
+    s_underLeftLock2:
+        number: S35
+        label: Under left VUK, 2nd position
+        tags:
+        type: NC
+    s_underLeftGun1:
+        number: S36
+        label: Under left cannon, 1st position
+        tags:
+        type: NC
+    s_underRightGun1:
+        number: S37
+        label: Under right cannon, 1st position
+        tags:
+        type: NC
+    s_leftGunShooter:
+        number: S38
+        label: Inside left cannon, ready to shoot
+        tags: left_cannon_loaded
+        type: NC
+    s_underLeftLock1:
+        number: S41
+        label: Under left VUK, 1st position
+        tags: pntsplz
+        type: NC
+    s_underLeftLock3:
+        number: S42
+        label: Under left VUK, 3rd position
+        tags:
+        type: NC
+    s_underLeftLock4:
+        number: S43
+        label: Under left VUK, 4th position
+        tags:
+        type: NC
+    s_leftOuterLoop:
+        number: S44
+        label: Near top of orbit, confirms left orbit shots
+        tags: playfield_active
+        type: NC
+    s_underTopHole:
+        number: S45
+        label: Under top hole, confirms entrance at top of subway
+        tags: playfield_active, subway_enter
+        type: NC
+    s_underLeftHole:
+        number: S46
+        label: Under left hole, confirms Command Decision entrance
+        tags: playfield_active, subway_enter
+        type: NC
+    s_underBorgHole:
+        number: S47
+        label: Center shot, Start Mission
+        tags: playfield_active, subway_enter, start_mission
+        type: NC
+    s_borgEntry:
+        number: S48
+        label: Enter Borg Ship
+        tags: borgEntry,  playfield_active
+        type: NC
+# No Optos this column
+    s_leftBankTop:
+        number: S51
+        label: Left target bank, top target
+        tags: playfield_active
+    s_leftBankMiddle:
+        number: S52
+        label: Left target bank, middle target
+        tags: playfield_active
+    s_leftBankBottom:
+        number: S53
+        label: Left target bank, bottom target
+        tags: playfield_active, end_mission
+    s_rightBankTop:
+        number: S54
+        label: Right target bank, top target
+        tags: playfield_active
+    s_rightBankMiddle:
+        number: S55
+        label: Right target bank, middle target
+        tags: playfield_active
+    s_rightBankBottom:
+        number: S56
+        label: Right target bank, bottom target
+        tags: playfield_active
+    s_topDropTarget:
+        number: S57
+        label: Drop Target position switch
+        tags:
+    s_rightOuterLoop:
+        number: S58
+        label: Confirm right orbit made
+        tags: playfield_active
+# More Optos this column
+    s_trough6:
+        number: S61
+        label: Trough 6
+        tags:
+        type: NC
+    s_trough5:
+        number: S62
+        label: Trough 5
+        tags:
+        type: NC
+    s_trough4:
+        number: S63
+        label: Trough 4
+        tags:
+        type: NC
+    s_trough3:
+        number: S64
+        label: Trough 3
+        tags:
+        type: NC
+    s_trough2:
+        number: S65
+        label: Trough 2
+        tags:
+        type: NC
+    s_trough1:
+        number: S66
+        label: Trough 1
+        tags:
+        type: NC
+    s_troughUp:
+        number: S67
+        label: Trough Up (Jam)
+        tags:
+        type: NC
+# No more Optos
+    s_shooter:
+        number: S68
+        label: Inside Catapult, ready to Launch
+        tags:
+    s_leftJet:
+        number: S71
+        label: left Pop Bumper
+        tags: playfield_active
+    s_rightJet:
+        number: S72
+        label: right Pop Bumper
+        tags: playfield_active
+    s_bottomJet:
+        number: S73
+        label: bottom pop Bumper
+        tags: playfield_active
+    s_rightSling:
+        number: S74
+        label: right slingShot
+        tags: playfield_active
+    s_leftSling:
+        number: S75
+        label: left slingShot
+        tags: playfield_active
+    s_topLaneLeft:
+        number: S76
+        label: Left Top Lane
+        tags: playfield_active
+    s_topLaneCenter:
+        number: S77
+        label: Center Top Lane
+        tags: playfield_active
+    s_topLaneRight:
+        number: S78
+        label: Right Top Lane
+        tags: playfield_active
+    s_time:
+        number: S81
+        label: Time standup next to delta quadrant ramp
+        tags: playfield_active, time
+    s_rift:
+        number: S82
+        label: Rift standup next to delta quadrant ramp
+        tags: playfield_active, rift
+    s_madeLeftRamp:
+        number: S83
+        label: Confirm delta quadrant ramp made
+        tags: leftRampShot,  playfield_active
+    s_q:
+        number: S84
+        label: Q target
+        tags: playfield_active, advance_mission
+    s_left2xShuttle:
+        number: S85
+        label: Left standup next to alpha quadrant ramp
+        tags: playfield_active
+    s_right2xShuttle:
+        number: S86
+        label: Right standup next to alpha quadrant ramp
+        tags: playfield_active
+    s_madeRightRamp:
+        number: S87
+        label: Confirm alpha quadrant ramp made
+        tags: playfield_active
+    s_enterLeftRamp:
+        number: S88
+        label: Delta quadrant entrance (fires diverter)
+        tags: borgDiverter,  playfield_active
+    dummyswitch91:
+        number: S91
+        label: Does not exist
+        tags:
+    s_LeftGunMark:
+        number: S92
+        label: Left Gun OK to Shoot
+        tags: left_cannon_mark
+    dummyswitch93:
+        number: S93
+        label: Does not exist
+        tags:
+    dummyswitch94:
+        number: S94
+        label: Does not exist
+        tags:
+    s_RightGunHome:
+        number: S95
+        label: Right Gun Ok to Receive Ball
+        tags: right_cannon_home
+    s_RightGunMark:
+        number: S96
+        label: Right Gun OK to Shoot
+        tags: right_cannon_mark
+    s_LeftGunHome:
+        number: S97
+        label: Left Gun OK to Receive Ball
+        tags: left_cannon_home
+    dummyswitch98:
+        number: S98
+        label: Does not exist
+        tags:
+
+Targets:
+    t_topLaneLeft:
+        switch: s_topLaneLeft
+        light: l_topLaneLeft
+    t_topLaneCenter:
+        switch: s_topLaneCenter
+        light: l_topLaneCenter
+    t_topLaneRight:
+        switch: s_topLaneRight
+        light: l_topLaneRight
+    t_leftBankTop:
+        switch: s_leftBankTop
+        light: l_leftBankTop
+    t_leftBankMiddle:
+        switch: s_leftBankMiddle
+        light: l_leftBankMiddle
+    t_leftBankBottom:
+        switch: s_leftBankBottom
+        light: l_leftBankBottom
+    t_rightBankTop:
+        switch: s_rightBankTop
+        light: l_rightBankTop
+    t_rightBankMiddle:
+        switch: s_rightBankMiddle
+        light: l_rightBankMiddle
+    t_rightBankBottom:
+        switch: s_rightBankBottom
+        light: l_rightBankBottom
+
+Matrix_Lights:
+    l_leftBankTop:
+        number: L11
+        label: Left Bank Top
+        tags:
+    l_leftBankMiddle:
+        number: L12
+        label: Left Bank Middle
+        tags:
+    l_shipMode1:
+        number: L13
+        label: Worm hole
+        tags:
+    l_shipMode2:
+        number: L14
+        label: Time Rift
+        tags:
+    l_leftBankBottom:
+        number: L15
+        label: Left Bank Bottom
+        tags:
+    l_finalFrontier:
+        number: L16
+        label: Final Frontier
+        tags:
+    l_shootAgain:
+        number: L17
+        label: Shoot Again
+        tags:
+    l_shipMode7:
+        number: L18
+        label: Asteroid Threat
+        tags:
+    l_shipMode3:
+        number: L21
+        label: Search the Galaxy
+        tags:
+    l_shipMode4:
+        number: L22
+        label: Battle Simulation
+        tags:
+    l_shipMode5:
+        number: L23
+        label: Qs Challenge
+        tags:
+    l_rightBankTop:
+        number: L24
+        label: Right Bank Top
+        tags:
+    l_rightBankMiddle:
+        number: L25
+        label: Right Bank Middle
+        tags:
+    l_commandDecision:
+        number: L26
+        label: Command Decision
+        tags:
+    l_shipMode6:
+        number: L27
+        label: Rescue
+        tags:
+    l_rightBankBottom:
+        number: L28
+        label: Right Bank Bottom
+        tags:
+    l_topLaneLeft:
+        number: L31
+        label: Top Lane Left
+        tags:
+    l_topLaneCenter:
+        number: L32
+        label: Top Lane Center
+        tags:
+    l_topLaneRight:
+        number: L33
+        label: Top Lane Right
+        tags:
+    l_bonus2x:
+        number: L34
+        label: Bonus 2x
+        tags:
+    l_bonus4x:
+        number: L35
+        label: Bonus 4x
+        tags:
+    l_multipliersHeld:
+        number: L36
+        label: Hold multipliers
+        tags:
+    l_bonus8x:
+        number: L37
+        label: Bonus 8x
+        tags:
+    l_bonus10x:
+        number: L38
+        label: Bonus 10x
+        tags:
+    l_q:
+        number: L41
+        label: Q target light
+        tags:
+    l_generic1:
+        number: L42
+        label: Right orbit shot indicator
+        tags: shot_indicator
+    l_rightLock:
+        number: L43
+        label: Right lock
+        tags:
+    l_holodeck:
+        number: L44
+        label: holodeck
+        tags:
+    l_right2xShuttle:
+        number: L45
+        label: Right 2x Shuttle
+        tags:
+    l_generic4:
+        number: L46
+        label: Beta quadrant shot indicator
+        tags: shot_indicator
+    l_rightMillions:
+        number: L47
+        label: Right Millions
+        tags:
+    l_left2xShuttle:
+        number: L48
+        label: Left 2x Shuttle
+        tags:
+    l_leftReturnLane:
+        number: L51
+        label: Start Hurry-up
+        tags:
+    l_leftLauncher:
+        number: L52
+        label: Light in left cannon
+        tags:
+    l_advanceInRank:
+        number: L53
+        label: Advance in Rank
+        tags:
+    l_generic6:
+        number: L54
+        label: Center hole shot indicator
+        tags: shot_indicator
+    l_super:
+        number: L55
+        label: Not actually Super. Lens says Transporter
+        tags:
+    l_jackpot:
+        number: L56
+        label: jackpot
+        tags:
+    l_extraBall:
+        number: L57
+        label: Extra Ball
+        tags:
+    l_startMission:
+        number: L58
+        label: Start Mission
+        tags:
+    l_generic3:
+        number: L61
+        label: Left orbit shot indicator
+        tags: shot_indicator
+    l_increaseWarp:
+        number: L62
+        label: Warp Factor
+        tags:
+    l_spinner:
+        number: L63
+        label: Spinner (Repair Shields)
+        tags:
+    l_generic7:
+        number: L64
+        label: Alpha quadrant shot indicator
+        tags: shot_indicator
+    l_leftMillions:
+        number: L65
+        label: Left Millions
+        tags:
+    l_jackpotX:
+        number: L66
+        label: Not actually jackpotX - lens says Rescue
+        tags:
+    l_rift:
+        number: L67
+        label: RIFT in Time Rift
+        tags:
+    l_time:
+        number: L68
+        label: TIME in Time Rift
+        tags:
+    l_generic2:
+        number: L71
+        label: Command Decision shot indicator
+        tags: shot_indicator
+    l_top3BankLeft:
+        number: L72
+        label: Neutral Zone Left Light
+        tags:
+    l_top3BankCenter:
+        number: L73
+        label: Neutral Zone Center Light
+        tags:
+    l_top3BankRight:
+        number: L74
+        label: Neutral Zone Right Light
+        tags:
+    l_leftLock:
+        number: L75
+        label: Neutral Zone Lock
+        tags:
+    l_generic5:
+        number: L76
+        label: Delta Quadrant shot indicator
+        tags: shot_indicator
+    l_wormHole:
+        number: L77
+        label: Worm hole
+        tags:
+    l_borgShip:
+        number: L78
+        label: Several lamps inside borg ship
+        tags:
+    l_rightReturnLane:
+        number: L81
+        label: Super Spinner
+        tags:
+    l_rightLauncher:
+        number: L82
+        label: Light in right cannon
+        tags:
+    l_millionJets:
+        number: L83
+        label: Million Jets
+        tags:
+    l_kickback:
+        number: L84
+        label: kickback
+        tags:
+    l_borgLock:
+        number: L85
+        label: Lock light on sign above Delta Quadrant
+        tags:
+    l_borgJackpot:
+        number: L86
+        label: Jackpot light on sign above Delta Quadrant
+        tags:
+    l_buyIn:
+        number: L87
+        label: Buy in button light
+        tags:
+    l_startButton:
+        number: L88
+        label: Start button light
+        tags:
+
+Coils:
+    c_leftGunKicker:
+        number: C01
+        pulse_ms: 10
+    c_rightGunKicker:
+        number: C02
+        pulse_ms: 10
+    c_leftGunPopper:
+        number: C03
+        pulse_ms: 30
+    c_rightGunPopper:
+        number: C04
+        pulse_ms: 30
+    c_leftPopper:
+        number: C05
+        pulse_ms: 30
+    c_plunger:
+        number: C06
+        label: catapult
+        pulse_ms: 60
+    c_knocker:
+        number: C07
+        pulse_ms: 10
+    c_kickback:
+        number: C08
+        pulse_ms: 10
+    c_leftSlingshot:
+        number: C09
+        pulse_ms: 10
+    c_rightSlingshot:
+        number: C10
+        pulse_ms: 10
+    c_trough:
+        number: C11
+        pulse_ms: 20
+    c_leftJetBumper:
+        number: C12
+        pulse_ms: 10
+    c_rightJetBumper:
+        number: C13
+        pulse_ms: 10
+    c_bottomJetBumper:
+        number: C14
+        pulse_ms: 10
+    c_topDivertor:
+        number: C15
+        pulse_ms: 100
+        holdPatter: 1-4
+    c_borgKicker:
+        number: C16
+        pulse_ms: 10
+    c_underDivertorBottom:
+        number: C38
+        pulse_ms: 100
+        holdPatter: 1-4
+    c_underDivertorTop:
+        number: C37
+        pulse_ms: 100
+        holdPatter: 1-4
+    c_topDropUp:
+        number: C39
+        pulse_ms: 10
+    c_topDropDown:
+        number: C40
+        pulse_ms: 10
+
+# Motors
+    motor_leftGunMotor:
+        number: C17
+        allow_enable: True
+    motor_rightGunMotor:
+        number: C18
+        allow_enable: True
+
+# Flippers
+    lowerRightFlipperPower:
+        number: FLRM
+        pulse_ms: 22
+    lowerRightFlipperHold:
+        number: FLRH
+    lowerLeftFlipperPower:
+        number: FLLM
+        pulse_ms: 22
+    lowerLeftFlipperHold:
+        number: FLLH
+    upperRightFlipperPower:
+        number: FURM
+        pulse_ms: 22
+    upperRightFlipperHold:
+        number: FURH
+
+Flashers:
+    f_jetsFlasher:
+        number: C20
+        label: Jets Flasher
+        tags:
+    f_rightPopperFlasher:
+        number: C21
+        label: Right VUK Flasher
+        tags:
+    f_middleRampFlasher:
+        number: C22
+        label: Middle Ramp Flasher
+        tags:
+    f_shieldsFlasher:
+        number: C23
+        label: Flashers under shields (6 bulbs)
+        tags:
+    f_autofireFlasher:
+        number: C24
+        label: Return to Duty
+        tags:
+    f_exitUndergroundFlasher:
+        number: C25
+        label: Left VUK Flasher
+        tags:
+    f_rightBorgFlasher:
+        number: C26
+        label: Borg Ship Right Flasher
+        tags:
+    f_leftBorgFlasher:
+        number: C27
+        label: Borg Ship Left Flasher
+        tags:
+    f_centerBorgFlasher:
+        number: C28
+        label: Borg Ship Center Flasher
+        tags:
+    f_romulanFlashers:
+        number: C41
+        label: Romulan Ship (upper left) Flasher
+        tags:
+    f_rightRampFlashers:
+        number: C42
+        label: Red Flasher mounted to back board above right ramp
+        tags:
+
+Ball_Devices:
+    bd_trough:
+        tags: trough, home, drain
+        label: Main Trough
+        eject_targets: bd_catapult
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_troughUp
+        ball_capacity: 6
+        entrance_count_delay: 0.5s
+        eject_coil: c_trough
+        eject_switch: s_trough6
+        confirm_eject_type: target
+        exit_count_delay: 2s
+        jam_switch: s_troughUp
+    bd_catapult:
+        tags: ball_add_live
+        label: Ball Launch Catapult
+        eject_targets: playfield, bd_leftVUK, bd_leftCannonVUK, bd_rightCannonVUK
+        ball_switches: s_shooter
+        eject_switch: s_shooter
+        entrance_count_delay: 300ms
+        eject_coil: c_plunger
+        exit_count_delay: 1s
+        confirm_eject_type: target
+    bd_leftVUK:
+        tags: home
+        label: Left VUK that feeds left inlane
+        eject_targets: playfield
+        ball_switches: s_underLeftLock1, s_underLeftLock2, s_underLeftLock3, s_underLeftLock4
+        eject_coil: c_leftPopper
+        eject_switch: s_underLeftLock1
+        confirm_eject_type: target
+        exit_count_delay: 1s
+    bd_leftCannonVUK:
+        tags: home
+        label: Left VUK that feeds left inlane
+        eject_targets: bd_leftCannon
+        ball_switches: s_underLeftGun1, s_underLeftGun2
+        eject_coil: c_leftGunPopper
+        eject_switch: s_underLeftGun1
+        confirm_eject_type: device
+    bd_leftCannon:
+        tags: motor
+        label: Left cannon
+        eject_targets: playfield
+        ball_switches: s_leftGunShooter
+        eject_coil: c_leftGunPopper
+        eject_switch: s_leftGunShooter
+        confirm_eject_type: count
+        exit_count_delay: 1s
+        entrance_count_delay: 300ms
+    bd_rightCannonVUK:
+        tags: home
+        label: Left VUK that feeds left inlane
+        eject_targets: bd_rightCannon
+        ball_switches: s_underRightGun1, s_underRightGun2
+        eject_coil: c_rightGunPopper
+        eject_switch: s_underRightGun1
+        confirm_eject_type: device
+    bd_rightCannon:
+        tags: motor
+        label: Right cannon
+        eject_targets: playfield
+        ball_switches: s_rightGunShooter
+        eject_coil: c_rightGunPopper
+        eject_switch: s_rightGunShooter
+        confirm_eject_type: count
+        exit_count_delay: 1s
+        entrance_count_delay: 300ms
+    bd_borgShip:
+        tags:
+        label: Inside Borg ship
+        eject_targets: playfield
+        ball_switches: s_borgLock
+        eject_coil: c_borgKicker
+        eject_switch: s_borgLock
+        confirm_eject_type: count
+        exit_count_delay: 1s
+        entrance_count_delay: 300ms
+
+
+Flippers:
+        LowerLeft:
+            main_coil: lowerLeftFlipperPower
+            hold_coil: lowerLeftFlipperHold
+            activation_switch: s_lowerLeftOpto
+            eos_switch: s_lowerLeftEOS
+            label: Lower Left Flipper
+        LowerRight:
+            main_coil: lowerRightFlipperPower
+            hold_coil: lowerRightFlipperHold
+            activation_switch: s_lowerRightOpto
+            eos_switch: s_lowerRightEOS
+            label: Lower Right Flipper
+        UpperRight:
+            main_coil: upperRightFlipperPower
+            hold_coil: upperRightFlipperHold
+            activation_switch: s_upperRightOpto
+            eos_switch: s_upperRightEOS
+            label: Upper Right Flipper
+
+Autofire_Coils:
+    leftJetBumper:
+        coil: c_leftJetBumper
+        switch: s_leftJet
+    rightJetBumper:
+        coil: c_rightJetBumper
+        switch: s_rightJet
+    bottomJetBumper:
+        coil: c_bottomJetBumper
+        switch: s_bottomJet
+    SlingL:
+        coil: c_leftSlingshot
+        switch: s_leftSling
+    SlingR:
+        coil: c_rightSlingshot
+        switch: s_rightSling
+    kickback:
+        coil: c_kickback
+        switch: s_leftOutlane
+        enable_events: mode_kickback_started
+        disable_events: mode_kickback_stopped
+
+Diverters:
+    topDiverter:
+        activation_coil: c_topDivertor # WMS uses the -tor spelling
+        type: hold
+        activation_time: 3s
+        activation_switches: s_enterLeftRamp
+        enable_events: ball_started
+        disable_events: ball_ended, Borg_Lock_Lit
+        targets_when_active: playfield
+        targets_when_inactive: bd_borgShip
+    subwayTopDiverter:
+        activation_coil: c_underDivertorTop
+        type: hold
+        activation_time: 3s
+        activation_switches: s_underTopHole, s_underLeftHole, s_underBorgHole
+        targets_when_active: bd_rightCannonVUK
+        targets_when_inactive: bd_leftVUK
+        feeder_devices: bd_catapult
+    subwayBottomDiverter:
+        activation_coil: c_underDivertorBottom
+        type: hold
+        activation_time: 3s
+        activation_switches: s_underTopHole, s_underLeftHole, s_underBorgHole
+        targets_when_active: bd_leftCannonVUK
+        targets_when_inactive: bd_leftVUK
+        feeder_devices: bd_catapult
+    dropTarget:
+        activation_coil: c_topDropDown
+        deactivation_coil: c_topDropUp
+        type: pulse
+        targets_when_active: bd_leftCannonVUK, bd_rightCannonVUK, bd_leftVUK
+        targets_when_inactive: playfield
+        feeder_devices: bd_catapult
+
+
+GIs:
+    gi01:
+        number: G01
+        label: White/Brown, Shields
+        tags: gi
+        dimmable: True
+    gi02:
+        number: G02
+        label: White/Orange, Inserts
+        tags: gi
+        dimmable: True
+    gi03:
+        number: G03
+        label: White/Yellow, Inserts
+        tags: gi
+        dimmable: False
+    gi04:
+        number: G04
+        label: White/Green, PF GI, Half of return lanes
+        tags: gi
+        dimmable: True
+    gi05:
+        number: G05
+        label: White/Violet, Half of return lanes, coin slots
+        tags: gi
+        dimmable: False

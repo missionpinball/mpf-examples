@@ -1,0 +1,15 @@
+# config_version=1
+
+hardware:
+    Platform: fast
+    DriverBoards: fast
+
+fast:
+    ports: \\.\COM3 \\.\COM4, \\.\COM5 #Windows
+    #ports: /dev/ttyUSB0, /dev/ttyUSB1, /dev/ttyUSB2
+    config_number_format: hex
+    default_debounce_close: 10ms
+    default_debounce_open: 30ms
+
+Config:
+    - config.yaml

@@ -1,0 +1,17 @@
+!!python/object/apply:collections.OrderedDict
+- - - score
+    - - !!python/tuple
+        - AAA
+        - 50000
+      - !!python/tuple
+        - AAA
+        - 30000
+      - !!python/tuple
+        - BRI
+        - 10100
+      - !!python/tuple
+        - BRI
+        - 10000
+      - !!python/tuple
+        - AAA
+        - 10000

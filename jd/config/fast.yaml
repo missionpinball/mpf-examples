@@ -1,0 +1,10 @@
+# config_version=3
+Hardware:
+    Platform: fast
+
+Fast:
+    ports: \\.\COM10, \\.\COM11, \\.\COM12
+    config_number_format: hex
+
+Config:
+    - config.yaml

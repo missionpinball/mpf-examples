@@ -1,0 +1,60 @@
+events:
+  ball_search_begin_phase1: 0
+  game_ended: 14
+  game_started: 92
+player:
+  score:
+    average: 933354
+    top:
+    - 7000030
+    - 6000030
+    - 1000030
+    - 30
+    - 30
+    - 30
+    - 30
+    - 30
+    - 30
+    - 30
+    total: 15
+shots:
+  dart: 169
+  inlane: 21
+  outlane: 9
+switches:
+  s_flipper_left: 161
+  s_flipper_right: 158
+  s_inlane_left: 10
+  s_inlane_right: 10
+  s_lane_a: 62
+  s_lane_d: 12
+  s_lane_r: 16
+  s_lane_t: 70
+  s_lock_center: 6
+  s_lock_left: 4
+  s_lock_right: 11
+  s_mid_right_rubber: 5
+  s_orbit_left: 6
+  s_outlane_left: 5
+  s_outlane_right: 4
+  s_pop_bumper_right_rubber: 2
+  s_pop_left: 88
+  s_pop_right: 74
+  s_rubber_upper_left: 8
+  s_rubber_way_up_right: 3
+  s_sling_left: 42
+  s_sling_right: 60
+  s_spinner: 105
+  s_start: 10
+  s_target_1: 72
+  s_target_12: 49
+  s_target_17: 48
+  s_target_18: 57
+  s_target_19: 60
+  s_target_2: 54
+  s_target_20: 51
+  s_target_3: 52
+  s_target_5: 44
+  s_target_9: 46
+  s_tilt: 0
+  s_trough: 73
