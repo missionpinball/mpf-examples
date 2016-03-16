@@ -1,7 +1,7 @@
 Mission Pinball Framework Examples
 ==================================
 
-<img src="mpf-examples-logo.png"/>
+<img align="right" height="200" src="mpf-examples-logo.png"/>
 
 This GitHub repository contains example configuration, demos, and tutorial files for the Mission Pinball Framework. It's
 a separate repo from the main MPF project so you can download this folder to an easily-accessible location.
