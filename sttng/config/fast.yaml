@@ -1,15 +1,15 @@
-#config_version=2
-Hardware:
-    Platform: fast
+#config_version=4
+hardware:
+  platform: fast
 
-Fast:
-    port0_name: /dev/ttyO2
-    port0_baud: 921600
-    port1_name: /dev/ttyO1
-    port1_baud: 460800
-    main_port: 0
-    led_port: 1
-    dmd_port: 1
+fast:
+  port0_name: /dev/ttyO2
+  port0_baud: 921600
+  port1_name: /dev/ttyO1
+  port1_baud: 460800
+  main_port: 0
+  led_port: 1
+  dmd_port: 1 
 
-Config:
-    - config.yaml
+config:
+- config.yaml

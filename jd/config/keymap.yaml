@@ -1,61 +1,60 @@
-# config_version=3
+# config_version=4
 
 # Instructions for this config file:
 # https://missionpinball.com/docs/configuration-file-reference/
 
-Keyboard:
-
-    z:
-        switch: flipperLwL
-    /:
-        switch: flipperLwR
-    s:
-        switch: start
+keyboard:
+  z:
+    switch: flipperLwL
+  /:
+    switch: flipperLwR
+  s:
+    switch: start
         #invert: True
-    1:
-        switch: trough1
-        toggle: True
-    2:
-        switch: trough2
-        toggle: True
-    3:
-        switch: trough3
-        toggle: True
-    4:
-        switch: trough4
-        toggle: True
-    5:
-        switch: trough5
-        toggle: True
-    6:
-        switch: trough6
-        toggle: True
+  1:
+    switch: trough1
+    toggle: true
+  2:
+    switch: trough2
+    toggle: true
+  3:
+    switch: trough3
+    toggle: true
+  4:
+    switch: trough4
+    toggle: true
+  5:
+    switch: trough5
+    toggle: true
+  6:
+    switch: trough6
+    toggle: true
 
-    7:
-        switch: shooterR
+  7:
+    switch: shooterR
 
-    8:
-        switch: fireR
+  8:
+    switch: fireR
 
-    t:
-        switch: threeBankTargets
+  t:
+    switch: threeBankTargets
 
-    p:
-        switch: rightRampExit
-    
-    o:
-        switch: topRampExit
+  p:
+    switch: rightRampExit
 
-    .:
-        switch: slingR
+  o:
+    switch: topRampExit
 
-    x:
-        switch: slingL
-    up:
-        event: action_set_volume
-        params:
-            change: .05
-    down:
-        event: action_set_volume
-        params:
-            change: "-.05"
+  .:
+    switch: slingR
+
+  x:
+    switch: slingL
+  up:
+    event: action_set_volume
+    params:
+      change: 0.05
+  down:
+    event: action_set_volume
+    params:
+      change: -.05

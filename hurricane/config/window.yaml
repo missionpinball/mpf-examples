@@ -1,55 +1,51 @@
-#config_version=3
+#config_version=4
 
 window:
-    width: 600
+  width: 600
+  height: 200
+  title: Mission Pinball Framework - Hurricane
+  resizable: true
+  fullscreen: false
+  borderless: false
+  exit_on_escape: true
+displays:
+  window:
     height: 200
-    title: Mission Pinball Framework - Hurricane
-    resizable: yes
-    frame: yes
-    fullscreen: no
-    fps: auto
-    quit_on_close: True
-    elements:
+    width: 600
+slides:
+  window_slide_1:
+  - type: dmd
+    width: 512
+    height: 128
+    pixel_color: ff5500
+    dark_color: 220000
+    z: 1
+  - type: text
+    style: tall title
+    text: MISSION PINBALL FRAMEWORK
+    anchor_y: top
+    y: top-3
+    font_size: 30
+    z: 1
+    color: white
 
-    - type: VirtualDMD
-      width: 512
-      height: 128
-      h_pos: center
-      v_pos: center
-      pixel_color: ff5500
-      dark_color: 220000
-      layer: 1
-      pixel_spacing: 2
+  - type: rectangle
+    width: 514
+    height: 130
+    z: 2
+    color: 444444
 
-    - type: Text
-      font: tall title
-      text: MISSION PINBALL FRAMEWORK
-      h_pos: center
-      v_pos: top
-      y: 3
-      size: 30
-      antialias: yes
-      layer: 1
-      color: ffffff
-
-    - type: Shape
-      shape: box
-      width: 514
-      height: 130
-      layer: 2
-      thickness: 2
-      v_pos: center
-      h_pos: center
-      color: 444444
-
-    - type: Text
-      font: tall title
-      text: STARTER GAME
-      h_pos: right
-      v_pos: bottom
-      y: -3
-      x: -42
-      size: 30
-      antialias: yes
-      layer: 1
-      color: ff0000
+  - type: text
+    style: tall title
+    text: STARTER GAME
+    anchor_x: right
+    anchor_y: bottom
+    y: bottom+3
+    x: right-42
+    font_size: 30
+    z: 1
+    color: red
+slide_player:
+  machine_reset_phase_3:
+    window_slide_1:
+      target: window

@@ -4,7 +4,7 @@
 # General erratic behavior
 # pop empty list error - bonus mode code ran before score reels finished game scoring
 
-from mpf.system.mode import Mode
+from mpf.core.mode import Mode
 
 class Bonus(Mode):
 

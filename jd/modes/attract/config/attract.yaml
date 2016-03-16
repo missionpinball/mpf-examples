@@ -1,50 +1,47 @@
-#config_version=3
-
-light_player:
-    mode_attract_started:
-      - show: drop_target_sweep
-        repeat: yes
-        tocks_per_sec: 5
-      - show: chain_sweep
-        repeat: yes
-        tocks_per_sec: 8
-      - show: flipper_area_flash
-        repeat: yes
-        tocks_per_sec: 4
-      - show: lock_sweep
-        repeat: yes
-        tocks_per_sec: 5
-      - show: crime_sweep
-        repeat: yes
-        tocks_per_sec: 5
-      - show: perp_sweep
-        repeat: yes
-        tocks_per_sec: 3
-      - show: random_blinking
-        repeat: yes
-        tocks_per_sec: 4
-    mode_attract_stopped:
-      - show: drop_target_sweep
-        action: stop
-      - show: chain_sweep
-        action: stop
-      - show: flipper_area_flash
-        action: stop
-      - show: lock_sweep
-        action: stop
-      - show: crime_sweep
-        action: stop
-      - show: perp_sweep
-        action: stop
-      - show: random_blinking
-        action: stop
+#config_version=4
 
 show_player:
-    mode_attract_started:
-      - show: attract_display
-        repeat: yes
-        tocks_per_sec: 1
+  mode_attract_started:
+    attract_display:
+      loops: -1
+      speed: 1         
 
-    mode_attract_stopped:
-      - show: attract_display
-        action: stop
+    drop_target_sweep:
+      loops: -1
+      speed: 5
+    chain_sweep:
+      loops: -1
+      speed: 8
+    flipper_area_flash:
+      loops: -1
+      speed: 4
+    lock_sweep:
+      loops: -1
+      speed: 5
+    crime_sweep:
+      loops: -1
+      speed: 5
+    perp_sweep:
+      loops: -1
+      speed: 3
+    random_blinking:
+      loops: -1
+      speed: 4
+  mode_attract_stopped:
+    attract_display:
+      action: stop
+    drop_target_sweep:
+      action: stop
+    chain_sweep:
+      action: stop
+    flipper_area_flash:
+      action: stop
+    lock_sweep:
+      action: stop
+    crime_sweep:
+      action: stop
+    perp_sweep:
+      action: stop
+    random_blinking:
+      action: stop
+

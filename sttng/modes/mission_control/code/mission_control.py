@@ -3,7 +3,7 @@
 
 import random
 import inspect #329
-from mpf.system.modes import Mode
+from mpf.core.modes import Mode
 
 
 class MissionControl(Mode):

@@ -1,6 +1,6 @@
 # Attract mode Scriptlet for Judge Dredd
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class Attract(Scriptlet):

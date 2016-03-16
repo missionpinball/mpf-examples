@@ -1,6 +1,8 @@
-- tocks: 1
+# show_version=4
+- time: 0
   lights:
     l_kickback: ff
-- tocks: 1
+- time: '+1'
   lights:
-    l_kickback: 00
+    l_kickback: 0
+- time: '+1'

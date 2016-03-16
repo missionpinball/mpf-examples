@@ -1,227 +1,228 @@
-# config_version=3
+# config_version=4
 mode:
-    start_events: ball_starting
-    priority: 100
+  start_events: ball_starting
+  priority: 100
 
 event_player:
-  multiplayer_game:
-    player_1_multiplayer_slide
-  player_1_ball_started:
-    player_1_multiplayer_slide
+  multiplayer_game: player_1_multiplayer_slide
+  player_1_ball_started: player_1_multiplayer_slide
 
 slide_player:
-  single_player_ball_started:
-    - type: text
-      text: "%player1|score%"
-      number_grouping: true
-      min_digits: 2
-      v_pos: center
-      h_pos: center
-      y: -2
-      slide: score_display
-      #persist_slide: yes
-      font: tall title
-      color: ff5500
-    - type: text
-      text: BALL %player1|ball%    %machine|credits_string%
-      v_pos: bottom
-      font: small
-      y: -1
-      color: ff5500
-
-  player_1_multiplayer_slide:
-    - type: text
-      text: "%player1|score%"
-      #font: medium
-      number_grouping: true
-      min_digits: 2
-      v_pos: top
-      h_pos: right
-      x: -60
-      y: 2
-      color: ff5500
-    - type: text
-      text: "%player2|score%"
-      font: medium
-      v_pos: top
-      h_pos: right
-      number_grouping: true
-      min_digits: 2
-      x: -2
-      y: 2
-      color: 441100
-    - type: text
-      text: "%player3|score%"
-      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -60
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: "%player4|score%"
-      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -2
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: BALL %player1|ball%    %machine|credits_string%
-      v_pos: bottom
-      font: small
-      y: -1
-      color: ff5500
-
-  player_2_ball_started:
-    - type: text
-      text: "%player1|score%"
-      font: medium
-      number_grouping: true
-      min_digits: 2
-      v_pos: top
-      h_pos: right
-      x: -60
-      y: 2
-    - type: text
-      text: "%player2|score%"
-#      font: medium
-      v_pos: top
-      h_pos: right
-      number_grouping: true
-      min_digits: 2
-      x: -2
-      y: 2
-    - type: text
-      text: "%player3|score%"
-      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -60
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: "%player4|score%"
-      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -2
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: BALL %player2|ball%    %machine|credits_string%
-      v_pos: bottom
-      font: small
-      y: -1
-
-  player_3_ball_started:
-    - type: text
-      text: "%player1|score%"
-      font: medium
-      number_grouping: true
-      min_digits: 2
-      v_pos: top
-      h_pos: right
-      x: -60
-      y: 2
-    - type: text
-      text: "%player2|score%"
-      font: medium
-      v_pos: top
-      h_pos: right
-      number_grouping: true
-      min_digits: 2
-      x: -2
-      y: 2
-    - type: text
-      text: "%player3|score%"
-#      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -60
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: "%player4|score%"
-      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -2
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: BALL %player3|ball%    %machine|credits_string%
-      v_pos: bottom
-      font: small
-      y: -1
-
-  player_4_ball_started:
-    - type: text
-      text: "%player1|score%"
-      font: medium
-      number_grouping: true
-      min_digits: 2
-      v_pos: top
-      h_pos: right
-      x: -60
-      y: 2
-    - type: text
-      text: "%player2|score%"
-      font: medium
-      v_pos: top
-      h_pos: right
-      number_grouping: true
-      min_digits: 2
-      x: -2
-      y: 2
-    - type: text
-      text: "%player3|score%"
-      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -60
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: "%player4|score%"
-#      font: medium
-      v_pos: bottom
-      h_pos: right
-      y: -10
-      x: -2
-      number_grouping: true
-      min_digits: 2
-    - type: text
-      text: BALL %player4|ball%    %machine|credits_string%
-      v_pos: bottom
-      font: small
-      y: -1
-
+  single_player_ball_started: slide_1
+  player_1_multiplayer_slide: slide_2
+  player_2_ball_started: slide_3
+  player_3_ball_started: slide_4
+  player_4_ball_started: slide_5
 scoring:
-    left_outlane_active:
-      score: 1000
-      hits: 1
-    left_inlane_active:
-      score: 2550
-      hits: 1
-    right_inlane_active:
-      score: 2540
-      hits: 1
-    right_outlane_active:
-      score: 1010
-      hits: 1
-    left_sling_active:
-      score: 570
+  left_outlane_active:
+    score: 1000
+    hits: 1
+  left_inlane_active:
+    score: 2550
+    hits: 1
+  right_inlane_active:
+    score: 2540
+    hits: 1
+  right_outlane_active:
+    score: 1010
+    hits: 1
+  left_sling_active:
+    score: 570
 #      hits: 1
 #      slings: 1
-    right_sling_active:
-      score: 580
-      hits: 1
-      slings: 1
+  right_sling_active:
+    score: 580
+    hits: 1
+    slings: 1
+slides:
+  slide_1:
+  - type: text
+    text: (player1|score)
+    number_grouping: true
+    min_digits: 2
+    y: middle+2
+      #persist_slide: yes
+    style: tall title
+    color: ff5500
+  - type: text
+    text: BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+    color: ff5500
+
+  slide_2:
+  - type: text
+    text: (player1|score)
+      #font: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+    color: ff5500
+  - type: text
+    text: (player2|score)
+    style: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+    color: 441100
+  - type: text
+    text: (player3|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+    color: ff5500
+
+  slide_3:
+  - type: text
+    text: (player1|score)
+    style: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+#      font: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player2|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
+  slide_4:
+  - type: text
+    text: (player1|score)
+    style: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+    style: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+#      font: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player3|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
+  slide_5:
+  - type: text
+    text: (player1|score)
+    style: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+    style: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+#      font: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player4|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+

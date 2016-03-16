@@ -1,84 +1,95 @@
-#config_version=3
+#config_version=4
 
 high_score:
   categories:
   - score:
-      - GRAND CHAMPION
-      - HIGH SCORE 1
-      - HIGH SCORE 2
-      - HIGH SCORE 3
-      - HIGH SCORE 4
+    - GRAND CHAMPION
+    - HIGH SCORE 1
+    - HIGH SCORE 2
+    - HIGH SCORE 3
+    - HIGH SCORE 4
   - loops:
-      - MOST LOOPS
+    - MOST LOOPS
 
 slide_player:
-  high_score:
-    - type: text
-      text: PLAYER %player_num%
-      font: medium
-      v_pos: bottom
-      h_pos: center
-      x: -27
-      y: -21
-    - type: text
-      text: "%award%"
-      font: small
-      v_pos: bottom
-      h_pos: center
-      x: -27
-      y: -12
-    - type: character_picker
+  high_score: slide_18
+  high_score_award_display: slide_19
+slides:
+  slide_18:
+  - type: text
+    text: PLAYER (player_num)
+    style: medium
+    anchor_y: bottom
+    x: center-27
+    y: bottom+21
+  - type: text
+    text: (award)
+    style: small
+    anchor_y: bottom
+    x: center-27
+    y: bottom+12
+  - type: character_picker
       #width: 50
-      name: high_score
-      slide_name: high_score
-      clear_slide: true
-      persist: no
-      height: 9
-      font: medium
-      v_pos: bottom
-      selected_char_color: 0
-      selected_char_bg: 15
-      char_x_offset: 1
-      char_y_offset: 1
-      char_width: 7
-      char_list: "ABCDEFGHIJKLMNOPQRSTUVWXYZ_- "
-      back_char: back_arrow_7x7
-      end_char: end_11x7
-      back_char_selected: back_arrow_7x7_selected
-      end_char_selected: end_11x7_selected
-      image_padding: 1
-      shift_left_tag: left_flipper
-      shift_right_tag: right_flipper
-      select_tag: start
-      max_chars: 3
-      timeout: 30s
-      return_param: award
+    name: high_score
+    slide_name: high_score
+    clear_slide: true
+    persist: false
+    height: 9
+    style: medium
+    anchor_y: bottom
+    selected_char_color: 0
+    selected_char_bg: 15
+    char_x_offset: 1
+    char_y_offset: 1
+    char_width: 7
+    char_list: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_- '
+    back_char: back_arrow_7x7
+    end_char: end_11x7
+    back_char_selected: back_arrow_7x7_selected
+    end_char_selected: end_11x7_selected
+    image_padding: 1
+    shift_left_tag: left_flipper
+    shift_right_tag: right_flipper
+    select_tag: start
+    max_chars: 3
+    timeout: 30s
+    return_param: award
 
-    - type: entered_chars
-      character_picker: high_score
-      cursor_char: _
-      v_pos: bottom
-      h_pos: left
-      x: 90
-      y: -12
-      cursor_offset_x: 0
-      cursor_offset_y: 0
-      cursor_decorators:
-        type: blink
-
-  high_score_award_display:
-    - type: text
-      text: "%player_name%"
-      color: 0
-      bg_color: 15
-      v_pos: center
-      y: 2
-      decorators:
-        type: blink
-        on_secs: .05
-        off_secs: .05
-    - type: text
-      text: "%award%"
-      font: medium
-      v_pos: top
-      y: 2
+    y: bottom
+  - type: entered_chars
+    character_picker: high_score
+    cursor_char: _
+    anchor_y: bottom
+    anchor_x: left
+    x: left+90
+    y: bottom+12
+    cursor_offset_x: 0
+    cursor_offset_y: 0
+    cursor_animations:
+      entrance:
+      - property: opacity
+        value: 1
+        duration: 0.5s
+      - property: opacity
+        value: 0
+        duration: 0.5s
+        repeat: true
+  slide_19:
+  - type: text
+    text: (player_name)
+    color: 0
+    y: middle-2
+    animations:
+      entrance:
+      - property: opacity
+        value: 1
+        duration: 0.05s
+      - property: opacity
+        value: 0
+        duration: 0.05s
+        repeat: true
+  - type: text
+    text: (award)
+    style: medium
+    anchor_y: top
+    y: top-2

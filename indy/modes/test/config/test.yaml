@@ -1,14 +1,14 @@
-#config_version=3
+#config_version=4
 
-Mode:
-    start_events: player_turn_start
-    stop_events: game_ending
-    priority: 400
+mode:
+  start_events: player_turn_start
+  stop_events: game_ending
+  priority: 400
 
 
 shot_groups:
-    indy_lanes:
-        profile: test
-        enable_events: ball_started
-        disable_events: ball_ending
-        debug: yes
+  indy_lanes:
+    profile: test
+    enable_events: ball_started
+    disable_events: ball_ending
+    debug: true

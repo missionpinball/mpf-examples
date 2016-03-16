@@ -1,28 +1,30 @@
-#config_version=3
+#config_version=4
 window:
-    title: Indiana Jones
-    elements:
-      - type: virtualdmd
-        width: 512
-        height: 128
-        h_pos: center
-        v_pos: center
-        pixel_color: ff6600
-        dark_color: 220000
-        pixel_spacing: 1
-      - type: shape
-        shape: box
-        width: 520
-        height: 136
-        color: aaaaaa
-        thickness: 2
-      - type: text
-        font: tall title
-        text: INDIANA JONES
-        h_pos: center
-        v_pos: top
-        y: 60
-        size: 100
-        antialias: yes
-        layer: 1
-        color: ff6600
+  title: Indiana Jones
+displays:
+  window:
+    height: 600
+    width: 800
+slides:
+  window_slide_1:
+  - type: dmd
+    width: 512
+    height: 128
+    pixel_color: ff6600
+    dark_color: 220000
+  - type: rectangle
+    width: 520
+    height: 136
+    color: aaaaaa
+  - type: text
+    style: tall title
+    text: INDIANA JONES
+    anchor_y: top
+    y: top-60
+    font_size: 100
+    z: 1
+    color: ff6600
+slide_player:
+  machine_reset_phase_3:
+    window_slide_1:
+      target: window

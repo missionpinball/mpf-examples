@@ -1,37 +1,37 @@
-# config_version=3
-Game:
-    balls_per_game: 3
-    max_players: 4
+# config_version=4
+game:
+  balls_per_game: 3
+  max_players: 4 
 
-Modes:
-    - skillshot
-    - base
-    - both_ramps_made
+modes:
+- skillshot
+- base
+- both_ramps_made
 
-Shots:
-    RightRamp:
-        Switch: rightRampExit
-    LeftRamp:
-        switch_sequence: leftRampEnter, leftRampExit
-        Time: 3s
-    LeftOrbit:
-        switch_sequence: leftRollover, topRightOpto
-        Time: 3s
-    WeakRightOrbit:
-        switch_sequence: topRightOpto, topCenterRollover
-        Time: 3s
-    FullRightOrbit:
-        switch_sequence: topRightOpto, leftRollover
-        Time: 3s
-    AirRaidRamp:
-        Switch: topRampExit
-    OrangeStandups:
-        Switch: threeBankTargets
-    Slingshot:
-        Switch: slingR, slingL
-    Inlane:
-        Switch: inlaneL, inlaneR, outerInlaneR
-    Outlane:
-        Switch: outlaneR, outlaneL
-    DropTarget:
-        Switch: dropTargetJ, dropTargetU, dropTargetD, dropTargetG, dropTargetE
+shots:
+  rightramp:
+    switch: rightRampExit
+  leftramp:
+    switch_sequence: leftRampEnter, leftRampExit
+    time: 3s
+  leftorbit:
+    switch_sequence: leftRollover, topRightOpto
+    time: 3s
+  weakrightorbit:
+    switch_sequence: topRightOpto, topCenterRollover
+    time: 3s
+  fullrightorbit:
+    switch_sequence: topRightOpto, leftRollover
+    time: 3s
+  airraidramp:
+    switch: topRampExit
+  orangestandups:
+    switch: threeBankTargets
+  slingshot:
+    switch: slingR, slingL
+  inlane:
+    switch: inlaneL, inlaneR, outerInlaneR
+  outlane:
+    switch: outlaneR, outlaneL
+  droptarget:
+    switch: dropTargetJ, dropTargetU, dropTargetD, dropTargetG, dropTargetE

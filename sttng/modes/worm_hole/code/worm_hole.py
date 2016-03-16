@@ -1,4 +1,4 @@
-from mpf.system.modes import Mode
+from mpf.core.modes import Mode
 
 class WormHole(Mode):
     def mode_init(self):

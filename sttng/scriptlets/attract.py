@@ -1,7 +1,7 @@
 # Attract mode Scriptlet for STTNG
 
-from mpf.system.scriptlet import Scriptlet
-from mpf.system.light_controller import Playlist
+from mpf.core.scriptlet import Scriptlet
+from mpf.core.light_controller import Playlist
 
 
 class Attract(Scriptlet):

@@ -1,6 +1,5 @@
-# config_version=3
+# config_version=4
 keyboard:
-
   s:
     switch: start
   l:
@@ -49,13 +48,13 @@ keyboard:
     switch: adventure_v
   4:
     switch: adventure_e1
-    toggle: yes
+    toggle: true
   5:
     switch: adventure_n
-    toggle: yes
+    toggle: true
   6:
     switch: adventure_t
-    toggle: yes
+    toggle: true
   7:
     switch: adventure_u
   8:

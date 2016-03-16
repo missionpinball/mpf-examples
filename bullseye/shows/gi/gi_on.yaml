@@ -1,3 +1,4 @@
-- tocks: 1
+# show_version=4
+- time: 0
   leds:
-    tag|GI: ffffff
+    GI: ffffff

@@ -1,9 +1,9 @@
-#config_version=3
+#config_version=4
 show_player:
   mode_attract_started:
-    - show: attract_dmd_loop
-      repeat: yes
-      tocks_per_sec: 1
+    attract_dmd_loop:
+      loops: -1
+      speed: 1
   mode_attract_stopped:
-    - show: attract_dmd_loop
+    attract_dmd_loop:
       action: stop

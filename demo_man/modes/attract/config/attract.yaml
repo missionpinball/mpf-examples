@@ -1,84 +1,71 @@
-#config_version=3
+#config_version=4
 show_player:
   mode_attract_started:
-    - show: attract_dmd_loop
-      repeat: yes
-      tocks_per_sec: 1
+    multiball_sweep:
+      loops: -1
+      speed: 10
+    random_flashing:
+      loops: -1
+      speed: 6
+    freeze_sweep:
+      loops: -1
+      speed: 9
+    car_crash_sweep:
+      loops: -1
+      speed: 7
+    middle_circle_sweep:
+      loops: -1
+      speed: 12
+    right_orbit_sweep:
+      loops: -1
+      speed: 12
+    standup_sweep:
+      loops: -1
+      speed: 5
+    center_red_sweep:
+      loops: -1
+      speed: 4
+    center_ramp_sweep:
+      loops: -1
+      speed: 7
+    top_lanes_sweep:
+      loops: -1
+      speed: 4
+    claw_cycle:
+      loops: -1
+      speed: 9
+    inlane_alternate:
+      loops: -1
+      speed: 8
+    gi_on:
+      loops: 0
+      hold: true
   mode_attract_stopped:
-    - show: attract_dmd_loop
+    multiball_sweep:
       action: stop
-
-show_player:
-  mode_attract_started:
-    - show: multiball_sweep
-      repeat: yes
-      tocks_per_sec: 10
-    - show: random_flashing
-      repeat: yes
-      tocks_per_sec: 6
-    - show: freeze_sweep
-      repeat: yes
-      tocks_per_sec: 9
-    - show: car_crash_sweep
-      repeat: yes
-      tocks_per_sec: 7
-    - show: middle_circle_sweep
-      repeat: yes
-      tocks_per_sec: 12
-    - show: right_orbit_sweep
-      repeat: yes
-      tocks_per_sec: 12
-    - show: standup_sweep
-      repeat: yes
-      tocks_per_sec: 5
-    - show: center_red_sweep
-      repeat: yes
-      tocks_per_sec: 4
-    - show: center_ramp_sweep
-      repeat: yes
-      tocks_per_sec: 7
-    - show: top_lanes_sweep
-      repeat: yes
-      tocks_per_sec: 4
-    - show: claw_cycle
-      repeat: yes
-      tocks_per_sec: 9
-    - show: inlane_alternate
-      repeat: yes
-      tocks_per_sec: 8
-    - show: gi_on
-      repeat: no
-      hold: yes
-    #- show: flashers
-    #  repeat: yes
-    #  tocks_per_sec: 4
-
-  mode_attract_stopped:
-    - show: multiball_sweep
+    random_flashing:
       action: stop
-    - show: random_flashing
+    freeze_sweep:
       action: stop
-    - show: freeze_sweep
+    car_crash_sweep:
       action: stop
-    - show: car_crash_sweep
+    middle_circle_sweep:
       action: stop
-    - show: middle_circle_sweep
+    right_orbit_sweep:
       action: stop
-    - show: right_orbit_sweep
+    standup_sweep:
       action: stop
-    - show: standup_sweep
+    center_red_sweep:
       action: stop
-    - show: center_red_sweep
+    center_ramp_sweep:
       action: stop
-    - show: center_ramp_sweep
+    top_lanes_sweep:
       action: stop
-    - show: top_lanes_sweep
-      action: stop
-    - show: claw_cycle
+    claw_cycle:
       action: stop
       hold: false
-    - show: inlane_alternate
+    inlane_alternate:
       action: stop
       hold: false
-    - show: flashers
+    flashers:
       action: stop

@@ -1,6 +1,6 @@
 # Coil tests for Big Shot
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class CoilTests(Scriptlet):
@@ -41,13 +41,13 @@ class CoilTests(Scriptlet):
         self.machine.coils[coil_name].enable()
 
     def hold_coil_kill(self):
-        print "+-----------------------------------------------+"
-        print "coil: ", self.holding_coil
-        print "pulse time (ms):", (time.time() - self.machine.coils[
-                                   self.holding_coil].time_last_changed) * 1000
-        print "+-----------------------------------------------+"
+        print("+-----------------------------------------------+")
+        print("coil: ", self.holding_coil)
+        print("pulse time (ms):", (time.time() - self.machine.coils[
+                                   self.holding_coil].time_last_changed) * 1000)
+        print("+-----------------------------------------------+")
         self.machine.coils[self.holding_coil].disable()
 
     def test(self, param=None):
-        print "test"
-        print "param", param
+        print("test")
+        print("param", param)

@@ -1,18 +1,20 @@
-- tocks: 1
+# show_version=4
+- time: 0
   lights:
     l_left_rollover: ff
-- tocks: 1
+- time: '+1'
   lights:
     l_middle_rollover: ff
-- tocks: 1
+- time: '+1'
   lights:
     l_right_rollover: ff
-- tocks: 1
+- time: '+1'
   lights:
     l_left_rollover: 0
-- tocks: 1
+- time: '+1'
   lights:
     l_middle_rollover: 0
-- tocks: 1
+- time: '+1'
   lights:
     l_right_rollover: 0
+- time: '+1'

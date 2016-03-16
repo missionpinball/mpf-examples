@@ -6,7 +6,7 @@
 
 # Documentation and more info at http://missionpinball.com/mpf
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class Attract(Scriptlet):

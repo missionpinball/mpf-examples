@@ -1,7 +1,7 @@
 # Bonus mode Scriptlet for Big Shot
 
-from mpf.system.scriptlet import Scriptlet
-from mpf.system.tasks import DelayManager
+from mpf.core.scriptlet import Scriptlet
+from mpf.core.tasks import DelayManager
 
 
 class Bonus(Scriptlet):

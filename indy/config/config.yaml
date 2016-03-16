@@ -1,9 +1,9 @@
-# config_version=3
+# config_version=4
 
 config:
-  - hardware.yaml
-  - window.yaml
-  - keyboard.yaml
+- hardware.yaml
+- window.yaml
+- keyboard.yaml
 
 modes:
   # - test
@@ -11,6 +11,7 @@ modes:
   - skillshot
   - game_mode_selector
   - castle_grunewald
+  
   # - choose_wisely
   # - three_challenges
   # - tank_chase
@@ -24,62 +25,85 @@ sound_system:
       volume: 1
       priority: 2
       simultaneous_sounds: 1
-      preload: no
+      preload: false
     sfx:
       volume: 1
       priority: 1
-      preload: no
+      preload: false
       simultaneous_sounds: 3
-  stream:
-    name: music
-    priority: 0
-
-  buffer: 512
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+  buffer: 2048  # previous value was 512
   frequency: 44100
   channels: 1
-  initial_volume: 1
-  volume_steps: 20
-
+  master_volume: 1
+  enabled: true
 sound_player:
   player added:
     sound: whip_1
     start_events: player_add_success
 
 event_player:
-   pop_deflector:
-       coil_c_ark_deflector_pulse
-       coil_c_ark_deflector_hold_enable
-       coil_c_deflector_motor_enable
-   drop_deflector:
-       coil_c_deflector_motor_disable
-       coil_c_ark_deflector_hold_disable
-   pop_portal:
-       coil_c_vuk_portal_pulse
+  pop_deflector: coil_c_ark_deflector_pulse coil_c_ark_deflector_hold_enable coil_c_deflector_motor_enable
+  drop_deflector: coil_c_deflector_motor_disable coil_c_ark_deflector_hold_disable
+  pop_portal: coil_c_vuk_portal_pulse
 
 credits:
   max_credits: 12
-  free_play: no
+  free_play: false
   service_credits_switch: exit
   switches:
-    - switch: coin1
-      type: money
-      value: .25
-    - switch: coin2
-      type: money
-      value: .25
-    - switch: coin3
-      type: token
-      value: 1
-    - switch: coin4
-      value: 1
-      type: money
+  - switch: coin1
+    type: money
+    value: 0.25
+  - switch: coin2
+    type: money
+    value: 0.25
+  - switch: coin3
+    type: token
+    value: 1
+  - switch: coin4
+    value: 1
+    type: money
   pricing_tiers:
-    - price: .50
-      credits: 1
-    - price: 2
-      credits: 5
+  - price: 0.5
+    credits: 1
+  - price: 2
+    credits: 5
   fractional_credit_expiration_time: 15m
   credit_expiration_time: 2h
   persist_credits_while_off_time: 1h
   free_play_string: FREE PLAY
   credits_string: CREDITS
+text_styles:
+  default:
+    font_name: Quadrit
+    font_size: 10
+    crop_top: 2
+    crop_bottom: 3
+  space title huge:
+    font_name: DEADJIM
+    font_size: 29
+    antialias: true
+    crop_top: 3
+    crop_bottom: 3
+  space title:
+    font_name: DEADJIM
+    font_size: 21
+    antialias: true
+    crop_top: 2
+    crop_bottom: 3
+  medium:
+    font_name: pixelmix
+    font_size: 8
+    crop_top: 1
+    crop_bottom: 1
+  small:
+    font_name: smallest_pixel-7
+    font_size: 9
+    crop_top: 2
+    crop_bottom: 3
+  tall title:
+    font_name: big_noodle_titling
+    font_size: 20

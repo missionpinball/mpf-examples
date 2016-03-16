@@ -1,665 +1,661 @@
-# config_version=3
+# config_version=4
 
 # Machine hardware config file for Judge Dredd
 
-Machine:
-    balls_installed: 6
-    min_balls: 1
+machine:
+  balls_installed: 6
+  min_balls: 1 
 
-Hardware:
-    DriverBoards: wpc
+hardware:
+  driverboards: wpc
 
-Switches:
-    flipperLwR_EOS:
-        number: SF1
-    flipperLwR:
-        number: SF6
-        tags: right_flipper
-    flipperLwL_EOS:
-        number: SF3
-    flipperLwL: 
-        number: SF4
-        tags: left_flipper
-    flipperUpR_EOS: 
-        number: SF5
-    flipperUpR: 
-        number: SF2
-    flipperUpL_EOS: 
-        number: SF7
-    flipperUpL: 
-        number: SF8
-    coin1:
-        number: SD1
-    coin2:
-        number: SD2
-    coin3:
-        number: SD3
-    coin4:
-        number: SD4
-    esc: 
-        number: SD5
-    down: 
-        number: SD6
-    up: 
-        number: SD7
-    enter: 
-        number: SD8
-    fireL:
-        number: S11
-        tags: left_eject
-    fireR:
-        number: S12
-        tags: right_eject
-    start:
-        number: S13
-        tags: start
-    plumbBob:
-        number: S14
-        tags: tilt
-    ShooterLaneL:
-        number: S15
-    outlaneL:
-        number: S16
-        tags: playfield_active
-    inlaneL:
-        number: S17
-        tags: playfield_active
-    threeBankTargets:
-        number: S18
-        tags: playfield_active
-    slamTilt:
-        number: S21
-        tags: slamTilt
-    coinDoor:
-        number: S22
-    ticketDispenser:
-        number: S23
-    alwaysClosed:
-        number: S24
-    rightTopPost:
-        number: S25
-        tags: playfield_active
-    captiveBall1:
-        number: S26
-        tags: playfield_active
-    mystery:
-        number: S27
-        tags: playfield_active
+switches:
+  flipperlwr_eos:
+    number: SF1
+  flipperlwr:
+    number: SF6
+    tags: right_flipper
+  flipperlwl_eos:
+    number: SF3
+  flipperlwl:
+    number: SF4
+    tags: left_flipper
+  flipperupr_eos:
+    number: SF5
+  flipperupr:
+    number: SF2
+  flipperupl_eos:
+    number: SF7
+  flipperupl:
+    number: SF8
+  coin1:
+    number: SD1
+  coin2:
+    number: SD2
+  coin3:
+    number: SD3
+  coin4:
+    number: SD4
+  esc:
+    number: SD5
+  down:
+    number: SD6
+  up:
+    number: SD7
+  enter:
+    number: SD8
+  firel:
+    number: S11
+    tags: left_eject
+  firer:
+    number: S12
+    tags: right_eject
+  start:
+    number: S13
+    tags: start
+  plumbbob:
+    number: S14
+    tags: tilt
+  shooterlanel:
+    number: S15
+  outlanel:
+    number: S16
+    tags: playfield_active
+  inlanel:
+    number: S17
+    tags: playfield_active
+  threebanktargets:
+    number: S18
+    tags: playfield_active
+  slamtilt:
+    number: S21
+    tags: slamTilt
+  coindoor:
+    number: S22
+  ticketdispenser:
+    number: S23
+  alwaysclosed:
+    number: S24
+  righttoppost:
+    number: S25
+    tags: playfield_active
+  captiveball1:
+    number: S26
+    tags: playfield_active
+  mystery:
+    number: S27
+    tags: playfield_active
 #    ballOnMagnet:
 #        number: S28
-    buyIn:
-        number: S31
+  buyin:
+    number: S31
  #   leftRampEnter:
  #       number: S32
  #       type: 'NC'
-    leftRollover:
-        number: S33
-        tags: playfield_active
-    inlaneR:
-        number: S34
-        tags: playfield_active
-    topCenterRollover:
-        number: S35
-        tags: playfield_active
-    leftScorePost:
-        number: S36
-        tags: playfield_active
-    subwayEnter1:
-        number: S37
-        tags: playfield_active
-    subwayEnter2:
-        number: S38
-    shooterR:
-        number: S41
-    outlaneR:
-        number: S42
-        tags: playfield_active
-    outerInlaneR:
-        number: S43
-        tags: playfield_active
-    superGame:
-        number: S44
-    slingL: 
-        number: S51
-        tags: playfield_active, sling
-    slingR: 
-        number: S52
-        tags: playfield_active, sling
-    captiveBall2:
-        number: S53
-        tags: playfield_active
-    dropTargetJ:
-        number: S54
-        type: 'NC'
-        tags: playfield_active
-    dropTargetU:
-        number: S55
-        type: 'NC'
-        tags: playfield_active
-    dropTargetD:
-        number: S56
-        type: 'NC'
-        tags: playfield_active
-    dropTargetG:
-        number: S57
-        type: 'NC'
-        tags: playfield_active
-    dropTargetE:
-        number: S58
-        type: 'NC'
-        tags: playfield_active
-    globePosition1: 
-        number: S61
-        type: 'NO' # Manual says NC
-    craneRelease: 
-        number: S62
-        type: 'NC'
-    leftRampToLock:
-        number: S63
-        type: 'NC'
-        tags: playfield_active
-    leftRampExit:
-        number: S64
-        type: 'NC'
-        tags: playfield_active
-    centerRampExit:
-        number: S66
-        type: 'NC'
-        tags: playfield_active
-    leftRampEnter:
-        number: S67
-        type: 'NC'
-        tags: playfield_active
-    captiveBall3:
-        number: S68
-        tags: playfield_active
-    magnetOverRing:
-        number: S71
-        type: 'NO' # Manual says NC
-    topRightOpto:
-        number: S72
-        type: 'NC'
-        tags: playfield_active
-    popperL:
-        number: S73
-        type: 'NC'
-        tags: playfield_active
-    popperR:
-        number: S74
-        type: 'NC'
-        tags: playfield_active
-    topRampExit:
-        number: S75
-        type: 'NC'
-        tags: playfield_active
-    rightRampExit:
-        number: S76
-        type: 'NC'
-        tags: playfield_active
-    globePosition2:
-        number: S77
-        type: 'NO' # Manual says NC
-    trough1:
-        number: S81
-        type: 'NC'
-    trough2:
-        number: S82
-        type: 'NC'
-    trough3:
-        number: S83
-        type: 'NC'
-    trough4:
-        number: S84
-        type: 'NC'
-    trough5:
-        number: S85
-        type: 'NC'
-    trough6:
-        number: S86
-        type: 'NC'
-    troughJam:
-        number: S87
-        type: 'NC'
-
-Coils:
-
-    flipperLwRMain: 
-        number: FLRM
-        pulse_ms: 30
-    flipperLwRHold: 
-        number: FLRH
-    flipperLwLMain: 
-        number: FLLM
-        pulse_ms: 30
-    flipperLwLHold: 
-        number: FLLH
-    flipperUpRMain: 
-        number: FURM
-        pulse_ms: 30
-    flipperUpRHold: 
-        number: FURH
-    flipperUpLMain: 
-        number: FULM
-        pulse_ms: 30
-    flipperUpLHold: 
-        number: FULH
-    craneMagnet:
-        number: C01
-    popperL:
-        number: C02
-        pulse_ms: 25
-    popperR:
-        number: C03
-        pulse_ms: 20
-    crane:
-        number: C04
-    resetDropTarget:
-        number: C05
-        tags: ball_search
-        pulse_ms: 25
-    globeMotor:
-        number: C06
-        allow_enable: True
-    knocker:
-        number: C07
-    shooterR:
-        number: C08
-        pulse_ms: 20
-    shooterL:
-        number: C09
-        pulse_ms: 20
-    tripDropTarget:
-        number: C10
-        tags: ball_search
-    diverter:
-        number: C11
-        tags: ball_search
-        hold_power: 3
-    trough:
-        number: C13
-        pulse_ms: 20
-    slingL: 
-        number: C15
-        tags: ball_search
-        pulse_ms: 20
-    slingR: 
-        number: C16
-        tags: ball_search
-        pulse_ms: 20
-    flasherFire:
-        number: C17
-    flasherFear:
-        number: C18
-    flasherDeath:
-        number: C19
-    flasherMortis:
-        number: C20
-    flasherPursuitL:
-        number: C21
-    flasherPursuitR:
-        number: C22
-    flasherBlackout:
-        number: C23
-    flasherCursedEarth:
-        number: C24
-    flashersLowerLeft:
-        number: C25
-    flasherGlobe:
-        number: C26
-    flashersRtRamp:
-        number: C27
-    flashersInsert:
-        number: C28
+  leftrollover:
+    number: S33
+    tags: playfield_active
+  inlaner:
+    number: S34
+    tags: playfield_active
+  topcenterrollover:
+    number: S35
+    tags: playfield_active
+  leftscorepost:
+    number: S36
+    tags: playfield_active
+  subwayenter1:
+    number: S37
+    tags: playfield_active
+  subwayenter2:
+    number: S38
+  shooterr:
+    number: S41
+  outlaner:
+    number: S42
+    tags: playfield_active
+  outerinlaner:
+    number: S43
+    tags: playfield_active
+  supergame:
+    number: S44
+  slingl:
+    number: S51
+    tags: playfield_active, sling
+  slingr:
+    number: S52
+    tags: playfield_active, sling
+  captiveball2:
+    number: S53
+    tags: playfield_active
+  droptargetj:
+    number: S54
+    type: NC
+    tags: playfield_active
+  droptargetu:
+    number: S55
+    type: NC
+    tags: playfield_active
+  droptargetd:
+    number: S56
+    type: NC
+    tags: playfield_active
+  droptargetg:
+    number: S57
+    type: NC
+    tags: playfield_active
+  droptargete:
+    number: S58
+    type: NC
+    tags: playfield_active
+  globeposition1:
+    number: S61
+    type: NO       # Manual says NC
+  cranerelease:
+    number: S62
+    type: NC
+  leftramptolock:
+    number: S63
+    type: NC
+    tags: playfield_active
+  leftrampexit:
+    number: S64
+    type: NC
+    tags: playfield_active
+  centerrampexit:
+    number: S66
+    type: NC
+    tags: playfield_active
+  leftrampenter:
+    number: S67
+    type: NC
+    tags: playfield_active
+  captiveball3:
+    number: S68
+    tags: playfield_active
+  magnetoverring:
+    number: S71
+    type: NO       # Manual says NC
+  toprightopto:
+    number: S72
+    type: NC
+    tags: playfield_active
+  popperl:
+    number: S73
+    type: NC
+    tags: playfield_active
+  popperr:
+    number: S74
+    type: NC
+    tags: playfield_active
+  toprampexit:
+    number: S75
+    type: NC
+    tags: playfield_active
+  rightrampexit:
+    number: S76
+    type: NC
+    tags: playfield_active
+  globeposition2:
+    number: S77
+    type: NO       # Manual says NC
+  trough1:
+    number: S81
+    type: NC
+  trough2:
+    number: S82
+    type: NC
+  trough3:
+    number: S83
+    type: NC
+  trough4:
+    number: S84
+    type: NC
+  trough5:
+    number: S85
+    type: NC
+  trough6:
+    number: S86
+    type: NC
+  troughjam:
+    number: S87
+    type: NC
+coils:
+  flipperlwrmain:
+    number: FLRM
+    pulse_ms: 30
+  flipperlwrhold:
+    number: FLRH
+  flipperlwlmain:
+    number: FLLM
+    pulse_ms: 30
+  flipperlwlhold:
+    number: FLLH
+  flipperuprmain:
+    number: FURM
+    pulse_ms: 30
+  flipperuprhold:
+    number: FURH
+  flipperuplmain:
+    number: FULM
+    pulse_ms: 30
+  flipperuplhold:
+    number: FULH
+  cranemagnet:
+    number: C01
+  popperl:
+    number: C02
+    pulse_ms: 25
+  popperr:
+    number: C03
+    pulse_ms: 20
+  crane:
+    number: C04
+  resetdroptarget:
+    number: C05
+    tags: ball_search
+    pulse_ms: 25
+  globemotor:
+    number: C06
+    allow_enable: true
+  knocker:
+    number: C07
+  shooterr:
+    number: C08
+    pulse_ms: 20
+  shooterl:
+    number: C09
+    pulse_ms: 20
+  tripdroptarget:
+    number: C10
+    tags: ball_search
+  diverter:
+    number: C11
+    tags: ball_search
+    hold_power: 3
+  trough:
+    number: C13
+    pulse_ms: 20
+  slingl:
+    number: C15
+    tags: ball_search
+    pulse_ms: 20
+  slingr:
+    number: C16
+    tags: ball_search
+    pulse_ms: 20
+  flasherfire:
+    number: C17
+  flasherfear:
+    number: C18
+  flasherdeath:
+    number: C19
+  flashermortis:
+    number: C20
+  flasherpursuitl:
+    number: C21
+  flasherpursuitr:
+    number: C22
+  flasherblackout:
+    number: C23
+  flashercursedearth:
+    number: C24
+  flasherslowerleft:
+    number: C25
+  flasherglobe:
+    number: C26
+  flashersrtramp:
+    number: C27
+  flashersinsert:
+    number: C28 
 
 matrix_lights:
+  perp1white:
+    number: L11
+  perp1red:
+    number: L12
+    x: 38
+    y: 208
+  perp1yellow:
+    number: L13
+  perp1green:
+    number: L14
+  perp2white:
+    number: L15
+  perp2red:
+    number: L16
+    x: 95
+    y: 104
+  perp2yellow:
+    number: L17
+  perp2green:
+    number: L18
+  perp4white:
+    number: L21
+    x: 155
+    y: 135
+  perp4red:
+    number: L22
+    x: 155
+    y: 135
+  perp4yellow:
+    number: L23
+  perp4green:
+    number: L24
+  perp5white:
+    number: L25
+  perp5red:
+    number: L26
+    x: 140
+    y: 245
+  perp5yellow:
+    number: L27
+  perp5green:
+    number: L28
+  perp3white:
+    number: L31
+  perp3red:
+    number: L32
+  perp3yellow:
+    number: L33
+  perp3green:
+    number: L34
+  lock1:
+    number: L35
+    x: 55
+    y: 215
+  lock2:
+    number: L36
+    x: 52
+    y: 205
+  lock3:
+    number: L37
+    x: 48
+    y: 192
+  buyin:
+    number: L38
+  crimelevel4:
+    number: L41
+    x: 121
+    y: 340
+  crimelevel3:
+    number: L42
+    x: 108
+    y: 340
+  crimelevel2:
+    number: L43
+    x: 93
+    y: 340
+  crimelevel1:
+    number: L44
+    x: 80
+    y: 340
+  meltdown:
+    number: L45
+    x: 117
+    y: 318
+  impersonator:
+    number: L46
+    x: 100
+    y: 320
+  battletank:
+    number: L47
+    x: 81
+    y: 318
+  stopmeltdown:
+    number: L48
+    x: 156
+    y: 255
+  stakeout:
+    number: L51
+    x: 152
+    y: 305
+  safecracker:
+    number: L52
+    x: 124
+    y: 305
+  pursuit:
+    number: L53
+    x: 48
+    y: 304
+  ultimatechallenge:
+    number: L54
+    x: 100
+    y: 298
+  manhunt:
+    number: L55
+    x: 135
+    y: 312
+  blackout:
+    number: L56
+    x: 65
+    y: 312
+  sniper:
+    number: L57
+    x: 75
+    y: 305
+  pickaprize:
+    number: L58
+  extraball:   # This is for both
+    number: L61
+  rightstartfeature:
+    number: L62
+    x: 135
+    y: 118
+  tankcenter:
+    number: L63
+  awardsniper:
+    number: L64
+  airraid:
+    number: L65
+  leftcenterfeature:
+    number: L66
+    x: 62
+    y: 230
+  tankleft:
+    number: L67
+    x: 40
+    y: 235
+  mystery:
+    number: L68
+    x: 33
+    y: 262
+  droptargetj:
+    number: L71
+    x: 72
+    y: 176
+  droptargetu:
+    number: L72
+    x: 82
+    y: 170
+  droptargetd:
+    number: L73
+    x: 92
+    y: 164
+  droptargetg:
+    number: L74
+    x: 102
+    y: 156
+  droptargete:
+    number: L75
+    x: 112
+    y: 150
+  awardsafecracker:
+    number: L76
+    x: 115
+    y: 170
+  multiballjackpot:
+    number: L77
+    x: 100
+    y: 180
+  awardbadimpersonator:
+    number: L78
+    x: 88
+    y: 190
+  awardstakeout:
+    number: L81
+  blackoutjackpot:
+    number: L82
+  drainshield:
+    number: L83
+    x: 100
+    y: 380
+  judgeagain:
+    number: L84
+    x: 100
+    y: 400
+  advancecrimelevel:
+    number: L85
+    x: 125
+    y: 200
+  tankright:
+    number: L86
+    x: 107
+    y: 201
+  supergame:
+    number: L87
+  startbutton:
+    number: L88 
 
-    perp1White:
-        number: L11
-    perp1Red:
-        number: L12
-        x: 38
-        y: 208
-    perp1Yellow:
-        number: L13
-    perp1Green:
-        number: L14
-    perp2White:
-        number: L15
-    perp2Red:
-        number: L16
-        x: 95
-        y: 104
-    perp2Yellow:
-        number: L17
-    perp2Green:
-        number: L18
-    perp4White:
-        number: L21
-        x: 155
-        y: 135
-    perp4Red:
-        number: L22
-        x: 155
-        y: 135
-    perp4Yellow:
-        number: L23
-    perp4Green:
-        number: L24
-    perp5White:
-        number: L25
-    perp5Red:
-        number: L26
-        x: 140
-        y: 245
-    perp5Yellow:
-        number: L27
-    perp5Green:
-        number: L28
-    perp3White:
-        number: L31
-    perp3Red:
-        number: L32
-    perp3Yellow:
-        number: L33
-    perp3Green:
-        number: L34
-    lock1:
-        number: L35
-        x: 55
-        y: 215
-    lock2:
-        number: L36
-        x: 52
-        y: 205
-    lock3:
-        number: L37
-        x: 48
-        y: 192
-    buyIn:
-        number: L38
-    crimeLevel4:
-        number: L41
-        x: 121
-        y: 340
-    crimeLevel3:
-        number: L42
-        x: 108
-        y: 340
-    crimeLevel2:
-        number: L43
-        x: 93
-        y: 340
-    crimeLevel1:
-        number: L44
-        x: 80
-        y: 340
-    meltdown:
-        number: L45
-        x: 117
-        y: 318
-    impersonator:
-        number: L46
-        x: 100
-        y: 320
-    battleTank:
-        number: L47
-        x: 81
-        y: 318
-    stopMeltdown:
-        number: L48
-        x: 156
-        y: 255
-    stakeout:
-        number: L51
-        x: 152
-        y: 305
-    safecracker:
-        number: L52
-        x: 124
-        y: 305
-    pursuit:
-        number: L53
-        x: 48
-        y: 304
-    ultimateChallenge:
-        number: L54
-        x: 100
-        y: 298
-    manhunt:
-        number: L55
-        x: 135
-        y: 312
-    blackout:
-        number: L56
-        x: 65
-        y: 312
-    sniper:
-        number: L57
-        x: 75
-        y: 305
-    pickAPrize:
-        number: L58
-    ExtraBall: # This is for both
-        number: L61
-    rightStartFeature:
-        number: L62
-        x: 135
-        y: 118
-    tankCenter:
-        number: L63
-    awardSniper:
-        number: L64
-    airRaid:
-        number: L65
-    leftCenterFeature:
-        number: L66
-        x: 62
-        y: 230
-    tankLeft:
-        number: L67
-        x: 40
-        y: 235
-    mystery:
-        number: L68
-        x: 33
-        y: 262
-    dropTargetJ:
-        number: L71
-        x: 72
-        y: 176
-    dropTargetU:
-        number: L72
-        x: 82
-        y: 170
-    dropTargetD:
-        number: L73
-        x: 92
-        y: 164
-    dropTargetG:
-        number: L74
-        x: 102
-        y: 156
-    dropTargetE:
-        number: L75
-        x: 112
-        y: 150
-    awardSafecracker:
-        number: L76
-        x: 115
-        y: 170
-    multiballJackpot:
-        number: L77
-        x: 100
-        y: 180
-    awardBadImpersonator:
-        number: L78
-        x: 88
-        y: 190
-    awardStakeout:
-        number: L81
-    blackoutJackpot:
-        number: L82
-    drainShield:
-        number: L83
-        x: 100
-        y: 380
-    judgeAgain:
-        number: L84
-        x: 100
-        y: 400
-    advanceCrimeLevel:
-        number: L85
-        x: 125
-        y: 200
-    tankRight:
-        number: L86
-        x: 107
-        y: 201
-    superGame:
-        number: L87
-    startButton:
-        number: L88
+gis:
+  gi01:    # lower backglass
+    number: G01
+    tags: gi
+    dimmable: false
+  gi02:    # mid backglass and rear playfield
+    number: G02
+    tags: gi
+    dimmable: false
+  gi03:    # upper left backglass and slings, variable
+    number: G03
+    tags: gi
+    dimmable: false
+  gi04:    # upper right backglass and deadworld globe, variable
+    number: G04
+    tags: gi
+    dimmable: false
+  gi05:    # coin slot lights & side cabinet fire buttons
+    number: G05
+    tags: gi
+    dimmable: false
+  enable_relay:    # enables certain GI strings
+    number: G08 
 
-GIs:
-    gi01:  # lower backglass
-        number: G01
-        tags: gi
-        dimmable: False
-    gi02:  # mid backglass and rear playfield
-        number: G02
-        tags: gi
-        dimmable: False
-    gi03:  # upper left backglass and slings, variable
-        number: G03
-        tags: gi
-        dimmable: False
-    gi04:  # upper right backglass and deadworld globe, variable
-        number: G04
-        tags: gi
-        dimmable: False
-    gi05:  # coin slot lights & side cabinet fire buttons
-        number: G05
-        tags: gi
-        dimmable: False
-    enable_relay:  # enables certain GI strings
-        number: G08
-
-Flippers:
-    LowerLeft:
-        main_coil: flipperLwLMain
-        hold_coil: flipperLwLHold
-        activation_switch: flipperLwL
-        eos_switch: flipperLwL_EOS
+flippers:
+  lowerleft:
+    main_coil: flipperLwLMain
+    hold_coil: flipperLwLHold
+    activation_switch: flipperLwL
+    eos_switch: flipperLwL_EOS
         #use_eos: True
         #hold_pwm:
         #tags:
-        label: Left Main Flipper
-    LowerRight:
-        main_coil: flipperLwRMain
-        hold_coil: flipperLwRHold
-        activation_switch: flipperLwR
-        eos_switch: flipperLwR_EOS
-        label: Right Main Flipper
-    UpperLeft:
-        main_coil: flipperUpLMain
-        hold_coil: flipperUpLHold
-        activation_switch: flipperUpL
-        eos_switch: flipperUpL_EOS
-        label: Upper Left Flipper
-    UpperRight:
-        main_coil: flipperUpRMain
-        hold_coil: flipperUpRHold
-        activation_switch: flipperUpR
-        eos_switch: flipperUpR_EOS
-        label: Upper Right Flipper
-        
+    label: Left Main Flipper
+  lowerright:
+    main_coil: flipperLwRMain
+    hold_coil: flipperLwRHold
+    activation_switch: flipperLwR
+    eos_switch: flipperLwR_EOS
+    label: Right Main Flipper
+  upperleft:
+    main_coil: flipperUpLMain
+    hold_coil: flipperUpLHold
+    activation_switch: flipperUpL
+    eos_switch: flipperUpL_EOS
+    label: Upper Left Flipper
+  upperright:
+    main_coil: flipperUpRMain
+    hold_coil: flipperUpRHold
+    activation_switch: flipperUpR
+    eos_switch: flipperUpR_EOS
+    label: Upper Right Flipper
+
 autofire_coils:
-    SlingL:
-        coil: slingL
-        switch: slingL
-    SlingR:
-        coil: slingR
-        switch: slingR
-        
+  slingl:
+    coil: slingL
+    switch: slingL
+  slingr:
+    coil: slingR
+    switch: slingR
+
 drop_targets:
-    J:
-        switch: dropTargetJ
-        reset_coil: resetDropTarget
-    U:
-        switch: dropTargetU
-        reset_coil: resetDropTarget
-    D:
-        switch: dropTargetD
-        reset_coil: resetDropTarget
-        knockdown_coil: tripDropTarget
-    G:
-        switch: dropTargetG
-        reset_coil: resetDropTarget
-    E:
-        switch: dropTargetE
-        reset_coil: resetDropTarget
+  j:
+    switch: dropTargetJ
+    reset_coil: resetDropTarget
+  u:
+    switch: dropTargetU
+    reset_coil: resetDropTarget
+  d:
+    switch: dropTargetD
+    reset_coil: resetDropTarget
+    knockdown_coil: tripDropTarget
+  g:
+    switch: dropTargetG
+    reset_coil: resetDropTarget
+  e:
+    switch: dropTargetE
+    reset_coil: resetDropTarget
 
 drop_target_banks:
-    Judge:
-        drop_targets: J, U, D, G, E
-        reset_coil: resetDropTarget
+  judge:
+    drop_targets: J, U, D, G, E
+    reset_coil: resetDropTarget
 
-Diverters:
-    deadWorld:
-        activation_coil: diverter
-        type: hold
-        activation_time: 3s
-        activation_switches: leftRampEnter
-        enable_events: shot_LeftRamp
-        disable_events: ball_ending
-        deactivation_switches: leftRampToLock
-        targets_when_active: deadworld
+diverters:
+  deadworld:
+    activation_coil: diverter
+    type: hold
+    activation_time: 3s
+    activation_switches: leftRampEnter
+    enable_events: shot_LeftRamp
+    disable_events: ball_ending
+    deactivation_switches: leftRampToLock
+    targets_when_active: deadworld
 
 ball_devices:
+  trough:
+    tags: trough, home, drain
+    label: Main Trough
+    ball_switches: trough1, trough2, trough3, trough4, trough5, trough6, troughJam
+    entrance_count_delay: 0.5s
+    eject_coil: trough
+    confirm_eject_type: target
+    eject_targets: shooterLaneR
+    jam_switch: troughJam
 
-    trough:
-        tags: trough, home, drain
-        label: Main Trough
-        ball_switches: trough1, trough2, trough3, trough4, trough5, trough6, troughJam
-        entrance_count_delay: 0.5s
-        eject_coil: trough
-        confirm_eject_type: target
-        eject_targets: shooterLaneR
-        jam_switch: troughJam
+  shooterlaner:
+    tags: ball_add_live
+    label: Right Plunger Lane
+    ball_switches: shooterR
+    entrance_count_delay: 0.3s
+    eject_coil: shooterR
+    confirm_eject_type: playfield
 
-    shooterLaneR:
-        tags: ball_add_live
-        label: Right Plunger Lane
-        ball_switches: shooterR
-        entrance_count_delay: 0.3s
-        eject_coil: shooterR
-        confirm_eject_type: playfield
+  shooterlanel:
+    label: Left Plunger Lane
+    ball_switches: ShooterLaneL
+    entrance_count_delay: 0.3s
+    eject_coil: shooterL
+    confirm_eject_type: count
+    exit_count_delay: 0.5s
 
-    shooterLaneL:
-        label: Left Plunger Lane
-        ball_switches: ShooterLaneL
-        entrance_count_delay: 0.3s
-        eject_coil: shooterL
-        confirm_eject_type: count
-        exit_count_delay: 0.5s
+  snipervuk:
+    label: Sniper Tower VUK
+    ball_switches: popperR
+    entrance_count_delay: 0.3s
+    eject_coil: popperR
+    confirm_eject_type: count
+    exit_count_delay: 0.5s
 
-    SniperVUK:
-        label: Sniper Tower VUK
-        ball_switches: popperR
-        entrance_count_delay: 0.3s
-        eject_coil: popperR
-        confirm_eject_type: count
-        exit_count_delay: 0.5s
+  hallofjusticevuk:
+    label: Hall of Justice VUK
+    ball_switches: popperL
+    entrance_count_delay: 0.3s
+    eject_coil: popperL
+    confirm_eject_type: count
+    exit_count_delay: 0.5s
 
-    HallOfJusticeVUK:
-        label: Hall of Justice VUK
-        ball_switches: popperL
-        entrance_count_delay: 0.3s
-        eject_coil: popperL
-        confirm_eject_type: count
-        exit_count_delay: 0.5s
-
-    deadworld:
-        label: Deadwold Globe
-        entrance_switch: leftRampToLock
-        ball_capacity: 3
+  deadworld:
+    label: Deadwold Globe
+    entrance_switch: leftRampToLock
+    ball_capacity: 3

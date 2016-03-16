@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 
 tilt:
   tilt_warning_switch_tag: tilt_warning
@@ -11,20 +11,24 @@ tilt:
   tilt_warnings_player_var: tilt_warnings
 
 slide_player:
-  tilt_warning_1:
-    type: text
+  tilt_warning_1: slide_21
+  tilt_warning_2: slide_22
+  tilt: slide_23
+  tilt_clear: slide_24
+slides:
+  slide_21:
+  - type: text
     text: WARNING
-    expire: 1s
-  tilt_warning_2:
-    - type: text
-      text: WARNING
-      y: 2
-    - type: text
-      text: WARNING
-      y: 18
-      expire: 1s
-  tilt:
-    type: text
+  slide_22:
+  - type: text
+    text: WARNING
+    y: top-2
+    anchor_y: top
+  - type: text
+    text: WARNING
+    y: top-18
+    anchor_y: top
+  slide_23:
+  - type: text
     text: TILT
-  tilt_clear:
-    clear_slides: yes
+  slide_24: []

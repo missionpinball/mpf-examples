@@ -1,12 +1,14 @@
-- tocks: 1
+# show_version=4
+- time: 0
   leds:
     upperLaneLeft: 00ff00
-    upperLaneRight: 000000
-- tocks: 1
+    upperLaneRight: '000000'
+- time: '+1'
   leds:
     upperLaneMiddle: ffcc00
-    upperLaneLeft: 000000
-- tocks: 1
+    upperLaneLeft: '000000'
+- time: '+1'
   leds:
     upperLaneRight: ff0000
-    upperLaneMiddle: 000000
+    upperLaneMiddle: '000000'
+- time: '+1'

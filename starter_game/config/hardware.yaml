@@ -1,14 +1,8 @@
-# config_version=3
+# config_version=4
 
-virtual_platform_start_active_switches:
-    trough_1
-    trough_2
-    trough_3
-    trough_4
-    trough_5
+virtual_platform_start_active_switches: trough_1 trough_2 trough_3 trough_4 trough_5
 
 switches:
-
 # Cabinet
   left_flipper:
     number: XX0
@@ -56,7 +50,6 @@ switches:
   plunger_lane:
     number: XX11
     tags:
-
 # Trough
   trough_1:
     number: XX12
@@ -75,7 +68,6 @@ switches:
     type: NC
 
 coils:
-
 # Note: If you have single-wound (e.g. pulse/pwm) flippers, remove the
 # dual-wound section below and un-comment the single-wound section
 
@@ -135,7 +127,6 @@ ball_devices:
 #    mechanical_eject: true  # uncomment if you have a mechanical plunger
 
 flippers:
-
   left:
     main_coil: left_flipper_main
     hold_coil: left_flipper_hold  # remove for single-wound pulse/pwm flippers
@@ -147,29 +138,27 @@ flippers:
     activation_switch: right_flipper
 
 sound_system:
-    tracks:
-        voice:
-            volume: 1
-            priority: 2
-            simultaneous_sounds: 1
-            preload: yes
-        sfx:
-            volume: 1
-            priority: 1
-            preload: yes
-            simultaneous_sounds: 7
-    stream:
-        name: music
-        priority: 0
-
-    buffer: 512
-    frequency: 44100
-    channels: 1
-    initial_volume: 1
-    volume_steps: 20
-
-dmd:
-    physical: no
+  tracks:
+    voice:
+      volume: 1
+      priority: 2
+      simultaneous_sounds: 1
+      preload: true
+    sfx:
+      volume: 1
+      priority: 1
+      preload: true
+      simultaneous_sounds: 7
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+  buffer: 2048  # previous value was 512
+  frequency: 44100
+  channels: 1
+  master_volume: 1
+  enabled: true
+displays:
+  dmd:
     width: 128
     height: 32
     shades: 16

@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 keyboard:
   s:
     switch: s_start
@@ -8,10 +8,10 @@ keyboard:
     switch: s_ball_launch
   1:
     switch: s_trough_1
-    toggle: yes
+    toggle: true
   8:
     switch: s_shooter_lane
-    toggle: yes
+    toggle: true
   x:
     switch: s_left_slingshot
   equals:

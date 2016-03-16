@@ -1,11 +1,11 @@
-# config_version=3
+# config_version=4
 # Pinbot
 
 system11:
-    ac_relay_driver_number: c14
+  ac_relay_driver_number: c14
 
 mpf:
-    default_pulse_ms: 30
+  default_pulse_ms: 30
 
 #switches:
 #  # Cabinet
@@ -275,8 +275,6 @@ coils:
   left_kicker:
     number: c20
   right_sling:
-    number: c21
-  right_sling:
     number: c22
 
 flashers:
@@ -303,134 +301,134 @@ flashers:
     number: c16
 
 matrix_lights:
-    gameOverBackBox:
-        number: L11
-    matchBackBox:
-        number: L12
-    ballInPlayBackBox:
-        number: L13
-    mouth1LeftBackBox:
-        number: L14
-    mouth2BackBox:
-        number: L15
-    mouth3BackBox:
-        number: L16
-    mouth4BackBox:
-        number: L17
-    mouth5RightBackBox:
-        number: L18
-    x2Bonus:
-        number: L21
-    x3Bonus:
-        number: L22
-    x4Bonus:
-        number: L23
-    x5Bonus:
-        number: L24
-    eject25K:
-        number: L25
-    eject50K:
-        number: L26
-    eject75K:
-        number: L27
-    ejectLightExtraBall:
-        number: L28
-    dropTargetTimerLamp:
-        number: L31
-    advancePlanent:
-        number: L32
-    pluto:
-        number: L33
-    neptune:
-        number: L34
-    uranus:
-        number: L35
-    saturn:
-        number: L36
-    jupiter:
-        number: L37
-    mars:
-        number: L38
-    earth:
-        number: L41
-    venus:
-        number: L42
-    mercury:
-        number: L43
-    chestMatrix11:
-        number: L44
-    chestMatrix21:
-        number: L45
-    chestMatrix31:
-        number: L46
-    chestMatrix41:
-        number: L47
-    chestMatrix51:
-        number: L48
-    shootAgain:
-        number: L51
-    scoreEnergy:
-        number: L52
-    solarEnergyValue:
-        number: L53
-    chestMatrix12:
-        number: L54
-    chestMatrix22:
-        number: L55
-    chestMatrix32:
-        number: L56
-    chestMatrix42:
-        number: L57
-    chestMatrix52:
-        number: L58
-    dropTarget1Top:
-        number: L61
-    dropTarget2Middle:
-        number: L62
-    dropTarget3Bottom:
-        number: L63
-    chestMatrix13:
-        number: L64
-    chestMatrix23:
-        number: L65
-    chestMatrix33:
-        number: L66
-    chestMatrix43:
-        number: L67
-    chestMatrix53:
-        number: L68
-    leftOutLaneExtraBall:
-        number: L71
-    leftInLaneExtraBall:
-        number: L72
-    specialLamp:
-        number: L73
-    chestMatrix14:
-        number: L74
-    chestMatrix24:
-        number: L75
-    chestMatrix34:
-        number: L76
-    chestMatrix44:
-        number: L77
-    chestMatrix54:
-        number: L78
-    rightOutLaneExtraBall:
-        number: L81
-    rightInLaneExtraBall:
-        number: L82
-    notUsedLamp83:
-        number: L83
-    chestMatrix15:
-        number: L84
-    chestMatrix25:
-        number: L85
-    chestMatrix35:
-        number: L86
-    chestMatrix45:
-        number: L87
-    chestMatrix55:
-        number: L88
+  gameoverbackbox:
+    number: L11
+  matchbackbox:
+    number: L12
+  ballinplaybackbox:
+    number: L13
+  mouth1leftbackbox:
+    number: L14
+  mouth2backbox:
+    number: L15
+  mouth3backbox:
+    number: L16
+  mouth4backbox:
+    number: L17
+  mouth5rightbackbox:
+    number: L18
+  x2bonus:
+    number: L21
+  x3bonus:
+    number: L22
+  x4bonus:
+    number: L23
+  x5bonus:
+    number: L24
+  eject25k:
+    number: L25
+  eject50k:
+    number: L26
+  eject75k:
+    number: L27
+  ejectlightextraball:
+    number: L28
+  droptargettimerlamp:
+    number: L31
+  advanceplanent:
+    number: L32
+  pluto:
+    number: L33
+  neptune:
+    number: L34
+  uranus:
+    number: L35
+  saturn:
+    number: L36
+  jupiter:
+    number: L37
+  mars:
+    number: L38
+  earth:
+    number: L41
+  venus:
+    number: L42
+  mercury:
+    number: L43
+  chestmatrix11:
+    number: L44
+  chestmatrix21:
+    number: L45
+  chestmatrix31:
+    number: L46
+  chestmatrix41:
+    number: L47
+  chestmatrix51:
+    number: L48
+  shootagain:
+    number: L51
+  scoreenergy:
+    number: L52
+  solarenergyvalue:
+    number: L53
+  chestmatrix12:
+    number: L54
+  chestmatrix22:
+    number: L55
+  chestmatrix32:
+    number: L56
+  chestmatrix42:
+    number: L57
+  chestmatrix52:
+    number: L58
+  droptarget1top:
+    number: L61
+  droptarget2middle:
+    number: L62
+  droptarget3bottom:
+    number: L63
+  chestmatrix13:
+    number: L64
+  chestmatrix23:
+    number: L65
+  chestmatrix33:
+    number: L66
+  chestmatrix43:
+    number: L67
+  chestmatrix53:
+    number: L68
+  leftoutlaneextraball:
+    number: L71
+  leftinlaneextraball:
+    number: L72
+  speciallamp:
+    number: L73
+  chestmatrix14:
+    number: L74
+  chestmatrix24:
+    number: L75
+  chestmatrix34:
+    number: L76
+  chestmatrix44:
+    number: L77
+  chestmatrix54:
+    number: L78
+  rightoutlaneextraball:
+    number: L81
+  rightinlaneextraball:
+    number: L82
+  notusedlamp83:
+    number: L83
+  chestmatrix15:
+    number: L84
+  chestmatrix25:
+    number: L85
+  chestmatrix35:
+    number: L86
+  chestmatrix45:
+    number: L87
+  chestmatrix55:
+    number: L88 
 
 #gis:
 #  robot_visor:
@@ -443,8 +441,8 @@ matrix_lights:
 #    number: c18
 
 driver_enabled:
-    playfield_devices:
-        number: c23
+  playfield_devices:
+    number: c23 
 
 #ball_devices:
 #    outhole:
@@ -480,4 +478,4 @@ bcp:
     host: 127.0.0.1
     port: 5050
     connection_attempts: 1
-    require_connection: False
+    require_connection: false

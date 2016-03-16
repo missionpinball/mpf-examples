@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 
 mode:
   start_events: ball_ending
@@ -7,23 +7,30 @@ mode:
   use_wait_queue: true
 
 slide_player:
-  bonus_start:
-    type: text
+  bonus_start: slide_6
+  bonus_hits: slide_7
+  bonus_slings: slide_8
+  bonus_subtotal: slide_9
+  bonus_multiplier: slide_10
+  bonus_total: slide_11
+slides:
+  slide_6:
+  - type: text
     text: END OF BALL BONUS
-  bonus_hits:
-    type: text
-    text: "SLINGSHOTS: %slings%"
-  bonus_slings:
-    type: text
-    text: "TOTAL HITS: %hits%"
-  bonus_subtotal:
-    type: text
-    text: "BONUS SCORE: %points%"
+  slide_7:
+  - type: text
+    text: 'SLINGSHOTS: (slings)'
+  slide_8:
+  - type: text
+    text: 'TOTAL HITS: (hits)'
+  slide_9:
+  - type: text
+    text: 'BONUS SCORE: (points)'
     number_grouping: true
-  bonus_multiplier:
-    type: text
-    text: "%bonus_multiplier%X"
-  bonus_total:
-    type: text
-    text: "TOTAL BONUS: %points%"
+  slide_10:
+  - type: text
+    text: (bonus_multiplier)X
+  slide_11:
+  - type: text
+    text: 'TOTAL BONUS: (points)'
     number_grouping: true

@@ -1,12 +1,14 @@
-- tocks: 1
+# show_version=4
+- time: 0
   lights:
     indy_I: ff
-    indy_n: 00
+    indy_n: 0
     indy_d: ff
-    indy_y: 00
-- tocks: 1
+    indy_y: 0
+- time: '+1'
   lights:
-    indy_I: 00
+    indy_I: 0
     indy_n: ff
-    indy_d: 00
+    indy_d: 0
     indy_y: ff
+- time: '+1'

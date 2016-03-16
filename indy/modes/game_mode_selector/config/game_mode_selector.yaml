@@ -1,33 +1,33 @@
-#config_version=3
+#config_version=4
 mode:
   start_events: ball_starting
   priority: 200
 
 shots:
-    castle_grunewald:
-      hit_events: balldevice_mode_hole_ball_enter
-      light: castle_grunewald
-      profile: mode
-      advance_events: castle_grunewald_advance
-      debug: true
-    choose_wisely:
-      hit_events: balldevice_mode_hole_ball_enter
-      light: choose_wisely
-      profile: mode
-      advance_events: choose_wisely_advance
-      debug: true
-    three_challenges:
-      hit_events: balldevice_mode_hole_ball_enter
-      light: three_challenges
-      profile: mode
-      advance_events: three_challenges_advance
-      debug: true
-    tank_chase:
-      hit_events: balldevice_mode_hole_ball_enter
-      light: tank_chase
-      profile: mode
-      advance_events: tank_chase_advance
-      debug: true
+  castle_grunewald:
+    hit_events: balldevice_mode_hole_ball_enter
+    light: castle_grunewald
+    profile: mode
+    advance_events: castle_grunewald_advance
+    debug: true
+  choose_wisely:
+    hit_events: balldevice_mode_hole_ball_enter
+    light: choose_wisely
+    profile: mode
+    advance_events: choose_wisely_advance
+    debug: true
+  three_challenges:
+    hit_events: balldevice_mode_hole_ball_enter
+    light: three_challenges
+    profile: mode
+    advance_events: three_challenges_advance
+    debug: true
+  tank_chase:
+    hit_events: balldevice_mode_hole_ball_enter
+    light: tank_chase
+    profile: mode
+    advance_events: tank_chase_advance
+    debug: true
 
 shot_groups:
   modes:
@@ -42,13 +42,12 @@ shot_profiles:
     state_names_to_not_rotate: complete
     advance_on_hit: false
     states:
-      - name: unlit
-        light_script: "off"
-      - name: lit
-        light_script: flash
-      - name: complete
-        light_script: "on"
-
+    - name: unlit
+      show: off
+    - name: lit
+      show: flash
+    - name: complete
+      show: on
 event_player:
   mode_game_mode_selector_started:
-    - castle_grunewald_advance
+  - castle_grunewald_advance

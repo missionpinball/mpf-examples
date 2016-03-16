@@ -1,3 +1,4 @@
-- tocks: 1
+# show_version=4
+- time: 0
   lights:
     l_kickback: ff

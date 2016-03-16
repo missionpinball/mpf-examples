@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 mode:
   start_events: ball_starting
   stop_events: timer_skillshot_hit_complete
@@ -11,11 +11,11 @@ shot_groups:
     remove_active_profile_events: indy_lanes_skill_hit
     rotate_left_events: left_flipper_active
     rotate_right_events: right_flipper_active
-    debug: yes
+    debug: true
   ure:
     shots: adventure_u, adventure_r, adventure_e2
     profile: test_2
-    debug: yes
+    debug: true
 
 shots:
   indy_i:
@@ -36,25 +36,24 @@ random_event_player:
 
 event_player:
   mode_skillshot_started:
-    - indy_i_advance
-    - indy_i_advance
+  - indy_i_advance
+  - indy_i_advance
 
 shot_profiles:
   skill:
     advance_on_hit: false
-    lights_when_disabled: yes
-    block: no
+    show_when_disable: true
+    block: false
     state_names_to_not_rotate: hit
     states:
-      - name: unlit
-        light_script: "off"
-      - name: lit
-        light_script: flash
-        repeat: yes
-        tocks_per_sec: 10
-      - name: hit
-        light_script: "on"
-
+    - name: unlit
+      show: off
+    - name: lit
+      show: flash
+      loops: -1
+      speed: 10
+    - name: hit
+      show: on
 scoring:
   indy_lanes_skill_lit_hit:
     score: 10000|block
@@ -64,18 +63,21 @@ scoring:
     score: 0|block
 
 slide_player:
-  indy_lanes_skill_lit_hit:
-    type: text
+  indy_lanes_skill_lit_hit: slide_9
+  indy_lanes_skill_unlit_hit: slide_10
+timers:
+  skillshot_hit:
+    start_value: 2
+    end_value: 0
+    direction: down
+    control_events:
+    - event: indy_lanes_skill_hit
+      action: start
+slides:
+  slide_9:
+  - type: text
     text: SKILLSHOT HIT!
-  indy_lanes_skill_unlit_hit:
-    type: text
+  slide_10:
+  - type: text
     text: SKILLSHOT MISSED!
 
-timers:
-    skillshot_hit:
-        start_value: 2
-        end_value: 0
-        direction: down
-        control_events:
-          - event: indy_lanes_skill_hit
-            action: start

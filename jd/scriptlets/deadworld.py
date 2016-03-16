@@ -1,6 +1,6 @@
 """Handles the ball locking in the Deadworld globe."""
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class Deadworld(Scriptlet):

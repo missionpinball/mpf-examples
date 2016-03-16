@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 
 hardware:
   platform: p_roc
@@ -43,3 +43,34 @@ matrix_lights:
 driver_controlled:
   flippers:
     enable_coil_name: flipper_enable
+text_styles:
+  default:
+    font_name: Quadrit
+    font_size: 10
+    crop_top: 2
+    crop_bottom: 3
+  space title huge:
+    font_name: DEADJIM
+    font_size: 29
+    antialias: true
+    crop_top: 3
+    crop_bottom: 3
+  space title:
+    font_name: DEADJIM
+    font_size: 21
+    antialias: true
+    crop_top: 2
+    crop_bottom: 3
+  medium:
+    font_name: pixelmix
+    font_size: 8
+    crop_top: 1
+    crop_bottom: 1
+  small:
+    font_name: smallest_pixel-7
+    font_size: 9
+    crop_top: 2
+    crop_bottom: 3
+  tall title:
+    font_name: big_noodle_titling
+    font_size: 20

@@ -1,6 +1,6 @@
 # Classic / modern switcher Scriptlet for Big Shot
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class ClassicModern(Scriptlet):
@@ -21,11 +21,11 @@ class ClassicModern(Scriptlet):
             self.enable_modern_mode()
 
     def enable_classic_mode(self):
-        print "1974 MODE"
+        print("1974 MODE")
         self.machine.classic_mode = True
         self.machine.events.post('enable_classic_mode')
 
     def enable_modern_mode(self):
-        print "2014 MODE"
+        print("2014 MODE")
         self.machine.classic_mode = False
         self.machine.events.post('enable_modern_mode')

@@ -1,9 +1,10 @@
-- tocks: 1
+# show_version=4
+- time: 0
   leds:
     leftorbit: ffffff
-    semicircle_above: 00
-- tocks: 1
+    semicircle_above: 0
+- time: '+1'
   leds:
-    leftorbit: 00
+    leftorbit: 0
     semicircle_above: ffffff
-    
+- time: '+1'

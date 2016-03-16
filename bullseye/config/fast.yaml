@@ -1,15 +1,15 @@
-# config_version=2
+# config_version=4
 
 hardware:
-    Platform: fast
-    DriverBoards: fast
+  platform: fast
+  driverboards: fast
 
 fast:
-    ports: com3, com4, com5
+  ports: com3, com4, com5
     #ports: /dev/ttyUSB0, /dev/ttyUSB1, /dev/ttyUSB2
-    config_number_format: hex
-    default_debounce_close: 10ms
-    default_debounce_open: 30ms
+  config_number_format: hex
+  default_debounce_close: 10ms
+  default_debounce_open: 30ms
 
-Config:
-    - config.yaml
+config:
+- config.yaml

@@ -1,6 +1,6 @@
 # Game mode Scriptlet for Big Shot
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class Game(Scriptlet):

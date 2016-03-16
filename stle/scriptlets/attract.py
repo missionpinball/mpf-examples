@@ -1,7 +1,7 @@
 # Attract mode Scriptlet for STLE
 
-from mpf.system.scriptlet import Scriptlet
-from mpf.system.show_controller import Playlist
+from mpf.core.scriptlet import Scriptlet
+from mpf.core.show_controller import Playlist
 
 
 class Attract(Scriptlet):

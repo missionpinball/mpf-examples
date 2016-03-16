@@ -1,45 +1,47 @@
-- tocks: 1
+# show_version=4
+- time: 0
   lights:
     palaceP: ff
-    palaceA1: 00
-    hurricaneValue: 00
-- tocks: 1
+    palaceA1: 0
+    hurricaneValue: 0
+- time: '+1'
   lights:
     palaceA1: ff
-    palaceP: 00
-- tocks: 1
+    palaceP: 0
+- time: '+1'
   lights:
     palaceL: ff
-    palaceA1: 00
-- tocks: 1
+    palaceA1: 0
+- time: '+1'
   lights:
     palaceA2: ff
-    palaceL: 00
-- tocks: 1
+    palaceL: 0
+- time: '+1'
   lights:
     palaceC: ff
-    palaceA2: 00
-- tocks: 1
+    palaceA2: 0
+- time: '+1'
   lights:
     palaceE: ff
-    palaceC: 00
-- tocks: 1
+    palaceC: 0
+- time: '+1'
   lights:
     special: ff
-    palaceE: 00
-- tocks: 1
+    palaceE: 0
+- time: '+1'
   lights:
     clownTime: ff
-    special: 00
-- tocks: 1
+    special: 0
+- time: '+1'
   lights:
     spotPalace: ff
-    clownTime: 00
-- tocks: 1
+    clownTime: 0
+- time: '+1'
   lights:
     skillShot: ff
-    spotPalace: 00
-- tocks: 1
+    spotPalace: 0
+- time: '+1'
   lights:
     hurricaneValue: ff
-    skillShot: 00
+    skillShot: 0
+- time: '+1'

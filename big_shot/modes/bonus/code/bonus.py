@@ -4,7 +4,7 @@
 # General erratic behavior
 # pop empty list error - bonus mode code ran before score reels finished game scoring
 
-from mpf.system.mode import Mode
+from mpf.core.mode import Mode
 
 
 class Bonus(Mode):
@@ -98,7 +98,7 @@ class Bonus(Mode):
     def bonus_step(self, **kwargs):
         # automatically called when the score reels are valid
 
-        print "------------ entering bonus_step", self.machine.tick_num
+        print("------------ entering bonus_step", self.machine.tick_num)
 
         if self.bonus_lights:
             # sets the "pause" between bonus scores, then does the bonus step
@@ -112,7 +112,7 @@ class Bonus(Mode):
         #print(self.bonus_lights)
         this_light = self.bonus_lights.pop()
         this_light.off(force=True)
-        print "-------- turning off light", this_light, self.machine.tick_num
+        print("-------- turning off light", this_light, self.machine.tick_num)
 
         self.machine.scoring.add(self.bonus_value)
         #self.log.debug("Turning off %s", this_light)

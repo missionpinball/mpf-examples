@@ -1,7 +1,7 @@
 # Attract mode for Big Shot
 
 import inspect #329
-from mpf.system.light_controller import Playlist
+from mpf.core.light_controller import Playlist
 import mpf.modes.attract.code.attract
 
 

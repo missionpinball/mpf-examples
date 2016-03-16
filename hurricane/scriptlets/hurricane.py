@@ -1,6 +1,6 @@
 # General scriptlet for Hurricane
 
-from mpf.system.scriptlet import Scriptlet
+from mpf.core.scriptlet import Scriptlet
 
 
 class Hurricane(Scriptlet):
