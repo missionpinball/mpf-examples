@@ -13,9 +13,8 @@ mode:
 
 timers:
   mode_timer:
-    start_events: balldevice_playfield_ball_enter
     start_value: 3
-    start_paused: true
+    start_running: false
     end_value: 0
     direction: down
     tick_interval: 1s
