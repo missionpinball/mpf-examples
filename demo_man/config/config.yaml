@@ -29,39 +29,6 @@ modes:
 
 scriptlets: add_a_ball.AddABall claw.Claw
 
-window:
-  width: 800
-  height: 600
-  minimum_width: 200
-  minimum_height: 100
-  borderless: true
-  fullscreen: false
-  rotation: 0
-  title: Demo Man
-  show_cursor: false
-  source_display: window
-  dpi: 96
-  scale_contents: true
-
-displays:
-  window:
-    height: 600
-    width: 800
-    default: true
-  dmd:
-    width: 128
-    height: 32
-
-slides:
-  slide_1: []
-keyboard:
-  g:
-    mc_event: event1
-  h:
-    mc_event: event2
-
-slide_player:
-  display_window_initialized: slide_1
 text_styles:
   default:
     font_name: Quadrit
@@ -93,21 +60,3 @@ text_styles:
   tall title:
     font_name: big_noodle_titling
     font_size: 20
-#animations:
-#  fade_in:
-#    property: opacity
-#    start: 0
-#    value: 1
-#    duration: 1s
-#    timing: with_previous
-#    repeats: 0
-#
-#  multi:
-#  - property: opacity
-#    value: 1
-#    duration: 1s
-#  - property: opacity
-#    value: 0
-#    duration: 100ms
-#    timing: after_previous
-#    repeats: -1

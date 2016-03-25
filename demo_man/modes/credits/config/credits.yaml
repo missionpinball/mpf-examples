@@ -29,15 +29,15 @@ credits:
   credits_string: CREDITS
 
 slide_player:
-  credits_added: slide_14
-  not_enough_credits: slide_15
-  enabling_free_play: slide_16
-  enabling_credit_play: slide_17
+  credits_added: slide_13
+  not_enough_credits: slide_14
+  enabling_free_play: slide_15
+  enabling_credit_play: slide_16
 slides:
-  slide_14:
+  slide_13:
   - type: text
     text: (machine|credits_string)
-  slide_15:
+  slide_14:
   - type: text
     text: (machine|credits_string)
     style: small
@@ -54,10 +54,10 @@ slides:
         value: 0
         duration: 0.1s
         repeat: true
-  slide_16:
+  slide_15:
   - type: text
     text: ENABLING FREE PLAY
-  slide_17:
+  slide_16:
   - type: text
     text: ENABLING CREDIT PLAY
   - type: text

@@ -9,17 +9,11 @@ event_player:
   player_1_ball_started: player_1_multiplayer_slide
 
 slide_player:
-  single_player_ball_started: slide_2
-  player_1_ball_started: slide_3
-  player_2_ball_started: slide_4
-  player_3_ball_started: slide_5
-  player_4_ball_started: slide_6
-slides:
-  slide_2: []
-  slide_3: []
-  slide_4: []
-  slide_5: []
-  slide_6: []
+  single_player_ball_started: slide_1
+  player_1_multiplayer_slide: slide_2
+  player_2_ball_started: slide_3
+  player_3_ball_started: slide_4
+  player_4_ball_started: slide_5
 sound_player:
   waiting to plunge loop:
     sound: waiting to plunge loop
@@ -103,6 +97,193 @@ shot_groups:
     rotate_right_events: sw_right_flipper
   standups:
     profile: default
+slides:
+  slide_1:
+  - type: text
+    text: (player1|score)
+    number_grouping: true
+    min_digits: 2
+    y: middle+2
+      #persist_slide: yes
+    style: tall title
+  - type: text
+    text: BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
+  slide_2:
+  - type: text
+    text: (player1|score)
+      #font: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+    style: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
+  slide_3:
+  - type: text
+    text: (player1|score)
+    style: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+#      font: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player2|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
+  slide_4:
+  - type: text
+    text: (player1|score)
+    style: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+    style: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+#      font: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player3|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
+  slide_5:
+  - type: text
+    text: (player1|score)
+    style: medium
+    number_grouping: true
+    min_digits: 2
+    anchor_y: top
+    anchor_x: right
+    x: right-60
+    y: top-2
+  - type: text
+    text: (player2|score)
+    style: medium
+    anchor_y: top
+    anchor_x: right
+    number_grouping: true
+    min_digits: 2
+    x: right-2
+    y: top-2
+  - type: text
+    text: (player3|score)
+    style: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-60
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+#      font: medium
+    anchor_y: bottom
+    anchor_x: right
+    y: bottom+10
+    x: right-2
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: BALL (player4|ball)    (machine|credits_string)
+    anchor_y: bottom
+    style: small
+    y: bottom+1
+
 show_player:
   left_orbit_default_unlit_hit:
     left orbit: {}

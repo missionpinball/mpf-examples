@@ -7,30 +7,30 @@ mode:
   use_wait_queue: true
 
 slide_player:
-  bonus_start: slide_7
-  bonus_ramps: slide_8
-  bonus_modes: slide_9
-  bonus_subtotal: slide_10
-  bonus_multiplier: slide_11
-  bonus_total: slide_12
+  bonus_start: slide_6
+  bonus_ramps: slide_7
+  bonus_modes: slide_8
+  bonus_subtotal: slide_9
+  bonus_multiplier: slide_10
+  bonus_total: slide_11
 slides:
-  slide_7:
+  slide_6:
   - type: text
     text: END OF BALL BONUS
-  slide_8:
+  slide_7:
   - type: text
     text: 'RAMPS: (ramps)'
-  slide_9:
+  slide_8:
   - type: text
     text: 'MODES: (modes)'
-  slide_10:
+  slide_9:
   - type: text
     text: 'BONUS SCORE: (points)'
     number_grouping: true
-  slide_11:
+  slide_10:
   - type: text
     text: (multiplier)X
-  slide_12:
+  slide_11:
   - type: text
     text: 'TOTAL BONUS: (points)'
     number_grouping: true

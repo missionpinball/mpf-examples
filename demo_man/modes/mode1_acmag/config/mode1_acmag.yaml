@@ -13,9 +13,9 @@ timers:
     bcp: true
 
 slide_player:
-  timer_mode_countdown_tick: slide_20
+  timer_mode_countdown_tick: slide_19
 slides:
-  slide_20:
+  slide_19:
   - type: text
     text: 'COUNTDOWN: %ticks'
     style: small

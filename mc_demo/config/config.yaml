@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 
 # The first line of every MPF config file needs to start with a hash sign,
 # then config_version=3. When we add features that require changes to config

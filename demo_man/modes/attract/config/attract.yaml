@@ -1,6 +1,9 @@
 #config_version=4
 show_player:
   mode_attract_started:
+    attract_dmd_loop:
+      loops: -1
+      speed: 1
     multiball_sweep:
       loops: -1
       speed: 10
@@ -41,6 +44,9 @@ show_player:
       loops: 0
       hold: true
   mode_attract_stopped:
+    attract_dmd_loop:
+      action: stop
+
     multiball_sweep:
       action: stop
     random_flashing:

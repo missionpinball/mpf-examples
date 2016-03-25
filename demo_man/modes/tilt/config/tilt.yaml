@@ -11,15 +11,15 @@ tilt:
   tilt_warnings_player_var: tilt_warnings
 
 slide_player:
-  tilt_warning_1: slide_21
-  tilt_warning_2: slide_22
-  tilt: slide_23
-  tilt_clear: slide_24
+  tilt_warning_1: slide_20
+  tilt_warning_2: slide_21
+  tilt: slide_22
+  tilt_clear: slide_23
 slides:
-  slide_21:
+  slide_20:
   - type: text
     text: WARNING
-  slide_22:
+  slide_21:
   - type: text
     text: WARNING
     y: top-2
@@ -28,7 +28,7 @@ slides:
     text: WARNING
     y: top-18
     anchor_y: top
-  slide_23:
+  slide_22:
   - type: text
     text: TILT
-  slide_24: []
+  slide_23: []

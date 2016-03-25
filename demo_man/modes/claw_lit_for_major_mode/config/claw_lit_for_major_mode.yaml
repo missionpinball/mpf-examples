@@ -14,9 +14,9 @@ logic_blocks:
       events_when_complete: start_mode1_acmag
 
 slide_player:
-  balldevice_elevator_ball_enter: slide_13
+  balldevice_elevator_ball_enter: slide_12
 slides:
-  slide_13:
+  slide_12:
   - type: text
     text: PICK YOUR MODE
 show_player:

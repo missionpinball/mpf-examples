@@ -12,10 +12,10 @@ high_score:
     - MOST LOOPS
 
 slide_player:
-  high_score: slide_18
-  high_score_award_display: slide_19
+  high_score: slide_17
+  high_score_award_display: slide_18
 slides:
-  slide_18:
+  slide_17:
   - type: text
     text: PLAYER (player_num)
     style: medium
@@ -74,7 +74,7 @@ slides:
         value: 0
         duration: 0.5s
         repeat: true
-  slide_19:
+  slide_18:
   - type: text
     text: (player_name)
     color: 0

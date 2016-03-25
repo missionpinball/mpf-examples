@@ -14,16 +14,16 @@ mode:
 timers:
   mode_timer:
     start_value: 3
-    start_running: false
     end_value: 0
     direction: down
     tick_interval: 1s
     control_events:
     - event: balldevice_playfield_ball_enter
       action: start
+    start_running: false
   target_rotator:
     start_running: true
-    tick_interval: 1s  
+    tick_interval: 1s
 
 #slide_player:
 #    mode_skillshot_started:
