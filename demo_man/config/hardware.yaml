@@ -3,7 +3,7 @@
 
 machine:
   balls_installed: 6
-  min_balls: 1 
+  min_balls: 1
 
 virtual_platform_start_active_switches: s_trough_1 s_trough_2 s_trough_3 s_trough_4
   s_trough_5
@@ -697,7 +697,7 @@ coils:
     label:
     tags:
     allow_enable: true
-    hold_power: 8   
+    hold_power: 8
 
 # Fliptronics coils
   c_flipper_left_main:
@@ -922,10 +922,12 @@ sound_system:
   channels: 1
   master_volume: 1
   enabled: true
+
 physical_dmd:
   width: 128
   height: 32
   shades: 16
+
 window:
   width: 600
   height: 200
@@ -934,6 +936,7 @@ window:
   fullscreen: false
   borderless: false
   exit_on_escape: true
+
 displays:
   window:
     height: 200
@@ -942,6 +945,7 @@ displays:
     width: 128
     height: 32
     default: true
+
 slides:
   window_slide_1:
   - type: dmd
@@ -958,13 +962,11 @@ slides:
     font_size: 30
     z: 1
     color: white
-
   - type: rectangle
     width: 514
     height: 130
     z: 2
     color: 444444
-
   - type: text
     style: tall title
     text: DEMO MAN
@@ -975,7 +977,19 @@ slides:
     font_size: 30
     z: 1
     color: red
+
+  waiting_for_connection:
+  - type: text
+    text: WAITING FOR MPF CONNECTION
+
+  asset_status:
+  - type: text
+    text: "LOADING ASSETS: (percent)%"
+
 slide_player:
-  machine_reset_phase_3:
+  mc_ready:
     window_slide_1:
       target: window
+  loading_assets: asset_status
+
+

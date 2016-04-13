@@ -38,12 +38,13 @@
       number_grouping: true
       y: bottom+3
     - type: rectangle
-      width: 128
-      height: 32
-    - type: rectangle
       width: 126
       height: 30
-      brightness: 8
+      color: 0
+    - type: rectangle
+      width: 128
+      height: 32
+
 - time: '+2'
   slides:
     attract_dmd_loop_slide_5:
@@ -155,11 +156,5 @@
       text: (machine|credits_string)
       style: small
       anchor_y: bottom
-
-
-
-
-
-
       y: bottom
 - time: '+2'
