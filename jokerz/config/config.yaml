@@ -43,8 +43,8 @@ matrix_lights:
 driver_controlled:
   flippers:
     enable_coil_name: flipper_enable
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_name: Quadrit
     font_size: 10
     crop_top: 2

@@ -11,7 +11,7 @@ modes:
   - skillshot
   - game_mode_selector
   - castle_grunewald
-  
+
   # - choose_wisely
   # - three_challenges
   # - tank_chase
@@ -76,8 +76,8 @@ credits:
   persist_credits_while_off_time: 1h
   free_play_string: FREE PLAY
   credits_string: CREDITS
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_name: Quadrit
     font_size: 10
     crop_top: 2

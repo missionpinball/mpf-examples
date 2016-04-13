@@ -54,8 +54,8 @@ shows:
       (lights): 0
 
   - time: '+1'
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_name: Quadrit
     font_size: 10
     crop_top: 2

@@ -4,11 +4,11 @@ machine:
   hz: 30
   balls installed: 1
   min balls: 0
-  max balls: 1 
+  max balls: 1
 
 game:
   balls per game: 3
-  max players per game: 4 
+  max players per game: 4
 
 modes:
 - base
@@ -88,7 +88,7 @@ switches:
   s_lock_right:
     number: 26
   s_rubber_way_up_right:
-    number: 27  
+    number: 27
 
 coils:
   c_flipper_left:
@@ -311,7 +311,7 @@ leds:
     tags: rgb
   l_white_20:
     number: 17
-    tags: rgb 
+    tags: rgb
 
   l_2x:
     number: 9
@@ -389,7 +389,7 @@ leds:
     number: 83
     tags: gi
     #l_upper_plastic_left_2:
-    #    number: 
+    #    number:
     #    tags: gi
     #l_upper_plastic_left_3:
     #    number:
@@ -429,7 +429,7 @@ leds:
     tags: gi
   l_upper_center_plastic_2:
     number: 88
-    tags: gi  
+    tags: gi
 
 
 ball_devices:
@@ -546,7 +546,7 @@ bcp:
       host: localhost
       port: 5050
       connection_attempts: -1
-      require_connection: false 
+      require_connection: false
 
 images:
   backglass:
@@ -609,14 +609,14 @@ slides:
     x: right-20
     font_size: 60
     z: 1
-    color: red 
+    color: red
 
   - type: image
     image: backglass
     x: center+0
     y: top+0
     anchor_y: top
-    priority: 0   
+    priority: 0
 
   - type: rectangle
     width: 518
@@ -665,8 +665,8 @@ slide_player:
   machine_reset_phase_3:
     window_slide_1:
       target: window
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_name: Quadrit
     font_size: 10
     crop_top: 2

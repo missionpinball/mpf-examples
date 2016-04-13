@@ -1,7 +1,7 @@
 # config_version=4
 
 machine:
-  balls_installed: 1 
+  balls_installed: 1
 
 hardware:
   platform: fast
@@ -75,7 +75,7 @@ switches:
   standupmidright2:
     number: 29
   standupmidright1:
-    number: 2a  
+    number: 2a
 
 coils:
   leftpop:
@@ -108,7 +108,7 @@ coils:
     pulse_ms: 20
   trough:
     number: 7
-    pulse_ms: 40  
+    pulse_ms: 40
 
 leds:
   leftorbit:
@@ -193,7 +193,7 @@ leds:
   semicircle9:
     number: 25
   rightoutlane:
-    number: 26  
+    number: 26
 
 ball_devices:
   trough:
@@ -270,7 +270,7 @@ shots:
     led: spinnerArrow
     switch: spinner
     reset_events:
-      shot_spinner_unlit_hit: 30ms  
+      shot_spinner_unlit_hit: 30ms
 
 shot_groups:
   upperlanes:
@@ -326,7 +326,7 @@ bcp:
       host: localhost
       port: 5050
       connection_attempts: 5
-      require_connection: true  
+      require_connection: true
 
 displays:
   window:
@@ -370,8 +370,8 @@ slide_player:
   machine_reset_phase_3:
     window_slide_1:
       target: window
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_name: Quadrit
     font_size: 10
     crop_top: 2
@@ -429,7 +429,7 @@ show_player:
       speed: 7
     whites:
       loops: -1
-      speed: 15        
+      speed: 15
 
   mode_attract_stopped:
     attract_display:

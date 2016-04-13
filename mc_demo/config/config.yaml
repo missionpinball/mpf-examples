@@ -474,8 +474,8 @@ widgets:
 
 
 
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_size: 20
   chalk:
     font_size: 50

@@ -52,7 +52,7 @@ coils:
     pulse_ms: 20
   bottompop:
     number: C15
-    pulse_ms: 20  
+    pulse_ms: 20
 
 switches:
   rightflipper:
@@ -171,7 +171,7 @@ switches:
   up:
     number: SD7
   enter:
-    number: SD8 
+    number: SD8
 
 matrix_lights:
   clownlefteye:
@@ -301,7 +301,7 @@ matrix_lights:
   leftsling:
     number: L87
   rightslot:
-    number: L88 
+    number: L88
 
 ball_devices:
   outhole:
@@ -363,7 +363,7 @@ drop_target_banks:
     reset_coils: droptargetReset
     drop_targets: droptarget1, droptarget2, droptarget3
     reset_events:
-      ball_starting: 0     
+      ball_starting: 0
 
 drop_targets:
   droptarget1:
@@ -462,8 +462,8 @@ displays:
   dmd:
     width: 128
     height: 32
-text_styles:
-  default:
+widget_styles:
+  text_default:
     font_name: Quadrit
     font_size: 10
     crop_top: 2
