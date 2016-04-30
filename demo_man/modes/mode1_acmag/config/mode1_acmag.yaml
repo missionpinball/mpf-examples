@@ -35,6 +35,7 @@ slides:
 show_player:
   mode_mode1_acmag_started:
     flash:
-      lights: l_left_ramp_arrow
+      show_tokens:
+        lights: l_left_ramp_arrow
       speed: 4
       loops: -1

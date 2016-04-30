@@ -22,7 +22,8 @@ slides:
 show_player:
   mode_claw_lit_for_major_mode_started:
     flash:
-      lights: l_claw_ready, l_right_ramp_arrow
+      show_tokens:
+        lights: l_claw_ready, l_right_ramp_arrow
       key: claw_lit
       speed: 5
       loops: -1
