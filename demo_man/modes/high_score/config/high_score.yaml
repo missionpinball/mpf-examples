@@ -28,44 +28,21 @@ slides:
     anchor_y: bottom
     x: center-27
     y: bottom+12
-  - type: character_picker
-      #width: 50
-    name: high_score
-    slide_name: high_score
-    clear_slide: true
-    persist: false
-    height: 9
+  - type: text_input
+    key: high_score
     style: medium
     anchor_y: bottom
-    selected_char_color: 0
-    selected_char_bg: 15
-    char_x_offset: 1
-    char_y_offset: 1
-    char_width: 7
-    char_list: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_- '
-    back_char: back_arrow_7x7
-    end_char: end_11x7
-    back_char_selected: back_arrow_7x7_selected
-    end_char_selected: end_11x7_selected
-    image_padding: 1
-    shift_left_tag: left_flipper
-    shift_right_tag: right_flipper
-    select_tag: start
     max_chars: 3
-    timeout: 30s
-    return_param: award
-
     y: bottom
-  - type: entered_chars
-    character_picker: high_score
-    cursor_char: _
+  - type: text
+    text: A
+    key: high_score
     anchor_y: bottom
     anchor_x: left
     x: left+90
     y: bottom+12
-    cursor_offset_x: 0
-    cursor_offset_y: 0
-    cursor_animations:
+    style: medium
+    animations:
       entrance:
       - property: opacity
         value: 1
