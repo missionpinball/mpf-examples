@@ -325,8 +325,6 @@ bcp:
     local_display:
       host: localhost
       port: 5050
-      connection_attempts: 5
-      require_connection: true
 
 displays:
   window:

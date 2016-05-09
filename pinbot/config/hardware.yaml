@@ -428,7 +428,7 @@ matrix_lights:
   chestmatrix45:
     number: L87
   chestmatrix55:
-    number: L88 
+    number: L88
 
 #gis:
 #  robot_visor:
@@ -442,7 +442,7 @@ matrix_lights:
 
 driver_enabled:
   playfield_devices:
-    number: c23 
+    number: c23
 
 #ball_devices:
 #    outhole:
@@ -477,5 +477,3 @@ bcp:
   local_display:
     host: 127.0.0.1
     port: 5050
-    connection_attempts: 1
-    require_connection: false

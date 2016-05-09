@@ -545,8 +545,6 @@ bcp:
     local_display:
       host: localhost
       port: 5050
-      connection_attempts: -1
-      require_connection: false
 
 images:
   backglass:
