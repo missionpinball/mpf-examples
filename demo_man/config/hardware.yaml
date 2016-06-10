@@ -8,6 +8,27 @@ machine:
 virtual_platform_start_active_switches: s_trough_1 s_trough_2 s_trough_3 s_trough_4
   s_trough_5
 
+mpf-mc:
+  fps: 60
+
+window:
+  width: 600
+  height: 200
+  title: Mission Pinball Framework - Demo Man
+  resizable: true
+  fullscreen: false
+  borderless: false
+  exit_on_escape: true
+
+displays:
+  window:
+    height: 200
+    width: 600
+  dmd:
+    width: 128
+    height: 32
+    default: true
+
 switches:
 # Fliptronics
   s_flipper_lower_right_eos:
@@ -709,6 +730,7 @@ coils:
     number: fllh
     label:
     tags:
+    allow_enable: true
   c_flipper_right_main:
     number: flrm
     label:
@@ -718,6 +740,7 @@ coils:
     number: flrh
     label:
     tags:
+    allow_enable: true
   c_flipper_upper_main:
     number: fulm
     label:
@@ -727,6 +750,7 @@ coils:
     number: fulh
     label:
     tags:
+    allow_enable: true
   c_claw_magnet:
     number: furm
     label:
@@ -922,29 +946,6 @@ sound_system:
   channels: 1
   master_volume: 1
   enabled: true
-
-physical_dmd:
-  width: 128
-  height: 32
-  shades: 16
-
-window:
-  width: 600
-  height: 200
-  title: Mission Pinball Framework - Demo Man
-  resizable: true
-  fullscreen: false
-  borderless: false
-  exit_on_escape: true
-
-displays:
-  window:
-    height: 200
-    width: 600
-  dmd:
-    width: 128
-    height: 32
-    default: true
 
 slides:
   window_slide_1:
