@@ -1,8 +1,29 @@
 # config_version=4
 
+#hardware:
+#  platform: smart_virtual
+#  driverboards: virtual
+
+fast:
+  ports: COM3, COM4, COM5
+
 hardware:
-  platform: smart_virtual
-  driverboards: virtual
+  driverboards: wpc
+  platform: p_roc
+#  rgb_dmd: smartmatrix
+
+#smartmatrix:
+#    port: com7
+#    use_separate_thread: no
+
+physical_dmd:
+  shades: 16
+  fps: 24
+
+#physical_rgb_dmd:
+#  fps: 30
+#  only_send_changes: true
+#  luminosity: .8, .5, .0
 
 config:
 - hardware.yaml
@@ -11,6 +32,7 @@ config:
 
 mpf:
   default_pulse_ms: 20
+  hz: 60
 
 game:
   balls_per_game: 3
