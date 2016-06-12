@@ -42,7 +42,6 @@ show_player:
       speed: 8
     gi_on:
       loops: 0
-      hold: true
   mode_attract_stopped:
     attract_dmd_loop:
       action: stop
@@ -69,9 +68,7 @@ show_player:
       action: stop
     claw_cycle:
       action: stop
-      hold: false
     inlane_alternate:
       action: stop
-      hold: false
     flashers:
       action: stop
