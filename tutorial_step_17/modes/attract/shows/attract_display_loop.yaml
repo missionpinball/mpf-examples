@@ -1,0 +1,50 @@
+#show_version=4
+
+- duration: 3s
+  slides:
+    awesome_slide:
+      widgets:
+      - type: text
+        text: YOU ARE AWESOME
+        font_size: 50
+      transition:
+         type: push
+         duration: 1s
+         direction: left
+
+- duration: 3s
+  slides:
+    press_start:
+      widgets:
+      - type: Text
+        text: PRESS START
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
+      - type: Text
+        text: FREE PLAY
+        color: green
+        y: 10
+        anchor_y: bottom
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right
+
+- duration: 3
+  slides:
+    mission_pinball:
+      widgets:
+      - type: Text
+        text: MISSION PINBALL
+        color: red
+      transition:
+         type: move_in
+         duration: 1s
+         direction: top

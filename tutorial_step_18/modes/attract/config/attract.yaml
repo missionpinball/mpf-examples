@@ -1,0 +1,5 @@
+#config_version=4
+show_player:
+  mode_attract_started:
+    attract_display_loop:
+    attract_light_show:
