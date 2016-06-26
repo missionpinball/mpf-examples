@@ -18,15 +18,3 @@ slide_player:
         text: BALL (ball)
         y: bottom
         x: right
-      - type: text
-        text: "POTATO VALUE: (potato)"
-        y: 40%
-
-scoring:
-    s_right_inlane_active:
-        score: 100
-    s_flipper_lower_left_active:
-        score: 1000
-        potato: 1
-    s_flipper_lower_right_active:
-        potato: -2

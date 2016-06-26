@@ -1,7 +1,6 @@
-#config_version=3
+#config_version=4
 
 # Config file for Step 4 of our step-by-step tutorial.
-# https://missionpinball.com/docs/tutorial/
 
 # WARNING: The switch and coil numbers in this configuration file are for a Demolition Man machine.
 # Do not use this file with your own hardware unless you change the coil and switch numbers to match your actual

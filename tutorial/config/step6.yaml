@@ -1,11 +1,40 @@
-#config_version=3
+#config_version=4
 
-# Config file for Step 4 of our step-by-step tutorial.
-# https://missionpinball.com/docs/tutorial/
+# Config file for Step 6 of our step-by-step tutorial.
 
 # WARNING: The switch and coil numbers in this configuration file are for a Demolition Man machine.
 # Do not use this file with your own hardware unless you change the coil and switch numbers to match your actual
 # hardware!
+
+keyboard:
+    z:
+        switch: s_left_flipper
+    /:
+        switch: s_right_flipper
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+  attract_started:
+    widgets:
+      - text: ATTRACT MODE
+        type: text
+
+slide_player:
+  mc_ready: welcome_slide
+  mode_attract_started: attract_started
 
 switches:
     s_left_flipper:
@@ -14,15 +43,15 @@ switches:
         number: SF2
 
 coils:
-    c_flipper_left_main: 
+    c_flipper_left_main:
         number: FLLM
         pulse_ms: 25
-    c_flipper_left_hold: 
+    c_flipper_left_hold:
         number: FLLH
-    c_flipper_right_main: 
+    c_flipper_right_main:
         number: FLRM
         pulse_ms: 25
-    c_flipper_right_hold: 
+    c_flipper_right_hold:
         number: FLRH
 
 flippers:
@@ -36,42 +65,3 @@ flippers:
         hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3
-
-dmd:
-    physical: yes
-    width: 128
-    height: 32
-
-window:
-    elements:
-      - type: virtualdmd
-        width: 512
-        height: 128
-        h_pos: center
-        v_pos: center
-        pixel_color: ff6600
-        dark_color: 220000
-        pixel_spacing: 1
-      - type: shape
-        shape: box
-        width: 516
-        height: 132
-        color: aaaaaa
-        thickness: 2
-      - type: text
-        font: tall title
-        text: MY AWESOME GAME
-        h_pos: center
-        v_pos: top
-        y: 60
-        size: 100
-        antialias: yes
-        layer: 1
-        color: ee9900
-
-slide_player:
-    mode_attract_started:
-        type: text
-        text: PRESS START
-        slide_priority: 10
-        
