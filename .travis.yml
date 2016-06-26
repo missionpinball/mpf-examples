@@ -5,7 +5,10 @@ python:
   - 3.4
 
 install:
-- pip3 install coveralls
+- sudo add-apt-repository ppa:zoogie/sdl2-snapshots;
+- sudo apt-get update;
+- sudo apt-get -y install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev gstreamer0.10-plugins-{good,base,bad,ugly} libgstreamer0.10-dev libxine1-ffmpeg libsmpeg-dev libswscale-dev libavformat-dev libavcodec-dev libjpeg-dev libtiff4-dev libX11-dev libmtdev-dev build-essential libgl1-mesa-dev libgles2-mesa-dev;
+- pip3 install --upgrade cython pillow coveralls setuptools;
 - pip3 install https://github.com/missionpinball/mpf/zipball/${TRAVIS_BRANCH} || pip3 install https://github.com/missionpinball/mpf/zipball/dev;
 - pip3 install https://github.com/missionpinball/mpf-mc/zipball/${TRAVIS_BRANCH} || pip3 install https://github.com/missionpinball/mpf-mc/zipball/dev;
 script:
