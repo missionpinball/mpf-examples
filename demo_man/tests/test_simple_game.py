@@ -3,9 +3,6 @@ from mpf.tests.MpfMachineTestCase import MpfMachineTestCase
 
 class TestSimpleGame(MpfMachineTestCase):
 
-    def get_platform(self):
-        return 'smart_virtual'
-
     def test_single_player_game(self):
         self.hit_and_release_switch("s_start")
         # game should be running
