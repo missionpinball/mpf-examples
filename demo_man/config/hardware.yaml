@@ -947,6 +947,17 @@ sound_system:
   master_volume: 1
   enabled: true
 
+assets:
+  sounds:
+    default:
+      track: sfx
+    music:
+      track: music
+    sfx:
+      track: sfx
+    voice:
+      track: voice
+
 slides:
   window_slide_1:
   - type: dmd
