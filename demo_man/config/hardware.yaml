@@ -37,7 +37,7 @@ switches:
     label:
   s_flipper_lower_right:
     number: sf2
-    tags: player, right_flipper
+    tags: player, high_score_right
     label:
   s_flipper_lower_left_eos:
     number: sf3
@@ -45,7 +45,7 @@ switches:
     label:
   s_flipper_lower_left:
     number: sf4
-    tags: player, left_flipper
+    tags: player, high_score_left
     label:
   s_flipper_upper_left_eos:
     number: sf5
@@ -108,7 +108,7 @@ switches:
   s_start:
     number: s13
     label:
-    tags: start, player
+    tags: start, player, high_score_select
   s_plumb_bob:
     number: s14
     label:
