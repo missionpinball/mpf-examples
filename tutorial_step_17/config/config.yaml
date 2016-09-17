@@ -789,7 +789,7 @@ slides:
         height: 60
 
 slide_player:
-   mc_ready: welcome_slide
+   init_done: welcome_slide
 
 keyboard:
     z:

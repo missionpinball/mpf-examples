@@ -25,3 +25,17 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         font_size: 50
+      - type: text
+        text: "POTATO VALUE: (potato)"
+        y: 40%
+
+scoring:
+   my_first_shot_my_first_profile_unlit_hit:
+       score: 100
+   my_first_shot_my_first_profile_flashing_hit:
+       score: 1000
+   s_flipper_lower_left_active:
+       score: 1000
+       potato: 1
+   s_flipper_lower_right_active:
+       potato: -2
