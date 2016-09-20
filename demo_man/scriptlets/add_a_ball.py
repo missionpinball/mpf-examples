@@ -8,7 +8,7 @@ class AddABall(Scriptlet):
     def on_load(self):
         self.machine.events.add_handler('sw_buy_in', self.add_ball)
 
-    def add_ball(self):
+    def add_ball(self, **kwargs):
 
         if self.machine.game:
             self.machine.game.add_balls_in_play(1)

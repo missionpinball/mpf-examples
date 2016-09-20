@@ -16,9 +16,10 @@ hardware:
 #    port: com7
 #    use_separate_thread: no
 
-physical_dmd:
-  shades: 16
-  fps: 24
+physical_dmds:
+  dmd:
+    shades: 16
+    fps: 24
 
 #physical_rgb_dmd:
 #  fps: 30

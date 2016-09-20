@@ -133,7 +133,7 @@ class Claw(Scriptlet):
         if self.auto_release_in_progress:
             self.auto_release()
 
-    def light_claw(self):
+    def light_claw(self, **kwargs):
         print("light claw")
         #self.machine.ball_devices['elevator'].request_ball()
         self.machine.diverters['diverter'].enable()
