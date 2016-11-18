@@ -1,0 +1,14 @@
+#show_version=4
+- time: 0
+  leds:
+    upper_planet: white-f1s
+- time: '+1'
+  leds:
+    upper_planet: red-f1s
+- time: '+1'
+  leds:
+    upper_planet: blue-f1s
+- time: '+1'
+  leds:
+    upper_planet: orange-f1s
+- time: '+1'

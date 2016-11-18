@@ -1,0 +1,125 @@
+#config_version=4
+
+hardware:
+  platform: fast
+  driverboards: fast
+
+fast:
+  ports: com14, com15
+
+switches:
+
+  s_right_flipper:
+    number: 1e
+  s_left_flipper:
+    number: 1f
+  s_outhole:
+    number: 03
+  s_upper_plunger_lane:
+    number: 19
+  s_right_upper_rollover:
+    number: 09
+  s_upper_left_rollover:
+    number: 08
+#  s_lane_a:
+#    number:
+  s_lane_b:
+    number: 0b
+  s_lane_c:
+    number: 0d
+  s_lane_d:
+    number: 0e
+  s_center_upper_10k_standup:
+    number: 0c
+  s_left_pop:
+    number: 17
+#  s_right_pop:
+#    number:
+  s_upper_rubbers:  # left and right
+    number: 14  # second from top on right does not work
+  s_center_spinner:
+    number: 13
+  s_left_spinner:
+    number: 12
+  s_right_upper_5k_standup:
+    number: 0f
+  s_right_upper_10k_standup:
+    number: 1a
+  s_right_upper_3k_rollover:
+    number: 1b
+#  s_right_upper_1k_rollover:
+#    number:
+#  s_right_kickout_hole:
+#    number:
+  s_outlanes:  # left and right
+    number: 01
+  s_inlines:
+    number: 02
+  s_sorta_slings:
+    number: 04
+  s_left_mibble_rubber:
+    number: 06
+  s_middle_right_rubber:
+    number: 00
+  s_left_red_standup:
+    number: 07
+  s_shuttle_rollover_4:  # top
+    number: 16
+  s_shuttle_rollover_3:
+    number: 11
+  s_shuttle_rollover_2:
+    number: 10
+  s_shuttle_rollover_1:  # bottom
+    number: 05
+
+leds:
+  bc_lane_10k:
+    number: 00
+  upper_planet:
+    number: 01
+  ad_lane_10k:
+    number: 02
+  upper_left_spaceship:
+    number: 03
+  lane_a:
+    number: 04
+  lane_b:
+    number: 05
+  lane_c:
+    number: 07
+  lane_d:
+    number: 08
+  upper_50k_eb_chance:
+    number: 06
+  upper_right_special_chance_wl:
+    number: 09
+  upper_right_bonus_score_wl:
+    number: 0a
+  center_spinner_3k_wl:
+    number: 0b
+  right_40k:
+    number: 40
+  right_30k:
+    number: 41
+  right_20k:
+    number: 42
+  right_10k:
+    number: 43
+  left_50k:
+    number: 44
+  left_60k:
+    number: 45
+  left_70k:
+    number: 46
+  left_80k:
+    number: 47
+  left_spinner_3k_wl:
+    number: 48
+  left_special_chance_wl:
+    number: 49
+  right_special_chance_wl:
+    number: 4c
+  center_double_bonus_wl:
+    number: 4a
+  extra_ball:
+    number: 4b

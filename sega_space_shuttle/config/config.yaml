@@ -1,0 +1,8 @@
+#config_version=4
+
+# Sega Space Shuttle (1977)
+# http://www.ipdb.org/machine.cgi?id=5542
+
+config:
+  - hardware
+  - window

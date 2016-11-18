@@ -1,0 +1,14 @@
+#show_version=4
+- time: 0
+  leds:
+    upper_left_spaceship: white
+- time: '+100ms'
+  leds:
+    upper_left_spaceship: off
+- time: '+250ms'
+  leds:
+    upper_left_spaceship: white
+- time: '+100ms'
+  leds:
+    upper_left_spaceship: off
+- time: '+500ms'
