@@ -1,8 +1,9 @@
-- tocks: 4
+#show_version=4
+- duration: 4
   lights:
     l_eightBall500: ff
     l_popBumper: 0
-- tocks: 4
+- duration: 4
   lights:
     l_popBumper: ff
     l_eightBall500: 0

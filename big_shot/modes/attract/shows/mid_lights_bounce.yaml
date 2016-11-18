@@ -1,24 +1,25 @@
-- tocks: 1
+#show_version=4
+- duration: 1
   lights:
     l_rtMid1k: ff
     l_rtSpecial: 0
-- tocks: 1
+- duration: 1
   lights:
     l_rtSpecial: ff
     l_rtMid1k: 0
-- tocks: 1
+- duration: 1
   lights:
     l_ltSpecial: ff
     l_rtSpecial: 00
-- tocks: 1
+- duration: 1
   lights:
     l_ltMid1k: ff
     l_ltSpecial: 0
-- tocks: 1
+- duration: 1
   lights:
     l_ltSpecial: ff
     l_ltMid1k: 0
-- tocks: 1
+- duration: 1
   lights:
     l_rtSpecial: ff
     l_ltSpecial: 0

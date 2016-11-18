@@ -1,5 +1,7 @@
-### Maybe play at 8 tps?
-- tocks: 4
+#show_version=4
+
+# Maybe play at 8 tps?
+- duration: 4
   lights:
     l_rtBank1: 00
     l_rtBank2: 00
@@ -13,14 +15,14 @@
   coils: 
     c_rightbankreset1: pulse
     c_rightbankreset2: pulse
-- tocks: 2
+- duration: 2
   lights:
     l_rtBank1: 00
     l_rtBank2: 00
     l_popBumper: ff
   coils:
     c_popBumper: pulse
-- tocks: 4
+- duration: 4
   lights: 
     l_popBumper: 00
     l_ltBank1: ff
@@ -28,7 +30,7 @@
   coils:
     c_leftbankreset1: pulse
     c_leftbankreset2: pulse
-- tocks: 2
+- duration: 2
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
@@ -37,14 +39,14 @@
   coils: 
     c_rightbankreset1: pulse
     c_rightbankreset2: pulse
-- tocks: 4
+- duration: 4
   lights:
     l_rtBank1: 00
     l_rtBank2: 00
     l_popBumper: ff
   coils:
     c_popBumper: pulse
-- tocks: 2
+- duration: 2
   lights: 
     l_popBumper: 00
     l_ltBank1: ff
@@ -52,7 +54,7 @@
   coils:
     c_leftbankreset1: pulse
     c_leftbankreset2: pulse
-- tocks: 4
+- duration: 4
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
@@ -61,14 +63,14 @@
   coils: 
     c_rightbankreset1: pulse
     c_rightbankreset2: pulse
-- tocks: 2
+- duration: 2
   lights:
     l_rtBank1: 00
     l_rtBank2: 00
     l_popBumper: ff
   coils:
     c_popBumper: pulse
-- tocks: 4
+- duration: 4
   lights: 
     l_popBumper: 00
     l_ltBank1: ff
@@ -76,7 +78,7 @@
   coils:
     c_leftbankreset1: pulse
     c_leftbankreset2: pulse
-- tocks: 2
+- duration: 2
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
@@ -85,98 +87,98 @@
   coils: 
     c_rightbankreset1: pulse
     c_rightbankreset2: pulse
-- tocks: 4
+- duration: 4
   lights:
     l_rtBank1: 00
     l_rtBank2: 00
     l_popBumper: ff
   coils:
     c_popBumper: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_popBumper: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff
   coils:
     c_flipperLeftMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_ltSling: 00
     l_rtSling: ff
   coils:
     c_flipperRightMain: pulse
-- tocks: 1
+- duration: 1
   lights:
     l_rtSling: 00
     l_ltSling: ff

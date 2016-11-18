@@ -1,4 +1,5 @@
-- tocks: 1
+#show_version=4
+- duration: 1
   lights:
     l_match00: ff
     l_match10: 00
@@ -10,7 +11,7 @@
     l_match70: 00
     l_match80: 00
     l_match90: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match00: 00
     l_match10: ff
@@ -22,7 +23,7 @@
     l_match70: ff
     l_match80: 00
     l_match90: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match00: 00
     l_match10: 00

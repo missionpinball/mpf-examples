@@ -1,8 +1,10 @@
 # TODO
-# Bonus count is double what it should be (2 lights on ball 1 should score 2k, not 4k) (Not all the time?)
+# Bonus count is double what it should be (2 lights on ball 1 should score 2k,
+# not 4k) (Not all the time?)
 # Lights don't count down...they just turn off.
 # General erratic behavior
-# pop empty list error - bonus mode code ran before score reels finished game scoring
+# pop empty list error - bonus mode code ran before score reels finished game
+# scoring
 
 from mpf.core.mode import Mode
 
@@ -64,7 +66,7 @@ class Bonus(Mode):
                 self.bonus_lights.append(
                     self.machine.shots[target.name].config['light'][0])
 
-        #self.log.debug("Bonus Lights: %s", self.bonus_lights)
+        # self.log.debug("Bonus Lights: %s", self.bonus_lights)
 
         self.check_score_reels()
 
@@ -85,7 +87,8 @@ class Bonus(Mode):
             self.start_bonus()
 
     def start_bonus(self, **kwargs):
-        # remove the handler that we used to wait for the score reels to be done
+        # remove the handler that we used to wait for the score reels to be
+        # done
         self.machine.events.remove_handler(self.start_bonus)
 
         # add the handler that will advance through these bonus steps
@@ -103,21 +106,19 @@ class Bonus(Mode):
         if self.bonus_lights:
             # sets the "pause" between bonus scores, then does the bonus step
             self.delay.add(ms=200, callback=self.do_bonus_step)
-            #print(self.bonus_lights)
+            # print(self.bonus_lights)
 
         else:
             self.bonus_done()
 
     def do_bonus_step(self):
-        #print(self.bonus_lights)
+        # print(self.bonus_lights)
         this_light = self.bonus_lights.pop()
         this_light.off(force=True)
         print("-------- turning off light", this_light, self.machine.tick_num)
 
         self.machine.scoring.add(self.bonus_value)
-        #self.log.debug("Turning off %s", this_light)
-
-
+        # self.log.debug("Turning off %s", this_light)
 
         # if this is the 8 ball, also turn off the top 8 ball lane light
         if this_light.name == 'l_ball8':
@@ -128,7 +129,7 @@ class Bonus(Mode):
         self.log.debug("Bonus is done.")
         self.machine.events.post("bonus_complete")
         # Remove any event handlers we were waiting for
-        #self.machine.events.remove_handler(self.bonus_step)
+        # self.machine.events.remove_handler(self.bonus_step)
 
     def mode_stop(self, **kwargs):
         pass

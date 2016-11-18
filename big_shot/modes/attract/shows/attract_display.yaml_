@@ -1,20 +1,12 @@
-#- tocks: 50
-#  display:
-#    - type: Text
-#      text: YOUR NAME HERE
-#    - type: Text
-#      text: MISSION PINBALL FRAMEWORK
-#      v_pos: bottom
-#      font: small
-#      #y: -1
-#      x: 2
-- tocks: 3
+#show_version=4
+
+- duration: 3
   display:
   - type: Image
     image: mpf_logo
     layer: 1
 
-- tocks: 5
+- duration: 5
   display:
   - type: Animation
     animation: rolling_ball
@@ -31,7 +23,7 @@
       type: move_out
       direction: right
 
-- tocks: 3
+- duration: 3
   display:
     - type: Text
       text: "(PRESS START)"
@@ -50,7 +42,7 @@
         duration: 1s
         direction: right
 
-- tocks: 3
+- duration: 3
   display:
     - type: Text
       text: "BLINKING .5 ON, .5 OFF"
@@ -60,12 +52,12 @@
         on_secs: .5
         off_secs: .5
 
-- tocks: 3
+- duration: 3
   display:
     - type: Text
       text: "NO BLINKING"
 
-- tocks: 3
+- duration: 3
   display:
     - type: Text
       text: "BLINKING .1 ON, .1 OFF"
@@ -76,7 +68,7 @@
         off_secs: .1
 
 
-- tocks: 3
+- duration: 3
   display:
     - type: Text
       text: MISSION PINBALL
@@ -87,7 +79,7 @@
         direction: left
 
 
-- tocks: 3
+- duration: 3
   display:
   - type: Text
     text: JUDGE DREDD
@@ -107,7 +99,7 @@
   - type: Image
     image: death
 
-- tocks: 20
+- duration: 20
   display:
   - type: Image
     image: mpf_logo
@@ -117,7 +109,7 @@
     layer: 1
 
 
-- tocks: 3
+- duration: 3
   display:
   - type: Image
     image: p_roc
@@ -130,7 +122,7 @@
     layer: 0
     shade: 8
 
-- tocks: 3
+- duration: 3
   display:
   - type: Text
     text: CENTERED SIZE 10
@@ -151,7 +143,7 @@
       type: move_out
       direction: bottom
 
-- tocks: 3
+- duration: 3
   display:
   - type: Text
     font: small

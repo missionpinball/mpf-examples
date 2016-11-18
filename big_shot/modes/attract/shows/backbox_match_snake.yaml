@@ -1,4 +1,6 @@
-- tocks: 1
+#show_version=4
+
+- duration: 1
   lights:
     l_match00: 00
     l_match10: 00
@@ -13,60 +15,60 @@
     l_player1_10k: 00
     l_player1: 00
     l_match00: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match10: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match20: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match30: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match40: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match50: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match60: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match70: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match80: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match90: ff
-- tocks: 1
+- duration: 1
   lights:
     l_match00: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match10: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match20: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match30: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match40: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match50: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match60: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match70: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match80: 00
-- tocks: 1
+- duration: 1
   lights:
     l_match90: 00

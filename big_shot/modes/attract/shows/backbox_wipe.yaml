@@ -1,4 +1,5 @@
-- tocks: 1
+#show_version=4
+- duration: 1
   lights:
     l_match00: 00
     l_match10: 00
@@ -12,24 +13,24 @@
     l_match90: 00
     l_player1_10k: ff
     l_player1: ff
-- tocks: 1
+- duration: 1
   lights:
     l_b_i: ff
     l_tilt: ff
-- tocks: 1
+- duration: 1
   lights:
     l_player1_1k: ff
     l_player2: ff
     l_player1_10k: 00
     l_player1: 00
-- tocks: 1
+- duration: 1
   lights:
     l_player1_100: ff
     l_g_s: ff
     l_player1_1k: 00
     l_b_i: 00
     l_tilt: 00
-- tocks: 1
+- duration: 1
   lights:
     l_player1_10: ff
     l_h: ff
@@ -37,7 +38,7 @@
     l_player1_100: 00
     l_g_s: 00
     l_player2: 00
-- tocks: 1
+- duration: 1
   lights: 
     l_player1_1: ff
     l_match90: ff
@@ -45,7 +46,7 @@
     l_match60: ff
     l_player1_10: 00
     l_h: 00
-- tocks: 1
+- duration: 1
   lights:
     l_o_t: ff
     l_gameOver: ff
@@ -57,7 +58,7 @@
     l_match90: 00
     l_match80: 00
     l_match70: 00
-- tocks: 1
+- duration: 1
   lights:
     l_guysHair: ff
     l_ltBody: ff
@@ -69,7 +70,7 @@
     l_o_t: 00
     l_match50: 00
     l_match00: 00
-- tocks: 1
+- duration: 1
   lights:
     l_player2_10k: ff
     l_midBody2: ff
@@ -81,7 +82,7 @@
     l_match30: 00
     l_guysHair: 00
     l_ltLeg: 00
-- tocks: 1
+- duration: 1
   lights:
     l_player2_1k: ff
     l_rtBody: ff
@@ -91,7 +92,7 @@
     l_midBody1: 00
     l_midBody2: 00
     l_player2_10k: 00
-- tocks: 1
+- duration: 1
   lights:
     l_bip1: ff
     l_player2_100: ff
@@ -99,40 +100,40 @@
     l_rtLeg: 00
     l_bip4: 00
     l_player2_1k: 00
-- tocks: 1
+- duration: 1
   lights: 
     l_bip3: ff
     l_player2_10: ff
     l_bip1: 00
     l_player2_100: 00
-- tocks: 1
+- duration: 1
   lights:
     l_bip5: ff
     l_player2_1: ff
     l_bip3: 00
     l_player2_10: 00
-- tocks: 1
+- duration: 1
   lights: 
     l_bip5: 00
     l_player2_1: 00
 ########## Wipe Back ###########
-- tocks: 1
+- duration: 1
   lights:
     l_bip5: ff
     l_player2_1: ff
-- tocks: 1
+- duration: 1
   lights:
     l_bip5: 00
     l_player2_1: 00
     l_bip3: ff
     l_player2_10: ff
-- tocks: 1
+- duration: 1
   lights: 
     l_bip3: 00
     l_player2_10: 00
     l_bip1: ff
     l_player2_100: ff
-- tocks: 1
+- duration: 1
   lights:
     l_bip1: 00
     l_player2_100: 00
@@ -140,7 +141,7 @@
     l_rtLeg: ff
     l_bip4: ff
     l_player2_1k: ff
-- tocks: 1
+- duration: 1
   lights:
     l_player2_1k: 00
     l_rtBody: 00
@@ -150,7 +151,7 @@
     l_midBody1: ff
     l_midBody2: ff
     l_player2_10k: ff
-- tocks: 1
+- duration: 1
   lights:
     l_player2_10k: 00
     l_midBody2: 00
@@ -162,7 +163,7 @@
     l_match30: ff
     l_guysHair: ff
     l_ltLeg: ff
-- tocks: 1
+- duration: 1
   lights:
     l_guysHair: 00
     l_ltBody: 00
@@ -174,7 +175,7 @@
     l_o_t: ff
     l_match50: ff
     l_match00: ff
-- tocks: 1
+- duration: 1
   lights:
     l_o_t: 00
     l_gameOver: 00
@@ -186,7 +187,7 @@
     l_match90: ff
     l_match80: ff
     l_match70: ff
-- tocks: 1
+- duration: 1
   lights: 
     l_player1_1: 00
     l_match90: 00
@@ -194,7 +195,7 @@
     l_match60: 00
     l_player1_10: ff
     l_h: ff
-- tocks: 1
+- duration: 1
   lights:
     l_player1_10: 00
     l_h: 00
@@ -202,20 +203,20 @@
     l_player1_100: ff
     l_g_s: ff
     l_player2: ff
-- tocks: 1
+- duration: 1
   lights:
     l_player1_100: 00
     l_g_s: 00
     l_player1_1k: ff
     l_b_i: ff
     l_tilt: ff
-- tocks: 1
+- duration: 1
   lights:
     l_player1_1k: 00
     l_player2: 00
     l_player1_10k: ff
     l_player1: ff
-- tocks: 1
+- duration: 1
   lights:
     l_b_i: 00
     l_tilt: 00

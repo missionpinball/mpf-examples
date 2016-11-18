@@ -1,5 +1,6 @@
-- tocks: 6
+#show_version=4
 #step: 1
+- duration: 6
   coils:
     c_chime3: pulse
   lights:
@@ -10,14 +11,14 @@
     l_rtBank2: ff
     l_player1_10k: ff
     l_player2_1: ff
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 6
+- duration: 6
 #step: 2
   coils:
     c_chime3: pulse
@@ -29,14 +30,14 @@
     l_rtBank2: ff
     l_player1_1k: ff
     l_player2_10: ff
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 6
+- duration: 6
 #step: 3
   coils:
     c_chime2: pulse
@@ -48,14 +49,14 @@
     l_rtBank2: ff
     l_player1_100: ff
     l_player2_100: ff
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 6
+- duration: 6
 #step: 4
   coils:
     c_chime3: pulse
@@ -67,17 +68,17 @@
     l_rtBank2: ff
     l_player1_10: ff
     l_player2_1k: ff
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 6
+- duration: 6
 #step: 5
   ### Anything here?
-- tocks: 6
+- duration: 6
 #step: 6
   coils:
     c_chime2: pulse
@@ -87,18 +88,18 @@
     l_ltSling: ff
     l_player1_1: ff
     l_player2_10k: ff
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_rtSling: 00
     l_ltSling: 00
-- tocks: 6
+- duration: 6
 #step: 7
   ### Anything here?
-- tocks: 2
+- duration: 2
 #step: 8
   ### Anything here?
-- tocks: 6
+- duration: 6
 #step: 9
   coils:
     c_chime1: pulse
@@ -108,15 +109,15 @@
     l_ltSling: ff
     l_player1_1: 00
     l_player2_10k: 00
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_rtSling: 00
     l_ltSling: 00
-- tocks: 6
+- duration: 6
 #step: 10
   ### Anything here?
-- tocks: 6
+- duration: 6
 #step: 11
   coils:
     c_chime1: pulse
@@ -126,18 +127,18 @@
     l_ltSling: ff
     l_player1_10: 00
     l_player2_1k: 00
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_rtSling: 00
     l_ltSling: 00
-- tocks: 6
+- duration: 6
 #step: 12
   ### Anything here?
-- tocks: 3
+- duration: 3
 #step: 13
   ### Anything here?
-- tocks: 6
+- duration: 6
 #step: 14
   coils:
     c_chime1: pulse
@@ -149,14 +150,14 @@
     l_rtBank2: ff
     l_player1_100: 00
     l_player2_100: 00
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 6
+- duration: 6
 #step: 15
   coils:
     c_chime2: pulse
@@ -168,17 +169,17 @@
     l_rtBank2: ff
     l_player1_1k: 00
     l_player2_10: 00
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 6
+- duration: 6
 #step: 16
   ### Anything here?
-- tocks: 6
+- duration: 6
 #step: 17
   coils:
     c_chime1: pulse
@@ -190,14 +191,14 @@
     l_rtBank2: ff
     l_player1_10k: 00
     l_player2_1: 00
-- tocks: 1
+- duration: 1
 ########### RESET ###########
   lights:
     l_ltBank1: 00
     l_ltBank2: 00
     l_rtBank1: 00
     l_rtBank2: 00
-- tocks: 10
+- duration: 10
 #step: 18
   lights:
     l_match00: 0
