@@ -25,16 +25,3 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         font_size: 50
-      - type: text
-        text: "POTATO VALUE: (potato)"
-        y: 40%
-
-scoring:
-    s_right_inlane_active:
-        score: 100
-    s_left_flipper_active:
-        score: 1000
-        potato: 1
-    s_right_flipper_active:
-        potato: -2
-

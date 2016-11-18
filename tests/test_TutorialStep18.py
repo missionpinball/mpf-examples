@@ -1,20 +1,19 @@
 from mpfmc.tests.MpfIntegrationTestCase import MpfIntegrationTestCase
 
 
-class TestTutorialStep15(MpfIntegrationTestCase):
+class TestTutorialStep18(MpfIntegrationTestCase):
 
     def getConfigFile(self):
         return 'config.yaml'
 
     def getMachinePath(self):
-        return self.get_abs_path('tutorial_step_15')
+        return self.get_abs_path('tutorial_step_18')
 
     def get_platform(self):
         return 'smart_virtual'
 
     def test_game(self):
         # start active switches should start with 5 balls in the trough
-
         self.machine.ball_controller.num_balls_known = 5
         self.assertEqual(5, self.machine.ball_devices.bd_trough.balls)
 
@@ -36,8 +35,21 @@ class TestTutorialStep15(MpfIntegrationTestCase):
         self.advance_time_and_run(2)
 
         # ball is on the pf
-        self.machine.switch_controller.process_switch('s_right_inlane', 1)
-        self.machine.switch_controller.process_switch('s_right_inlane', 0)
+        # 100 points
+        self.machine.switch_controller.process_switch('s_right_inlane',
+                                                      1)
+        self.machine.switch_controller.process_switch('s_right_inlane',
+                                                      0)
+        self.advance_time_and_run(1)
+        self.assertEqual(100, self.machine.game.player.score)
+
+        # player should get 1000 points for hitting the flipper button
+        self.machine.switch_controller.process_switch('s_left_flipper',
+                                                      1)
+        self.machine.switch_controller.process_switch('s_left_flipper',
+                                                      0)
+        self.advance_time_and_run(1)
+        self.assertEqual(1100, self.machine.game.player.score)
         self.advance_time_and_run(2)
 
         self.assertEqual(1, self.machine.game.player.ball)

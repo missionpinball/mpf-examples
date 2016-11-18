@@ -1,14 +1,13 @@
-#config_version=3
+#config_version=4
 
 # Config file for Step 15 of our step-by-step tutorial.
-# https://missionpinball.com/docs/tutorial/
 
-# WARNING: This is for a Demolition Man machine controlled by a P-ROC. Do not
-# use this file with your own hardware unless you change the coil and switch
-# numbers to match your actual hardware!
+# WARNING: The switch and coil numbers in this configuration file are for a Demolition Man machine.
+# Do not use this file with your own hardware unless you change the coil and switch numbers to match your actual
+# hardware!
 
 modes:
-    - base
+  - base
 
 switches:
 # Fliptronics
@@ -18,25 +17,23 @@ switches:
         label:
     s_right_flipper:
         number: sf2
-        tags: player
+        tags:
         label:
-        tags: right_flipper
     s_left_flipper_eos:
         number: sf3
         tags:
         label:
     s_left_flipper:
         number: sf4
-        tags: player
+        tags:
         label:
-        tags: left_flipper
     s_flipper_upper_left_eos:
         number: sf5
         tags:
         label:
     s_flipper_upper_left:
         number: sf6
-        tags: player
+        tags:
         label:
     s_flipper_upper_right_eos:
         number: sf7
@@ -44,7 +41,7 @@ switches:
         label:
     s_flipper_upper_right:
         number: sf8
-        tags: player
+        tags:
         label:
 
 # Direct
@@ -85,15 +82,15 @@ switches:
     s_launch:
         number: s11
         label:
-        tags: launch, player
+        tags: launch
     s_left_handle_button:
         number: s12
         label:
-        tags: player
+        tags:
     s_start:
         number: s13
         label:
-        tags: start, player
+        tags: start
     s_plumb_bob:
         number: s14
         label:
@@ -489,82 +486,16 @@ flippers:
         hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
 
-dmd:
-    physical: yes
-    width: 128
-    height: 32
-
-window:
-    elements:
-      - type: virtualdmd
-        width: 512
-        height: 128
-        h_pos: center
-        v_pos: center
-        pixel_color: ff6600
-        dark_color: 220000
-        pixel_spacing: 1
-      - type: shape
-        shape: box
-        width: 516
-        height: 132
-        color: aaaaaa
-        thickness: 2
-      - type: text
-        font: tall title
-        text: MY AWESOME GAME
-        h_pos: center
-        v_pos: top
-        y: 60
-        size: 100
-        antialias: yes
-        layer: 1
-        color: ee9900
-
-slide_player:
-    mode_attract_started:
-        type: text
-        text: PRESS START
-
-keyboard:
-    z:
-        switch: s_left_flipper
-    /:
-        switch: s_right_flipper
-    1:
-        switch: s_trough1
-        toggle: true
-    2:
-        switch: s_trough2
-        toggle: true
-    3:
-        switch: s_trough3
-        toggle: true
-    4:
-        switch: s_trough4
-        toggle: true
-    5:
-        switch: s_trough5
-        toggle: true
-    p:
-        switch: s_plunger_lane
-        toggle: true
-    s:
-        switch: s_start
-    L:
-        switch: s_launch
-    q:
-        switch: s_right_inlane
-
 ball_devices:
+
   bd_trough:
     tags: trough, home, drain
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam
     eject_coil: c_trough_eject
+    eject_targets: bd_plunger
     entrance_count_delay: 300ms
     jam_switch: s_trough_jam
-    eject_targets: bd_plunger
-    debug: yes
+    debug: true
 
   bd_plunger:
     ball_switches: s_plunger_lane
@@ -594,13 +525,6 @@ ball_devices:
     mechanical_eject: true
     eject_timeouts: 500ms
 
-virtual_platform_start_active_switches:
-    s_trough1
-    s_trough2
-    s_trough3
-    s_trough4
-    s_trough5
-
 autofire_coils:
   left_slingshot:
     coil: c_left_slingshot
@@ -617,3 +541,64 @@ autofire_coils:
   right_jet:
     coil: c_right_jet_bumper
     switch: s_right_jet
+
+virtual_platform_start_active_switches:
+    s_trough1
+    s_trough2
+    s_trough3
+    s_trough4
+    s_trough5
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+  attract_started:
+    widgets:
+      - text: ATTRACT MODE
+        type: text
+
+slide_player:
+   init_done: welcome_slide
+   mode_attract_started: attract_started
+
+keyboard:
+    z:
+        switch: s_left_flipper
+    "?":
+        switch: s_right_flipper
+    1:
+        switch: s_trough1
+        toggle: true
+    2:
+        switch: s_trough2
+        toggle: true
+    3:
+        switch: s_trough3
+        toggle: true
+    4:
+        switch: s_trough4
+        toggle: true
+    5:
+        switch: s_trough5
+        toggle: true
+    p:
+        switch: s_plunger_lane
+        toggle: true
+    l:
+        switch: s_launch
+    s:
+        switch: s_start
+    q:
+        switch: s_right_inlane

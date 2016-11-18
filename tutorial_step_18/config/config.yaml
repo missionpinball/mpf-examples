@@ -8,6 +8,7 @@
 
 modes:
   - base
+  - mode2
 
 switches:
 # Fliptronics
@@ -857,3 +858,25 @@ keyboard:
         switch: s_start
     q:
         switch: s_right_inlane
+    n:
+        event: mode2_start
+    m:
+        event: mode2_stop
+
+shots:
+ my_first_shot:
+   switch: s_right_inlane
+   show_tokens:
+     light: l_light_quick_freeze
+   profile: my_first_profile
+
+shot_profiles:
+   my_first_profile:
+      states:
+         - name: unlit  # step 1
+           show: off
+         - name: flashing  # step 2
+           show: flash
+         - name: lit  # step 3
+           show: on
+      loop: yes

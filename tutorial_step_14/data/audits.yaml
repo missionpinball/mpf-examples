@@ -1,6 +1,6 @@
 events:
   game_ended: 4
-  game_started: 10
+  game_started: 6
 player:
   score:
     average: 0.0
@@ -55,7 +55,7 @@ switches:
   s_left_slingshot: 0
   s_lower_rebound: 0
   s_plumb_bob: 0
-  s_plunger_lane: 18
+  s_plunger_lane: 14
   s_right_coin: 0
   s_right_flipper: 0
   s_right_flipper_eos: 0

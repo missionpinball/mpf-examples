@@ -30,8 +30,10 @@ slide_player:
         y: 40%
 
 scoring:
-    s_right_inlane_active:
+    my_first_shot_my_first_profile_unlit_hit:
         score: 100
+    my_first_shot_my_first_profile_flashing_hit:
+        score: 1000
     s_left_flipper_active:
         score: 1000
         potato: 1

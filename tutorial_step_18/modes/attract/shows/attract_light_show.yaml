@@ -1,0 +1,26 @@
+# show_version=4
+- duration: 1
+  lights:
+    l_freeze_1: ff
+- duration: 1
+  lights:
+    l_freeze_2: ff
+- duration: 1
+  lights:
+    l_freeze_3: ff
+- duration: 1
+  lights:
+    l_freeze_4: ff
+- duration: 1
+  lights:
+    l_freeze_1: 0
+- duration: 1
+  lights:
+    l_freeze_2: 0
+- duration: 1
+  lights:
+    l_freeze_3: 0
+- duration: 1
+  lights:
+    l_freeze_4: 0
+- duration: 1
