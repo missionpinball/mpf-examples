@@ -10,6 +10,7 @@ slide_player:
   player_score: slide_1
   mode_base_started: slide_2
   player_add_success: slide_3
+
 shots:
   pops:
     switch: leftPop, rightPop, bottomPop
@@ -54,25 +55,26 @@ scoring:
   shot_upperleft_unlit:
     score: 250 
 
-sound_player:
-  drain:
-    sound: fail
-    start_events: ball_drain
-  slingshot:
-    sound: big metal
-    start_events: shot_slings
-  pops:
-    sound: little metal
-    start_events: shot_pops
-  standup_lit:
-    sound: standup hit lit
-    start_events: shot_left1_lit_hit, shot_left2_lit_hit
-  standup_unlit:
-    sound: standup hit unlit
-    start_events: shot_left1_unlit_hit, shot_left2_unlit_hit
-  spinner:
-    sound: medium metal
-    start_events: shot_spinner_unlit
+#sound_player:
+#  drain:
+#    sound: fail
+#    start_events: ball_drain
+#  slingshot:
+#    sound: big metal
+#    start_events: shot_slings
+#  pops:
+#    sound: little metal
+#    start_events: shot_pops
+#  standup_lit:
+#    sound: standup hit lit
+#    start_events: shot_left1_lit_hit, shot_left2_lit_hit
+#  standup_unlit:
+#    sound: standup hit unlit
+#    start_events: shot_left1_unlit_hit, shot_left2_unlit_hit
+#  spinner:
+#    sound: medium metal
+#    start_events: shot_spinner_unlit
+
 slides:
   slide_1:
   - type: text

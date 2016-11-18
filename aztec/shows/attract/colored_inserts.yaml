@@ -8,9 +8,9 @@
     centerRowRed: ffffff
 - time: '+1'
   leds:
-    shootAgain: 0
-    leftoutlane: 0
-    rightoutlane: 0
-    spinnerArrow: 0
-    centerRowRed: 0
+    shootAgain: off
+    leftoutlane: off
+    rightoutlane: off
+    spinnerArrow: off
+    centerRowRed: off
 - time: '+1'

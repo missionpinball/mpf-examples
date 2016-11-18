@@ -2,11 +2,11 @@
 - time: 0
   leds:
     upperRolloverLeft: ff0000
-    upperRolloverMiddle: '000000'
+    upperRolloverMiddle: off
     upperRolloverRight: ff0000
 - time: '+1'
   leds:
-    upperRolloverLeft: '000000'
+    upperRolloverLeft: off
     upperRolloverMiddle: ff0000
-    upperRolloverRight: '000000'
+    upperRolloverRight: off
 - time: '+1'
