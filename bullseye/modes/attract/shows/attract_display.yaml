@@ -54,6 +54,6 @@
     #color: 0000ff
         width: 128
         height: 32
-        brightness: 9
+        color: 999999
         z: 1
 - time: '+3'

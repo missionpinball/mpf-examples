@@ -1,8 +1,0 @@
-# show_version=4
-- time: 0
-  lights:
-    l_kickback: ff
-- time: '+1'
-  lights:
-    l_kickback: 0
-- time: '+1'

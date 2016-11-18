@@ -1,8 +1,0 @@
-# show_version=4
-- time: 0
-  lights:
-    l_generic4: ff
-- time: '+1'
-  lights:
-    l_generic4: 0
-- time: '+1'
