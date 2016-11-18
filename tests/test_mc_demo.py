@@ -1,7 +1,5 @@
-import os
+from mpfmc.tests.MpfMcTestCase import MpfMcTestCase
 
-from mpf.mc.tests.MpfMcTestCase import MpfMcTestCase
-import sys
 
 class TestDemo(MpfMcTestCase):
     def get_machine_path(self):
