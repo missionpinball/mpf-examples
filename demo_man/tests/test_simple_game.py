@@ -3,8 +3,8 @@ from mpf.tests.MpfMachineTestCase import MpfMachineTestCase
 
 class TestSimpleGame(MpfMachineTestCase):
 
-    def get_platform(self):
-        return 'smart_virtual'
+    def getMachinePath(self):
+        return "demo_man"
 
     def testLoadConfig(self):
         pass
