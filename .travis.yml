@@ -14,7 +14,15 @@ install:
 - pip3 install -e _mpf/;
 - pip3 install kivy;
 - pip3 install https://github.com/missionpinball/mpf-mc/zipball/${TRAVIS_BRANCH} || pip3 install https://github.com/missionpinball/mpf-mc/zipball/dev;
+
+before_script:
+- export DISPLAY=:99.0;
+- /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1280x720x24 -ac +extension GLX;
+- export PYTHONPATH=$PYTHONPATH:$(pwd);
+
 script:
-  coverage run -m unittest discover
+  cd $TRAVIS_BUILD_DIR
+  coverage3 run --concurrency=thread -m unittest discover
+
 after_success:
   coveralls
