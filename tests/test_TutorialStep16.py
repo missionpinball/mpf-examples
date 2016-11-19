@@ -1,9 +1,7 @@
-
-from mpf.tests.MpfTestCase import MpfTestCase
-from mock import MagicMock
+from mpfmc.tests.MpfIntegrationTestCase import MpfIntegrationTestCase
 
 
-class TestTutorialStep16(MpfTestCase):
+class TestTutorialStep16(MpfIntegrationTestCase):
 
     def getConfigFile(self):
         return 'config.yaml'

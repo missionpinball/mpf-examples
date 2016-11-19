@@ -1,17 +1,13 @@
 events:
-  game_ended: 2
-  game_started: 5
+  game_ended: 0
+  game_started: 1
 player:
   score:
-    average: 2650.0
-    top:
-    - 4100
-    - 1200
-    total: 2
-r_rebound: 0
+    average: 0
+    top: []
+    total: 0
 switches:
   s_always_closed: 0
-  s_ball_launch: 3
   s_bottom_popper: 0
   s_buy_in: 0
   s_car_chase_1: 0
@@ -29,26 +25,20 @@ switches:
   s_claw_super_jets: 0
   s_coin_door_closed: 0
   s_down: 0
-  s_eject: 4
+  s_eject: 0
   s_elevator_hold: 0
   s_elevator_index: 0
   s_enter: 0
   s_esc: 0
   s_eyeball_standup: 0
-  s_flipper_lower_left: 4
-  s_flipper_lower_left_eos: 0
-  s_flipper_lower_right: 1
-  s_flipper_lower_right_eos: 0
   s_flipper_upper_left: 0
   s_flipper_upper_left_eos: 0
   s_flipper_upper_right: 0
   s_flipper_upper_right_eos: 0
   s_fourth_coin: 0
-  s_handle_trigger_left: 0
-  s_handle_trigger_right: 0
-  s_launch: 12
+  s_launch: 0
   s_left_coin: 0
-  s_left_flipper: 4
+  s_left_flipper: 0
   s_left_flipper_eos: 0
   s_left_handle_button: 0
   s_left_inlane: 0
@@ -61,19 +51,18 @@ switches:
   s_left_slingshot: 0
   s_lower_rebound: 0
   s_plumb_bob: 0
-  s_plunger_lane: 12
+  s_plunger_lane: 1
   s_right_coin: 0
   s_right_flipper: 0
   s_right_flipper_eos: 0
   s_right_freeway: 0
-  s_right_inlane: 9
+  s_right_inlane: 0
   s_right_jet: 0
   s_right_outlane: 0
   s_right_ramp_enter: 0
   s_right_ramp_exit: 0
   s_right_rollover: 0
   s_right_slingshot: 0
-  s_shooter_lane: 3
   s_side_ramp_enter: 0
   s_side_ramp_exit: 0
   s_slam_tilt: 0
@@ -85,16 +74,11 @@ switches:
   s_start: 0
   s_top_popper: 0
   s_top_slingshot: 0
-  s_trough1: 12
+  s_trough1: 0
   s_trough2: 0
   s_trough3: 0
   s_trough4: 0
   s_trough5: 0
-  s_trough_1: 3
-  s_trough_2: 0
-  s_trough_3: 0
-  s_trough_4: 0
-  s_trough_5: 0
   s_trough_jam: 0
   s_up: 0
   s_upper_left_flipper_gate: 0

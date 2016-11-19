@@ -1,43 +1,52 @@
-Mode:
-    start_events: ball_starting
-    stop_events: ball_ending
-    priority: 100
-    code: base.Base
+#config_version=4
 
-SlidePlayer:
+mode:
+    start_events: ball_starting
+    priority: 100
+
+slide_player:
     mode_base_started:
-      - type: Text
+      widgets:
+      - type: text
         text: "Pull Trigger To Begin"
         number_grouping: true
-        double_zeros: true
-        v_pos: center
-        transition:
-            type: move_in
-            direction: top
-      - type: Text
+        min_digits: 2
+        y: center
+      - type: text
         text: PLAYER %number%
-        v_pos: bottom
-        h_pos: left
-        font: small
-      - type: Text
-        text: BALL %ball%
-        v_pos: bottom
-        h_pos: right
-        font: small
+        y: bottom
+        x: left
+        style: small
+      - type: text
+        text: BALL (ball)
+        y: bottom
+        x: right
+        style: small
+#      transition:
+#          type: move_in
+#          direction: top
     ball_started:
-        text: PLAYER %player BALL %ball
+      widgets:
+      - type: text
+        text: PLAYER (player) BALL (ball)
     player_score:
-      - type: Text
-        text: "%value"
+      widgets:
+      - type: text
+        text: (score)
         number_grouping: true
-        v_pos: center
-      - type: Text
-        text: PLAYER %number%
-        v_pos: bottom
-        h_pos: left
-        font: small
-      - type: Text
-        text: BALL %ball%
-        v_pos: bottom
-        h_pos: right
-        font: small
+      - type: text
+        text: PLAYER (number)
+        y: bottom
+        x: left
+        style: small
+      - type: text
+        text: BALL (ball)
+        y: bottom
+        x: right
+        style: small
+
+scoring:
+  targets_all_targets_lit_complete:
+    score: 1000000
+  ball_started:
+    score: 10

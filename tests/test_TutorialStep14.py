@@ -6,10 +6,10 @@ from mock import MagicMock
 class TestTutorialStep14(MpfTestCase):
 
     def getConfigFile(self):
-        return 'step14.yaml'
+        return 'config.yaml'
 
     def getMachinePath(self):
-        return self.get_abs_path('tutorial')
+        return self.get_abs_path('tutorial_step_14')
 
     def get_platform(self):
         return 'smart_virtual'
@@ -28,6 +28,9 @@ class TestTutorialStep14(MpfTestCase):
         self.assertEqual(1, self.machine.ball_devices.bd_plunger.balls)
         self.assertEqual(4, self.machine.ball_devices.bd_trough.balls)
         self.assertEqual(0, self.machine.ball_devices.playfield.balls)
+
+        # make sure the base game mode is active
+        self.assertTrue(self.machine.mode_controller.is_active('base'))
 
         # player hits the launch button
         self.machine.switch_controller.process_switch('s_launch', 1)
@@ -122,3 +125,6 @@ class TestTutorialStep14(MpfTestCase):
         self.assertEqual(0, self.machine.ball_devices.bd_plunger.balls)
         self.assertEqual(5, self.machine.ball_devices.bd_trough.balls)
         self.assertEqual(0, self.machine.ball_devices.playfield.balls)
+
+        # make sure the base game mode is not active
+        self.assertFalse(self.machine.mode_controller.is_active('base'))

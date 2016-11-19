@@ -1,0 +1,9 @@
+#show_version=4
+
+- time: 0
+  leds:
+    upper_50k_eb_chance: 888888-f3s
+- time: '+3'
+  leds:
+    upper_50k_eb_chance: 222222-f3s
+- time: '+3'

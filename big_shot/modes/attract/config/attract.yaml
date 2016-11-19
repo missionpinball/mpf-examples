@@ -1,7 +1,3 @@
-#config_version=3
-Mode:
-#    start_events: ball_started
-#    stop_events: ball_ending
-#    priority: 10
-    code: attract.Attract
+#config_version=4
+
 

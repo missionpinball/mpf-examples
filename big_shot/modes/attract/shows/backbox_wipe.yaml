@@ -1,0 +1,222 @@
+#show_version=4
+- duration: 1
+  lights:
+    l_match00: 00
+    l_match10: 00
+    l_match20: 00
+    l_match30: 00
+    l_match40: 00
+    l_match50: 00
+    l_match60: 00
+    l_match70: 00
+    l_match80: 00
+    l_match90: 00
+    l_player1_10k: ff
+    l_player1: ff
+- duration: 1
+  lights:
+    l_b_i: ff
+    l_tilt: ff
+- duration: 1
+  lights:
+    l_player1_1k: ff
+    l_player2: ff
+    l_player1_10k: 00
+    l_player1: 00
+- duration: 1
+  lights:
+    l_player1_100: ff
+    l_g_s: ff
+    l_player1_1k: 00
+    l_b_i: 00
+    l_tilt: 00
+- duration: 1
+  lights:
+    l_player1_10: ff
+    l_h: ff
+    l_match80: ff
+    l_player1_100: 00
+    l_g_s: 00
+    l_player2: 00
+- duration: 1
+  lights: 
+    l_player1_1: ff
+    l_match90: ff
+    l_match70: ff
+    l_match60: ff
+    l_player1_10: 00
+    l_h: 00
+- duration: 1
+  lights:
+    l_o_t: ff
+    l_gameOver: ff
+    l_match50: ff
+    l_match40: ff
+    l_match10: ff
+    l_match00: ff
+    l_player1_1: 00
+    l_match90: 00
+    l_match80: 00
+    l_match70: 00
+- duration: 1
+  lights:
+    l_guysHair: ff
+    l_ltBody: ff
+    l_ltLeg: ff
+    l_match30: ff
+    l_match20: ff
+    l_match60: 00
+    l_gameOver: 00
+    l_o_t: 00
+    l_match50: 00
+    l_match00: 00
+- duration: 1
+  lights:
+    l_player2_10k: ff
+    l_midBody2: ff
+    l_bip2: ff
+    l_midBody1: ff
+    l_match10: 00
+    l_match40: 00
+    l_match20: 00
+    l_match30: 00
+    l_guysHair: 00
+    l_ltLeg: 00
+- duration: 1
+  lights:
+    l_player2_1k: ff
+    l_rtBody: ff
+    l_rtLeg: ff
+    l_bip4: ff
+    l_bip2: 00
+    l_midBody1: 00
+    l_midBody2: 00
+    l_player2_10k: 00
+- duration: 1
+  lights:
+    l_bip1: ff
+    l_player2_100: ff
+    l_rtBody: 00
+    l_rtLeg: 00
+    l_bip4: 00
+    l_player2_1k: 00
+- duration: 1
+  lights: 
+    l_bip3: ff
+    l_player2_10: ff
+    l_bip1: 00
+    l_player2_100: 00
+- duration: 1
+  lights:
+    l_bip5: ff
+    l_player2_1: ff
+    l_bip3: 00
+    l_player2_10: 00
+- duration: 1
+  lights: 
+    l_bip5: 00
+    l_player2_1: 00
+########## Wipe Back ###########
+- duration: 1
+  lights:
+    l_bip5: ff
+    l_player2_1: ff
+- duration: 1
+  lights:
+    l_bip5: 00
+    l_player2_1: 00
+    l_bip3: ff
+    l_player2_10: ff
+- duration: 1
+  lights: 
+    l_bip3: 00
+    l_player2_10: 00
+    l_bip1: ff
+    l_player2_100: ff
+- duration: 1
+  lights:
+    l_bip1: 00
+    l_player2_100: 00
+    l_rtBody: ff
+    l_rtLeg: ff
+    l_bip4: ff
+    l_player2_1k: ff
+- duration: 1
+  lights:
+    l_player2_1k: 00
+    l_rtBody: 00
+    l_rtLeg: 00
+    l_bip4: 00
+    l_bip2: ff
+    l_midBody1: ff
+    l_midBody2: ff
+    l_player2_10k: ff
+- duration: 1
+  lights:
+    l_player2_10k: 00
+    l_midBody2: 00
+    l_bip2: 00
+    l_midBody1: 00
+    l_match10: ff
+    l_match40: ff
+    l_match20: ff
+    l_match30: ff
+    l_guysHair: ff
+    l_ltLeg: ff
+- duration: 1
+  lights:
+    l_guysHair: 00
+    l_ltBody: 00
+    l_ltLeg: 00
+    l_match30: 00
+    l_match20: 00
+    l_match60: ff
+    l_gameOver: ff
+    l_o_t: ff
+    l_match50: ff
+    l_match00: ff
+- duration: 1
+  lights:
+    l_o_t: 00
+    l_gameOver: 00
+    l_match50: 00
+    l_match40: 00
+    l_match10: 00
+    l_match00: 00
+    l_player1_1: ff
+    l_match90: ff
+    l_match80: ff
+    l_match70: ff
+- duration: 1
+  lights: 
+    l_player1_1: 00
+    l_match90: 00
+    l_match70: 00
+    l_match60: 00
+    l_player1_10: ff
+    l_h: ff
+- duration: 1
+  lights:
+    l_player1_10: 00
+    l_h: 00
+    l_match80: 00
+    l_player1_100: ff
+    l_g_s: ff
+    l_player2: ff
+- duration: 1
+  lights:
+    l_player1_100: 00
+    l_g_s: 00
+    l_player1_1k: ff
+    l_b_i: ff
+    l_tilt: ff
+- duration: 1
+  lights:
+    l_player1_1k: 00
+    l_player2: 00
+    l_player1_10k: ff
+    l_player1: ff
+- duration: 1
+  lights:
+    l_b_i: 00
+    l_tilt: 00

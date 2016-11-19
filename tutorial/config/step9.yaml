@@ -29,11 +29,11 @@ switches:
     s_trough_jam:
         number: s36
         type: NC
-    s_launch_button:
-        number: s11
-        tags: launch
     s_plunger_lane:
         number: s27
+    s_launch:
+        number: s11
+        tags: launch
     s_start:
         number: s13
         tags: start
@@ -71,6 +71,30 @@ flippers:
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3
 
+ball_devices:
+  bd_trough:
+    tags: trough, home, drain
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam
+    eject_coil: c_trough_eject
+    eject_targets: bd_plunger
+    entrance_count_delay: 300ms
+    jam_switch: s_trough_jam
+    debug: true
+  bd_plunger:
+    ball_switches: s_plunger_lane
+    entrance_count_delay: 300ms
+    eject_timeouts: 3s
+    tags: ball_add_live
+    eject_coil: c_plunger_eject
+    player_controlled_eject_event: sw_launch
+
+virtual_platform_start_active_switches:
+    s_trough1
+    s_trough2
+    s_trough3
+    s_trough4
+    s_trough5
+
 displays:
   window:
     width: 800
@@ -98,7 +122,7 @@ slide_player:
 keyboard:
     z:
         switch: s_left_flipper
-    /:
+    "?":
         switch: s_right_flipper
     1:
         switch: s_trough1
@@ -118,31 +142,9 @@ keyboard:
     p:
         switch: s_plunger_lane
         toggle: true
-    L:
-        switch: s_launch_button
+    l:
+        switch: s_launch
     s:
         switch: s_start
     q:
         switch: s_right_inlane
-
-ball_devices:
-  bd_trough:
-    tags: trough, home, drain
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam
-    eject_coil: c_trough_eject
-    jam_switch: s_trough_jam
-    eject_targets: bd_plunger
-    debug: yes
-  bd_plunger:
-    ball_switches: s_plunger_lane
-    eject_timeouts: 3s
-    tags: ball_add_live
-    eject_coil: c_plunger_eject
-    player_controlled_eject_event: sw_launch
-
-virtual_platform_start_active_switches:
-    s_trough1
-    s_trough2
-    s_trough3
-    s_trough4
-    s_trough5

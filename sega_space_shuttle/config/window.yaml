@@ -1,0 +1,29 @@
+#config_version=4
+
+window:
+  width: 1024
+  height: 916
+
+displays:
+  window:
+    width: 1024
+    height: 916
+
+slides:
+  backglass:
+    widgets:
+      - type: text
+        color: ff5500
+        text: 00
+        font_size: 60
+        font_name: 16_segment_italic
+        min_digits: 2
+        x: 91%
+        y: 16.5%
+        halign: right
+        anchor_x: right
+      - type: image
+        image: space_shuttle_backglass
+
+slide_player:
+  mc_reset_phase_3: backglass

@@ -1,0 +1,59 @@
+# show_version=4
+- time: 0
+  slides:
+    attract_display_slide_1:
+    - type: text
+      text: FAST PINBALL
+    - type: text
+      text: MISSION PINBALL FRAMEWORK
+      anchor_y: bottom
+      style: small
+      #y: -1
+      x: left+2
+
+      y: bottom
+      anchor_x: left
+- time: '+3'
+  slides:
+    attract_display_slide_2:
+      transition:
+        type: move_in
+        duration: 1s
+        direction: right
+
+      widgets:
+      - type: text
+        text: PRESS START
+        animations:
+          entrance:
+          - property: opacity
+            value: 1
+            duration: 0.5s
+          - property: opacity
+            value: 0
+            duration: 0.5s
+            repeat: true
+      - type: text
+        text: FREE PLAY
+        color: lime
+        anchor_y: bottom
+        style: small
+        y: bottom
+- time: '+3'
+  slides:
+    attract_display_slide_3:
+      transition:
+        type: move_in
+        duration: 1s
+        direction: top
+      widgets:
+      - type: text
+        text: BULLSEYE 301.1
+        z: 1
+      - type: rectangle
+    #color: 0000ff
+        width: 128
+        height: 32
+        color: 999999
+        z: 1
+- time: '+3'

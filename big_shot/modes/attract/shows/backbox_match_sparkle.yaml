@@ -1,0 +1,37 @@
+#show_version=4
+- duration: 1
+  lights:
+    l_match00: ff
+    l_match10: 00
+    l_match20: 00
+    l_match30: ff
+    l_match40: 00
+    l_match50: 00
+    l_match60: ff
+    l_match70: 00
+    l_match80: 00
+    l_match90: ff
+- duration: 1
+  lights:
+    l_match00: 00
+    l_match10: ff
+    l_match20: 00
+    l_match30: 00
+    l_match40: ff
+    l_match50: 00
+    l_match60: 00
+    l_match70: ff
+    l_match80: 00
+    l_match90: 00
+- duration: 1
+  lights:
+    l_match00: 00
+    l_match10: 00
+    l_match20: ff
+    l_match30: 00
+    l_match40: 00
+    l_match50: ff
+    l_match60: 00
+    l_match70: 00
+    l_match80: ff
+    l_match90: 00

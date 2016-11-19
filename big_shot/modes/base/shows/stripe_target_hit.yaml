@@ -1,0 +1,54 @@
+#show_version=4
+- duration: 1
+  coils:
+    c_chime2: pulse
+  lights:
+    l_ball15: ff
+- duration: 1
+  lights:
+    l_ball14: ff
+    l_ball10: ff
+- duration: 1
+  coils:
+    c_chime3: pulse
+  lights:
+    l_ball13: ff
+    l_ball9: ff
+    l_ball6: ff
+- duration: 1
+  lights: 
+    l_ball12: ff
+    l_ball8: ff
+    l_ball5: ff
+    l_ball3: ff
+- duration: 1
+  lights:
+    l_ball11: ff
+    l_ball7: ff
+    l_ball4: ff
+    l_ball2: ff
+    l_ball1: ff
+- duration: 1
+  lights:
+    l_ball15: 00
+- duration: 1
+  lights:
+    l_ball14: 00
+    l_ball10: 00
+- duration: 1
+  lights:
+    l_ball13: 00
+    l_ball9: 00
+    l_ball6: 00
+- duration: 1
+  lights: 
+    l_ball12: 00
+    l_ball8: 00
+    l_ball5: 00
+    l_ball3: 00
+- duration: 1
+  lights:
+    l_ball11: 00
+    l_ball7: 00
+    l_ball4: 00
+    l_ball2: 00

@@ -1,14 +1,14 @@
 # Bonus mode Scriptlet for Big Shot
 
 from mpf.core.scriptlet import Scriptlet
-from mpf.core.tasks import DelayManager
+from mpf.core.delays import DelayManager
 
 
 class Bonus(Scriptlet):
 
     def on_load(self):
         self.queue = None
-        self.delay = DelayManager()
+        self.delay = DelayManager(self.machine.delayRegistry)
         self.bonus_lights = list()
         self.bonus_value = 0
 

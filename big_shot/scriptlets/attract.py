@@ -1,7 +1,6 @@
 # Attract mode Scriptlet for Big Shot
 
 from mpf.core.scriptlet import Scriptlet
-from mpf.core.light_controller import Playlist
 
 
 class Attract(Scriptlet):
@@ -13,7 +12,7 @@ class Attract(Scriptlet):
         self.machine.events.add_handler('mode_attract_stopped',
                                         self.stop)
 
-    def start(self):
+    def start(self, **kwargs):
 
         # for light in self.machine.lights.items_tagged('GI'):
         #     light.on()
@@ -124,7 +123,7 @@ class Attract(Scriptlet):
         # self.modern_playlist.start()
         # self.modern_backbox_playlist.start()
 
-    def stop(self):
+    def stop(self, **kwargs):
         self.machine.shows['top_lanes_sweep'].stop()
         self.machine.shows['pop_8_alternate'].stop()
         self.machine.shows['mid_lights_bounce'].stop()

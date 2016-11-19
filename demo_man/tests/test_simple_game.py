@@ -3,6 +3,9 @@ from mpf.tests.MpfMachineTestCase import FullMachineTestCase
 
 class TestSimpleGame(FullMachineTestCase):
 
+    def getMachinePath(self):
+        return "demo_man"
+
     def test_single_player_game(self):
         self.hit_and_release_switch("s_start")
         # game should be running

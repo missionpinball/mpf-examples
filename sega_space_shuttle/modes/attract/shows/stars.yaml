@@ -1,0 +1,10 @@
+#show_version=4
+- time: 0
+  leds:
+    bc_lane_10k: white-f1s
+    ad_lane_10k: off-f1s
+- time: '+1'
+  leds:
+    bc_lane_10k: off-f1s
+    ad_lane_10k: white-f1s
+- time: '+1'

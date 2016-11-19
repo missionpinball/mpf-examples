@@ -1,4 +1,4 @@
-from mpf.mc.core.scriptlet import Scriptlet
+from mpfmc.core.scriptlet import Scriptlet
 
 
 class DemoDriver(Scriptlet):
@@ -11,14 +11,14 @@ class DemoDriver(Scriptlet):
         self.mc.events.add_handler('next_slide', self.next_slide)
         self.mc.events.add_handler('prev_slide', self.prev_slide)
 
-    def next_slide(self):
+    def next_slide(self, **kwargs):
         if self.current_slide_index == self.total_slides:
             return
 
         self.current_slide_index += 1
         self.mc.events.post('event{}'.format(self.current_slide_index))
 
-    def prev_slide(self):
+    def prev_slide(self, **kwargs):
 
         if self.current_slide_index == 1:
             return

@@ -1,19 +1,10 @@
 # config_version=4
 
 machine:
-  hz: 30
-  balls installed: 1
-  min balls: 0
-  max balls: 1
-
-game:
-  balls per game: 3
-  max players per game: 4
+  balls_installed: 1
 
 modes:
 - base
-
-scriptlets: attract.Attract
 
 switches:
   s_start:
@@ -439,7 +430,6 @@ ball_devices:
     entrance_count_delay: 200ms
     exit_count_delay: 1s
     eject_coil: c_trough
-    confirm_eject_type: count
   left_lock:
     ball_switches: s_lock_left
     eject_coil: c_lock_left
@@ -472,58 +462,14 @@ autofire_coils:
     coil: c_sling_right
     switch: s_sling_right
 
-targets:
-  dart_d:
-    switch: s_lane_d
-    light: l_lane_d
-  dart_a:
-    switch: s_lane_a
-    light: l_lane_a
-  dart_r:
-    switch: s_lane_r
-    light: l_lane_r
-  dart_t:
-    switch: s_lane_t
-    light_: l_lane_t
-  standup_20:
-    switch: s_target_20
-    light: l_white_20
-  standup_1:
-    switch: s_target_1
-    light: l_white_1
-  standup_18:
-    switch: s_target_18
-    light: l_white_18
-  standup_2:
-    switch: s_target_2
-    light: l_white_2
-  standup_17:
-    switch: s_target_17
-    light: l_white_17
-  standup_5:
-    switch: s_target_5
-    light: l_white_5
-  standup_12:
-    switch: s_target_12
-    light: l_white_12
-  standup_9:
-    switch: s_target_9
-    light: l_white_9
-  standup_3:
-    switch: s_target_3
-    light: l_white_3
-  standup_19:
-    switch: s_target_19
-    light: l_white_19
-
-target_groups:
+shot_groups:
   all_targets:
-    targets: standup_9, standup_12, standup_5, standup_20, standup_1, standup_18,
+    shots: standup_9, standup_12, standup_5, standup_20, standup_1, standup_18,
       standup_2, standup_17, standup_3, standup_19
     enable_events: ball_started
     reset_events: ball_ending, targets_all_targets_lit_complete
   rollovers:
-    targets: dart_d, dart_a, dart_r, dart_t
+    shots: dart_d, dart_a, dart_r, dart_t
     enable_events: ball_started
     reset_events: ball_ending, targets_rollovers_lit_complete
 
@@ -540,27 +486,76 @@ keyboard:
   s:
     switch: s_start
 
-bcp:
-  connections:
-    local_display:
-      host: localhost
-      port: 5050
-
 images:
   backglass:
     file: 301.bmp
 
 shots:
   left_orbit:
-    type: sequence
-    switches: s_orbit_left, s_lane_d
+    switch_sequence: s_orbit_left, s_lane_d
     time: 3s
   dart:
-    switch: s_lane_d, s_lane_a, s_lane_r, s_lane_t
+    switches: s_lane_d, s_lane_a, s_lane_r, s_lane_t
   inlane:
-    switch: s_inlane_right, s_inlane_left
+    switches: s_inlane_right, s_inlane_left
   outlane:
-    switch: s_outlane_right, s_outlane_left
+    switches: s_outlane_right, s_outlane_left
+  dart_d:
+    switch: s_lane_d
+    show_tokens:
+      light: l_lane_d
+  dart_a:
+    switch: s_lane_a
+    show_tokens:
+      light: l_lane_a
+  dart_r:
+    switch: s_lane_r
+    show_tokens:
+      light: l_lane_r
+  dart_t:
+    switch: s_lane_t
+    show_tokens:
+      light_: l_lane_t
+  standup_20:
+    switch: s_target_20
+    show_tokens:
+      light: l_white_20
+  standup_1:
+    switch: s_target_1
+    show_tokens:
+      light: l_white_1
+  standup_18:
+    switch: s_target_18
+    show_tokens:
+      light: l_white_18
+  standup_2:
+    switch: s_target_2
+    show_tokens:
+      light: l_white_2
+  standup_17:
+    switch: s_target_17
+    show_tokens:
+      light: l_white_17
+  standup_5:
+    switch: s_target_5
+    show_tokens:
+      light: l_white_5
+  standup_12:
+    switch: s_target_12
+    show_tokens:
+      light: l_white_12
+  standup_9:
+    switch: s_target_9
+    show_tokens:
+      light: l_white_9
+  standup_3:
+    switch: s_target_3
+    show_tokens:
+      light: l_white_3
+  standup_19:
+    switch: s_target_19
+    show_tokens:
+      light: l_white_19
 
 shows:
   flash:
@@ -572,11 +567,7 @@ shows:
       (lights): 0
 
   - time: '+1'
-scoring:
-  targets_all_targets_lit_complete:
-    score: 1000000
-  ball_started:
-    score: 10
+
 displays:
   window:
     height: 768

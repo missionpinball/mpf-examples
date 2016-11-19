@@ -8,7 +8,8 @@ hardware:
   driverboards: fast
 
 fast:
-  ports: com4, com5, com6
+#  ports: com4, com5, com6
+  ports: /dev/tty.usbserial-1415A, /dev/tty.usbserial-1415B, /dev/tty.usbserial-1415C
   config_number_format: hex
 
 open_pixel_control:
@@ -18,7 +19,10 @@ modes:
 - base
 
 led_settings:
-  brightness_compensation: 0.1
+  color_correction_profiles:
+    default:
+      whitepoint: 0.1, 0.1, 0.1
+  default_color_correction_profile: default
 
 switches:
   leftpop:
@@ -202,14 +206,14 @@ ball_devices:
     entrance_count_delay: 200ms
     exit_count_delay: 1s
     eject_coil: trough
-    confirm_eject_type: count
+    confirm_eject_type: target
 
   balllock:
     ball_switches: ballLock
     entrance_count_delay: 200ms
     exit_count_delay: 1s
     eject_coil: ballLock
-    confirm_eject_type: count
+    confirm_eject_type: target
 
 flippers:
   left:
@@ -241,33 +245,43 @@ autofire_coils:
 shots:
   laneleft:
     switch: topLaneLeft
-    led: upperLaneLeft
+    show_tokens:
+      led: upperLaneLeft
   lanemiddle:
     switch: topLaneMiddle
-    led: upperLaneMiddle
+    show_tokens:
+      led: upperLaneMiddle
   laneright:
     switch: topLaneRight
-    led: upperLaneRight
+    show_tokens:
+      led: upperLaneRight
   left1:
-    led: lefttarget1
     switch: standupMidLeft1
+    show_tokens:
+      led: lefttarget1
   left2:
-    led: lefttarget2
     switch: standupMidLeft2
+    show_tokens:
+      led: lefttarget2
   right1:
-    led: righttarget1
     switch: standupMidRight1
+    show_tokens:
+      led: righttarget1
   right2:
-    led: righttarget2
+    show_tokens:
+      led: righttarget2
     switch: standupMidRight2
   middle:
-    led: centerRowRed
+    show_tokens:
+      led: centerRowRed
     switch: standupMiddle
   upperleft:
     switch: standupTopLeft
-    led: leftUpperStandup
+    show_tokens:
+      led: leftUpperStandup
   spinner:
-    led: spinnerArrow
+    show_tokens:
+      led: spinnerArrow
     switch: spinner
     reset_events:
       shot_spinner_unlit_hit: 30ms
@@ -279,10 +293,6 @@ shot_groups:
     rotate_right_events: sw_right_flipper
     reset_events: shot_upperLanes_lit_complete
 
-physical_dmd:
-  width: 128
-  height: 32
-  shades: 16
 window:
   width: 1024
   height: 256
@@ -291,6 +301,7 @@ window:
   fullscreen: false
   borderless: false
   exit_on_escape: true
+
 virtual_platform_start_active_switches: trough
 
 keyboard:
@@ -320,12 +331,6 @@ keyboard:
   l:
     switch: standupMidLeft1
 
-bcp:
-  connections:
-    local_display:
-      host: localhost
-      port: 5050
-
 displays:
   window:
     height: 256
@@ -334,40 +339,43 @@ displays:
     width: 128
     height: 32
     default: true
+
 slides:
   window_slide_1:
-  - type: dmd
-    width: 1024
-    height: 256
-    pixel_color: ff0000
-    dark_color: 220000
-    z: 1
-      #- type: Text
-      #  font: tall title
-      #  text: FAST PINBALL
-      #  h_pos: right
-      #  v_pos: bottom
-      #  y: -10
-      #  x: -20
-      #  size: 60
-      #  antialias: yes
-      #  layer: 1
-      #  color: ff0000
-      #
-      #- type: Shape
-      #  shape: box
-      #  width: 516
-      #  height: 132
-      #  layer: 2
-      #  thickness: 2
-      #  v_pos: center
-      #  h_pos: center
-      #  color: aaaaaa
+    widgets:
+    - type: dmd
+      width: 1024
+      height: 256
+      pixel_color: ff0000
+      dark_color: 220000
+      z: 1
+        #- type: Text
+        #  font: tall title
+        #  text: FAST PINBALL
+        #  h_pos: right
+        #  v_pos: bottom
+        #  y: -10
+        #  x: -20
+        #  size: 60
+        #  antialias: yes
+        #  layer: 1
+        #  color: ff0000
+        #
+        #- type: Shape
+        #  shape: box
+        #  width: 516
+        #  height: 132
+        #  layer: 2
+        #  thickness: 2
+        #  v_pos: center
+        #  h_pos: center
+        #  color: aaaaaa
 
 slide_player:
   machine_reset_phase_3:
     window_slide_1:
       target: window
+
 widget_styles:
   text_default:
     font_name: Quadrit
@@ -399,6 +407,7 @@ widget_styles:
   tall title:
     font_name: big_noodle_titling
     font_size: 20
+
 show_player:
   mode_attract_started:
     attract_display:

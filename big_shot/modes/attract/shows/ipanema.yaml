@@ -1,0 +1,53 @@
+#show_version=4
+- duration: 8
+  coils:
+    c_chime3: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 6
+  coils:
+    c_chime1: pulse
+- duration: 8
+  coils:
+    c_chime3: pulse
+- duration: 6
+  coils:
+    c_chime3: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+#### BREAK
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 8
+  coils:
+    c_chime3: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 6
+  coils:
+    c_chime1: pulse
+- duration: 8
+  coils:
+    c_chime3: pulse
+- duration: 6
+  coils:
+    c_chime3: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse
+- duration: 8
+  coils:
+    c_chime2: pulse

@@ -1,0 +1,25 @@
+#show_version=4
+- duration: 1
+  lights:
+    l_topLtLane: ff
+- duration: 1
+  lights:
+    l_topMid1: ff
+- duration: 1
+  lights:
+    l_topMid2: ff
+- duration: 1
+  lights:
+    l_topRtLane: ff
+- duration: 1
+  lights:
+    l_topLtLane: 0
+- duration: 1
+  lights:
+    l_topMid1: 0
+- duration: 1
+  lights:
+    l_topMid2: 0
+- duration: 1
+  lights:
+    l_topRtLane: 0

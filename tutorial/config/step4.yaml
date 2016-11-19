@@ -15,12 +15,16 @@ switches:
 coils:
     c_flipper_left_main: 
         number: FLLM
+        pulse_ms: 25
     c_flipper_left_hold: 
         number: FLLH
+        allow_enable: true
     c_flipper_right_main: 
         number: FLRM
+        pulse_ms: 25
     c_flipper_right_hold: 
         number: FLRH
+        allow_enable: yes
 
 flippers:
     left_flipper:

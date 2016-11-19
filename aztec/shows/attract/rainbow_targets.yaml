@@ -25,7 +25,7 @@
     standup: 3300ff
 - time: '+1'
   leds:
-    standup: 0000fff
+    standup: 0000ff
 - time: '+1'
   leds:
     standup: 0033ff
