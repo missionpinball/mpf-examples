@@ -8,6 +8,7 @@ class TestSimpleGame(FullMachineTestCase):
 
     def test_single_player_game(self):
         self.hit_and_release_switch("s_start")
+        self.advance_time_and_run(1)
         # game should be running
         self.assertIsNotNone(self.machine.game)
         self.assertEqual(1, self.machine.game.player.ball)
