@@ -21,7 +21,7 @@ before_script:
 - export PYTHONPATH=$PYTHONPATH:$(pwd);
 
 script:
-- coverage3 run --concurrency=thread -m unittest discover -v;
+- coverage3 run --concurrency=thread -m unittest discover;
 
 after_success:
   coveralls
