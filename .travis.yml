@@ -12,6 +12,7 @@ install:
 - pip3 install --upgrade cython pillow coveralls setuptools;
 - git clone --recursive --branch ${TRAVIS_BRANCH} https://github.com/missionpinball/mpf.git _mpf || git clone --recursive --branch `python3 get_version.py` https://github.com/missionpinball/mpf.git _mpf || git clone --recursive --branch dev https://github.com/missionpinball/mpf.git _mpf;
 - pip3 install -e _mpf/;
+- pip3 install kivy;
 - pip3 install https://github.com/missionpinball/mpf-mc/zipball/${TRAVIS_BRANCH} || pip3 install https://github.com/missionpinball/mpf-mc/zipball/dev;
 script:
   coverage run -m unittest discover
