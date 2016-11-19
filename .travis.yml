@@ -21,8 +21,8 @@ before_script:
 - export PYTHONPATH=$PYTHONPATH:$(pwd);
 
 script:
-  cd $TRAVIS_BUILD_DIR
-  coverage3 run --concurrency=thread -m unittest discover
+- cd $TRAVIS_BUILD_DIR;
+- coverage3 run --concurrency=thread -m unittest discover;
 
 after_success:
   coveralls
