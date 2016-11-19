@@ -21,7 +21,11 @@ before_script:
 - export PYTHONPATH=$PYTHONPATH:$(pwd);
 
 script:
+- pwd;
+- ls;
 - cd $TRAVIS_BUILD_DIR;
+- pwd;
+- ls;
 - coverage3 run --concurrency=thread -m unittest discover;
 
 after_success:
