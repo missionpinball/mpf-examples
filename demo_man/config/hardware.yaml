@@ -37,7 +37,7 @@ switches:
     label:
   s_flipper_lower_right:
     number: sf2
-    tags: player, high_score_right
+    tags: player, high_score_right, right_flipper
     label:
   s_flipper_lower_left_eos:
     number: sf3
@@ -45,7 +45,7 @@ switches:
     label:
   s_flipper_lower_left:
     number: sf4
-    tags: player, high_score_left
+    tags: player, high_score_left, left_flipper
     label:
   s_flipper_upper_left_eos:
     number: sf5
@@ -53,7 +53,7 @@ switches:
     label:
   s_handle_trigger_right:
     number: sf6
-    tags: player
+    tags: player, right_flipper
     label:
   s_flipper_upper_right_eos:
     number: sf7
@@ -61,7 +61,7 @@ switches:
     label:
   s_handle_trigger_left:
     number: sf8
-    tags: player
+    tags: player, left_flipper
     label:
 # Direct
   s_left_coin:
