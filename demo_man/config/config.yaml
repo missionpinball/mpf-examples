@@ -16,9 +16,10 @@ hardware:
 #    port: com7
 #    use_separate_thread: no
 
-physical_dmd:
-  shades: 16
-  fps: 24
+physical_dmds:
+  dmd:
+    shades: 16
+    fps: 24
 
 #physical_rgb_dmd:
 #  fps: 30
@@ -47,6 +48,7 @@ modes:
 - bonus
 - high_score
 - tilt
+- service
 #  - credits
 
 scriptlets: add_a_ball.AddABall claw.Claw

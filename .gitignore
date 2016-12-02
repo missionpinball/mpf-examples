@@ -3,4 +3,6 @@ __pycache__/
 __mpfcache__
 .idea
 logs
-/data
+data
+
+.DS_Store

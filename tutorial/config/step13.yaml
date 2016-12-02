@@ -14,7 +14,7 @@ switches:
         label:
     s_right_flipper:
         number: sf2
-        tags:
+        tags: left_flipper
         label:
     s_left_flipper_eos:
         number: sf3
@@ -22,7 +22,7 @@ switches:
         label:
     s_left_flipper:
         number: sf4
-        tags:
+        tags: right_flipper
         label:
     s_flipper_upper_left_eos:
         number: sf5
@@ -30,7 +30,7 @@ switches:
         label:
     s_flipper_upper_left:
         number: sf6
-        tags:
+        tags: left_flipper
         label:
     s_flipper_upper_right_eos:
         number: sf7
@@ -38,7 +38,7 @@ switches:
         label:
     s_flipper_upper_right:
         number: sf8
-        tags:
+        tags: right_flipper
         label:
 
 # Direct

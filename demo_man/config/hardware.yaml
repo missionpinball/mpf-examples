@@ -6,7 +6,7 @@ machine:
   min_balls: 1
 
 virtual_platform_start_active_switches: s_trough_1 s_trough_2 s_trough_3 s_trough_4
-  s_trough_5
+  s_trough_5, s_coin_door_closed
 
 mpf-mc:
   fps: 60
@@ -37,7 +37,7 @@ switches:
     label:
   s_flipper_lower_right:
     number: sf2
-    tags: player, right_flipper
+    tags: player, high_score_right, right_flipper
     label:
   s_flipper_lower_left_eos:
     number: sf3
@@ -45,7 +45,7 @@ switches:
     label:
   s_flipper_lower_left:
     number: sf4
-    tags: player, left_flipper
+    tags: player, high_score_left, left_flipper
     label:
   s_flipper_upper_left_eos:
     number: sf5
@@ -53,7 +53,7 @@ switches:
     label:
   s_handle_trigger_right:
     number: sf6
-    tags: player
+    tags: player, right_flipper
     label:
   s_flipper_upper_right_eos:
     number: sf7
@@ -61,7 +61,7 @@ switches:
     label:
   s_handle_trigger_left:
     number: sf8
-    tags: player
+    tags: player, left_flipper
     label:
 # Direct
   s_left_coin:
@@ -82,19 +82,19 @@ switches:
     label:
   s_esc:
     number: sd5
-    tags:
+    tags: service_esc
     label:
   s_down:
     number: sd6
-    tags: volume_down
+    tags: service_down
     label:
   s_up:
     number: sd7
-    tags: volume_up
+    tags: service_up
     label:
   s_enter:
     number: sd8
-    tags:
+    tags: service_enter
     label:
 # Matrix
   s_ball_launch:
@@ -108,11 +108,11 @@ switches:
   s_start:
     number: s13
     label:
-    tags: start, player
+    tags: start, player, high_score_select
   s_plumb_bob:
     number: s14
     label:
-    tags: tilt
+    tags: tilt_warning
   s_left_outlane:
     number: s15
     label:
@@ -136,7 +136,7 @@ switches:
   s_coin_door_closed:
     number: s22
     label:
-    tags:
+    tags: service_door_closed, power_on
   s_buy_in:
     number: s23
     label:
@@ -946,6 +946,17 @@ sound_system:
   channels: 1
   master_volume: 1
   enabled: true
+
+assets:
+  sounds:
+    default:
+      track: sfx
+    music:
+      track: music
+    sfx:
+      track: sfx
+    voice:
+      track: voice
 
 slides:
   window_slide_1:

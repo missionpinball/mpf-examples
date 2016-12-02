@@ -1,5 +1,6 @@
 # show_version=4
 - time: 0
+  duration: -1
   gis:
     gi_back_panel: ff
     gi_upper_right: ff

@@ -9,8 +9,10 @@
 switches:
     s_left_flipper:
         number: SF4
+        tags: left_flipper
     s_right_flipper:
         number: SF2
+        tags: right_flipper
     s_trough1:
         number: s31
         type: NC
