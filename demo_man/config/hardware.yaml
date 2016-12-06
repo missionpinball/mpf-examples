@@ -965,19 +965,16 @@ slides:
     height: 128
     pixel_color: ff5500
     dark_color: 220000
-    z: 1
   - type: text
     style: tall title
     text: MISSION PINBALL FRAMEWORK
     anchor_y: top
     y: top-3
     font_size: 30
-    z: 1
     color: white
   - type: rectangle
     width: 514
     height: 130
-    z: 2
     color: 444444
   - type: text
     style: tall title
@@ -987,7 +984,6 @@ slides:
     y: bottom+3
     x: right-42
     font_size: 30
-    z: 1
     color: red
 
   waiting_for_connection:
