@@ -1,9 +1,0 @@
-#config_version=4
-mode:
-  start_events: castle_grunewald_mode_lit_hit
-  priority: 300
-
-slide_player:
-  mode_castle_grunewald_starting: slide_8
-slides:
-  slide_8: []

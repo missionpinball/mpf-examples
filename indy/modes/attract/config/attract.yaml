@@ -1,7 +1,0 @@
-# config_version=4
-slide_player:
-  mode_attract_started: slide_1
-slides:
-  slide_1:
-  - type: text
-    text: PRESS START

@@ -1,5 +1,0 @@
-Mode:
-    start_events: ball_started
-    stop_events: ball_ending
-    priority: 150
-    code: mission_control.MissionControl
