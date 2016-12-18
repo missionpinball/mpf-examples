@@ -1,10 +1,11 @@
+import os
 from mpfmc.tests.FullMpfMachineTestCase import FullMachineTestCase
 
 
 class TestSimpleGame(FullMachineTestCase):
 
     def getMachinePath(self):
-        return "demo_man"
+        return os.path.abspath(os.path.join(os.path.realpath(__file__), os.pardir, os.pardir))
 
     def test_single_player_game(self):
         self.hit_and_release_switch("s_start")
