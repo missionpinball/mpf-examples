@@ -1,9 +1,16 @@
+import os
 from mpfmc.tests.MpfMcTestCase import MpfMcTestCase
+
 
 
 class TestDemo(MpfMcTestCase):
     def get_machine_path(self):
-        return self.get_abs_path('mc_demo')
+        return "../"
+
+    def getAbsoluteMachinePath(self):
+        # do not use path relative to MPF folder
+        return os.path.abspath(os.path.join(
+            os.path.realpath(__file__), os.pardir, self.get_machine_path()))
 
     def get_config_file(self):
         return 'config.yaml'
