@@ -16,7 +16,7 @@ install:
 - pip3 install --upgrade coveralls
 
 script:
-- docker run -v /dev/snd:/dev/snd -v /tmp/_mpf:/tmp/_mpf -v /tmp/_mpf-mc:/tmp/_mpf-mc -v /tmp/_mpf_installer:/tmp/_mpf_installer -v $PWD:$PWD -w $PWD $LINUX /bin/sh -c "/tmp/_mpf_installer/install-mpf && pip3 install --upgrade coveralls && apt-get install -y xvfb && pip3 install -e /tmp/_mpf/ && pip3 install /tmp/_mpf-mc/ && export DISPLAY=:99.0 && /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1280x720x24 -ac +extension GLX && export PYTHONPATH=$PYTHONPATH:$(pwd) && coverage3 run --concurrency=thread -m unittest discover;";
+- docker run -v /dev/snd:/dev/snd -v /tmp/_mpf:/tmp/_mpf -v /tmp/_mpf-mc:/tmp/_mpf-mc -v /tmp/_mpf_installer:/tmp/_mpf_installer -v $PWD:$PWD -w $PWD $LINUX /bin/sh -c "/tmp/_mpf_installer/install-mpf && pip3 install --upgrade coveralls && apt-get install -y xvfb && pip3 install -e /tmp/_mpf/ && pip3 install /tmp/_mpf-mc/ && export DISPLAY=:99.0 && /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1280x720x24 -ac +extension GLX && export PYTHONPATH=$PYTHONPATH:$(pwd) && coverage3 run --concurrency=thread -m unittest discover -s demo_man && coverage3 run -a --concurrency=thread -m unittest discover -s mc_demo && coverage3 run -a --concurrency=thread -m unittest discover -s tests";
 
 after_success:
   coveralls
