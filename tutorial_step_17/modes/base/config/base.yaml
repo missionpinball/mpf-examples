@@ -32,8 +32,9 @@ slide_player:
 scoring:
     s_right_inlane_active:
         score: 100
-    s_flipper_lower_left_active:
+    s_left_flipper_active:
         score: 1000
         potato: 1
-    s_flipper_lower_right_active:
+    s_right_flipper_active:
         potato: -2
+

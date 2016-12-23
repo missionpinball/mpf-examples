@@ -9,18 +9,24 @@
 switches:
     s_left_flipper:
         number: SF4
+        tags: left_flipper
     s_right_flipper:
         number: SF2
+        tags: right_flipper
 
 coils:
-    c_flipper_left_main: 
+    c_flipper_left_main:
         number: FLLM
-    c_flipper_left_hold: 
+        pulse_ms: 25
+    c_flipper_left_hold:
         number: FLLH
-    c_flipper_right_main: 
+        allow_enable: true
+    c_flipper_right_main:
         number: FLRM
-    c_flipper_right_hold: 
+        pulse_ms: 25
+    c_flipper_right_hold:
         number: FLRH
+        allow_enable: yes
 
 flippers:
     left_flipper:

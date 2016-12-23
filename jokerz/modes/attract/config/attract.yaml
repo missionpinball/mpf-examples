@@ -1,9 +1,0 @@
-#config_version=4
-show_player:
-  mode_attract_started:
-    bouncing_bells:
-      loops: -1
-      speed: 7
-  mode_attract_stopped:
-    bouncing_bells:
-      action: stop

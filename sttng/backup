@@ -1,4 +1,0 @@
-#!/bin/sh
-time_stamp=$(date +%Y_%m_%d_%H_%M_%S)
-mkdir /home/pinball/backup/sttng_${time_stamp}
-cp -R /home/pinball/mpf_github/machine_files/sttng/* /home/pinball/backup/sttng_${time_stamp}

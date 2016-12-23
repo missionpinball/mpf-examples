@@ -9,8 +9,10 @@
 switches:
     s_left_flipper:
         number: SF4
+        tags: left_flipper
     s_right_flipper:
         number: SF2
+        tags: right_flipper
     s_trough1:
         number: s31
         type: NC
@@ -31,15 +33,15 @@ switches:
         type: NC
 
 coils:
-    c_flipper_left_main: 
+    c_flipper_left_main:
         number: FLLM
         pulse_ms: 25
-    c_flipper_left_hold: 
+    c_flipper_left_hold:
         number: FLLH
-    c_flipper_right_main: 
+    c_flipper_right_main:
         number: FLRM
         pulse_ms: 25
-    c_flipper_right_hold: 
+    c_flipper_right_hold:
         number: FLRH
     c_trough_eject:
         number: c01
@@ -56,6 +58,21 @@ flippers:
         hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3
+
+ball_devices:
+  bd_trough:
+    tags: trough, home, drain
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam
+    eject_coil: c_trough_eject
+    jam_switch: s_trough_jam
+    debug: true
+
+virtual_platform_start_active_switches:
+    s_trough1
+    s_trough2
+    s_trough3
+    s_trough4
+    s_trough5
 
 displays:
   window:
@@ -84,7 +101,7 @@ slide_player:
 keyboard:
     z:
         switch: s_left_flipper
-    /:
+    "?":
         switch: s_right_flipper
     1:
         switch: s_trough1
@@ -101,19 +118,3 @@ keyboard:
     5:
         switch: s_trough5
         toggle: true
-
-ball_devices:
-  bd_trough:
-    tags: trough, home, drain
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough_jam
-    eject_coil: c_trough_eject
-    entrance_count_delay: 300ms
-    jam_switch: s_trough_jam
-    debug: true
-
-virtual_platform_start_active_switches:
-    s_trough1
-    s_trough2
-    s_trough3
-    s_trough4
-    s_trough5

@@ -15,38 +15,28 @@ slide_player:
   player_3_ball_started: slide_4
   player_4_ball_started: slide_5
 
-#sound_player:
-#  waiting to plunge loop:
-#    sound: waiting to plunge loop
-#    start_events: mode_base_started
-#    stop_events: sw_plunger
-#    loops: -1
-#    volume: 0.5
-#  background music:
-#    start_events: sw_plunger
-#    stop_events: mode_base_stopping, balldevice_elevator_ball_enter
-#    sound: base background music
-#    loops: -1
-#    volume: 0.5
-#  ramp 1 fx:
-#    start_events: sw_ramp_1
-#    sound: ramp 1
-#  ramp 2 fx:
-#    start_events: sw_ramp_2
-#    sound: ramp 2
-#  standup lit:
-#    start_events: shots_standups_lit_hit
-#    sound: standup hit lit
-#  standup unlit:
-#    start_events: shots_standups_unlit_hit
-#    sound: standup hit unlit
-#  little metal:
-#    start_events: sw_slingshot
-#    sound: little metal
-#        #switch_tag_triggers: slingshot
-#  jets:
-#    start_events: sw_jet
-#    sound: medium metal
+sound_player:
+
+  mode_base_started:
+    waiting to plunge loop:
+      loops: -1
+
+  sw_plunger:
+    waiting to plunge loop:
+      action: stop
+    base background music:
+      loops: -1
+
+  balldevice_elevator_ball_enter:
+    base background music:
+      loops: -1
+
+  sw_ramp_1: ramp 1
+  sw_ramp_2: ramp 2
+  shots_standups_lit_hit: standup hit lit
+  shots_standups_unlit_hit: standup hit unlit
+  sw_slingshot: little metal
+  sw_jet: medium metal
 
 scoring:
   left_orbit_unlit_hit:

@@ -1,6 +1,6 @@
 #config_version=4
 
-# Config file for Step 6 of our step-by-step tutorial.
+# Config file for Step 3 of our step-by-step tutorial.
 
 # WARNING: The switch and coil numbers in this configuration file are for a Demolition Man machine.
 # Do not use this file with your own hardware unless you change the coil and switch numbers to match your actual
@@ -17,13 +17,11 @@ switches:
 coils:
     c_flipper_left_main:
         number: FLLM
-        pulse_ms: 25
     c_flipper_left_hold:
         number: FLLH
         allow_enable: true
     c_flipper_right_main:
         number: FLRM
-        pulse_ms: 25
     c_flipper_right_hold:
         number: FLRH
         allow_enable: yes
@@ -39,33 +37,3 @@ flippers:
         hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3
-
-displays:
-  window:
-    width: 800
-    height: 600
-
-slides:
-  welcome_slide:
-    widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-      - type: rectangle
-        width: 240
-        height: 60
-  attract_started:
-    widgets:
-      - text: ATTRACT MODE
-        type: text
-
-slide_player:
-  init_done: welcome_slide
-  mode_attract_started: attract_started
-
-keyboard:
-    z:
-        switch: s_left_flipper
-    "?":
-        switch: s_right_flipper

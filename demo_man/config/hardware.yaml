@@ -37,7 +37,7 @@ switches:
     label:
   s_flipper_lower_right:
     number: sf2
-    tags: player, high_score_right
+    tags: player, high_score_right, right_flipper
     label:
   s_flipper_lower_left_eos:
     number: sf3
@@ -45,7 +45,7 @@ switches:
     label:
   s_flipper_lower_left:
     number: sf4
-    tags: player, high_score_left
+    tags: player, high_score_left, left_flipper
     label:
   s_flipper_upper_left_eos:
     number: sf5
@@ -53,7 +53,7 @@ switches:
     label:
   s_handle_trigger_right:
     number: sf6
-    tags: player
+    tags: player, right_flipper
     label:
   s_flipper_upper_right_eos:
     number: sf7
@@ -61,7 +61,7 @@ switches:
     label:
   s_handle_trigger_left:
     number: sf8
-    tags: player
+    tags: player, left_flipper
     label:
 # Direct
   s_left_coin:
@@ -965,19 +965,16 @@ slides:
     height: 128
     pixel_color: ff5500
     dark_color: 220000
-    z: 1
   - type: text
     style: tall title
     text: MISSION PINBALL FRAMEWORK
     anchor_y: top
     y: top-3
     font_size: 30
-    z: 1
     color: white
   - type: rectangle
     width: 514
     height: 130
-    z: 2
     color: 444444
   - type: text
     style: tall title
@@ -987,7 +984,6 @@ slides:
     y: bottom+3
     x: right-42
     font_size: 30
-    z: 1
     color: red
 
   waiting_for_connection:

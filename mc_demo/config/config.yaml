@@ -1,7 +1,7 @@
 #config_version=4
 
 # The first line of every MPF config file needs to start with a hash sign,
-# then config_version=3. When we add features that require changes to config
+# then config_version=4. When we add features that require changes to config
 # files, we update the version number.
 
 # You can add comments to config files by starting a line with a hash sign
@@ -32,8 +32,8 @@ slides:
       text: HIT THE RIGHT ARROW KEY TO CONTINUE -->
       y: 33%
       animations:  # This widget has some animations for it.
-        entrance:
-          # The settings in the "entrance" section in the animations section
+        show_slide:
+          # The settings in the "show_slide" section in the animations section
           # automatically start playing when the slide loads. Multiple steps in
           # the animation are also denoted with a dash.
           - property: opacity  # This step adjusts the "opacity" value of this widget.
@@ -80,7 +80,7 @@ slides:
       y: 33%
       x: 7%
       animations:  # For this animation, we're animating the "x" property.
-        entrance:  # "x" is the x position of the widget (like x,y coordinates)
+        show_slide:  # "x" is the x position of the widget (like x,y coordinates)
           - property: x
             value: 5%  # In step 1, we set x to 5% (from 7% before)
             duration: .25s
@@ -115,10 +115,10 @@ slides:
       font_size: 45
       color: ffaa00
     - type: text
-      text: The transition was called "push", the direction is "right", and the duration is "1s"
+      text: The transition was called "push", the direction was "right", and the duration was "1s"
       font_size: 20
       color: 00ff33
-      y: -50
+      y: 50
     - type: rectangle
       color: purple
       height: 100
@@ -131,7 +131,7 @@ slides:
   slide6:
     - type: points
       points: 100, 100, 150, 100, 200, 60, 400, 100, 136, 500
-      size: 3
+      pointsize: 3
     - type: line
       points: 0, 0, 200, 200, 200, 400
       color: 00ff00
@@ -171,14 +171,9 @@ slides:
     - type: dmd
       width: 640
       height: 160
-#      color: ff00aa
-#      source_display: dmd
-#      shades: 16
 #      gain: 2
-#      bg_color: 303030
 #      blur: .5
 #      pixel_size: .7
-#      dot_filter: false
     - type: text
       text: TRADITIONAL DMD AS A WIDGET
       y: 200
@@ -196,14 +191,10 @@ slides:
     - type: dmd
       width: 640
       height: 160
-      color: green
-#      source_display: dmd
-#      shades: 16
+      pixel_color: lime
+#      blur: .5
+#      pixel_size: .7
 #      gain: 2
-#      bg_color: 303030
-      blur: .5
-      pixel_size: .7
-#      dot_filter: false
     - type: text
       text: SET THE COLOR TO WHATEVER YOU WANT
       y: 200
@@ -217,18 +208,15 @@ slides:
     - type: dmd
       width: 640
       height: 160
-      color: green
-#      source_display: dmd
-#      shades: 16
-#      gain: 2
-#      bg_color: 303030
-      blur: .5
-      pixel_size: .7
+      color: red
+#      blur: .5
+#      pixel_size: .7
       dot_filter: false
+#      gain: 2
     - type: text
-      text: REMOVE THE DOT FILTER
+      text: NO "DOT" FILTER
       y: 200
-      color: green
+      color: red
     - type: rectangle
       width: 642
       height: 162
@@ -239,13 +227,10 @@ slides:
       width: 640
       height: 160
       color: green
-#      source_display: dmd
       shades: 4
+#      blur: .5
+#      pixel_size: .7
 #      gain: 2
-#      bg_color: 303030
-      blur: .5
-      pixel_size: .7
-      dot_filter: false
     - type: text
       text: CLAMP DOWN TO 4 SHADES
       y: 200
@@ -258,14 +243,9 @@ slides:
     - type: color_dmd
       width: 640
       height: 160
-#      color: green
-#      source_display: dmd
-#      shades: 4
-#      gain: 2
-#      bg_color: 303030
-      blur: .5
-      pixel_size: .7
-#      dot_filter: false
+#      blur: .5
+#      pixel_size: .7
+#      gain: 1.5
     - type: text
       text: COLOR DMD
       y: 200
@@ -384,84 +364,75 @@ slide_player:
 
   # There are lots of entries in here. One for each event.
   # So when the event 'mc_reset_phase_3' is posted, the slide_player shows slide1.
-  mc_reset_phase_3:
-    slide: slide1
+  mc_reset_phase_3: slide1
 
-  event1:
-    slide: slide1
+  event1:  slide1
 
-  event2:
-    slide: slide2
+  event2: slide2
 
-  event3:
-    slide: slide3
+  event3: slide3
 
-  event4:
-    slide: slide4
+  event4: slide4
 
   event5:
-    slide: slide5
-    transition:  # We can also specify slide transitions in the slide_player
-      type: push
+    slide5:
+      transition:  # We can also specify slide transitions in the slide_player
+        type: push
 
   event6:
-    slide: slide6
-    transition:
-      type: rise_in
+    slide6:
+      transition:
+        type: rise_in
 
-  event7:
-    - slide: slide7
+  event7.1:
+    slide7:
       transition:
        type: wipe
-    - slide: dmd_slide
+    dmd_slide:
       target: dmd
 
-  event8:
-    slide: slide8
+  event8: slide8
 
-  event9:
-    slide: slide9
+  event9: slide9
 
-  event10:
-    slide: slide10
+  event10: slide10
 
-  event11:
-    slide: slide11
+  event11: slide11
 
-  event12:
-    - slide: slide12
-    - slide: left_slide1
+  event12.1: slide12
+
+  event12.2:
+    left_slide1:
       target: left_frame
-    - slide: center_slide1
+    center_slide1:
       target: center_frame
-    - slide: right_slide1
+    right_slide1:
       target: right_frame
 
-  event13:
-    - slide: left_slide2
+  event13.1:
+    left_slide2:
       target: left_frame
       transition:
         type: move_in
         direction: left
-    - slide: center_slide2
+    center_slide2:
       target: center_frame
       transition:
         type: move_in
         direction: top
-    - slide: right_slide2
+    right_slide2:
       target: right_frame
       transition:
         type: move_in
         direction: bottom
 
   event14:
-    slide: center_slide3
-    target: center_frame
-    transition:
-      type: swap
+    center_slide3:
+      target: center_frame
+      transition:
+        type: swap
 
-  event15:
-    slide: slide13
+  event15: slide13
 
 widgets:
   score_group:
@@ -506,9 +477,9 @@ mc_scriptlets:
 
 keyboard:
   right:
-    mc_event: next_slide
+    event: next_slide
   left:
-    mc_event: prev_slide
+    event: prev_slide
 
 
 assets:

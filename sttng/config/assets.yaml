@@ -1,4 +1,0 @@
-#config_version=4
-images:
-  rolling_ball:
-    file: rolling_ball.dmd

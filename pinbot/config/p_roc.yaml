@@ -1,9 +1,0 @@
-# config_version=4
-
-hardware:
-  platform: p_roc
-  driverboards: snux
-
-
-config:
-- config.yaml
