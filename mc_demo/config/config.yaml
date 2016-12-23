@@ -1,7 +1,7 @@
 #config_version=4
 
 # The first line of every MPF config file needs to start with a hash sign,
-# then config_version=3. When we add features that require changes to config
+# then config_version=4. When we add features that require changes to config
 # files, we update the version number.
 
 # You can add comments to config files by starting a line with a hash sign
@@ -32,8 +32,8 @@ slides:
       text: HIT THE RIGHT ARROW KEY TO CONTINUE -->
       y: 33%
       animations:  # This widget has some animations for it.
-        entrance:
-          # The settings in the "entrance" section in the animations section
+        show_slide:
+          # The settings in the "show_slide" section in the animations section
           # automatically start playing when the slide loads. Multiple steps in
           # the animation are also denoted with a dash.
           - property: opacity  # This step adjusts the "opacity" value of this widget.
@@ -80,7 +80,7 @@ slides:
       y: 33%
       x: 7%
       animations:  # For this animation, we're animating the "x" property.
-        entrance:  # "x" is the x position of the widget (like x,y coordinates)
+        show_slide:  # "x" is the x position of the widget (like x,y coordinates)
           - property: x
             value: 5%  # In step 1, we set x to 5% (from 7% before)
             duration: .25s
@@ -115,10 +115,10 @@ slides:
       font_size: 45
       color: ffaa00
     - type: text
-      text: The transition was called "push", the direction is "right", and the duration is "1s"
+      text: The transition was called "push", the direction was "right", and the duration was "1s"
       font_size: 20
       color: 00ff33
-      y: -50
+      y: 50
     - type: rectangle
       color: purple
       height: 100
@@ -171,9 +171,9 @@ slides:
     - type: dmd
       width: 640
       height: 160
-      gain: 2
-      blur: .5
-      pixel_size: .7
+#      gain: 2
+#      blur: .5
+#      pixel_size: .7
     - type: text
       text: TRADITIONAL DMD AS A WIDGET
       y: 200
@@ -191,9 +191,10 @@ slides:
     - type: dmd
       width: 640
       height: 160
-      pixel_color: green
-      blur: .5
-      pixel_size: .7
+      pixel_color: lime
+#      blur: .5
+#      pixel_size: .7
+#      gain: 2
     - type: text
       text: SET THE COLOR TO WHATEVER YOU WANT
       y: 200
@@ -207,14 +208,15 @@ slides:
     - type: dmd
       width: 640
       height: 160
-      color: green
-      blur: .5
-      pixel_size: .7
+      color: red
+#      blur: .5
+#      pixel_size: .7
       dot_filter: false
+#      gain: 2
     - type: text
-      text: REMOVE THE DOT FILTER
+      text: NO "DOT" FILTER
       y: 200
-      color: green
+      color: red
     - type: rectangle
       width: 642
       height: 162
@@ -226,9 +228,9 @@ slides:
       height: 160
       color: green
       shades: 4
-      blur: .5
-      pixel_size: .7
-      dot_filter: false
+#      blur: .5
+#      pixel_size: .7
+#      gain: 2
     - type: text
       text: CLAMP DOWN TO 4 SHADES
       y: 200
@@ -241,8 +243,9 @@ slides:
     - type: color_dmd
       width: 640
       height: 160
-      blur: .5
-      pixel_size: .7
+#      blur: .5
+#      pixel_size: .7
+#      gain: 1.5
     - type: text
       text: COLOR DMD
       y: 200
