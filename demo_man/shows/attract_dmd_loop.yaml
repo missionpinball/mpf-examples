@@ -21,8 +21,6 @@
       - type: image
         image: demo_man_logo
 
-  sounds: fanfare
-
 - time: '+2'
   slides:
     attract_dmd_loop_slide_3:
