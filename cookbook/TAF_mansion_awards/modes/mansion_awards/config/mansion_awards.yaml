@@ -1,0 +1,167 @@
+#config_version=4
+
+mode:
+  start_events: ball_starting
+
+achievements:
+  9_mil:
+    # instant points award & plays shows
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  6_mil:
+  # instant points award & plays shows, also spots 3 mil
+    show_tokens:
+      lights: 6_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_6_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_6_mil
+  3_mil:
+    # instant points award & plays shows, also spots 6 mil
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  thing_multiball:
+    # starts thing_multiball mode
+    show_tokens:
+      lights: thing
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  quick_multiball:
+    # starts quick_multiball mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  graveyard_at_max:
+  # starts graveyard_at_max mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  raise_the_dead:
+    # starts raise_the_dead mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  festers_tunnel_hunt:
+    # starts festers_tunnel_hunt mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  lite_extra_ball:
+    # instant award lights extra ball & plays show
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  seance:
+    # starts seance mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  hit_cousin_it:
+    # starts hit_cousin_it mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  mamushka:
+    # starts mamushka mode
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+  tour_mansion:
+    # starts tour_mansion mode
+    # none of the mansion awards can be collected until the next ball even if
+    # tour_mansion completes
+    show_tokens:
+      lights: 9_mil
+    show_when_selected: flash
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started: award_9_mil
+    start_enabled: False
+    events_when_completed: enable_light_chair, select_next_mansion_award
+    complete_events: award_9_mil
+
+achievement_groups:
+  mansion_awards:
+    achievements:
+        9_mil
+        6_mil
+        3_mil
+        thing_multiball
+        quick_multiball
+        graveyard_at_max
+        raise_the_dead
+        festers_tunnel_hunt
+        lite_extra_ball
+        seance
+        hit_cousin_it
+        mamushka

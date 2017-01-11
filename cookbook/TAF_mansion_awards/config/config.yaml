@@ -1,0 +1,122 @@
+#config_version=4
+
+modes:
+  - mansion_awards
+
+switches:
+  start:
+    number: S13
+    tags: start
+  drain:
+    number:
+  trough1:
+    number: S15
+  trough2:
+    number: S16
+  trough3:
+    number: S17
+  plunger_lane:
+    number: S27
+  swamp_kickout:
+    number: S74
+  electric_chair:
+    number: S43
+  left_ramp:
+    number: S66
+  center_ramp:
+    number: S65
+  right_inlane:
+    number: S25
+  upper_left_jet:
+    number: S31
+    tags: jet
+  upper_right_jet:
+    number: S32
+    tags: jet
+  center_left_jet:
+    number: S33
+    tags: jet
+  center_right_jet:
+    number: S34
+    tags: jet
+  lower_jet:
+    number: S35
+    tags: jet
+
+coils:
+  drain:
+    number: 05
+  trough:
+    number: 04
+  swamp_kickout:
+    number: 08
+  electric_chair:
+    number: 01
+
+matrix_lights:
+  9_mil:
+    number: L66
+  6_mil:
+    number: L54
+  3_mil:
+    number: L68
+  thing:
+    number: L51
+  quick_multiball:
+    number: L55
+  grave_yard_at_max:
+    number: L67
+  raise_the_dead:
+    number: L52
+  festers_tunnel_hunt:
+    number: L56
+  lite_extra_ball:
+    number: L53
+  seance:
+    number: L57
+  hit_cousin_it:
+    number: L58
+  mamushka:
+    number: L45
+  mansion_question:
+    number: L65
+  electric_chair_yellow:
+    number: L64
+  electric_chair_red:
+    number: L47
+
+ball_devices:
+
+  drain:
+    ball_switches: drain
+    eject_coil: drain
+    eject_targets: trough
+    tags: drain
+
+  trough:
+    ball_switches: trough1, trough2, trough3
+    eject_coil: trough
+    eject_targets: plunger_lane
+    tags: trough, home
+
+  plunger_lane:
+    ball_switches: plunger_lane
+    mechanical_eject: true
+    tags: home, ball_add_live
+
+  electric_chair:
+    ball_switches: electric_chair
+    eject_coil: electric_chair
+
+  swamp_kickout:
+    ball_switches: swamp_kickout
+    eject_coil: swamp_kickout
+
+
+
+
+
+
+
+
+
