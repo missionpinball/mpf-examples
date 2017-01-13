@@ -43,6 +43,8 @@ switches:
     number: S35
     tags: jet
 
+virtual_platform_start_active_switches: trough1, trough2, trough3
+
 coils:
   drain:
     number: 05
@@ -64,7 +66,7 @@ matrix_lights:
     number: L51
   quick_multiball:
     number: L55
-  grave_yard_at_max:
+  graveyard_at_max:
     number: L67
   raise_the_dead:
     number: L52
@@ -102,6 +104,7 @@ ball_devices:
   plunger_lane:
     ball_switches: plunger_lane
     mechanical_eject: true
+    eject_timeouts: 3s
     tags: home, ball_add_live
 
   electric_chair:

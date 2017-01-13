@@ -2,153 +2,157 @@
 
 mode:
   start_events: ball_starting
+  priority: 100
+
+logic_blocks:
+  counters:
+    initialize_mansion:
+      count_events: mode_mansion_awards_started
+      events_when_complete: initialize_mansion
+      count_complete_value: 1
+      persist_state: true
 
 achievements:
   9_mil:
-    # instant points award & plays shows
     show_tokens:
       lights: 9_mil
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
+    events_when_started: award_9_mil  # instant points award & plays shows
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
     complete_events: award_9_mil
+    reset_events: reset_mansion
   6_mil:
   # instant points award & plays shows, also spots 3 mil
     show_tokens:
       lights: 6_mil
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
     events_when_started: award_6_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
     complete_events: award_6_mil
+    reset_events: reset_mansion
   3_mil:
     # instant points award & plays shows, also spots 6 mil
     show_tokens:
-      lights: 9_mil
+      lights: 3_mil
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_3_mil
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_3_mil
+    reset_events: reset_mansion
   thing_multiball:
     # starts thing_multiball mode
     show_tokens:
       lights: thing
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_thing_multiball
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_thing_multiball
+    reset_events: reset_mansion
   quick_multiball:
     # starts quick_multiball mode
     show_tokens:
-      lights: 9_mil
+      lights: quick_multiball
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_quick_multiball
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_quick_multiball
+    reset_events: reset_mansion
   graveyard_at_max:
   # starts graveyard_at_max mode
     show_tokens:
-      lights: 9_mil
+      lights: graveyard_at_max
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_graveyard_at_max
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_graveyard_at_max
+    reset_events: reset_mansion
   raise_the_dead:
     # starts raise_the_dead mode
     show_tokens:
-      lights: 9_mil
+      lights: raise_the_dead
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_raise_the_dead
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_raise_the_dead
+    reset_events: reset_mansion
   festers_tunnel_hunt:
     # starts festers_tunnel_hunt mode
     show_tokens:
-      lights: 9_mil
+      lights: festers_tunnel_hunt
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_festers_tunnel_hunt
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_festers_tunnel_hunt
+    reset_events: reset_mansion
   lite_extra_ball:
     # instant award lights extra ball & plays show
     show_tokens:
-      lights: 9_mil
+      lights: lite_extra_ball
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_lite_extra_ball
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_lite_extra_ball
+    reset_events: reset_mansion
   seance:
     # starts seance mode
     show_tokens:
-      lights: 9_mil
+      lights: seance
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_seance
+    enable_events: initialize_mansion, reset_mansion
+    events_when_completed: enable_light_chair
+    complete_events: award_seance
+    reset_events: reset_mansion
   hit_cousin_it:
-    # starts hit_cousin_it mode
     show_tokens:
-      lights: 9_mil
+      lights: hit_cousin_it
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_hit_cousin_it  # starts hit_cousin_it mode
+    events_when_completed: enable_light_chair
+    complete_events: award_hit_cousin_it
+    reset_events: reset_mansion
   mamushka:
-    # starts mamushka mode
     show_tokens:
-      lights: 9_mil
+      lights: mamushka
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_mamushka  # starts mamushka mode
+    events_when_completed: enable_light_chair
+    complete_events: award_mamushka
+    reset_events: reset_mansion
   tour_mansion:
     # starts tour_mansion mode
     # none of the mansion awards can be collected until the next ball even if
     # tour_mansion completes
     show_tokens:
-      lights: 9_mil
+      lights: tour_mansion
     show_when_selected: flash
-    show_when_started: flash
     show_when_completed: on
-    events_when_started: award_9_mil
-    start_enabled: False
-    events_when_completed: enable_light_chair, select_next_mansion_award
-    complete_events: award_9_mil
+    events_when_started: award_tour_mansion
+    enable_events: select_tour_mansion.1
+    select_events: select_tour_mansion.2
+    events_when_completed: reset_mansion
+    complete_events: award_tour_mansion
 
 achievement_groups:
   mansion_awards:
@@ -165,3 +169,12 @@ achievement_groups:
         seance
         hit_cousin_it
         mamushka
+    show_tokens:
+      lights: electric_chair_yellow, electric_chair_red
+    auto_select: yes
+    events_when_all_completed: select_tour_mansion
+    enable_while_no_achievement_started: no
+    show_when_enabled: on
+    select_random_achievement_events: sw_jet
+    allow_selection_change_while_disabled: yes
+    start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter
