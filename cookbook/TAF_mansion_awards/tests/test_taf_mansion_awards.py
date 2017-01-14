@@ -32,18 +32,19 @@ class TestTafMansionAwards(MpfMachineTestCase):
         self.machine.switch_controller.process_switch('plunger_lane', 0, True)
         self.advance_time_and_run(secs_since_plunge)  # plunger timeout is 3s
 
-    # def test_single_player_game_start(self):
-    #     self._start_single_player_game(4)
-    #
-    #     # 4 secs since plunge means ball is on the pf
-    #     self.assertEqual(1, self.machine.playfield.balls)
-    #     self.assertEqual(self.machine.ball_devices.drain.balls, 0)
-    #     self.assertEqual(self.machine.ball_devices.trough.balls, 2)
-    #     self.assertEqual(self.machine.ball_devices.plunger_lane.balls, 0)
-    #
-    #     self.assertModeRunning('mansion_awards')
+    def test_single_player_game_start(self):
+        self._start_single_player_game(4)
 
-    def test_taf_mansion_awards(self):
+        # 4 secs since plunge means ball is on the pf
+        self.assertEqual(1, self.machine.playfield.balls)
+        self.assertEqual(self.machine.ball_devices.drain.balls, 0)
+        self.assertEqual(self.machine.ball_devices.trough.balls, 2)
+        self.assertEqual(self.machine.ball_devices.plunger_lane.balls, 0)
+
+        self.assertModeRunning('mansion_awards')
+        self.assertModeRunning('chair_lit')
+
+    def test_mansion_awards(self):
         self._start_single_player_game(4)
 
         # make sure the selected achievement knows it's selected
@@ -106,3 +107,67 @@ class TestTafMansionAwards(MpfMachineTestCase):
         new_selected_achievement = self.machine.achievement_groups.mansion_awards._selected_member
 
         self.assertNotEqual(selected_achievement, new_selected_achievement)
+
+    def test_award_from_swamp(self):
+        self._start_single_player_game(4)
+
+        selected_achievement = self.machine.achievement_groups.mansion_awards._selected_member
+        self.hit_switch_and_run('swamp_kickout', 1)
+
+        # that one should be complete now
+        self.assertEqual(selected_achievement.state, 'completed')
+
+        # new one should be selected
+        new_selected_achievement = self.machine.achievement_groups.mansion_awards._selected_member
+
+        self.assertNotEqual(selected_achievement, new_selected_achievement)
+
+        # the chair lights should be off
+        self.assertLightOff('electric_chair_red')
+        self.assertLightOff('electric_chair_yellow')
+
+    def _start_and_complete_first_award(self):
+        self._start_single_player_game(4)
+
+        selected_achievement = self.machine.achievement_groups.mansion_awards._selected_member
+        self.hit_switch_and_run('electric_chair', 1)
+
+        # that one should be complete now
+        self.assertEqual(selected_achievement.state, 'completed')
+
+        # new one should be selected
+        new_selected_achievement = self.machine.achievement_groups.mansion_awards._selected_member
+
+        self.assertNotEqual(selected_achievement, new_selected_achievement)
+
+        # the chair lights should be off
+        self.assertLightOff('electric_chair_red')
+        self.assertLightOff('electric_chair_yellow')
+
+        # should be 10 achievements remaining "enabled"
+        # (since there's 1 complete, 1 selected)
+
+        enabled_achievements = [x for x in self.machine.achievements if
+                                 x.state == 'enabled']
+
+        self.assertEqual(len(enabled_achievements), 10)
+
+        return new_selected_achievement
+
+    def test_relighting_from_ramp(self):
+        selected = self._start_and_complete_first_award()
+
+        # hit the chair, should not award
+        self.hit_switch_and_run('electric_chair', 1)
+
+        self.assertLightOff('electric_chair_red')
+        self.assertLightOff('electric_chair_yellow')
+        self.assertEqual(selected,
+            self.machine.achievement_groups.mansion_awards._selected_member)
+        self.assertFalse(self.machine.achievement_groups.mansion_awards._enabled)
+
+        # Still should be 10 enabled achievements
+        enabled_achievements = [x for x in self.machine.achievements if
+                                 x.state == 'enabled']
+
+        self.assertEqual(len(enabled_achievements), 10)

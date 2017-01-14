@@ -4,13 +4,7 @@ mode:
   start_events: ball_starting
   priority: 100
 
-logic_blocks:
-  counters:
-    initialize_mansion:
-      count_events: mode_mansion_awards_started
-      events_when_complete: initialize_mansion
-      count_complete_value: 1
-      persist_state: true
+
 
 achievements:
   9_mil:
@@ -20,7 +14,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_9_mil  # instant points award & plays shows
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_9_mil
     reset_events: reset_mansion
   6_mil:
@@ -31,7 +24,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_6_mil
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_6_mil
     reset_events: reset_mansion
   3_mil:
@@ -42,7 +34,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_3_mil
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_3_mil
     reset_events: reset_mansion
   thing_multiball:
@@ -53,7 +44,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_thing_multiball
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_thing_multiball
     reset_events: reset_mansion
   quick_multiball:
@@ -64,7 +54,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_quick_multiball
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_quick_multiball
     reset_events: reset_mansion
   graveyard_at_max:
@@ -75,7 +64,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_graveyard_at_max
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_graveyard_at_max
     reset_events: reset_mansion
   raise_the_dead:
@@ -86,7 +74,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_raise_the_dead
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_raise_the_dead
     reset_events: reset_mansion
   festers_tunnel_hunt:
@@ -97,7 +84,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_festers_tunnel_hunt
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_festers_tunnel_hunt
     reset_events: reset_mansion
   lite_extra_ball:
@@ -108,7 +94,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_lite_extra_ball
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_lite_extra_ball
     reset_events: reset_mansion
   seance:
@@ -119,7 +104,6 @@ achievements:
     show_when_completed: on
     events_when_started: award_seance
     enable_events: initialize_mansion, reset_mansion
-    events_when_completed: enable_light_chair
     complete_events: award_seance
     reset_events: reset_mansion
   hit_cousin_it:
@@ -127,8 +111,7 @@ achievements:
       lights: hit_cousin_it
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_hit_cousin_it  # starts hit_cousin_it mode
-    events_when_completed: enable_light_chair
+    events_when_started: award_hit_cousin_it # starts hit_cousin_it mode
     complete_events: award_hit_cousin_it
     reset_events: reset_mansion
   mamushka:
@@ -137,7 +120,6 @@ achievements:
     show_when_selected: flash
     show_when_completed: on
     events_when_started: award_mamushka  # starts mamushka mode
-    events_when_completed: enable_light_chair
     complete_events: award_mamushka
     reset_events: reset_mansion
   tour_mansion:
@@ -177,4 +159,7 @@ achievement_groups:
     show_when_enabled: on
     select_random_achievement_events: sw_jet
     allow_selection_change_while_disabled: yes
-    start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter
+    disable_while_achievement_started: no
+    start_selected_events: balldevice_electric_chair_ball_enter, balldevice_swamp_kickout_ball_enter, award_mansion_from_bear
+    enable_events: light_chair
+    disable_events: unlight_chair

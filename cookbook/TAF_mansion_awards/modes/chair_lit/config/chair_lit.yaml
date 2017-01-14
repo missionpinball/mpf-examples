@@ -1,0 +1,20 @@
+#config_version=4
+
+mode:
+  priority: 102
+  start_events: center_ramp, ball_starting
+  stop_events:
+    balldevice_electric_chair_ball_enter
+    balldevice_swamp_kickout_ball_enter
+
+event_player:
+  mode_chair_lit_started: cancel_chair_timer, light_chair
+  mode_chair_lit_stopping: unlight_chair
+
+logic_blocks:
+  counters:
+    initialize_mansion:
+      count_events: mode_chair_lit_started
+      events_when_complete: initialize_mansion
+      count_complete_value: 1
+      persist_state: true

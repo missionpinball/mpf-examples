@@ -2,6 +2,8 @@
 
 modes:
   - mansion_awards
+  - chair_lit
+  - chair_lit_3s
 
 switches:
   start:
@@ -114,12 +116,3 @@ ball_devices:
   swamp_kickout:
     ball_switches: swamp_kickout
     eject_coil: swamp_kickout
-
-
-
-
-
-
-
-
-
