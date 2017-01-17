@@ -16,96 +16,97 @@ achievements:
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_9_mil
     reset_events: reset_mansion
+
   6_mil:
-  # instant points award & plays shows, also spots 3 mil
     show_tokens:
       lights: 6_mil
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_6_mil
+    events_when_started: award_6_mil  # instant points award & plays shows, also spots 3 mil
     enable_events: initialize_mansion, reset_mansion
-    complete_events: award_6_mil
+    complete_events: award_6_mil, award_3_mil
     reset_events: reset_mansion
+
   3_mil:
-    # instant points award & plays shows, also spots 6 mil
     show_tokens:
       lights: 3_mil
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_3_mil
+    events_when_started: award_3_mil  # instant points award & plays shows, also spots 6 mil
     enable_events: initialize_mansion, reset_mansion
-    complete_events: award_3_mil
+    complete_events: award_3_mil, award_6_mil
     reset_events: reset_mansion
+
   thing_multiball:
-    # starts thing_multiball mode
     show_tokens:
       lights: thing
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_thing_multiball
+    events_when_started: award_thing_multiball  # starts thing_multiball mode
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_thing_multiball
     reset_events: reset_mansion
+
   quick_multiball:
-    # starts quick_multiball mode
     show_tokens:
       lights: quick_multiball
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_quick_multiball
+    events_when_started: award_quick_multiball  # starts quick_multiball mode
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_quick_multiball
     reset_events: reset_mansion
+
   graveyard_at_max:
-  # starts graveyard_at_max mode
     show_tokens:
       lights: graveyard_at_max
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_graveyard_at_max
+    events_when_started: award_graveyard_at_max  # starts graveyard_at_max mode
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_graveyard_at_max
     reset_events: reset_mansion
+
   raise_the_dead:
-    # starts raise_the_dead mode
     show_tokens:
       lights: raise_the_dead
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_raise_the_dead
+    events_when_started: award_raise_the_dead  # starts raise_the_dead mode
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_raise_the_dead
     reset_events: reset_mansion
+
   festers_tunnel_hunt:
-    # starts festers_tunnel_hunt mode
     show_tokens:
       lights: festers_tunnel_hunt
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_festers_tunnel_hunt
+    events_when_started: award_festers_tunnel_hunt  # starts festers_tunnel_hunt mode
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_festers_tunnel_hunt
     reset_events: reset_mansion
+
   lite_extra_ball:
-    # instant award lights extra ball & plays show
     show_tokens:
       lights: lite_extra_ball
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_lite_extra_ball
+    events_when_started: award_lite_extra_ball  # instant award lights extra ball & plays show
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_lite_extra_ball
     reset_events: reset_mansion
+
   seance:
-    # starts seance mode
     show_tokens:
       lights: seance
     show_when_selected: flash
     show_when_completed: on
-    events_when_started: award_seance
+    events_when_started: award_seance  # starts seance mode
     enable_events: initialize_mansion, reset_mansion
     complete_events: award_seance
     reset_events: reset_mansion
+
   hit_cousin_it:
     show_tokens:
       lights: hit_cousin_it
@@ -114,6 +115,7 @@ achievements:
     events_when_started: award_hit_cousin_it # starts hit_cousin_it mode
     complete_events: award_hit_cousin_it
     reset_events: reset_mansion
+
   mamushka:
     show_tokens:
       lights: mamushka
@@ -122,6 +124,7 @@ achievements:
     events_when_started: award_mamushka  # starts mamushka mode
     complete_events: award_mamushka
     reset_events: reset_mansion
+
   tour_mansion:
     # starts tour_mansion mode
     # none of the mansion awards can be collected until the next ball even if

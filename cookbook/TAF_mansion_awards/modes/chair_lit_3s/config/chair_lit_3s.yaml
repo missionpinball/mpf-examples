@@ -4,15 +4,16 @@ mode:
   priority: 101
   start_events: right_inlane_active
   stop_events:
-    cancel_chair_timer,
-    timer_unlight_chair_complete
+    unlight_chair
     balldevice_electric_chair_ball_enter
     balldevice_swamp_kickout_ball_enter
+    cancel_chair_timer
 
 event_player:
   mode_chair_lit_3s_started: light_chair
-  mode_chair_lit_stopping: unlight_chair
+  timer_unlight_chair_complete: unlight_chair
 
 timers:
   unlight_chair:
     end_value: 3
+    start_running: yes

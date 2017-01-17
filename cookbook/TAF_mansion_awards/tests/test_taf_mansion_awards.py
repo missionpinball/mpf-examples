@@ -76,12 +76,7 @@ class TestTafMansionAwards(MpfMachineTestCase):
         self.assertEqual(self.machine.achievements.tour_mansion.state,
                          "disabled")
 
-        # The mansion_awards group should be enabled
-        self.assertTrue(self.machine.achievement_groups.mansion_awards.enabled)
-
-        # the chair lights should be on
-        self.assertLightOn('electric_chair_red')
-        self.assertLightOn('electric_chair_yellow')
+        self.assertMansionLit()
 
         # pop bumper hits should change the selected award
 
@@ -108,6 +103,8 @@ class TestTafMansionAwards(MpfMachineTestCase):
 
         self.assertNotEqual(selected_achievement, new_selected_achievement)
 
+        self.assertMansionNotLit()
+
     def test_award_from_swamp(self):
         self._start_single_player_game(4)
 
@@ -122,9 +119,7 @@ class TestTafMansionAwards(MpfMachineTestCase):
 
         self.assertNotEqual(selected_achievement, new_selected_achievement)
 
-        # the chair lights should be off
-        self.assertLightOff('electric_chair_red')
-        self.assertLightOff('electric_chair_yellow')
+        self.assertMansionNotLit()
 
     def _start_and_complete_first_award(self):
         self._start_single_player_game(4)
@@ -140,9 +135,7 @@ class TestTafMansionAwards(MpfMachineTestCase):
 
         self.assertNotEqual(selected_achievement, new_selected_achievement)
 
-        # the chair lights should be off
-        self.assertLightOff('electric_chair_red')
-        self.assertLightOff('electric_chair_yellow')
+        self.assertMansionNotLit()
 
         # should be 10 achievements remaining "enabled"
         # (since there's 1 complete, 1 selected)
@@ -154,14 +147,24 @@ class TestTafMansionAwards(MpfMachineTestCase):
 
         return new_selected_achievement
 
+    def assertMansionLit(self):
+        self.assertTrue(self.machine.achievement_groups.mansion_awards.enabled)
+        self.assertLightOn('electric_chair_red')
+        self.assertLightOn('electric_chair_yellow')
+
+    def assertMansionNotLit(self):
+        self.assertFalse(self.machine.achievement_groups.mansion_awards.enabled)
+        self.assertLightOff('electric_chair_red')
+        self.assertLightOff('electric_chair_yellow')
+
     def test_relighting_from_ramp(self):
         selected = self._start_and_complete_first_award()
 
         # hit the chair, should not award
         self.hit_switch_and_run('electric_chair', 1)
 
-        self.assertLightOff('electric_chair_red')
-        self.assertLightOff('electric_chair_yellow')
+        self.assertMansionNotLit()
+
         self.assertEqual(selected,
             self.machine.achievement_groups.mansion_awards._selected_member)
         self.assertFalse(self.machine.achievement_groups.mansion_awards._enabled)
@@ -171,3 +174,66 @@ class TestTafMansionAwards(MpfMachineTestCase):
                                  x.state == 'enabled']
 
         self.assertEqual(len(enabled_achievements), 10)
+
+        # hit the ramp
+        self.hit_and_release_switch('center_ramp')
+        self.advance_time_and_run(.1)
+
+        self.assertMansionLit()
+
+        # 5 secs later, should still be lit
+        self.advance_time_and_run(5)
+        self.assertMansionLit()
+
+        # hit the inlane
+        self.hit_and_release_switch('right_inlane')
+        self.advance_time_and_run(.1)
+
+        self.assertMansionLit()
+
+        # 5 secs later, should still be lit
+        self.advance_time_and_run(5)
+        self.assertMansionLit()
+
+        # hit the swamp, should award
+        self.hit_switch_and_run('swamp_kickout', 1)
+
+        self.assertMansionNotLit()
+        self.assertModeNotRunning('chair_lit')
+        self.assertModeNotRunning('chair_lit_3s')
+
+    def test_relighting_from_inlane(self):
+        self._start_and_complete_first_award()
+
+        for _ in range(3):
+            # do this 3 times just for yucks
+
+            # hit the inlane
+            self.hit_and_release_switch('right_inlane')
+            self.advance_time_and_run(.1)
+
+            self.assertMansionLit()
+
+            # more than 3s, it unlights
+            self.advance_time_and_run(3)
+            self.assertMansionNotLit()
+
+        # shoot the inlane, then within the 3 secs, shoot the ramp, make
+        # sure the inlane timer doesn't kill the chair since the ramp should
+        # keep it lit
+
+        self.hit_and_release_switch('right_inlane')
+        self.advance_time_and_run(.1)
+        self.assertMansionLit()
+
+        self.advance_time_and_run(2)
+
+        # hit the ramp
+        self.hit_and_release_switch('center_ramp')
+        self.advance_time_and_run(.1)
+
+        self.assertMansionLit()
+
+        # 5 secs later, should still be lit
+        self.advance_time_and_run(5)
+        self.assertMansionLit()
