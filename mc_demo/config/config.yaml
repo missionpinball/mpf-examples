@@ -330,7 +330,7 @@ slides:
       width: 390
       height: 300
 
-  slide13:
+  slide15:
     - type: text
       text: WIDGET ON VIDEO
       x: 650
@@ -356,6 +356,77 @@ slides:
           duration: .5s
     - type: video
       video: mpf_hq
+
+  slide16:
+    - type: text
+      text: opacity 1.0
+      color: white
+      font_size: 100
+      y: 90%
+      anchor_x: left
+      x: 10%
+    - type: text
+      text: opacity .75
+      color: white
+      opacity: .75
+      font_size: 100
+      y: 70%
+      anchor_x: left
+      x: 10%
+    - type: text
+      text: opacity .5
+      color: white
+      opacity: .5
+      font_size: 100
+      y: 50%
+      anchor_x: left
+      x: 10%
+    - type: text
+      text: opacity .25
+      color: white
+      opacity: .25
+      font_size: 100
+      y: 30%
+      anchor_x: left
+      x: 10%
+    - type: text
+      text: opacity 0
+      color: white
+      opacity: 0
+      font_size: 100
+      y: 10%
+      anchor_x: right
+      x: 90%
+    - type: rectangle
+      color: red
+      width: 50
+      height: 600
+      x: 100
+    - type: rectangle
+      color: orange
+      width: 50
+      height: 600
+      x: 200
+    - type: rectangle
+      color: yellow
+      width: 50
+      height: 600
+      x: 300
+    - type: rectangle
+      color: green
+      width: 50
+      height: 600
+      x: 400
+    - type: rectangle
+      color: blue
+      width: 50
+      height: 600
+      x: 500
+    - type: rectangle
+      color: violet
+      width: 50
+      height: 600
+      x: 600
 
 # Now we're done with the slides config. The next section is the 'slide_player'.
 # The slide_player is how we make slides show. They "play" when a certain mpf event is posted
@@ -432,7 +503,9 @@ slide_player:
       transition:
         type: swap
 
-  event15: slide13
+  event15: slide15
+
+  event16: slide16
 
 widgets:
   score_group:
