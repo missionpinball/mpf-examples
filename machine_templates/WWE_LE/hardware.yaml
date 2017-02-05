@@ -6,7 +6,7 @@ hardware:
 spike:
    port: /dev/ttyUSB0
    baud: 115200
-   nodes: 0, 1, 8, 9, 10, 11
+   nodes: 0, 1, 8, 9, 10, 11, 12
 
 coils:
   c_trough:
@@ -15,9 +15,8 @@ coils:
     number: 8-4     # ID: 2
   c_center_3_bank_drop_target_reset:
     number: 9-3     # ID: 3
-  # intentional gap
-  c_ramp_control_gate_right:
-    number: 10-3    # ID: 7; only in Pro
+  # intentional gap.
+  # ID 7 exists only in Pro
   c_shaker_motor:
     number: 1-0     # ID: 8
   c_left_pop_bumper:
@@ -44,7 +43,19 @@ coils:
     number: 8-2     # ID: 20
   c_right_flipper_hold:
     number: 8-3     # ID: 21
-  # intentional gap. 22-27 only exist in LE
+  c_upper_left_flipper:
+    number: 10-3    # ID: 22
+  c_left_eject:
+    number: 12-1    # ID: 23
+  c_ramp_control_gate_left:
+    number: 12-2    # ID: 24
+  c_ramp_control_gate_right:
+    number: 12-3    # ID: 25
+  c_motor1:
+    number: 12-5    # ID: 26
+  c_motor2:
+    number: 12-6    # ID: 27
+  # intentional gap
   c_meter1:
     number: 1-2     # ID: 30
   c_meter2:
@@ -178,13 +189,13 @@ matrix_lights:
   l_right_ramp_ref:
     number: 11-29   # ID: 61
   l_ladder_1_bottom:
-    number: 11-24   # ID: 62
+    number: 12-1    # ID: 62; different in LE
   l_ladder_2:
-    number: 11-25   # ID: 63
+    number: 12-2    # ID: 63; different in LE
   l_ladder_3:
-    number: 11-26   # ID: 64
+    number: 12-3    # ID: 64; different in LE
   l_ladder_4_top:
-    number: 11-27   # ID: 65
+    number: 12-4    # ID: 65; different in LE
   l_flipper_when_lit_left:
     number: 10-10   # ID: 66
   l_flipper_when_lit_right:
@@ -217,44 +228,46 @@ matrix_lights:
     number: 11-14   # ID: 80
   l_top_lane_5_right:
     number: 11-15   # ID: 81
+  l_wham:
+    number: 11-15   # ID: 82; additional light in LE. IDs incremented by one after this
   l_coin_door_gi:
-    number: 1-1     # ID: 82
+    number: 1-1     # ID: 83
   l_left_playfield_gi:
-    number: 9-0     # ID: 83
+    number: 9-0     # ID: 84
   l_right_playfield_gi:
-    number: 10-0    # ID: 84
+    number: 10-0    # ID: 85
   l_left_slingshot_gi:
-    number: 8-3     # ID: 85
+    number: 8-3     # ID: 86
   l_right_slingshot_gi:
-    number: 8-2     # ID: 86
+    number: 8-2     # ID: 87
   l_left_outlane:
-    number: 8-44    # ID: 87
+    number: 8-44    # ID: 88
   l_right_outlane:
-    number: 8-39    # ID: 88
+    number: 8-39    # ID: 89
   l_united_states_champion:
-    number: 8-33    # ID: 89
+    number: 8-33    # ID: 90
   l_tag_team_champion:
-    number: 8-34    # ID: 90
+    number: 8-34    # ID: 91
   l_intercontinental_champion:
-    number: 8-32    # ID: 91
+    number: 8-32    # ID: 92
   l_world_heavyweight_champion:
-    number: 8-31    # ID: 92
+    number: 8-31    # ID: 93
   l_pop_bumpers:
-    number: 9-14    # ID: 93
+    number: 9-14    # ID: 94
   l_left_ramp:
-    number: 11-16   # ID: 94
+    number: 11-16   # ID: 95
   l_ladder_bottom:
-    number: 11-18   # ID: 95
+    number: 11-18   # ID: 96
   l_right_ramp:
-    number: 11-17   # ID: 96
+    number: 11-17   # ID: 97
   l_top_lane_left:
-    number: 10-14   # ID: 97
+    number: 10-14   # ID: 98
   l_top_lane_right:
-    number: 10-15   # ID: 98
+    number: 10-15   # ID: 99
   l_bell:
-    number: 10-12   # ID: 99
+    number: 10-12   # ID: 100
   l_ladder:
-    number: 10-13   # ID: 100
+    number: 10-13   # ID: 101
 
 leds:
   l_left_lane_arrow:
@@ -296,8 +309,7 @@ switches:
     number: 8-2     # ID: 10
   s_right_flipper_button:
     number: 8-3     # ID: 11
-  s_left_lane:
-    number: 11-3    # ID: 12; only in Pro
+  # ID 12 only in Pro
   # intentional gap
   s_left_orbit:
     number: 9-11    # ID: 14
@@ -328,7 +340,7 @@ switches:
   s_ring_eject:
     number: 10-1    # ID: 27
   s_bottom_ring_exit:
-    number: 10-3    # ID: 28
+    number: 10-15   # ID: 28; different in LE
   s_right_2_bank_top:
     number: 11-12   # ID: 29
   s_left_pop_bumper:
@@ -340,7 +352,7 @@ switches:
   s_right_2_bank_bottom:
     number: 11-13   # ID: 33
   s_right_ring_exit:
-    number: 10-15   # ID: 34
+    number: 11-21   # ID: 34; different in LE
   s_shooter_exit:
     number: 11-11   # ID: 35
   s_right_single_standup:
@@ -351,7 +363,8 @@ switches:
     number: 9-9     # ID: 38
   s_right_ramp_standup:
     number: 9-10    # ID: 39
-  # intentional gap; 40 exists in LE
+  s_left_eject:
+    number: 12-1    # ID: 40; only in LE
   s_top_lane_1:
     number: 11-16   # ID: 41
   s_top_lane_2:
@@ -370,9 +383,14 @@ switches:
     number: 9-13    # ID: 48
   s_right_ramp_exit:
     number: 9-14    # ID: 49
-  # intentional gap. 50-52 only exist in LE
+  s_ladder_1:
+    number: 12-4    # ID: 50; only in LE
+  s_ladder_2:
+    number: 12-5    # ID: 51; only in LE
+  s_ladder_3:
+    number: 12-6    # ID: 52; only in LE
   s_ladder_4:
-    number: 11-21   # ID: 53
+    number: 12-7    # ID: 53; different in LE
   s_ring_standup_left_1:
     number: 10-4    # ID: 54
   s_ring_standup_left_2:
