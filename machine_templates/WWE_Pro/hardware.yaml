@@ -1,0 +1,466 @@
+#config_version=4
+
+hardware:
+  platform: spike
+
+spike:
+   port: /dev/ttyUSB0
+   baud: 115200
+   nodes: 0, 1, 8, 9, 10, 11
+
+coils:
+  c_trough:
+    number: 8-5     # ID: 1
+  c_auto_plunger:
+    number: 8-4     # ID: 2
+  c_center_3_bank_drop_target_reset:
+    number: 9-3     # ID: 3
+  # intentional gap. 4-6 only exist in the LE
+  c_ramp_control_gate_right:
+    number: 10-3    # ID: 7
+  c_shaker_motor:
+    number: 1-0     # ID: 8
+  c_left_pop_bumper:
+    number: 9-0     # ID: 9
+  c_right_pop_bumper:
+    number: 9-1     # ID: 10
+  c_bottom_pop_bumper:
+    number: 9-2     # ID: 11
+  c_left_ring_slingshot:
+    number: 10-0    # ID: 12
+  c_right_ring_slingshot:
+    number: 10-2    # ID: 13
+  c_ring_ejct:
+    number: 10-1    # ID: 14
+  c_left_flipper:
+    number: 8-0     # ID: 15
+  c_right_flipper:
+    number: 8-1     # ID: 16
+  c_left_slingshot:
+    number: 8-7     # ID: 17
+  c_right_slingshot:
+    number: 8-6     # ID: 18
+  c_left_flipper_hold:
+    number: 8-2     # ID: 19
+  c_right_flipper_hold:
+    number: 8-3     # ID: 20
+  # intentional gap.
+  c_meter1:
+    number: 1-2     # ID: 30
+  c_meter2:
+    number: 1-3     # ID: 31
+  c_ticket_dispenser:
+    number: 1-4     # ID: 32
+
+matrix_lights:
+  backlight:
+    number: 0-0
+  l_start_button:
+    number: 1-2     # ID: 1
+  l_tournament_start_button:
+    number: 1-3     # ID: 2
+  l_shoot_again:
+    number: 8-47    # ID: 3
+  l_100_thousand:
+    number: 8-46    # ID: 4
+  l_200_thousand:
+    number: 8-45    # ID: 5
+  l_300_thousand:
+    number: 8-20    # ID: 6
+  l_400_thousand:
+    number: 8-19    # ID: 7
+  l_500_thousand:
+    number: 8-18    # ID: 8
+  l_600_thousand:
+    number: 8-17    # ID: 9
+  l_700_thousand:
+    number: 8-30    # ID: 10
+  l_800_thousand:
+    number: 8-29    # ID: 11
+  l_900_thousand:
+    number: 8-25    # ID: 12
+  l_1_million:
+    number: 8-16    # ID: 13
+  l_2_million:
+    number: 8-24    # ID: 14
+  l_3_million:
+    number: 8-28    # ID: 15
+  l_4_million:
+    number: 8-23    # ID: 16
+  l_2x:
+    number: 8-27    # ID: 17
+  l_3x:
+    number: 8-22    # ID: 18
+  l_4x:
+    number: 8-26    # ID: 19
+  l_5x:
+    number: 8-21    # ID: 20
+  l_special_when_red_left:
+    number: 8-43    # ID: 21
+  l_special_when_red_right:
+    number: 8-38    # ID: 22
+  l_y_es1:
+    number: 8-41    # ID: 23
+  l_y_e_s1:
+    number: 8-40    # ID: 24
+  l_ye_s_1:
+    number: 8-35    # ID: 25
+  l_yes_1_:
+    number: 8-36    # ID: 26
+  l_kick_out:
+    number: 8-42    # ID: 27
+  l_break_hold:
+    number: 8-37    # ID: 28
+  l_left_lange_arrow_r:
+    number: 11-3    # ID: 29
+  l_left_lange_arrow_g:
+    number: 11-4    # ID: 30
+  l_left_lange_arrow_b:
+    number: 11-5    # ID: 31
+  l_tag_team:
+    number: 11-6    # ID: 32
+  l_extra_ball:
+    number: 11-7    # ID: 33
+  l_light_kick_out:
+    number: 11-21   # ID: 34
+  l_center_3_bank_left:
+    number: 9-1     # ID: 35
+  l_center_3_bank_center:
+    number: 9-2     # ID: 36
+  l_center_3_bank_right:
+    number: 9-3     # ID: 37
+  l_light_break_hold:
+    number: 11-22   # ID: 38
+  l_right_lane_arrow:
+    number: 11-23   # ID: 39
+  l_right_2_bank_target_top:
+    number: 11-30   # ID: 40
+  l_right_2_bank_target_bottom:
+    number: 11-31   # ID: 41
+  l_left_ramp_arrow_red:
+    number: 11-0    # ID: 42
+  l_left_ramp_arrow_green:
+    number: 11-1    # ID: 43
+  l_left_ramp_arrow_blue:
+    number: 11-2    # ID: 44
+  l_left_ramp_ring:
+    number: 11-19   # ID: 45
+  l_left_ramp_ref:
+    number: 11-20   # ID: 46
+  l_tag_left:
+    number: 9-4     # ID: 47
+  l_left_orbit_arrow_red:
+    number: 9-6     # ID: 48
+  l_left_orbit_arrow_green:
+    number: 9-7     # ID: 49
+  l_left_orbit_arrow_blue:
+    number: 9-8     # ID: 50
+  l_left_orbit_ref:
+    number: 9-9     # ID: 51
+  l_right_orbit_arrow_red:
+    number: 9-10    # ID: 52
+  l_right_orbit_arrow_green:
+    number: 9-11    # ID: 53
+  l_right_orbit_arrow_blue:
+    number: 9-12    # ID: 54
+  l_right_orbit_ref:
+    number: 9-13    # ID: 55
+  l_tag_right:
+    number: 9-5     # ID: 56
+  l_right_ramp_arrow_red:
+    number: 11-8    # ID: 57
+  l_right_ramp_arrow_green:
+    number: 11-9    # ID: 58
+  l_right_ramp_arrow_blue:
+    number: 11-10   # ID: 59
+  l_right_ramp_ring:
+    number: 11-28   # ID: 60
+  l_right_ramp_ref:
+    number: 11-29   # ID: 61
+  l_ladder_1_bottom:
+    number: 11-24   # ID: 62
+  l_ladder_2:
+    number: 11-25   # ID: 63
+  l_ladder_3:
+    number: 11-26   # ID: 64
+  l_ladder_4_top:
+    number: 11-27   # ID: 65
+  l_flipper_when_lit_left:
+    number: 10-10   # ID: 66
+  l_flipper_when_lit_right:
+    number: 10-11   # ID: 67
+  l_ring_1_left:
+    number: 10-1    # ID: 68
+  l_ring_2:
+    number: 10-2    # ID: 69
+  l_ring_3:
+    number: 10-3    # ID: 70
+  l_ring_4:
+    number: 10-4    # ID: 71
+  l_ring_5:
+    number: 10-5    # ID: 72
+  l_ring_6:
+    number: 10-6    # ID: 73
+  l_ring_7:
+    number: 10-7    # ID: 74
+  l_ring_8:
+    number: 10-8    # ID: 75
+  l_ring_9_right:
+    number: 10-9    # ID: 76
+  l_top_lane_1_left:
+    number: 11-11   # ID: 77
+  l_top_lane_2:
+    number: 11-12   # ID: 78
+  l_top_lane_3:
+    number: 11-13   # ID: 79
+  l_top_lane_4:
+    number: 11-14   # ID: 80
+  l_top_lane_5_right:
+    number: 11-15   # ID: 81
+  l_coin_door_gi:
+    number: 1-1     # ID: 82
+  l_left_playfield_gi:
+    number: 9-0     # ID: 83
+  l_right_playfield_gi:
+    number: 10-0    # ID: 84
+  l_left_slingshot_gi:
+    number: 8-3     # ID: 85
+  l_right_slingshot_gi:
+    number: 8-2     # ID: 86
+  l_left_outlane:
+    number: 8-44    # ID: 87
+  l_right_outlane:
+    number: 8-39    # ID: 88
+  l_united_states_champion:
+    number: 8-33    # ID: 89
+  l_tag_team_champion:
+    number: 8-34    # ID: 90
+  l_intercontinental_champion:
+    number: 8-32    # ID: 91
+  l_world_heavyweight_champion:
+    number: 8-31    # ID: 92
+  l_pop_bumpers:
+    number: 9-14    # ID: 93
+  l_left_ramp:
+    number: 11-16   # ID: 94
+  l_ladder_bottom:
+    number: 11-18   # ID: 95
+  l_right_ramp:
+    number: 11-17   # ID: 96
+  l_top_lane_left:
+    number: 10-14   # ID: 97
+  l_top_lane_right:
+    number: 10-15   # ID: 98
+  l_bell:
+    number: 10-12   # ID: 99
+  l_ladder:
+    number: 10-13   # ID: 100
+
+switches:
+  s_left_return_lane:
+    number: 11-0    # ID: 1
+  s_right_return_lane:
+    number: 11-8    # ID: 2
+  s_left_outlane:
+    number: 11-1    # ID: 3
+  s_right_outlane:
+    number: 11-9    # ID: 4
+  s_left_slingshot:
+    number: 8-7     # ID: 5
+  s_right_slingshot:
+    number: 8-6     # ID: 6
+  s_center_3_bank_drop_target_right:
+    number: 9-6     # ID: 7
+  s_center_3_bank_drop_target_center:
+    number: 9-5     # ID: 8
+  s_center_3_bank_drop_target_left:
+    number: 9-4     # ID: 9
+  s_left_flipper_button:
+    number: 8-2     # ID: 10
+  s_right_flipper_button:
+    number: 8-3     # ID: 11
+  s_left_lane:
+    number: 11-3    # ID: 12
+  # intentional gap
+  s_left_orbit:
+    number: 9-11    # ID: 14
+  s_tournament_start_button:
+    number: 1-12    # ID: 15
+  s_trough_6:
+    number: 9-17    # ID: 16
+  s_trough_5:
+    number: 9-18    # ID: 17
+  s_trough_4:
+    number: 9-19    # ID: 18
+  s_trough_3:
+    number: 9-20    # ID: 19
+  s_trough_2:
+    number: 9-21    # ID: 20
+  s_trough_1:
+    number: 9-22    # ID: 21
+  s_trough_jam:
+    number: 9-23    # ID: 22
+  s_shooter_lane:
+    number: 8-4     # ID: 23
+  s_right_orbit:
+    number: 9-12    # ID: 24
+  s_left_ring_slingshot:
+    number: 10-0    # ID: 25
+  s_right_ring_slingshot:
+    number: 10-2    # ID: 26
+  s_ring_eject:
+    number: 10-1    # ID: 27
+  s_bottom_ring_exit:
+    number: 10-3    # ID: 28
+  s_right_2_bank_top:
+    number: 11-12   # ID: 29
+  s_left_pop_bumper:
+    number: 9-0     # ID: 30
+  s_right_pop_bumper:
+    number: 9-1     # ID: 31
+  s_bottom_pop_bumper:
+    number: 9-2     # ID: 32
+  s_right_2_bank_bottom:
+    number: 11-13   # ID: 33
+  s_right_ring_exit:
+    number: 10-15   # ID: 34
+  s_shooter_exit:
+    number: 11-11   # ID: 35
+  s_right_single_standup:
+    number: 11-10   # ID: 36
+  s_left_single_standup:
+    number: 11-2    # ID: 37
+  s_left_ramp_standup:
+    number: 9-9     # ID: 38
+  s_right_ramp_standup:
+    number: 9-10    # ID: 39
+  # intentional gap
+  s_top_lane_1:
+    number: 11-16   # ID: 41
+  s_top_lane_2:
+    number: 11-17   # ID: 42
+  s_top_lane_3:
+    number: 11-18   # ID: 43
+  s_top_lane_4:
+    number: 11-19   # ID: 44
+  s_top_lane_5:
+    number: 11-20   # ID: 45
+  s_ladder_exit:
+    number: 11-22   # ID: 46
+  s_left_ring_exit:
+    number: 10-13   # ID: 47
+  s_left_ramp_exit:
+    number: 9-13    # ID: 48
+  s_right_ramp_exit:
+    number: 9-14    # ID: 49
+  # intentional gap. 50-52 only exist in LE
+  s_ladder_4:
+    number: 11-21   # ID: 53
+  s_ring_standup_left_1:
+    number: 10-4    # ID: 54
+  s_ring_standup_left_2:
+    number: 10-5    # ID: 55
+  s_ring_standup_left_3:
+    number: 10-6    # ID: 56
+  s_top_lane_left_exit:
+    number: 10-12   # ID: 57
+  s_ring_standup_right_1:
+    number: 10-7    # ID: 58
+  s_ring_standup_right_2:
+    number: 10-8    # ID: 59
+  s_ring_standup_right_3:
+    number: 10-9    # ID: 60
+  s_top_lane_right_exit:
+    number: 10-14   # ID: 61
+  s_start_button:
+    number: 1-11    # ID: 62
+  s_pop_bumper_stage_left_exit:
+    number: 9-7     # ID: 63
+  s_pop_bumper_stage_right_exit:
+    number: 9-8     # ID: 64
+  s_left_flipper_eos:
+    number: 8-0     # ID: 65
+  s_right_flipper_eos:
+    number: 8-1     # ID: 66
+  s_left_coin:
+    number: 1-16    # ID: 67
+  s_right_coin:
+    number: 1-18    # ID: 68
+  s_center_coin:
+    number: 1-17    # ID: 69
+  s_fourth_coin:
+    number: 1-19    # ID: 70
+  s_fifth_coin:
+    number: 1-20    # ID: 71
+  s_tilt_pendulum:
+    number: 1-14    # ID: 72
+  # intentional gap
+  s_upper_left_flipper_button:
+    number: 10-10   # ID: 74
+  s_upper_right_flipper_button:
+    number: 10-11   # ID: 75
+  s_ticket_notch:
+    number: 1-8     # ID: 76
+  s_slam_tilt:
+    number: 1-21    # ID: 77
+  s_dip1:
+    number: 0-0     # ID: C1
+  s_dip2:
+    number: 0-1     # ID: C2; address incorrect in manual
+  s_dip3:
+    number: 0-2     # ID: C3; address incorrect in manual
+  s_dip4:
+    number: 0-3     # ID: C4; address incorrect in manual
+  s_dip5:
+    number: 0-4     # ID: C5; address incorrect in manual
+  s_dip6:
+    number: 0-5     # ID: C6; address incorrect in manual
+  s_dip7:
+    number: 0-6     # ID: C7; address incorrect in manual
+  s_dip8:
+    number: 0-7     # ID: C8; address incorrect in manual
+  s_service_select:
+    number: 0-8     # ID: C9; address incorrect in manual
+  s_service_plus:
+    number: 0-9     # ID: C10; address incorrect in manual
+  s_service_minus:
+    number: 0-10    # ID: C11; address incorrect in manual
+  s_service_back:
+    number: 0-11    # ID: C12; address incorrect in manual
+  s_playfield_power_interlock:
+    number: 0-16    # ID: C16
+
+autofire_coils:
+  ac_left_pop_bumper:
+    coil: c_left_pop_bumper
+    switch: s_left_pop_bumper
+  ac_right_pop_bumper:
+    coil: c_right_pop_bumper
+    switch: s_right_pop_bumper
+  ac_bottom_pop_bumper:
+    coil: c_bottom_pop_bumper
+    switch: s_bottom_pop_bumper
+    
+  ac_left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_slingshot
+  ac_right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+    
+  ac_left_ring_slingshot:
+    coil: c_left_ring_slingshot
+    switch: s_left_ring_slingshot
+  ac_right_ring_slingshot:
+    coil: c_right_ring_slingshot
+    switch: s_right_ring_slingshot
+
+flippers:
+    f_left_flipper:
+        main_coil: c_left_flipper
+        hold_coil: c_left_flipper_hold
+        activation_switch: s_left_flipper_button
+    f_right_flipper:
+        main_coil: c_right_flipper
+        hold_coil: c_right_flipper_hold
+        activation_switch: s_right_flipper_button
