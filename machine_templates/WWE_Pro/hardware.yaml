@@ -111,11 +111,11 @@ matrix_lights:
     number: 8-42    # ID: 27
   l_break_hold:
     number: 8-37    # ID: 28
-  l_left_lange_arrow_r:
+  l_left_lane_arrow_red:
     number: 11-3    # ID: 29
-  l_left_lange_arrow_g:
+  l_left_lane_arrow_green:
     number: 11-4    # ID: 30
-  l_left_lange_arrow_b:
+  l_left_lane_arrow_blue:
     number: 11-5    # ID: 31
   l_tag_team:
     number: 11-6    # ID: 32
@@ -255,6 +255,23 @@ matrix_lights:
     number: 10-12   # ID: 99
   l_ladder:
     number: 10-13   # ID: 100
+
+leds:
+  l_left_lane_arrow:
+    number: l_left_lane_arrow_red,l_left_lane_arrow_green,l_left_lane_arrow_blue
+    platform: lights
+  l_left_ramp_arrow:
+    number: l_left_ramp_arrow_red,l_left_ramp_arrow_green,l_left_ramp_arrow_blue
+    platform: lights
+  l_right_ramp_arrow:
+    number: l_right_ramp_arrow_red,l_right_ramp_arrow_green,l_right_ramp_arrow_blue
+    platform: lights
+  l_left_orbit_arrow:
+    number: l_left_orbit_arrow_red,l_left_orbit_arrow_green,l_left_orbit_arrow_blue
+    platform: lights
+  l_right_orbit_arrow:
+    number: l_right_orbit_arrow_red,l_right_orbit_arrow_green,l_right_orbit_arrow_blue
+    platform: lights
 
 switches:
   s_left_return_lane:
