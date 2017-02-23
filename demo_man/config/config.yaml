@@ -35,7 +35,8 @@ modes:
 - service
 #  - credits
 
-scriptlets: add_a_ball.AddABall claw.Claw
+scriptlets:
+  - claw.Claw
 
 widget_styles:
   text_default:
