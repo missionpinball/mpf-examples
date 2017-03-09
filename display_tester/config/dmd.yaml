@@ -1,0 +1,16 @@
+#config_version=4
+
+window:
+  height: 768
+  width: 1024
+  title: LCD Test Display (1024x768)
+
+slide_player:
+  mc_ready: boot_slide
+
+slides:
+  boot_slide:
+    widgets:
+      type: text
+      text: MC TESTER
+

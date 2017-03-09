@@ -1,0 +1,30 @@
+#config_version=4
+
+displays:
+  window:
+    width: 1024
+    height: 768
+  dmd:
+    width: 128
+    height: 32
+    default: yes
+
+window:
+  height: 768
+  width: 1024
+  title: LCD Test Display (1024x768)
+
+slide_player:
+  mc_ready.1:
+    boot_slide:
+      target: window
+  mc_ready.2: dmd_boot_slide
+
+slides:
+  boot_slide:
+    widgets:
+      type: dmd
+  dmd_boot_slide:
+    widgets:
+      type: text
+      text: DMD
