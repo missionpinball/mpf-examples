@@ -1,0 +1,19 @@
+#config_version=4
+
+mpf-mc:
+  widgets:
+    camera: mpfmc.widgets.camera
+
+slides:
+  camera:
+    widgets:
+      - type: camera
+        width: 1024
+        height: 768
+      - type: rectangle
+        color: red
+        height: 100
+        width: 100
+
+slide_player:
+  mc_ready: camera
