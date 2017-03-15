@@ -36,7 +36,7 @@ modes:
 #  - credits
 
 scriptlets:
-  - claw.Claw
+  claw.Claw
 
 widget_styles:
   text_default:
