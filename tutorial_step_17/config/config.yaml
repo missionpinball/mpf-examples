@@ -270,7 +270,7 @@ switches:
     s_eject:
         number: s66
         label:
-        tags: playfield_active
+        tags:
     s_elevator_index:
         number: s67
         label:
