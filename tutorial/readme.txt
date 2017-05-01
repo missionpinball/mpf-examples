@@ -1,7 +1,7 @@
 This folder contains the config files for the "your_machine" game which we build
 in our Step-by-Step tutorial which is available here:
 
-https://missionpinball.com/docs/tutorial/
+http://docs.missionpinball.org/en/latest/tutorial/
 
 Notice that in the "config" folder we have lots of different config files, each
 corresponding to what the config file should look like after completing each
