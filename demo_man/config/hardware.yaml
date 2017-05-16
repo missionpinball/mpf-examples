@@ -368,7 +368,7 @@ switches:
     label:
     tags: playfield_active
 
-matrix_lights:
+lights:
   l_ball_save:
     number: l11
     label:
@@ -628,140 +628,6 @@ matrix_lights:
     label:
     tags: cabinet
 
-coils:
-  c_trough_eject:
-    number: c01
-    label:
-    tags:
-    pulse_ms: 25
-  c_bottom_popper:
-    number: c02
-    label:
-    tags:
-    pulse_ms: 25
-  c_plunger_lane:
-    number: c03
-    label:
-    tags:
-    pulse_ms: 25
-  c_top_popper:
-    number: c04
-    label:
-    tags:
-    pulse_ms: 30
-  c_diverter_power:
-    number: c05
-    label:
-    tags:
-    hold_power: 4
-    pulse_ms: 30
-    allow_enable: true
-    #name:
-    #    number: c06
-    #    label:
-    #    tags:
-  c_knocker:
-    number: c07
-    label:
-    tags:
-    #name:
-    #    number: c08
-    #    label:
-    #    tags:
-  c_left_slingshot:
-    number: c09
-    label:
-    tags:
-  c_right_slingshot:
-    number: c10
-    label:
-    tags:
-  c_left_jet_bumper:
-    number: c11
-    label:
-    tags:
-  c_top_slingshot:
-    number: c12
-    label:
-    tags:
-  c_right_jet_bumper:
-    number: c13
-    label:
-    tags:
-  c_retina_eject:
-    number: c14
-    label:
-    tags:
-  c_diverter_hold:
-    number: c15
-    label:
-    tags:
-    allow_enable: true
-    #name:
-    #    number: c16
-    #    label:
-    #    tags:
-  c_elevator_motor:
-    number: c18
-    label:
-    tags:
-    allow_enable: true
-    hold_power: 8
-  c_claw_motor_left:
-    number: c19
-    label:
-    tags:
-    allow_enable: true
-    hold_power: 8
-  c_claw_motor_right:
-    number: c20
-    label:
-    tags:
-    allow_enable: true
-    hold_power: 8
-
-# Fliptronics coils
-  c_flipper_left_main:
-    number: fllm
-    label:
-    tags:
-    pulse_ms: 30
-  c_flipper_left_hold:
-    number: fllh
-    label:
-    tags:
-    allow_enable: true
-  c_flipper_right_main:
-    number: flrm
-    label:
-    tags:
-    pulse_ms: 30
-  c_flipper_right_hold:
-    number: flrh
-    label:
-    tags:
-    allow_enable: true
-  c_flipper_upper_main:
-    number: fulm
-    label:
-    tags:
-    pulse_ms: 30
-  c_flipper_upper_hold:
-    number: fulh
-    label:
-    tags:
-    allow_enable: true
-  c_claw_magnet:
-    number: furm
-    label:
-    tags:
-    allow_enable: true
-    #name:
-    #    number: furh
-    #    label:
-    #    tags:
-
-flashers:
   f_claw:
     number: c17
     label:
@@ -830,7 +696,7 @@ flashers:
     number: c44
     label:
     tags:
-gis:
+
   gi_back_panel:
     number: g01
     label:
@@ -853,6 +719,135 @@ gis:
     tags:
     #gi06:
     #    number: g06
+    #    label:
+    #    tags:
+
+coils:
+  c_trough_eject:
+    number: c01
+    label:
+    tags:
+    default_pulse_ms: 25
+  c_bottom_popper:
+    number: c02
+    label:
+    tags:
+    default_pulse_ms: 25
+  c_plunger_lane:
+    number: c03
+    label:
+    tags:
+    default_pulse_ms: 25
+  c_top_popper:
+    number: c04
+    label:
+    tags:
+    default_pulse_ms: 30
+  c_diverter_power:
+    number: c05
+    label:
+    tags:
+    default_pulse_ms: 30
+    max_hold_power: 0.5
+    #name:
+    #    number: c06
+    #    label:
+    #    tags:
+  c_knocker:
+    number: c07
+    label:
+    tags:
+    #name:
+    #    number: c08
+    #    label:
+    #    tags:
+  c_left_slingshot:
+    number: c09
+    label:
+    tags:
+  c_right_slingshot:
+    number: c10
+    label:
+    tags:
+  c_left_jet_bumper:
+    number: c11
+    label:
+    tags:
+  c_top_slingshot:
+    number: c12
+    label:
+    tags:
+  c_right_jet_bumper:
+    number: c13
+    label:
+    tags:
+  c_retina_eject:
+    number: c14
+    label:
+    tags:
+  c_diverter_hold:
+    number: c15
+    label:
+    tags:
+    max_hold_power: 1.0
+    #name:
+    #    number: c16
+    #    label:
+    #    tags:
+  c_elevator_motor:
+    number: c18
+    label:
+    tags:
+    max_hold_power: 1.0
+  c_claw_motor_left:
+    number: c19
+    label:
+    tags:
+    max_hold_power: 1.0
+  c_claw_motor_right:
+    number: c20
+    label:
+    tags:
+    max_hold_power: 1.0
+
+# Fliptronics coils
+  c_flipper_left_main:
+    number: fllm
+    label:
+    tags:
+    default_pulse_ms: 30
+  c_flipper_left_hold:
+    number: fllh
+    label:
+    tags:
+    max_hold_power: 1.0
+  c_flipper_right_main:
+    number: flrm
+    label:
+    tags:
+    default_pulse_ms: 30
+  c_flipper_right_hold:
+    number: flrh
+    label:
+    tags:
+    max_hold_power: 1.0
+  c_flipper_upper_main:
+    number: fulm
+    label:
+    tags:
+    default_pulse_ms: 30
+  c_flipper_upper_hold:
+    number: fulh
+    label:
+    tags:
+    max_hold_power: 1.0
+  c_claw_magnet:
+    number: furm
+    label:
+    tags:
+    max_hold_power: 1.0
+    #name:
+    #    number: furh
     #    label:
     #    tags:
 
