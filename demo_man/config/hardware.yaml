@@ -851,6 +851,10 @@ coils:
     #    label:
     #    tags:
 
+playfields:
+  playfield:
+    default_source_device: shooter_lane
+
 ball_devices:
   trough:
     tags: trough, home, drain
@@ -861,7 +865,6 @@ ball_devices:
     jam_switch: s_trough_jam
 
   shooter_lane:
-    tags: ball_add_live
     ball_switches: s_shooter_lane
     eject_coil: c_plunger_lane
 
