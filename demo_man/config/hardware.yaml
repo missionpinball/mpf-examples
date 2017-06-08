@@ -12,18 +12,18 @@ mpf-mc:
   fps: 60
 
 window:
-  width: 600
-  height: 200
+  width: 512
+  height: 128
   title: Mission Pinball Framework - Demo Man
   resizable: true
   fullscreen: false
   borderless: false
   exit_on_escape: true
+  effects:
+    - type: dmd
+      dot_size: 0.8
 
 displays:
-  window:
-    height: 200
-    width: 600
   dmd:
     width: 128
     height: 32
@@ -958,11 +958,13 @@ assets:
 
 slides:
   window_slide_1:
-  - type: dmd
+  - type: display
     width: 512
     height: 128
-    pixel_color: ff5500
-    dark_color: 220000
+    effects:
+      - type: dmd
+        dot_color: ff5500
+        background_color: 220000
   - type: text
     style: tall title
     text: MISSION PINBALL FRAMEWORK
