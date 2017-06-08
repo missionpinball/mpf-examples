@@ -12,10 +12,19 @@ displays:
   default:
     width: 800
     height: 600
+    default: true
   dmd:
     width: 128
     height: 32
-
+  left_frame:
+    width: 200
+    height: 600
+  center_frame:
+    width: 400
+    height: 600
+  right_frame:
+    width: 200
+    height: 600
 
 slides:
 # The 'slides' section contains entries for named slides in your game. Then
@@ -77,6 +86,7 @@ slides:
       style: typewriter
     - type: text
       text: ( <-- ALSO LEFT ARROW GOES BACK)
+      anchor_x: left
       y: 33%
       x: 7%
       animations:  # For this animation, we're animating the "x" property.
@@ -168,9 +178,12 @@ slides:
       color: blue
 
   slide7:
-    - type: dmd
+    - type: display
       width: 640
       height: 160
+      source_display: dmd
+      effects:
+        - type: dmd
 #      gain: 2
 #      blur: .5
 #      pixel_size: .7
@@ -188,10 +201,13 @@ slides:
       fps: 20
 
   slide8:
-    - type: dmd
+    - type: display
       width: 640
       height: 160
-      pixel_color: lime
+      source_display: dmd
+      effects:
+        - type: dmd
+          dot_color: lime
 #      blur: .5
 #      pixel_size: .7
 #      gain: 2
@@ -205,13 +221,16 @@ slides:
       color: gray
 
   slide9:
-    - type: dmd
+    - type: display
       width: 640
       height: 160
       color: red
+      source_display: dmd
+      effects:
+        - type: dmd
+          dot_filter: false
 #      blur: .5
 #      pixel_size: .7
-      dot_filter: false
 #      gain: 2
     - type: text
       text: NO "DOT" FILTER
@@ -223,11 +242,14 @@ slides:
       color: gray
 
   slide10:
-    - type: dmd
+    - type: display
       width: 640
       height: 160
       color: green
-      shades: 4
+      source_display: dmd
+      effects:
+        - type: dmd
+          shades: 4
 #      blur: .5
 #      pixel_size: .7
 #      gain: 2
@@ -240,9 +262,12 @@ slides:
       color: gray
 
   slide11:
-    - type: color_dmd
+    - type: display
       width: 640
       height: 160
+      source_display: dmd
+      effects:
+        - type: color_dmd
 #      blur: .5
 #      pixel_size: .7
 #      gain: 1.5
@@ -255,18 +280,18 @@ slides:
       color: gray
 
   slide12:
-    - type: slide_frame
-      name: left_frame
+    - type: display
+      source_display: left_frame
       width: 200
       height: 600
       x: 100
-    - type: slide_frame
-      name: center_frame
+    - type: display
+      source_display: center_frame
       width: 400
       height: 600
       x: 400
-    - type: slide_frame
-      name: right_frame
+    - type: display
+      source_display: right_frame
       width: 200
       height: 600
       x: 700
