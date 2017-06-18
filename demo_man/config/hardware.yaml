@@ -12,18 +12,19 @@ mpf-mc:
   fps: 60
 
 window:
-  width: 512
-  height: 128
+  width: 600
+  height: 200
   title: Mission Pinball Framework - Demo Man
   resizable: true
   fullscreen: false
   borderless: false
   exit_on_escape: true
-  effects:
-    - type: dmd
-      dot_size: 0.8
+  source_display: window
 
 displays:
+  window:
+    width: 600
+    height: 200
   dmd:
     width: 128
     height: 32
@@ -854,6 +855,7 @@ coils:
 playfields:
   playfield:
     default_source_device: shooter_lane
+    tags: default
 
 ball_devices:
   trough:
