@@ -355,28 +355,28 @@ coils:
         number: c01
         label:
         tags:
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_bottom_popper:
         number: c02
         label:
         tags:
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_plunger_eject:
         number: c03
         label:
         tags:
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_top_popper:
         number: c04
         label:
         tags:
-        pulse_ms: 30
+        default_pulse_ms: 30
     c_diverter_power:
         number: c05
         label:
         tags:
-        hold_power: 2
-        pulse_ms: 30
+        default_hold_power: 0.25
+        default_pulse_ms: 30
     #name:
     #    number: c06
     #    label:
@@ -443,27 +443,30 @@ coils:
         number: fllm
         label:
         tags:
-        pulse_ms: 30
+        default_pulse_ms: 30
     c_flipper_left_hold:
         number: fllh
+        allow_enable: true
         label:
         tags:
     c_flipper_right_main:
         number: flrm
         label:
         tags:
-        pulse_ms: 30
+        default_pulse_ms: 30
     c_flipper_right_hold:
         number: flrh
+        allow_enable: true
         label:
         tags:
     c_flipper_upper_main:
         number: fulm
         label:
         tags:
-        pulse_ms: 30
+        default_pulse_ms: 30
     c_flipper_upper_hold:
         number: fulh
+        allow_enable: true
         label:
         tags:
     c_claw_magnet:
@@ -476,7 +479,7 @@ coils:
     #    label:
     #    tags:
 
-matrix_lights:
+lights:
   l_ball_save:
     number: l11
     label:
@@ -745,6 +748,11 @@ flippers:
         main_coil: c_flipper_right_main
         hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
+
+playfields:
+    playfield:
+        tags: default
+        default_source_device: bd_plunger
 
 ball_devices:
 

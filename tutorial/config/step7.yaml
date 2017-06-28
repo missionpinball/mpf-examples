@@ -35,17 +35,19 @@ switches:
 coils:
     c_flipper_left_main:
         number: FLLM
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_flipper_left_hold:
         number: FLLH
+        allow_enable: True
     c_flipper_right_main:
         number: FLRM
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_flipper_right_hold:
         number: FLRH
+        allow_enable: True
     c_trough_eject:
         number: c01
-        pulse_ms: 25
+        default_pulse_ms: 25
 
 flippers:
     left_flipper:
@@ -58,6 +60,11 @@ flippers:
         hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3
+
+playfields:
+    playfield:
+        tags: default
+        default_source_device: None
 
 ball_devices:
   bd_trough:

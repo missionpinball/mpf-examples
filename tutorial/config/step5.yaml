@@ -17,16 +17,21 @@ switches:
 coils:
     c_flipper_left_main:
         number: FLLM
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_flipper_left_hold:
         number: FLLH
         allow_enable: true
     c_flipper_right_main:
         number: FLRM
-        pulse_ms: 25
+        default_pulse_ms: 25
     c_flipper_right_hold:
         number: FLRH
         allow_enable: yes
+
+playfields:
+    playfield:
+        tags: default
+        default_source_device: None
 
 flippers:
     left_flipper:

@@ -26,6 +26,11 @@ coils:
         number: FLRH
         allow_enable: yes
 
+playfields:
+    playfield:
+        tags: default
+        default_source_device: None
+
 flippers:
     left_flipper:
         main_coil: c_flipper_left_main
