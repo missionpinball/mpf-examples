@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 show_player:
   mode_attract_started:
     attract_dmd_loop:

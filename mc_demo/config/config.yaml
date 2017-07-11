@@ -1,7 +1,7 @@
-#config_version=4
+#config_version=5
 
 # The first line of every MPF config file needs to start with a hash sign,
-# then config_version=4. When we add features that require changes to config
+# then config_version=5. When we add features that require changes to config
 # files, we update the version number.
 
 # You can add comments to config files by starting a line with a hash sign

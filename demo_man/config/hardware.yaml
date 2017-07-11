@@ -1,8 +1,8 @@
-# config_version=4
+# config_version=5
 # Demolition Man
 
 machine:
-  balls_installed: 6
+  balls_installed: 5
   min_balls: 1
 
 virtual_platform_start_active_switches: s_trough_1 s_trough_2 s_trough_3 s_trough_4
@@ -869,6 +869,8 @@ ball_devices:
   shooter_lane:
     ball_switches: s_shooter_lane
     eject_coil: c_plunger_lane
+    player_controlled_eject_event: sw_plunger
+
 
   retina_hole:
     ball_switches: s_eject

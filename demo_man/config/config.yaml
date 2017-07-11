@@ -1,4 +1,4 @@
-# config_version=4
+# config_version=5
 
 fast:
   ports: COM3, COM4, COM5
@@ -16,6 +16,9 @@ config:
 - hardware.yaml
 - shots.yaml
 - keyboard.yaml
+
+smart_virtual:
+  file_log: full
 
 mpf:
   default_pulse_ms: 20
