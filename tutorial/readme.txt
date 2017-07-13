@@ -1,18 +1,28 @@
 This folder contains the config files for the "your_machine" game which we build
-in our Step-by-Step tutorial which is available here:
+in our Step-by-Step tutorial which is available from the MPF documentation
+site:
 
-http://docs.missionpinball.org/en/latest/tutorial/
+http://docs.missionpinball.org/
 
-Notice that in the "config" folder we have lots of different config files, each
-corresponding to what the config file should look like after completing each
-step in the tutorial.
+(Click the "Tutorial" in the menu on the left.)
 
-In the actual tutorial, each of these files is named "config.yaml", so if you
-want to use any of these config files as a starting point, be sure to make a
-copy of the file you want and rename it to "config.yaml."
+Each step in the tutorial corresponds to a subfolder in this tutorial folder.
+For example, to run the machine from Step 2 in the tutorial, you would open
+a command prompt to the step_2 folder. For example:
 
-Also note that these files are for a Williams Demolition Man machine controlled by
-a FAST Pinball controller, so DO NOT RUN THEM ON A REAL MACHINE until you verify
-the hardware, switch, and coil numbers are correct for your machine. Since every
-machine is different, if you ran this on some other machine you might end up damaging
-your hardware.
+   C:\mpf-examples\tutorial\step_2>
+
+From there you can run "mpf" (or whatever else you're supposed to do in the tutorial
+step).
+
+Each of these steps also contains unit tests which you can run like this:
+
+   C:\mpf-examples\tutorial\step_2>python -m unittest
+
+Note that if you have both Python 2 and 3 installed, you'll need to use "python3" instead of
+"python" in the command above.
+
+A tutorial for these unit tests is available in the "Writing Tests" section of the developer
+documentation which is here:
+
+http://developer.missionpinball.org
