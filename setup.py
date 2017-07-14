@@ -33,4 +33,6 @@ step in the MPF tutorial.""",
 
     zip_safe=False,
 
+    include_package_data=True,
+
 )
