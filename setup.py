@@ -1,6 +1,23 @@
 """Mission Pinball Framework example machine files."""
 
+import os
+from os.path import join, dirname
 from setuptools import setup
+
+PACKAGE_FILES_EXCLUDED_EXT = ['pyc']
+
+data_files = list()
+
+for root, subFolders, files in os.walk('.'):
+    for fn in files:
+
+        ext = fn.split('.')[-1].lower()
+        if ext in PACKAGE_FILES_EXCLUDED_EXT:
+            continue
+
+        filename = join(root, fn)
+        directory = dirname(filename)
+        data_files.append((directory, [filename]))
 
 setup(
 
@@ -33,6 +50,6 @@ step in the MPF tutorial.""",
 
     zip_safe=False,
 
-    include_package_data=True,
+    data_files=data_files,
 
 )
