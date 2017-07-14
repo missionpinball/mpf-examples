@@ -4,5 +4,5 @@ __mpfcache__
 .idea
 logs
 data
-
+*.egg-info
 .DS_Store
