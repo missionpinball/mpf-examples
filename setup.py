@@ -4,6 +4,8 @@ import os
 from os.path import join, dirname
 from setuptools import setup
 
+from _version import version
+
 PACKAGE_FILES_EXCLUDED_EXT = ['pyc']
 
 data_files = list()
@@ -22,7 +24,7 @@ for root, subFolders, files in os.walk('.'):
 setup(
 
     name='mpf-examples',
-    version='0.50.0-dev1',
+    version=version,
     description='Mission Pinball Framework example machine files',
     long_description="""This repository contains examples for the Mission
 Pinball Framework, including complete configuration and test files for each
