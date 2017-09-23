@@ -18,6 +18,10 @@ class TestSimpleGame(FullMachineTestCase):
         # but its not there yet
         self.assertEqual(0, self.machine.playfield.balls)
 
+        self.advance_time_and_run(5)
+        # player presses eject
+        self.hit_and_release_switch("s_ball_launch")
+
         # after 20 its there
         self.advance_time_and_run(20)
         self.assertEqual(1, self.machine.playfield.balls)
@@ -40,6 +44,10 @@ class TestSimpleGame(FullMachineTestCase):
         self.assertEqual(0, self.machine.playfield.balls)
         self.assertEqual(2, self.machine.game.player.ball)
 
+        self.advance_time_and_run(5)
+        # player presses eject
+        self.hit_and_release_switch("s_ball_launch")
+
         # and it should eject a new ball to the pf
         self.advance_time_and_run(20)
         self.assertEqual(1, self.machine.playfield.balls)
@@ -50,6 +58,10 @@ class TestSimpleGame(FullMachineTestCase):
         self.advance_time_and_run(10)
         self.assertEqual(0, self.machine.playfield.balls)
         self.assertEqual(3, self.machine.game.player.ball)
+
+        self.advance_time_and_run(5)
+        # player presses eject
+        self.hit_and_release_switch("s_ball_launch")
 
         # and it should eject a new ball to the pf
         self.advance_time_and_run(20)
