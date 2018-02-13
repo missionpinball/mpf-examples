@@ -15,6 +15,7 @@ More details about MPF are here: https://missionpinball.org.
 
 [![Coverage Status](https://coveralls.io/repos/missionpinball/mpf-examples/badge.svg?branch=dev&service=github)](https://coveralls.io/github/missionpinball/mpf-examples?branch=dev)
 [![Build Status](https://travis-ci.org/missionpinball/mpf-examples.svg?branch=dev)](https://travis-ci.org/missionpinball/mpf-examples)
+[![Open Source Helpers](https://www.codetriage.com/missionpinball/mpf-examples/badges/users.svg)](https://www.codetriage.com/missionpinball/mpf-examples)
 
 Note that the branch of this repo corresponds to the branch of MPF. (e.g. the 'master' branch of examples here should
 work with the master branch of MPF, the dev with the dev, etc.)
