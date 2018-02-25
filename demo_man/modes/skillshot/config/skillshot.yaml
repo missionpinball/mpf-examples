@@ -8,7 +8,7 @@
 
 mode:
   start_events: ball_starting
-  stop_events: timer_mode_timer_complete, target_group_standups_hit
+  stop_events: timer_mode_timer_complete, standups_skill_hit
   priority: 300
 
 timers:
@@ -51,16 +51,41 @@ shot_profiles:
       speed: 10
     - name: hit
       show: on
-shots:
-  standup_1:
-    advance_events: mode_skillshot_started
 
 shot_groups:
-  standups:
-    profile: skill
+  standups_skill:
+    shots: standup_1, standup_2, standup_3, standup_4, standup_5
     rotate_events: timer_target_rotator_tick
     reset_events: mode_skillshot_started|1
 
 scoring:
-  standups_hit_me_active_hit:
+  standups_skill_hit_hit:
     score: 200000
+
+shots:
+  standup_1_skill:
+    switch: s_standup_1
+    profile: skill
+    advance_events: mode_skillshot_started
+    show_tokens:
+      light: l_standup_1
+  standup_2_skill:
+    switch: s_standup_2
+    profile: skill
+    show_tokens:
+      light: l_standup_2
+  standup_3_skill:
+    switch: s_standup_3
+    profile: skill
+    show_tokens:
+      light: l_standup_3
+  standup_4_skill:
+    switch: s_standup_4
+    profile: skill
+    show_tokens:
+      light: l_standup_4
+  standup_5_skill:
+    switch: s_standup_5
+    profile: skill
+    show_tokens:
+      light: l_standup_5

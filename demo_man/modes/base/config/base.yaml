@@ -39,17 +39,17 @@ sound_player:
   sw_jet: medium metal
 
 scoring:
-  left_orbit_unlit_hit:
+  left_orbit_hit:
     score: 1000000
-  left_ramp_default_unlit_hit:
+  left_ramp_hit:
     score: 1000000
-  side_ramp_default_unlit_hit:
+  side_ramp_hit:
     score: 2000000
-  right_ramp_default_unlit_hit:
+  right_ramp_hit:
     score: 1000000
-  right_orbit_default_unlit_hit:
+  right_orbit_hit:
     score: 1500000
-  center_ramp_default_unlit_hit:
+  center_ramp_hit:
     score: 250000
   sw_slingshot:
     score: 5170
@@ -59,17 +59,17 @@ scoring:
     score: 24440
   sw_inlane:
     score: 47650
-  standups_default_lit_hit:
+  standups_lit_hit:
     score: 10000
-  standups_default_unlit_hit:
+  standups_unlit_hit:
     score: 50000
-  standups_default_lit_complete:
+  standups_lit_complete:
     score: 100000
-  rollover_default_lanes_lit_hit:
+  rollover_lanes_lit_hit:
     score: 5000
-  rollover_default_lanes_unlit_hit:
+  rollover_lanes_unlit_hit:
     score: 45000
-  rollover_default_lanes_lit_complete:
+  rollover_lanes_lit_complete:
     score: 375000
   sw_small_car_crash:
     score: 25000
@@ -84,10 +84,12 @@ scoring:
 
 shot_groups:
   rollover_lanes:
+    shots: left_lane, middle_lane, right_lane
     rotate_left_events: sw_left_flipper
     rotate_right_events: sw_right_flipper
   standups:
-    profile: default
+    shots: standup_1, standup_2, standup_3, standup_4, standup_5
+
 slides:
   slide_1:
   - type: text
@@ -276,5 +278,41 @@ slides:
     y: bottom+1
 
 show_player:
-  left_orbit_default_unlit_hit:
+  left_orbit_unlit_hit:
     left orbit: {}
+
+shots:
+  left_lane:
+    switch: s_left_rollover
+    show_tokens:
+      light: l_left_rollover
+  middle_lane:
+    switch: s_center_rollover
+    show_tokens:
+      light: l_middle_rollover
+  right_lane:
+    switch: s_right_rollover
+    show_tokens:
+      light: l_right_rollover
+  standup_1:
+    switch: s_standup_1
+    show_tokens:
+      light: l_standup_1
+  standup_2:
+    switch: s_standup_2
+    show_tokens:
+      light: l_standup_2
+  standup_3:
+    switch: s_standup_3
+    show_tokens:
+      light: l_standup_3
+  standup_4:
+    switch: s_standup_4
+    show_tokens:
+      light: l_standup_4
+  standup_5:
+    switch: s_standup_5
+    show_tokens:
+      light: l_standup_5
+  center_ramp:
+    switch: s_center_ramp

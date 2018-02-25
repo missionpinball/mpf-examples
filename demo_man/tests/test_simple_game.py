@@ -89,7 +89,6 @@ class TestSimpleGame(FullMachineTestCase):
         self.advance_time_and_run()
         self.assertTextOnTopSlide("CDE")
 
-        # TODO dunno why this doesn't work
-        # self.assertEventCalled('text_input_high_score_complete')
-        # self.advance_time_and_run(10)
-        # self.assertIsNone(self.machine.game)
+        self.assertEventCalled('text_input_high_score_complete')
+        self.advance_time_and_run(10)
+        self.assertIsNone(self.machine.game)
