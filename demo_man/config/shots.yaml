@@ -1,4 +1,5 @@
-# config_version=5
+#config_version=5
+
 sequence_shots:
   left_orbit:
     switch_sequence: s_upper_left_flipper_gate, s_left_loop

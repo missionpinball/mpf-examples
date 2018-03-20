@@ -1,4 +1,5 @@
 #config_version=5
+
 keyboard:
   s:
     switch: s_start

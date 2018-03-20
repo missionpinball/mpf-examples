@@ -1,4 +1,5 @@
 #config_version=5
+
 fast:
   ports: COM3, COM4, COM5
 
