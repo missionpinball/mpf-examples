@@ -458,9 +458,7 @@ slides:
 
 slide_player:
 
-  # There are lots of entries in here. One for each event.
-  # So when the event 'mc_reset_phase_3' is posted, the slide_player shows slide1.
-  mc_reset_phase_3: slide1
+  mc_ready: slide1
 
   event1:  slide1
 
