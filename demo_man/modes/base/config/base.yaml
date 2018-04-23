@@ -38,7 +38,7 @@ sound_player:
   sw_slingshot: little metal
   sw_jet: medium metal
 
-scoring:
+variable_player:
   left_orbit_hit:
     score: 1000000
   left_ramp_hit:

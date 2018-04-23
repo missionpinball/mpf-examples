@@ -58,9 +58,9 @@ shot_groups:
     rotate_events: timer_target_rotator_tick
     reset_events: mode_skillshot_started|1
 
-scoring:
+variable_player:
   standups_skill_hit_hit:
-    score: 200000
+    int: 200000
 
 shots:
   standup_1_skill:
