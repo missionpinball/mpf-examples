@@ -13,12 +13,12 @@
     orange: 0
 - time: '+1'
   lights:
-    reen: ff
+    green: ff
     yellow: 0
 - time: '+1'
   lights:
     blue: ff
-    reen: 0
+    green: 0
 - time: '+1'
   lights:
     purple: ff
