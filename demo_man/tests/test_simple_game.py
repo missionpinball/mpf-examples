@@ -88,6 +88,8 @@ class TestSimpleGame(FullMachineTestCase):
         self.hit_and_release_switch("s_start")  # CDE
         self.advance_time_and_run()
         self.assertTextOnTopSlide("CDE")
+        self.hit_and_release_switch("s_start")
+        self.advance_time_and_run()
 
         self.assertEventCalled('text_input_high_score_complete')
         self.advance_time_and_run(10)
