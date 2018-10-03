@@ -47,13 +47,13 @@ widget_styles:
     font_size: 10
     adjust_top: 2
     adjust_bottom: 3
-  space title huge:
+  space_title_huge:
     font_name: DEADJIM
     font_size: 29
     antialias: true
     adjust_top: 3
     adjust_bottom: 3
-  space title:
+  space_title:
     font_name: DEADJIM
     font_size: 21
     antialias: true
@@ -69,6 +69,6 @@ widget_styles:
     font_size: 9
     adjust_top: 2
     adjust_bottom: 3
-  tall title:
+  tall_title:
     font_name: big_noodle_titling
     font_size: 20

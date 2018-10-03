@@ -107,7 +107,7 @@
         y: top
       - type: text
         text: (machine|loops1_name)
-        style: tall title
+        style: tall_title
       - type: text
         text: (machine|loops1_value) LOOPS
         anchor_y: bottom

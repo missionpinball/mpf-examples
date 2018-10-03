@@ -201,27 +201,26 @@ switches:
   s_standup_5:
     number: s38
     label:
-    tags: playfield_active
   s_left_slingshot:
     number: s41
     label:
-    tags: playfield_active, slingshot
+    tags: slingshot
   s_right_slingshot:
     number: s42
     label:
-    tags: playfield_active, slingshot
+    tags: slingshot
   s_left_jet:
     number: s43
     label:
-    tags: playfield_active, jet
+    tags: jet
   s_top_slingshot:
     number: s44
     label:
-    tags: playfield_active, jet
+    tags: jet
   s_right_jet:
     number: s45
     label:
-    tags: playfield_active, jet
+    tags: jet
   s_right_ramp_enter:
     number: s46
     label:
@@ -245,7 +244,6 @@ switches:
   s_center_ramp:
     number: s53
     label:
-    tags: playfield_active
   s_upper_rebound:
     number: s54
     label:
@@ -257,15 +255,12 @@ switches:
   s_standup_2:
     number: s56
     label:
-    tags: playfield_active
   s_standup_3:
     number: s57
     label:
-    tags: playfield_active
   s_standup_4:
     number: s58
     label:
-    tags: playfield_active
   s_side_ramp_enter:
     number: s61
     label:
@@ -277,15 +272,12 @@ switches:
   s_left_rollover:
     number: s63
     label:
-    tags: playfield_active
   s_center_rollover:
     number: s64
     label:
-    tags: playfield_active
   s_right_rollover:
     number: s65
     label:
-    tags: playfield_active
   s_eject:
     number: s66
     label:
@@ -335,7 +327,6 @@ switches:
   s_standup_1:
     number: s78
     label:
-    tags: playfield_active
   s_claw_capture_simon:
     number: s81
     label:
@@ -970,7 +961,7 @@ slides:
         dot_color: ff5500
         background_color: 220000
   - type: text
-    style: tall title
+    style: tall_title
     text: MISSION PINBALL FRAMEWORK
     anchor_y: top
     y: top-3
@@ -981,7 +972,7 @@ slides:
     height: 130
     color: 444444
   - type: text
-    style: tall title
+    style: tall_title
     text: DEMO MAN
     anchor_x: right
     anchor_y: bottom

@@ -98,7 +98,7 @@ slides:
     min_digits: 2
     y: middle+2
       #persist_slide: yes
-    style: tall title
+    style: tall_title
   - type: text
     text: BALL (player1|ball)    (machine|credits_string)
     anchor_y: bottom
