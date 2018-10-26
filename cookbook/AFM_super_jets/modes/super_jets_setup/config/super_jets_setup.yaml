@@ -1,0 +1,89 @@
+#config_version=5
+
+mode:
+  start_events: ball_starting
+  priority: 200
+
+shots:
+  jets:
+    switch: s_right_bumper, s_left_bumper, s_middle_bumper
+  right_rollover:
+    switch: s_right_rollover
+    show_tokens:
+      light: l_right_rollover
+  left_rollover:
+    switch: s_left_rollover
+    show_tokens:
+        light: l_left_rollover
+
+shot_groups:
+  rollover_lanes:
+    shots: right_rollover, left_rollover
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events: 
+      rollover_lanes_lit_complete: 1s
+
+counters:
+  lb_jets_count:
+    count_events: jets_hit
+    starting_count: 10
+    count_complete_value: 0
+    count_interval: 1
+    direction: down
+    persist_state: true
+    events_when_complete: Super_Jets_Go
+    #debug: true
+    reset_on_complete: false
+
+  lb_jets_resume:
+    count_events: jets_hit
+    starting_count: 5
+    count_complete_value: 0
+    count_interval: 1
+    direction: down
+    persist_state: false
+    events_when_complete: Super_Jets_Resume_Go
+    debug: true
+    reset_on_complete: false
+
+  lb_rollover_complete_count:
+    count_events: rollover_lanes_complete
+    events_when_hit: rollover_lanes_done
+    starting_count: 0
+    count_complete_value: 40
+    reset_on_complete: false
+    direction: up
+    persist_state: false
+
+sequences:
+  Resume_Super_Jets:
+    events:
+      - player_sj_active{value>1}
+      - Super_Jets_Resume_Go
+    events_when_complete: Super_Jets_Go_Again
+    persist_state: true
+    debug: true
+    reset_on_complete: true
+
+event_player:
+  Super_Jets_Go:
+    start_mode_super_jets
+  Super_Jets_Go_Again:
+    start_mode_super_jets
+  player_sj_active{value==1}:  
+    Super_Jets_on:
+      show_tokens:
+        lights: l_super_jets
+
+variable_player:
+  s_left_bumper_active:
+    score: 1000000 + (device.counters.lb_rollover_complete_count.value * 50000)
+  s_middle_bumper_active:
+    score: 1000000 + (device.counters.lb_rollover_complete_count.value * 50000)
+  s_right_bumper_active:
+    score: 1000000 + (device.counters.lb_rollover_complete_count.value * 50000)
+  rollover_lanes_complete:
+    score: 1000
+  start_mode_super_jets:
+    int: player_sj_active + 1

@@ -1,0 +1,87 @@
+#config_version=5
+
+
+switches:
+    s_left_flipper:
+        number: 0 
+        tags: left_flipper
+
+    s_right_flipper:
+        number: 71
+        tags: right_flipper
+
+    s_eject_chamber:
+        number: 4
+        tags: playfield_active, Bonus_Multiplier
+
+    s_cabinet_left:
+        number: 5
+        tags: playfield_active
+
+    s_credit:
+        number: 6
+        tags: start
+
+    s_cabinet_right:
+        number: 7
+        tags: playfield_active
+
+    s_outhole:
+        number: 8
+        tags: 
+
+    s_coins_right:
+        number: 9
+        tags: playfield_active
+
+    s_coins_left:
+        number: 10
+        tags: playfield_active
+
+    s_slam:
+        number: 14
+        tags: playfield_active
+
+    s_tilt:
+        number: 15
+        tags: playfield_active
+
+    s_left_bumper:
+        number: 17
+        tags:  jets
+
+    s_middle_bumper:
+        number: 18
+        tags: jets
+
+    s_right_bumper:
+        number: 19
+        tags: jets
+
+    s_right_rollover:
+        number: 22
+        tags: playfield_active, right_rollover
+
+    s_left_rollover:
+        number: 23
+        tags: playfield_active, left_rollover
+
+    s_trough_5:
+        number: 36
+        tags: 
+
+    s_trough_4:
+        number: 37
+        tags: 
+
+    s_trough_3:
+        number: 38
+        tags: 
+
+    s_trough_2:
+        number: 39
+        tags:
+
+    s_trough_1:
+        number: 40
+        tags: 

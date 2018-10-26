@@ -1,0 +1,54 @@
+events:
+  game_ended: 1
+  game_started: 106
+player:
+  score:
+    average: 40000000.0
+    top:
+    - 40000000
+    total: 1
+shots:
+  jets: 566
+switches:
+  s_cabinet_left: 0
+  s_cabinet_right: 0
+  s_center_target: 0
+  s_coins_left: 0
+  s_coins_middle: 0
+  s_coins_right: 0
+  s_credit: 0
+  s_eject_chamber: 0
+  s_heavy_target: 0
+  s_left_25K_target: 0
+  s_left_bumper: 203
+  s_left_flipper: 0
+  s_left_outlane: 0
+  s_left_return_lane: 0
+  s_left_rollover: 0
+  s_left_saucer: 0
+  s_left_slingshot: 0
+  s_load_chamber: 0
+  s_metal_target: 0
+  s_middle_bumper: 216
+  s_outhole: 0
+  s_ramp_drop_target: 0
+  s_right_25K_target: 0
+  s_right_bumper: 147
+  s_right_flipper: 0
+  s_right_outlane: 0
+  s_right_return_lane: 0
+  s_right_rollover: 0
+  s_right_saucer: 0
+  s_right_slingshot: 0
+  s_slam: 0
+  s_tilt: 0
+  s_top_25K_lane: 0
+  s_top_50K_lane: 0
+  s_top_lane_A: 0
+  s_top_lane_J: 0
+  s_top_lane_M: 0
+  s_trough_1: 48
+  s_trough_2: 0
+  s_trough_3: 0
+  s_trough_4: 0
+  s_trough_5: 0

@@ -1,0 +1,102 @@
+#config_version=5
+
+coils:
+    c_flipper_left_main:
+        number: 0
+        default_pulse_ms: 20
+    c_flipper_left_hold:
+        number: 1
+        allow_enable: true
+    c_flipper_right_main:
+        number: 2
+        default_pulse_ms: 20
+    c_flipper_right_hold:
+        number: 3
+        allow_enable: true
+    c_trough_eject:
+        number: 4
+        allow_enable: true
+    c_left_bumper:
+        number: c01
+        label:
+        tags:
+        default_pulse_ms: 25
+    c_middle_bumper:
+        number: c02
+        label:
+        tags:
+        default_pulse_ms: 25
+    c_right_bumper:
+        number: c03
+        label:
+        tags:
+        default_pulse_ms: 25
+    c_left_slingshot:
+        number: c04
+        label:
+        tags:
+        default_pulse_ms: 30
+    c_right_slingshot:
+        number: c05
+        label:
+        tags:
+        default_pulse_ms: 30
+        max_hold_power: 0.5
+    c_left_saucer:
+        number: c06
+        label:
+        tags:
+    c_right_saucer:
+        number: c07
+        label:
+        tags:
+    c_drop_target:
+        number: c08
+        label:
+        tags:
+    #name
+    #    number: c09
+    #    label:
+    #    tags:
+    c_pin_up:
+        number: c10
+        label:
+        tags:
+    c_pin_down:
+        number: c11
+        label:
+        tags:
+    c_ball_eject:
+        number: c12
+        label:
+        tags:
+        default_pulse_ms: 20
+    #name:
+     #    number: c13
+     #    label:
+     #    tags:
+    c_outhole:
+        number: c14
+        label:
+        tags:
+        default_pulse_ms: 20
+    c_knocker:
+        number: c15
+        label:
+        tags:    
+    c_backbox_light:
+        number: c16
+        label:
+        tags:
+    c_top_light:
+        number: c17
+        label:
+        tags:
+    c_flipper_backbox:
+        number: c18
+        label:
+        tags:
+    #name:
+    #    number: c19
+    #    label:
+    #    tags: 
