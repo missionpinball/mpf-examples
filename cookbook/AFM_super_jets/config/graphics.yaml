@@ -1,0 +1,20 @@
+#config_version=5
+
+displays:
+  window:
+    width: 600
+    height: 200
+  dmd:
+    width: 128
+    height: 32
+    default: true
+
+window:
+  width: 600
+  height: 200
+  title: Mission Pinball Framework - Powerman 5000
+  resizable: true
+  fullscreen: false
+  borderless: false
+  exit_on_escape: true
+  source_display: window

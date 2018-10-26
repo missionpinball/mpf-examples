@@ -1,0 +1,611 @@
+2018-10-24 02:08:12,782 : INFO : Machine : Mission Pinball Framework Core Engine v0.50.19
+2018-10-24 02:08:12,782 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'mpfconfigfile': 'c:\\program files\\python36\\lib\\site-packages\\mpf\\mpfconfig.yaml', 'force_assets_load': False, 'logfile': 'logs\\2018-10-24-02-08-12-mpf-Blitzwing.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 10, 'consoleloglevel': 10, 'force_platform': 'virtual', 'syslog_address': None, 'mc_file_name': None}
+2018-10-24 02:08:12,782 : INFO : Machine : MPF path: c:\program files\python36\lib\site-packages\mpf
+2018-10-24 02:08:12,782 : INFO : Machine : Machine path: c:\pinball\machine_files\test_bed
+2018-10-24 02:08:12,782 : INFO : Machine : Platform: win32
+2018-10-24 02:08:12,782 : INFO : Machine : Python executable location: c:\program files\python36\python.exe
+2018-10-24 02:08:12,782 : INFO : Machine : Python version: 3.6.4 (64-bit)
+2018-10-24 02:08:13,299 : INFO : Machine : Machine config file #1: config.yaml
+2018-10-24 02:08:13,300 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\33c83aa199ad88f99f9be91261b22024.mpf_cache
+2018-10-24 02:08:13,301 : DEBUG : asyncio : Using selector: SelectSelector
+2018-10-24 02:08:13,301 : INFO : Machine : Initialise MPF.
+2018-10-24 02:08:13,317 : DEBUG : Virtual Platform : Configuring virtual hardware interface.
+2018-10-24 02:08:13,511 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : DEBUG : YAML File Interface : Loading file: c:\pinball\machine_files\test_bed\data/machine_vars.yaml
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_player1_score'====== Args={'value': 40000000, 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.50.19', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.50.19, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.6.4', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Windows-10-10.0.17134-SP0', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Windows', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '10', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '10.0.17134', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'AMD64', 'prev_value': None, 'change': True}
+2018-10-24 02:08:13,542 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2018-10-24 02:08:13,609 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\b5f6b1c8ee9e5c1a9638c752ffbcbbf3.mpf_cache
+2018-10-24 02:08:13,625 : DEBUG : ModeController : Loaded mode base
+2018-10-24 02:08:13,625 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\e8bd7a94e1d73ea9e0da24a00ed7a281.mpf_cache
+2018-10-24 02:08:13,640 : DEBUG : ModeController : Loaded mode attract
+2018-10-24 02:08:13,640 : WARNING : ConfigProcessor : Config file in cache changed: c:\pinball\machine_files\test_bed\modes\super_jets_setup\config\super_jets_setup.yaml
+2018-10-24 02:08:13,640 : INFO : ConfigProcessor : Loading config from file c:\pinball\machine_files\test_bed\modes\super_jets_setup\config\super_jets_setup.yaml.
+2018-10-24 02:08:13,640 : DEBUG : YAML File Interface : Loading file: c:\pinball\machine_files\test_bed\modes\super_jets_setup\config\super_jets_setup.yaml
+2018-10-24 02:08:13,664 : INFO : ConfigProcessor : Loading config: c:\pinball\machine_files\test_bed\modes\super_jets_setup\config\super_jets_setup.yaml
+2018-10-24 02:08:13,664 : INFO : ConfigProcessor : Config file cache created: C:\Users\arsen\AppData\Local\Temp\48ce83baf1d264bc65f184ea7e187091.mpf_cache
+2018-10-24 02:08:13,701 : DEBUG : ModeController : Loaded mode super_jets_setup
+2018-10-24 02:08:13,701 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\f78866ef74dcb631e5d1769cfc2e6cb8.mpf_cache
+2018-10-24 02:08:13,717 : DEBUG : ModeController : Loaded mode super_jets
+2018-10-24 02:08:13,717 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\8e1a6a6e716428615d3205ffe45b9b4d.mpf_cache
+2018-10-24 02:08:13,732 : DEBUG : ModeController : Loaded mode game
+2018-10-24 02:08:13,748 : DEBUG : counter.lb_jets_resume : Configuring device with settings: '{'count_events': {'jets_hit': 0}, 'starting_count': <mpf.core.placeholder_manager.NativeTypeTemplate object at 0x0000018F09BCCE10>, 'count_complete_value': <mpf.core.placeholder_manager.NativeTypeTemplate object at 0x0000018F09BCCDA0>, 'count_interval': 1, 'direction': 'down', 'persist_state': False, 'events_when_complete': ['Super_Jets_Resume_Go'], 'debug': True, 'reset_on_complete': False, 'events_when_hit': ['counter_lb_jets_resume_hit', 'logicblock_lb_jets_resume_hit'], 'enable_events': {}, 'disable_events': {}, 'reset_events': {}, 'restart_events': {}, 'disable_on_complete': True, 'start_enabled': None, 'console_log': 'full', 'file_log': 'full', 'label': '%', 'tags': [], 'multiple_hit_window': 0}'
+2018-10-24 02:08:13,748 : DEBUG : sequence.Resume_Super_Jets : Configuring device with settings: '{'events': ['player_sj_active{value>1}', 'Super_Jets_Resume_Go'], 'events_when_complete': ['Super_Jets_Go_Again'], 'persist_state': True, 'debug': True, 'reset_on_complete': True, 'events_when_hit': ['logicblock_Resume_Super_Jets_hit'], 'enable_events': {}, 'disable_events': {}, 'reset_events': {}, 'restart_events': {}, 'disable_on_complete': True, 'start_enabled': None, 'console_log': 'full', 'file_log': 'full', 'label': '%', 'tags': []}'
+2018-10-24 02:08:13,748 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2018-10-24 02:08:13,748 : INFO : SwitchController : Found active switch: s_trough_5
+2018-10-24 02:08:13,748 : INFO : SwitchController : Found active switch: s_trough_4
+2018-10-24 02:08:13,748 : INFO : SwitchController : Found active switch: s_trough_3
+2018-10-24 02:08:13,748 : INFO : SwitchController : Found active switch: s_trough_2
+2018-10-24 02:08:13,748 : INFO : SwitchController : Found active switch: s_trough_1
+2018-10-24 02:08:13,789 : INFO : EventManager : Event: ======'bcp_connection_attempt'====== Args={'name': 'local_display', 'host': 'localhost', 'port': 5050}
+2018-10-24 02:08:13,789 : INFO : BCPClientSocket.local_display : Connecting BCP to 'local_display' at localhost:5050...
+2018-10-24 02:08:15,829 : INFO : BCPClientSocket.local_display : Connected BCP to 'local_display' localhost:5050
+2018-10-24 02:08:15,830 : INFO : EventManager : Event: ======'bcp_clients_connected'====== Args={}
+2018-10-24 02:08:15,839 : INFO : EventManager : Event: ======'slide_window_slide_1_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:15,843 : DEBUG : YAML File Interface : Loading file: c:\pinball\machine_files\test_bed\data/audits.yaml
+2018-10-24 02:08:15,863 : DEBUG : Machine : "info_lights:" section not found in machine configuration, so the Info Lights plugin will not be used.
+2018-10-24 02:08:15,863 : DEBUG : Machine : "switch_player:" section not found in machine configuration, so the Switch Playerplugin will not be used.
+2018-10-24 02:08:15,864 : INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+2018-10-24 02:08:15,867 : INFO : AssetManager : Registering Asset: Super_Jets_on, File: Super_Jets_on.yaml, Default Group: default, Final Config: {'load': 'preload', 'file': 'c:\\pinball\\machine_files\\test_bed\\shows\\Super_Jets_on.yaml'}
+2018-10-24 02:08:15,868 : INFO : AssetManager : Registering Asset: super_jets_startup, File: super_jets_startup.yaml, Default Group: default, Final Config: {'load': 'preload', 'file': 'c:\\pinball\\machine_files\\test_bed\\modes\\super_jets\\shows\\super_jets_startup.yaml'}
+2018-10-24 02:08:15,872 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 1.0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,872 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\7eb84c3bdddac075d5e7f4ba80564fb8.mpf_cache
+2018-10-24 02:08:15,873 : INFO : EventManager : Event: ======'loading_assets'====== Args={'total': 2, 'loaded': 1, 'remaining': 1, 'percent': 50}
+2018-10-24 02:08:15,873 : INFO : AssetManager : Loading assets: 1/2 (50%)
+2018-10-24 02:08:15,874 : INFO : ConfigProcessor : Loading config from cache: C:\Users\arsen\AppData\Local\Temp\af85647a6f62fce8669dfde3171c5c7a.mpf_cache
+2018-10-24 02:08:15,876 : INFO : EventManager : Event: ======'loading_assets'====== Args={'total': 2, 'loaded': 2, 'remaining': 0, 'percent': 100}
+2018-10-24 02:08:15,876 : INFO : EventManager : Event: ======'asset_loading_complete'====== Args={}
+2018-10-24 02:08:15,876 : INFO : AssetManager : Loading assets: 2/2 (100%)
+2018-10-24 02:08:15,877 : INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+2018-10-24 02:08:15,890 : INFO : EventManager : Event: ======'slide_asset_status_created'====== Args={'_from_bcp': True}
+2018-10-24 02:08:15,890 : INFO : EventManager : Event: ======'slide_asset_status_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:15,892 : INFO : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 1, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,893 : INFO : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 105, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,893 : INFO : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'average': 40000000.0, 'top': [40000000], 'total': 1}, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,893 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 556, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,894 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_cabinet_left'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,894 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_cabinet_right'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,894 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_target'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,895 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_coins_left'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,895 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_coins_middle'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,895 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_coins_right'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,896 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_credit'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,896 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_eject_chamber'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,896 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_heavy_target'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,896 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_25k_target'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,897 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 200, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,897 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_flipper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,897 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_outlane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,898 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_return_lane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,898 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_rollover'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,898 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_saucer'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,899 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_slingshot'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,899 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_load_chamber'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,899 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_metal_target'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,900 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 212, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,900 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_outhole'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,900 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_ramp_drop_target'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,900 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_25k_target'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,901 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 144, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,901 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_flipper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,901 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_outlane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,901 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_return_lane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,902 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_rollover'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,902 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_saucer'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,902 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_slingshot'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,902 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_slam'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,903 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_tilt'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,903 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_top_25k_lane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,903 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_top_50k_lane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,903 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_top_lane_a'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,904 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_top_lane_j'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,904 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_top_lane_m'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,904 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_1'====== Args={'value': 47, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,904 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,905 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,905 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_4'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,905 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_5'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2018-10-24 02:08:15,906 : INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+2018-10-24 02:08:15,906 : INFO : EventManager : Event: ======'slide_asset_status_removed'====== Args={'_from_bcp': True}
+2018-10-24 02:08:15,906 : INFO : EventManager : Event: ======'slide_asset_status_created'====== Args={'_from_bcp': True}
+2018-10-24 02:08:15,906 : INFO : EventManager : Event: ======'init_done'====== Args={}
+2018-10-24 02:08:15,907 : INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+2018-10-24 02:08:15,909 : INFO : EventManager : Event: ======'slide_asset_status_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:15,928 : INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+2018-10-24 02:08:15,929 : INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+2018-10-24 02:08:15,929 : INFO : EventManager : Event: ======'reset_complete'====== Args={}
+2018-10-24 02:08:15,930 : INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+2018-10-24 02:08:15,930 : INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+2018-10-24 02:08:15,931 : INFO : Mode.attract : Started. Priority: 10
+2018-10-24 02:08:15,931 : INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+2018-10-24 02:08:15,931 : INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+2018-10-24 02:08:15,932 : INFO : Machine : Starting the main run loop.
+2018-10-24 02:08:16,260 : INFO : BcpServer : New client connected.
+2018-10-24 02:08:18,078 : INFO : SwitchController : <<<<<<< 's_credit' active >>>>>>>
+2018-10-24 02:08:18,079 : INFO : EventManager : Event: ======'s_credit_active'====== Args={}
+2018-10-24 02:08:18,079 : INFO : EventManager : Event: ======'sw_start'====== Args={}
+2018-10-24 02:08:18,079 : INFO : EventManager : Event: ======'sw_start_active'====== Args={}
+2018-10-24 02:08:18,200 : INFO : SwitchController : <<<<<<< 's_credit' inactive >>>>>>>
+2018-10-24 02:08:18,200 : INFO : EventManager : Event: ======'s_credit_inactive'====== Args={}
+2018-10-24 02:08:18,201 : INFO : EventManager : Event: ======'sw_start_inactive'====== Args={}
+2018-10-24 02:08:18,201 : INFO : EventManager : Event: ======'request_to_start_game'====== Args={}
+2018-10-24 02:08:18,207 : INFO : EventManager : Event: ======'game_start'====== Args={'buttons': [], 'hold_time': 0.125}
+2018-10-24 02:08:18,207 : INFO : EventManager : Event: ======'mode_game_will_start'====== Args={'buttons': [], 'hold_time': 0.125}
+2018-10-24 02:08:18,209 : INFO : EventManager : Event: ======'mode_game_starting'====== Args={'buttons': [], 'hold_time': 0.125}
+2018-10-24 02:08:18,210 : INFO : EventManager : Event: ======'mode_attract_will_stop'====== Args={}
+2018-10-24 02:08:18,210 : INFO : EventManager : Event: ======'mode_attract_stopping'====== Args={}
+2018-10-24 02:08:18,211 : INFO : Mode.attract : Stopped.
+2018-10-24 02:08:18,212 : INFO : EventManager : Event: ======'mode_attract_stopped'====== Args={}
+2018-10-24 02:08:18,212 : INFO : EventManager : Event: ======'clear'====== Args={'key': 'attract'}
+2018-10-24 02:08:18,213 : INFO : Mode.game : Started. Priority: 20
+2018-10-24 02:08:18,213 : INFO : EventManager : Event: ======'mode_game_started'====== Args={'buttons': [], 'hold_time': 0.125}
+2018-10-24 02:08:18,214 : INFO : EventManager : Event: ======'game_will_start'====== Args={}
+2018-10-24 02:08:18,215 : INFO : EventManager : Event: ======'game_starting'====== Args={'game': <Mode.game>}
+2018-10-24 02:08:18,216 : DEBUG : Auditor : Enabling the Auditor
+2018-10-24 02:08:18,216 : INFO : EventManager : Event: ======'player_add_request'====== Args={}
+2018-10-24 02:08:18,217 : INFO : EventManager : Event: ======'player_will_add'====== Args={'number': 1}
+2018-10-24 02:08:18,217 : DEBUG : Player : Creating new player: Player 1. (player index '0')
+2018-10-24 02:08:18,217 : DEBUG : Player : Setting 'pf_multiplier' to: 1, (prior: 0, change: 1)
+2018-10-24 02:08:18,218 : DEBUG : Player : Setting 'sj_active' to: 0, (prior: 0, change: 0)
+2018-10-24 02:08:18,218 : DEBUG : Player : Setting 'score' to: 0, (prior: 0, change: 0)
+2018-10-24 02:08:18,218 : INFO : EventManager : Event: ======'player_adding'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:18,218 : INFO : EventManager : Event: ======'player_added'====== Args={'player': <Player 1>, 'num': 1}
+2018-10-24 02:08:18,218 : INFO : Mode.game : Player added successfully. Total players: 1
+2018-10-24 02:08:18,219 : INFO : EventManager : Event: ======'player_index'====== Args={'value': 0, 'prev_value': 0, 'change': 0, 'player_num': 1}
+2018-10-24 02:08:18,219 : INFO : EventManager : Event: ======'player_number'====== Args={'value': 1, 'prev_value': 1, 'change': 0, 'player_num': 1}
+2018-10-24 02:08:18,220 : INFO : EventManager : Event: ======'player_pf_multiplier'====== Args={'value': 1, 'prev_value': 1, 'change': 0, 'player_num': 1}
+2018-10-24 02:08:18,220 : INFO : EventManager : Event: ======'player_sj_active'====== Args={'value': 0, 'prev_value': 0, 'change': 0, 'player_num': 1}
+2018-10-24 02:08:18,221 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 0, 'prev_value': 0, 'change': 0, 'player_num': 1}
+2018-10-24 02:08:18,223 : INFO : EventManager : Event: ======'game_started'====== Args={}
+2018-10-24 02:08:18,224 : INFO : EventManager : Event: ======'player_turn_will_start'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:18,230 : INFO : EventManager : Event: ======'player_turn_starting'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:18,236 : DEBUG : Player : Setting 'ball' to: 1, (prior: 0, change: 1)
+2018-10-24 02:08:18,236 : INFO : EventManager : Event: ======'player_ball'====== Args={'value': 1, 'prev_value': 0, 'change': 1, 'player_num': 1}
+2018-10-24 02:08:18,238 : INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:18,240 : INFO : EventManager : Event: ======'ball_will_start'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,242 : INFO : EventManager : Event: ======'ball_starting'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,244 : INFO : EventManager : Event: ======'mode_super_jets_setup_will_start'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,245 : DEBUG : Player : Setting 'shot_jets_enabled' to: True, (prior: 0, change: 1)
+2018-10-24 02:08:18,246 : INFO : EventManager : Event: ======'player_shot_jets_enabled'====== Args={'value': True, 'prev_value': 0, 'change': 1, 'player_num': 1}
+2018-10-24 02:08:18,247 : DEBUG : Player : Setting 'shot_right_rollover_enabled' to: True, (prior: 0, change: 1)
+2018-10-24 02:08:18,247 : INFO : EventManager : Event: ======'player_shot_right_rollover_enabled'====== Args={'value': True, 'prev_value': 0, 'change': 1, 'player_num': 1}
+2018-10-24 02:08:18,249 : DEBUG : Player : Setting 'shot_left_rollover_enabled' to: True, (prior: 0, change: 1)
+2018-10-24 02:08:18,249 : INFO : EventManager : Event: ======'player_shot_left_rollover_enabled'====== Args={'value': True, 'prev_value': 0, 'change': 1, 'player_num': 1}
+2018-10-24 02:08:18,250 : INFO : EventManager : Event: ======'rollover_lanes_complete'====== Args={'state': 'unlit'}
+2018-10-24 02:08:18,251 : INFO : EventManager : Event: ======'rollover_lanes_unlit_complete'====== Args={}
+2018-10-24 02:08:18,255 : INFO : EventManager : Event: ======'mode_super_jets_setup_starting'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,256 : INFO : EventManager : Event: ======'mode_base_will_start'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,257 : INFO : EventManager : Event: ======'mode_base_starting'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,259 : INFO : Mode.base : Started. Priority: 100
+2018-10-24 02:08:18,259 : INFO : EventManager : Event: ======'mode_base_started'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,260 : INFO : EventManager : Event: ======'balls_in_play'====== Args={'balls': 1}
+2018-10-24 02:08:18,261 : INFO : EventManager : Event: ======'ball_started'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,265 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 10, 'enabled': True}
+2018-10-24 02:08:18,265 : DEBUG : counter.lb_jets_resume : Enabling
+2018-10-24 02:08:18,266 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 5, 'enabled': True}
+2018-10-24 02:08:18,267 : INFO : EventManager : Event: ======'logicblock_lb_rollover_complete_count_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:18,268 : DEBUG : sequence.Resume_Super_Jets : Enabling
+2018-10-24 02:08:18,269 : INFO : EventManager : Event: ======'logicblock_resume_super_jets_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:18,269 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 10, 'enabled': True}
+2018-10-24 02:08:18,269 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 5, 'enabled': True}
+2018-10-24 02:08:18,270 : INFO : EventManager : Event: ======'logicblock_lb_rollover_complete_count_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:18,270 : INFO : EventManager : Event: ======'logicblock_resume_super_jets_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:18,270 : INFO : Mode.super_jets_setup : Started. Priority: 200
+2018-10-24 02:08:18,270 : INFO : EventManager : Event: ======'mode_super_jets_setup_started'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2018-10-24 02:08:18,272 : INFO : EventManager : Event: ======'single_player_ball_started'====== Args={}
+2018-10-24 02:08:18,274 : INFO : EventManager : Event: ======'balldevice_balls_available'====== Args={}
+2018-10-24 02:08:18,276 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_eject_attempt'====== Args={'balls': 1, 'target': <playfield.playfield>, 'source': <ball_device.bd_trough>, 'mechanical_eject': False, 'num_attempts': 0}
+2018-10-24 02:08:18,278 : INFO : ball_device.bd_trough : Ejecting ball to <playfield.playfield>
+2018-10-24 02:08:18,278 : INFO : EventManager : Event: ======'balldevice_bd_trough_ejecting_ball'====== Args={'balls': 1, 'target': <playfield.playfield>, 'source': <ball_device.bd_trough>, 'mechanical_eject': False, 'num_attempts': 0}
+2018-10-24 02:08:18,280 : INFO : coil.c_ball_eject : Pulsing Driver for 20ms (1.0 pulse_power)
+2018-10-24 02:08:18,280 : DEBUG : VirtualDriver.c12 : Pulsing driver for 20ms
+2018-10-24 02:08:18,287 : INFO : EventManager : Event: ======'slide_slide_1_created'====== Args={'_from_bcp': True}
+2018-10-24 02:08:18,295 : INFO : EventManager : Event: ======'slide_slide_1_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:18,977 : INFO : SwitchController : <<<<<<< 's_trough_1' inactive >>>>>>>
+2018-10-24 02:08:18,978 : INFO : EventManager : Event: ======'s_trough_1_inactive'====== Args={}
+2018-10-24 02:08:19,824 : INFO : SwitchController : <<<<<<< 's_left_bumper' active >>>>>>>
+2018-10-24 02:08:19,824 : INFO : EventManager : Event: ======'s_left_bumper_active'====== Args={}
+2018-10-24 02:08:19,825 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:19,825 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:19,826 : INFO : EventManager : Event: ======'playfield_active'====== Args={}
+2018-10-24 02:08:19,831 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 201, 'prev_value': 200, 'change': 1}
+2018-10-24 02:08:19,832 : INFO : EventManager : Event: ======'playfield_active'====== Args={}
+2018-10-24 02:08:19,833 : DEBUG : Player : Setting 'shot_jets' to: 1, (prior: 0, change: 1)
+2018-10-24 02:08:19,833 : INFO : EventManager : Event: ======'player_shot_jets'====== Args={'value': 1, 'prev_value': 0, 'change': 1, 'player_num': 1}
+2018-10-24 02:08:19,834 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 557, 'prev_value': 556, 'change': 1}
+2018-10-24 02:08:19,835 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'unlit', 'advancing': True}
+2018-10-24 02:08:19,835 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'unlit', 'advancing': True}
+2018-10-24 02:08:19,836 : INFO : EventManager : Event: ======'jets_default_unlit_hit'====== Args={'profile': 'default', 'state': 'unlit', 'advancing': True}
+2018-10-24 02:08:19,836 : INFO : EventManager : Event: ======'jets_unlit_hit'====== Args={'profile': 'default', 'state': 'unlit', 'advancing': True}
+2018-10-24 02:08:19,837 : DEBUG : Player : Setting 'score' to: 1000000, (prior: 0, change: 1000000)
+2018-10-24 02:08:19,837 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 1000000, 'prev_value': 0, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:19,838 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 9, 'enabled': True}
+2018-10-24 02:08:19,839 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 9, 'remaining': -9}
+2018-10-24 02:08:19,839 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 9, 'remaining': -9}
+2018-10-24 02:08:19,840 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 4
+2018-10-24 02:08:19,840 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 4, 'enabled': True}
+2018-10-24 02:08:19,840 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 4, 'remaining': -4}
+2018-10-24 02:08:19,841 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 4, 'remaining': -4}
+2018-10-24 02:08:19,843 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_eject_success'====== Args={'balls': 1, 'target': <playfield.playfield>}
+2018-10-24 02:08:19,844 : INFO : EventManager : Event: ======'balldevice_playfield_ball_enter'====== Args={'new_balls': 1, 'unclaimed_balls': 1, 'device': <playfield.playfield>}
+2018-10-24 02:08:19,844 : INFO : EventManager : Event: ======'playfield_ball_count_change'====== Args={'balls': 1, 'change': 1}
+2018-10-24 02:08:19,846 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_count_changed'====== Args={'balls': 4}
+2018-10-24 02:08:19,886 : INFO : SwitchController : <<<<<<< 's_middle_bumper' active >>>>>>>
+2018-10-24 02:08:19,886 : INFO : EventManager : Event: ======'s_middle_bumper_active'====== Args={}
+2018-10-24 02:08:19,886 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:19,887 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:19,895 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 213, 'prev_value': 212, 'change': 1}
+2018-10-24 02:08:19,897 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 558, 'prev_value': 557, 'change': 1}
+2018-10-24 02:08:19,898 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:19,899 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:19,899 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:19,899 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:19,900 : DEBUG : Player : Setting 'score' to: 2000000, (prior: 1000000, change: 1000000)
+2018-10-24 02:08:19,900 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 2000000, 'prev_value': 1000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:19,901 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 8, 'enabled': True}
+2018-10-24 02:08:19,901 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 8, 'remaining': -8}
+2018-10-24 02:08:19,901 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 8, 'remaining': -8}
+2018-10-24 02:08:19,901 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 3
+2018-10-24 02:08:19,902 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 3, 'enabled': True}
+2018-10-24 02:08:19,902 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 3, 'remaining': -3}
+2018-10-24 02:08:19,902 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 3, 'remaining': -3}
+2018-10-24 02:08:20,017 : INFO : SwitchController : <<<<<<< 's_left_bumper' inactive >>>>>>>
+2018-10-24 02:08:20,018 : INFO : EventManager : Event: ======'s_left_bumper_inactive'====== Args={}
+2018-10-24 02:08:20,018 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:20,024 : INFO : SwitchController : <<<<<<< 's_right_bumper' active >>>>>>>
+2018-10-24 02:08:20,024 : INFO : EventManager : Event: ======'s_right_bumper_active'====== Args={}
+2018-10-24 02:08:20,025 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:20,026 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:20,033 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 145, 'prev_value': 144, 'change': 1}
+2018-10-24 02:08:20,035 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 559, 'prev_value': 558, 'change': 1}
+2018-10-24 02:08:20,035 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,036 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,036 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,036 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,036 : DEBUG : Player : Setting 'score' to: 3000000, (prior: 2000000, change: 1000000)
+2018-10-24 02:08:20,036 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 3000000, 'prev_value': 2000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:20,037 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 7, 'enabled': True}
+2018-10-24 02:08:20,037 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 7, 'remaining': -7}
+2018-10-24 02:08:20,038 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 7, 'remaining': -7}
+2018-10-24 02:08:20,038 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 2
+2018-10-24 02:08:20,038 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 2, 'enabled': True}
+2018-10-24 02:08:20,038 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 2, 'remaining': -2}
+2018-10-24 02:08:20,039 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 2, 'remaining': -2}
+2018-10-24 02:08:20,125 : INFO : SwitchController : <<<<<<< 's_middle_bumper' inactive >>>>>>>
+2018-10-24 02:08:20,125 : INFO : EventManager : Event: ======'s_middle_bumper_inactive'====== Args={}
+2018-10-24 02:08:20,125 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:20,221 : INFO : SwitchController : <<<<<<< 's_right_bumper' inactive >>>>>>>
+2018-10-24 02:08:20,221 : INFO : EventManager : Event: ======'s_right_bumper_inactive'====== Args={}
+2018-10-24 02:08:20,222 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:20,766 : INFO : SwitchController : <<<<<<< 's_left_bumper' active >>>>>>>
+2018-10-24 02:08:20,766 : INFO : EventManager : Event: ======'s_left_bumper_active'====== Args={}
+2018-10-24 02:08:20,766 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:20,766 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:20,772 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 202, 'prev_value': 201, 'change': 1}
+2018-10-24 02:08:20,773 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 560, 'prev_value': 559, 'change': 1}
+2018-10-24 02:08:20,774 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,774 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,775 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,775 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,776 : DEBUG : Player : Setting 'score' to: 4000000, (prior: 3000000, change: 1000000)
+2018-10-24 02:08:20,776 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 4000000, 'prev_value': 3000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:20,777 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 6, 'enabled': True}
+2018-10-24 02:08:20,778 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 6, 'remaining': -6}
+2018-10-24 02:08:20,778 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 6, 'remaining': -6}
+2018-10-24 02:08:20,779 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 1
+2018-10-24 02:08:20,779 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 1, 'enabled': True}
+2018-10-24 02:08:20,779 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 1, 'remaining': -1}
+2018-10-24 02:08:20,780 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 1, 'remaining': -1}
+2018-10-24 02:08:20,843 : INFO : SwitchController : <<<<<<< 's_middle_bumper' active >>>>>>>
+2018-10-24 02:08:20,843 : INFO : EventManager : Event: ======'s_middle_bumper_active'====== Args={}
+2018-10-24 02:08:20,844 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:20,845 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:20,850 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 214, 'prev_value': 213, 'change': 1}
+2018-10-24 02:08:20,851 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 561, 'prev_value': 560, 'change': 1}
+2018-10-24 02:08:20,852 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,852 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,852 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,853 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,854 : DEBUG : Player : Setting 'score' to: 5000000, (prior: 4000000, change: 1000000)
+2018-10-24 02:08:20,854 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 5000000, 'prev_value': 4000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:20,854 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 5, 'enabled': True}
+2018-10-24 02:08:20,855 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 5, 'remaining': -5}
+2018-10-24 02:08:20,855 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 5, 'remaining': -5}
+2018-10-24 02:08:20,855 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 0
+2018-10-24 02:08:20,855 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:20,855 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 0, 'remaining': 0}
+2018-10-24 02:08:20,856 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 0, 'remaining': 0}
+2018-10-24 02:08:20,857 : DEBUG : counter.lb_jets_resume : Complete
+2018-10-24 02:08:20,857 : INFO : EventManager : Event: ======'super_jets_resume_go'====== Args={}
+2018-10-24 02:08:20,857 : DEBUG : counter.lb_jets_resume : Disabling
+2018-10-24 02:08:20,986 : INFO : SwitchController : <<<<<<< 's_right_bumper' active >>>>>>>
+2018-10-24 02:08:20,986 : INFO : EventManager : Event: ======'s_right_bumper_active'====== Args={}
+2018-10-24 02:08:20,986 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:20,986 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:20,993 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 146, 'prev_value': 145, 'change': 1}
+2018-10-24 02:08:20,995 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 562, 'prev_value': 561, 'change': 1}
+2018-10-24 02:08:20,995 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,996 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,996 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,996 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:20,997 : DEBUG : Player : Setting 'score' to: 6000000, (prior: 5000000, change: 1000000)
+2018-10-24 02:08:20,997 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 6000000, 'prev_value': 5000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:20,998 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 4, 'enabled': True}
+2018-10-24 02:08:20,998 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 4, 'remaining': -4}
+2018-10-24 02:08:20,999 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 4, 'remaining': -4}
+2018-10-24 02:08:21,022 : INFO : SwitchController : <<<<<<< 's_left_bumper' inactive >>>>>>>
+2018-10-24 02:08:21,022 : INFO : EventManager : Event: ======'s_left_bumper_inactive'====== Args={}
+2018-10-24 02:08:21,022 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:21,086 : INFO : SwitchController : <<<<<<< 's_middle_bumper' inactive >>>>>>>
+2018-10-24 02:08:21,086 : INFO : EventManager : Event: ======'s_middle_bumper_inactive'====== Args={}
+2018-10-24 02:08:21,087 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:21,208 : INFO : SwitchController : <<<<<<< 's_right_bumper' inactive >>>>>>>
+2018-10-24 02:08:21,208 : INFO : EventManager : Event: ======'s_right_bumper_inactive'====== Args={}
+2018-10-24 02:08:21,209 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:21,649 : INFO : SwitchController : <<<<<<< 's_left_bumper' active >>>>>>>
+2018-10-24 02:08:21,650 : INFO : EventManager : Event: ======'s_left_bumper_active'====== Args={}
+2018-10-24 02:08:21,650 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:21,651 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:21,656 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 203, 'prev_value': 202, 'change': 1}
+2018-10-24 02:08:21,656 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 563, 'prev_value': 562, 'change': 1}
+2018-10-24 02:08:21,657 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,657 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,658 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,658 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,659 : DEBUG : Player : Setting 'score' to: 7000000, (prior: 6000000, change: 1000000)
+2018-10-24 02:08:21,659 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 7000000, 'prev_value': 6000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:21,659 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 3, 'enabled': True}
+2018-10-24 02:08:21,659 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 3, 'remaining': -3}
+2018-10-24 02:08:21,660 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 3, 'remaining': -3}
+2018-10-24 02:08:21,735 : INFO : SwitchController : <<<<<<< 's_middle_bumper' active >>>>>>>
+2018-10-24 02:08:21,736 : INFO : EventManager : Event: ======'s_middle_bumper_active'====== Args={}
+2018-10-24 02:08:21,736 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:21,736 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:21,742 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 215, 'prev_value': 214, 'change': 1}
+2018-10-24 02:08:21,744 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 564, 'prev_value': 563, 'change': 1}
+2018-10-24 02:08:21,745 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,745 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,745 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,745 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,746 : DEBUG : Player : Setting 'score' to: 8000000, (prior: 7000000, change: 1000000)
+2018-10-24 02:08:21,746 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 8000000, 'prev_value': 7000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:21,747 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 2, 'enabled': True}
+2018-10-24 02:08:21,748 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 2, 'remaining': -2}
+2018-10-24 02:08:21,748 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 2, 'remaining': -2}
+2018-10-24 02:08:21,869 : INFO : SwitchController : <<<<<<< 's_right_bumper' active >>>>>>>
+2018-10-24 02:08:21,870 : INFO : EventManager : Event: ======'s_right_bumper_active'====== Args={}
+2018-10-24 02:08:21,870 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:21,871 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:21,876 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 147, 'prev_value': 146, 'change': 1}
+2018-10-24 02:08:21,877 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 565, 'prev_value': 564, 'change': 1}
+2018-10-24 02:08:21,878 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,878 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,878 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,878 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:21,879 : DEBUG : Player : Setting 'score' to: 9000000, (prior: 8000000, change: 1000000)
+2018-10-24 02:08:21,879 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 9000000, 'prev_value': 8000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:21,880 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 1, 'enabled': True}
+2018-10-24 02:08:21,880 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 1, 'remaining': -1}
+2018-10-24 02:08:21,880 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 1, 'remaining': -1}
+2018-10-24 02:08:21,883 : INFO : SwitchController : <<<<<<< 's_left_bumper' inactive >>>>>>>
+2018-10-24 02:08:21,883 : INFO : EventManager : Event: ======'s_left_bumper_inactive'====== Args={}
+2018-10-24 02:08:21,883 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:21,953 : INFO : SwitchController : <<<<<<< 's_middle_bumper' inactive >>>>>>>
+2018-10-24 02:08:21,953 : INFO : EventManager : Event: ======'s_middle_bumper_inactive'====== Args={}
+2018-10-24 02:08:21,954 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:22,063 : INFO : SwitchController : <<<<<<< 's_right_bumper' inactive >>>>>>>
+2018-10-24 02:08:22,063 : INFO : EventManager : Event: ======'s_right_bumper_inactive'====== Args={}
+2018-10-24 02:08:22,063 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:22,864 : INFO : SwitchController : <<<<<<< 's_middle_bumper' active >>>>>>>
+2018-10-24 02:08:22,865 : INFO : EventManager : Event: ======'s_middle_bumper_active'====== Args={}
+2018-10-24 02:08:22,865 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:22,866 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:22,871 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 216, 'prev_value': 215, 'change': 1}
+2018-10-24 02:08:22,872 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 566, 'prev_value': 565, 'change': 1}
+2018-10-24 02:08:22,873 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:22,873 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:22,874 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:22,875 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:22,875 : DEBUG : Player : Setting 'score' to: 10000000, (prior: 9000000, change: 1000000)
+2018-10-24 02:08:22,875 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 10000000, 'prev_value': 9000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:22,877 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:22,878 : INFO : EventManager : Event: ======'counter_lb_jets_count_hit'====== Args={'count': 0, 'remaining': 0}
+2018-10-24 02:08:22,879 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_hit'====== Args={'count': 0, 'remaining': 0}
+2018-10-24 02:08:22,882 : INFO : EventManager : Event: ======'super_jets_go'====== Args={}
+2018-10-24 02:08:22,884 : INFO : EventManager : Event: ======'mode_super_jets_will_start'====== Args={}
+2018-10-24 02:08:22,887 : INFO : EventManager : Event: ======'mode_super_jets_starting'====== Args={}
+2018-10-24 02:08:22,888 : INFO : EventManager : Event: ======'start_mode_super_jets'====== Args={'priority': 0}
+2018-10-24 02:08:22,888 : INFO : Mode.super_jets : Started. Priority: 300
+2018-10-24 02:08:22,888 : INFO : EventManager : Event: ======'mode_super_jets_started'====== Args={}
+2018-10-24 02:08:22,906 : INFO : EventManager : Event: ======'slide_super_jets_startup_created'====== Args={'_from_bcp': True}
+2018-10-24 02:08:22,910 : INFO : EventManager : Event: ======'slide_super_jets_startup_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:22,968 : INFO : SwitchController : <<<<<<< 's_middle_bumper' inactive >>>>>>>
+2018-10-24 02:08:22,968 : INFO : EventManager : Event: ======'s_middle_bumper_inactive'====== Args={}
+2018-10-24 02:08:22,969 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:24,882 : INFO : EventManager : Event: ======'slide_super_jets_startup_removed'====== Args={'_from_bcp': True}
+2018-10-24 02:08:24,883 : INFO : EventManager : Event: ======'slide_slide_1_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:29,466 : INFO : SwitchController : <<<<<<< 's_trough_1' active >>>>>>>
+2018-10-24 02:08:29,466 : INFO : EventManager : Event: ======'s_trough_1_active'====== Args={}
+2018-10-24 02:08:29,471 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_1'====== Args={'value': 48, 'prev_value': 47, 'change': 1}
+2018-10-24 02:08:29,957 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_count_changed'====== Args={'balls': 5}
+2018-10-24 02:08:29,958 : INFO : EventManager : Event: ======'balldevice_captured_from_playfield'====== Args={'balls': 1}
+2018-10-24 02:08:29,958 : INFO : EventManager : Event: ======'sw_playfield_active'====== Args={'balls': 1}
+2018-10-24 02:08:29,959 : INFO : EventManager : Event: ======'playfield_ball_count_change'====== Args={'balls': 0, 'change': -1}
+2018-10-24 02:08:29,961 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_enter'====== Args={'new_balls': 1, 'unclaimed_balls': 1, 'device': <ball_device.bd_trough>}
+2018-10-24 02:08:29,962 : INFO : EventManager : Event: ======'ball_drain'====== Args={'device': <ball_device.bd_trough>, 'balls': 1}
+2018-10-24 02:08:29,962 : INFO : EventManager : Event: ======'ball_will_end'====== Args={}
+2018-10-24 02:08:29,963 : INFO : EventManager : Event: ======'balldevice_balls_available'====== Args={}
+2018-10-24 02:08:29,963 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_entered'====== Args={'new_balls': 1, 'device': <ball_device.bd_trough>}
+2018-10-24 02:08:29,966 : INFO : EventManager : Event: ======'ball_ending'====== Args={}
+2018-10-24 02:08:29,967 : INFO : EventManager : Event: ======'mode_super_jets_will_stop'====== Args={}
+2018-10-24 02:08:29,967 : INFO : EventManager : Event: ======'mode_super_jets_stopping'====== Args={}
+2018-10-24 02:08:29,967 : INFO : EventManager : Event: ======'mode_super_jets_setup_will_stop'====== Args={}
+2018-10-24 02:08:29,967 : INFO : EventManager : Event: ======'mode_super_jets_setup_stopping'====== Args={}
+2018-10-24 02:08:29,968 : INFO : EventManager : Event: ======'mode_base_will_stop'====== Args={}
+2018-10-24 02:08:29,968 : INFO : EventManager : Event: ======'mode_base_stopping'====== Args={}
+2018-10-24 02:08:29,968 : INFO : Mode.base : Stopped.
+2018-10-24 02:08:29,969 : INFO : EventManager : Event: ======'mode_base_stopped'====== Args={}
+2018-10-24 02:08:29,970 : INFO : EventManager : Event: ======'clear'====== Args={'key': 'base'}
+2018-10-24 02:08:29,970 : INFO : Mode.super_jets_setup : Stopped.
+2018-10-24 02:08:29,971 : INFO : EventManager : Event: ======'mode_super_jets_setup_stopped'====== Args={}
+2018-10-24 02:08:29,971 : INFO : EventManager : Event: ======'clear'====== Args={'key': 'super_jets_setup'}
+2018-10-24 02:08:29,973 : INFO : Mode.super_jets : Stopped.
+2018-10-24 02:08:29,974 : INFO : EventManager : Event: ======'mode_super_jets_stopped'====== Args={}
+2018-10-24 02:08:29,974 : INFO : EventManager : Event: ======'clear'====== Args={'key': 'super_jets'}
+2018-10-24 02:08:29,975 : INFO : EventManager : Event: ======'ball_ended'====== Args={}
+2018-10-24 02:08:29,977 : INFO : EventManager : Event: ======'player_turn_will_end'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:29,978 : INFO : EventManager : Event: ======'player_turn_ending'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:29,984 : INFO : EventManager : Event: ======'player_turn_ended'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:29,984 : INFO : EventManager : Event: ======'slide_slide_1_removed'====== Args={'_from_bcp': True}
+2018-10-24 02:08:29,985 : INFO : EventManager : Event: ======'slide_asset_status_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:29,985 : INFO : EventManager : Event: ======'player_turn_will_start'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:29,986 : INFO : EventManager : Event: ======'player_turn_starting'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:29,986 : DEBUG : Player : Setting 'ball' to: 2, (prior: 1, change: 1)
+2018-10-24 02:08:29,986 : INFO : EventManager : Event: ======'player_ball'====== Args={'value': 2, 'prev_value': 1, 'change': 1, 'player_num': 1}
+2018-10-24 02:08:29,987 : INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
+2018-10-24 02:08:29,988 : INFO : EventManager : Event: ======'ball_will_start'====== Args={'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,989 : INFO : EventManager : Event: ======'ball_starting'====== Args={'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,990 : INFO : EventManager : Event: ======'mode_super_jets_setup_will_start'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,993 : INFO : EventManager : Event: ======'rollover_lanes_complete'====== Args={'state': 'unlit'}
+2018-10-24 02:08:29,994 : INFO : EventManager : Event: ======'rollover_lanes_unlit_complete'====== Args={}
+2018-10-24 02:08:29,997 : INFO : EventManager : Event: ======'mode_super_jets_setup_starting'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,997 : INFO : EventManager : Event: ======'mode_base_will_start'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,998 : INFO : EventManager : Event: ======'mode_base_starting'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,999 : INFO : Mode.base : Started. Priority: 100
+2018-10-24 02:08:29,999 : INFO : EventManager : Event: ======'mode_base_started'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:29,999 : INFO : EventManager : Event: ======'balls_in_play'====== Args={'balls': 1}
+2018-10-24 02:08:29,999 : INFO : EventManager : Event: ======'ball_started'====== Args={'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:30,000 : DEBUG : counter.lb_jets_resume : Enabling
+2018-10-24 02:08:30,001 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 5, 'enabled': True}
+2018-10-24 02:08:30,001 : INFO : EventManager : Event: ======'logicblock_lb_rollover_complete_count_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:30,002 : INFO : EventManager : Event: ======'logicblock_lb_jets_count_updated'====== Args={'value': 0, 'enabled': False}
+2018-10-24 02:08:30,003 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 5, 'enabled': True}
+2018-10-24 02:08:30,003 : INFO : EventManager : Event: ======'logicblock_lb_rollover_complete_count_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:30,003 : INFO : EventManager : Event: ======'logicblock_resume_super_jets_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:30,004 : INFO : Mode.super_jets_setup : Started. Priority: 200
+2018-10-24 02:08:30,004 : INFO : EventManager : Event: ======'mode_super_jets_setup_started'====== Args={'queue': <QueuedEvent>, 'player': 1, 'ball': 2, 'balls_remaining': 1, 'is_extra_ball': False}
+2018-10-24 02:08:30,006 : INFO : EventManager : Event: ======'single_player_ball_started'====== Args={}
+2018-10-24 02:08:30,007 : INFO : EventManager : Event: ======'balldevice_balls_available'====== Args={}
+2018-10-24 02:08:30,008 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_eject_attempt'====== Args={'balls': 1, 'target': <playfield.playfield>, 'source': <ball_device.bd_trough>, 'mechanical_eject': False, 'num_attempts': 0}
+2018-10-24 02:08:30,010 : INFO : ball_device.bd_trough : Ejecting ball to <playfield.playfield>
+2018-10-24 02:08:30,010 : INFO : EventManager : Event: ======'balldevice_bd_trough_ejecting_ball'====== Args={'balls': 1, 'target': <playfield.playfield>, 'source': <ball_device.bd_trough>, 'mechanical_eject': False, 'num_attempts': 0}
+2018-10-24 02:08:30,012 : INFO : coil.c_ball_eject : Pulsing Driver for 20ms (1.0 pulse_power)
+2018-10-24 02:08:30,013 : DEBUG : VirtualDriver.c12 : Pulsing driver for 20ms
+2018-10-24 02:08:30,024 : INFO : EventManager : Event: ======'slide_slide_1_created'====== Args={'_from_bcp': True}
+2018-10-24 02:08:30,034 : INFO : EventManager : Event: ======'slide_slide_1_active'====== Args={'_from_bcp': True}
+2018-10-24 02:08:30,772 : INFO : SwitchController : <<<<<<< 's_trough_1' inactive >>>>>>>
+2018-10-24 02:08:30,772 : INFO : EventManager : Event: ======'s_trough_1_inactive'====== Args={}
+2018-10-24 02:08:31,952 : INFO : SwitchController : <<<<<<< 's_left_bumper' active >>>>>>>
+2018-10-24 02:08:31,952 : INFO : EventManager : Event: ======'s_left_bumper_active'====== Args={}
+2018-10-24 02:08:31,953 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:31,953 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:31,953 : INFO : EventManager : Event: ======'playfield_active'====== Args={}
+2018-10-24 02:08:31,958 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 204, 'prev_value': 203, 'change': 1}
+2018-10-24 02:08:31,959 : INFO : EventManager : Event: ======'playfield_active'====== Args={}
+2018-10-24 02:08:31,960 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 567, 'prev_value': 566, 'change': 1}
+2018-10-24 02:08:31,961 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:31,961 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:31,962 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:31,962 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:31,962 : DEBUG : Player : Setting 'score' to: 11000000, (prior: 10000000, change: 1000000)
+2018-10-24 02:08:31,962 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 11000000, 'prev_value': 10000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:31,963 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 4
+2018-10-24 02:08:31,963 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 4, 'enabled': True}
+2018-10-24 02:08:31,964 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 4, 'remaining': -4}
+2018-10-24 02:08:31,964 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 4, 'remaining': -4}
+2018-10-24 02:08:31,965 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_eject_success'====== Args={'balls': 1, 'target': <playfield.playfield>}
+2018-10-24 02:08:31,966 : INFO : EventManager : Event: ======'balldevice_playfield_ball_enter'====== Args={'new_balls': 1, 'unclaimed_balls': 1, 'device': <playfield.playfield>}
+2018-10-24 02:08:31,967 : INFO : EventManager : Event: ======'playfield_ball_count_change'====== Args={'balls': 1, 'change': 1}
+2018-10-24 02:08:31,968 : INFO : EventManager : Event: ======'balldevice_bd_trough_ball_count_changed'====== Args={'balls': 4}
+2018-10-24 02:08:32,115 : INFO : SwitchController : <<<<<<< 's_left_bumper' inactive >>>>>>>
+2018-10-24 02:08:32,115 : INFO : EventManager : Event: ======'s_left_bumper_inactive'====== Args={}
+2018-10-24 02:08:32,116 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:32,193 : INFO : SwitchController : <<<<<<< 's_middle_bumper' active >>>>>>>
+2018-10-24 02:08:32,193 : INFO : EventManager : Event: ======'s_middle_bumper_active'====== Args={}
+2018-10-24 02:08:32,194 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:32,195 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:32,201 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 217, 'prev_value': 216, 'change': 1}
+2018-10-24 02:08:32,203 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 568, 'prev_value': 567, 'change': 1}
+2018-10-24 02:08:32,205 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,205 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,206 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,207 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,207 : DEBUG : Player : Setting 'score' to: 12000000, (prior: 11000000, change: 1000000)
+2018-10-24 02:08:32,207 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 12000000, 'prev_value': 11000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:32,207 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 3
+2018-10-24 02:08:32,208 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 3, 'enabled': True}
+2018-10-24 02:08:32,208 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 3, 'remaining': -3}
+2018-10-24 02:08:32,209 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 3, 'remaining': -3}
+2018-10-24 02:08:32,348 : INFO : SwitchController : <<<<<<< 's_middle_bumper' inactive >>>>>>>
+2018-10-24 02:08:32,348 : INFO : EventManager : Event: ======'s_middle_bumper_inactive'====== Args={}
+2018-10-24 02:08:32,348 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:32,399 : INFO : SwitchController : <<<<<<< 's_right_bumper' active >>>>>>>
+2018-10-24 02:08:32,399 : INFO : EventManager : Event: ======'s_right_bumper_active'====== Args={}
+2018-10-24 02:08:32,401 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:32,401 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:32,408 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 148, 'prev_value': 147, 'change': 1}
+2018-10-24 02:08:32,409 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 569, 'prev_value': 568, 'change': 1}
+2018-10-24 02:08:32,410 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,411 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,411 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,412 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,413 : DEBUG : Player : Setting 'score' to: 13000000, (prior: 12000000, change: 1000000)
+2018-10-24 02:08:32,413 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 13000000, 'prev_value': 12000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:32,414 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 2
+2018-10-24 02:08:32,414 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 2, 'enabled': True}
+2018-10-24 02:08:32,415 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 2, 'remaining': -2}
+2018-10-24 02:08:32,415 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 2, 'remaining': -2}
+2018-10-24 02:08:32,552 : INFO : SwitchController : <<<<<<< 's_right_bumper' inactive >>>>>>>
+2018-10-24 02:08:32,553 : INFO : EventManager : Event: ======'s_right_bumper_inactive'====== Args={}
+2018-10-24 02:08:32,553 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:32,690 : INFO : SwitchController : <<<<<<< 's_left_bumper' active >>>>>>>
+2018-10-24 02:08:32,690 : INFO : EventManager : Event: ======'s_left_bumper_active'====== Args={}
+2018-10-24 02:08:32,691 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:32,691 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:32,695 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 205, 'prev_value': 204, 'change': 1}
+2018-10-24 02:08:32,696 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 570, 'prev_value': 569, 'change': 1}
+2018-10-24 02:08:32,697 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,697 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,697 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,698 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:32,698 : DEBUG : Player : Setting 'score' to: 14000000, (prior: 13000000, change: 1000000)
+2018-10-24 02:08:32,698 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 14000000, 'prev_value': 13000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:32,699 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 1
+2018-10-24 02:08:32,699 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 1, 'enabled': True}
+2018-10-24 02:08:32,699 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 1, 'remaining': -1}
+2018-10-24 02:08:32,700 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 1, 'remaining': -1}
+2018-10-24 02:08:32,801 : INFO : SwitchController : <<<<<<< 's_left_bumper' inactive >>>>>>>
+2018-10-24 02:08:32,801 : INFO : EventManager : Event: ======'s_left_bumper_inactive'====== Args={}
+2018-10-24 02:08:32,801 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:33,000 : INFO : SwitchController : <<<<<<< 's_middle_bumper' active >>>>>>>
+2018-10-24 02:08:33,000 : INFO : EventManager : Event: ======'s_middle_bumper_active'====== Args={}
+2018-10-24 02:08:33,000 : INFO : EventManager : Event: ======'sw_jets'====== Args={}
+2018-10-24 02:08:33,001 : INFO : EventManager : Event: ======'sw_jets_active'====== Args={}
+2018-10-24 02:08:33,006 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_middle_bumper'====== Args={'value': 218, 'prev_value': 217, 'change': 1}
+2018-10-24 02:08:33,006 : INFO : EventManager : Event: ======'machine_var_audits_shots_jets'====== Args={'value': 571, 'prev_value': 570, 'change': 1}
+2018-10-24 02:08:33,007 : INFO : EventManager : Event: ======'jets_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:33,007 : INFO : EventManager : Event: ======'jets_default_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:33,008 : INFO : EventManager : Event: ======'jets_default_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:33,008 : INFO : EventManager : Event: ======'jets_lit_hit'====== Args={'profile': 'default', 'state': 'lit', 'advancing': False}
+2018-10-24 02:08:33,009 : DEBUG : Player : Setting 'score' to: 15000000, (prior: 14000000, change: 1000000)
+2018-10-24 02:08:33,009 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 15000000, 'prev_value': 14000000, 'change': 1000000, 'player_num': 1}
+2018-10-24 02:08:33,010 : DEBUG : counter.lb_jets_resume : Processing Count change. Total: 0
+2018-10-24 02:08:33,010 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_updated'====== Args={'value': 0, 'enabled': True}
+2018-10-24 02:08:33,011 : INFO : EventManager : Event: ======'counter_lb_jets_resume_hit'====== Args={'count': 0, 'remaining': 0}
+2018-10-24 02:08:33,011 : INFO : EventManager : Event: ======'logicblock_lb_jets_resume_hit'====== Args={'count': 0, 'remaining': 0}
+2018-10-24 02:08:33,012 : DEBUG : counter.lb_jets_resume : Complete
+2018-10-24 02:08:33,012 : INFO : EventManager : Event: ======'super_jets_resume_go'====== Args={}
+2018-10-24 02:08:33,012 : DEBUG : counter.lb_jets_resume : Disabling
+2018-10-24 02:08:33,175 : INFO : SwitchController : <<<<<<< 's_middle_bumper' inactive >>>>>>>
+2018-10-24 02:08:33,175 : INFO : EventManager : Event: ======'s_middle_bumper_inactive'====== Args={}
+2018-10-24 02:08:33,176 : INFO : EventManager : Event: ======'sw_jets_inactive'====== Args={}
+2018-10-24 02:08:35,339 : INFO : Machine : Shutting down...
+2018-10-24 02:08:35,339 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2018-10-24 02:08:35,339 : INFO : root : MPF run loop ended.

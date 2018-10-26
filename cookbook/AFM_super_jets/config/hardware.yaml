@@ -1,0 +1,85 @@
+#config_version=5
+# powerman
+
+mpf-mc:
+  fps: 60
+
+virtual_platform_start_active_switches: s_trough_1 s_trough_2 s_trough_3 s_trough_4 s_trough_5
+
+sound_system:
+  tracks:
+    voice:
+      volume: 1
+      priority: 2
+      simultaneous_sounds: 1
+      preload: true
+    sfx:
+      volume: 1
+      priority: 1
+      preload: true
+      simultaneous_sounds: 7
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+  buffer: 2048  # previous value was 512
+  frequency: 44100
+  channels: 1
+  master_volume: 1
+  enabled: true
+
+assets:
+  sounds:
+    default:
+      preload: yes
+    music:
+      track: music
+    sfx:
+      track: sfx
+      load: on_demand
+    voice:
+      track: voice
+      load: on_demand
+
+slide_player:
+  mc_ready:
+    window_slide_1:
+      target: window
+  loading_assets: asset_status
+
+slides:
+  window_slide_1:
+  - type: display
+    width: 512
+    height: 128
+    effects:
+      - type: dmd
+        dot_color: 00ff00
+        background_color: 000000
+  - type: text
+    style: tall title
+    text: MISSION PINBALL FRAMEWORK
+    anchor_y: top
+    y: top-3
+    font_size: 30
+    color: white
+  - type: rectangle
+    width: 514
+    height: 130
+    color: 444444
+  - type: text
+    style: tall title
+    text: POWERMAN 5000
+    anchor_x: right
+    anchor_y: bottom
+    y: bottom+3
+    x: right-42
+    font_size: 30
+    color: red
+
+  waiting_for_connection:
+  - type: text
+    text: WAITING FOR MPF CONNECTION
+
+  asset_status:
+  - type: text
+    text: "LOADING ASSETS: (percent)%"
