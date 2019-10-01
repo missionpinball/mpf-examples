@@ -6,7 +6,7 @@ Mission Pinball Framework Examples
 This GitHub repository contains example configuration, demos, and tutorial files for the Mission Pinball Framework. It's
 a separate repo from the main MPF project so you can download this folder to an easily-accessible location.
 
-The examples here are synchronized to work with the corresonding branches in MPF and the MPF-MC. (e.g. the "master"
+The examples here are synchronized to work with the corresponding branches in MPF and the MPF-MC. (e.g. the "master"
 branch of mpf-examples works with the master branch of mpf, the dev branch works with the dev branch, etc.)
 
 If you're new to MPF, start with the tutorial at http://docs.missionpinball.org/en/latest/tutorial/.
