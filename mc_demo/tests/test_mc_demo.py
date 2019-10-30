@@ -7,7 +7,7 @@ class TestDemo(MpfMcTestCase):
     def get_machine_path(self):
         return "../"
 
-    def getAbsoluteMachinePath(self):
+    def get_absolute_machine_path(self):
         # do not use path relative to MPF folder
         return os.path.abspath(os.path.join(
             os.path.realpath(__file__), os.pardir, self.get_machine_path()))

@@ -4,7 +4,7 @@ from mpfmc.tests.FullMpfMachineTestCase import FullMachineTestCase
 
 class TestSimpleGame(FullMachineTestCase):
 
-    def getMachinePath(self):
+    def get_machine_path(self):
         return os.path.abspath(os.path.join(os.path.realpath(__file__), os.pardir, os.pardir))
 
     def test_single_player_game(self):
