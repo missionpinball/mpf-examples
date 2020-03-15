@@ -13,5 +13,5 @@ sequence_shots:
     switch_sequence: s_right_ramp_enter, s_right_ramp_exit
     sequence_timeout: 3s
   right_orbit:
-    switch_sequence: s_right_freeway, s_left_loop, s_upper_left_flipper_gate,
+    switch_sequence: s_right_freeway, s_left_loop, s_upper_left_flipper_gate
     sequence_timeout: 3s
