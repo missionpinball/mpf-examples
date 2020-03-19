@@ -1,9 +1,9 @@
 dist: trusty
 sudo: required
 os: linux
-env: LINUX=ubuntu:16.04
+env: LINUX=ubuntu:18.04
 language: python
-python: "3.4"
+python: "3.6"
 
 services:
   - docker
