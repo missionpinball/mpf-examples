@@ -277,10 +277,6 @@ slides:
     style: small
     y: bottom+1
 
-show_player:
-  left_orbit_unlit_hit:
-    left orbit: {}
-
 shots:
   left_lane:
     switch: s_left_rollover
