@@ -1,0 +1,200 @@
+#config_version=5
+
+hardware:
+  platform: smart_virtual
+
+modes:
+  - base
+
+switches:
+  s_left_flipper:
+    number:
+    tags: left_flipper
+  s_right_flipper:
+    number:
+    tags: right_flipper
+  s_trough1:
+    number:
+  s_trough2:
+    number:
+  s_trough3:
+    number:
+  s_trough4:
+    number:
+  s_trough5:
+    number:
+  s_trough6:
+    number:
+  s_trough_jam:
+    number:
+  s_plunger:
+    number:
+  s_start:
+    number:
+    tags: start
+  s_right_inlane:
+    number:
+    tags: playfield_active
+  s_top_popper:
+    number:
+  s_elevator_hold:
+    number:
+  s_eject:
+    number:
+  s_bottom_popper:
+    number:
+  s_left_slingshot:
+    number:
+  s_right_slingshot:
+    number:
+  s_top_slingshot:
+    number:
+  s_left_jet:
+    number:
+  s_right_jet:
+    number:
+
+virtual_platform_start_active_switches:
+  - s_trough1
+  - s_trough2
+  - s_trough3
+
+keyboard:
+  z:
+    switch: s_left_flipper
+  '?':
+    switch: s_right_flipper
+  s:
+    switch: s_start
+  q:
+    switch: s_right_inlane
+  1:
+    switch: s_trough1
+    toggle: true
+  2:
+    switch: s_trough2
+    toggle: true
+  3:
+    switch: s_trough3
+    toggle: true
+  4:
+    switch: s_trough4
+    toggle: true
+  5:
+    switch: s_trough5
+    toggle: true
+  p:
+    switch: s_plunger
+    toggle: true
+
+coils:
+  c_flipper_left_main:
+    number: 
+    default_pulse_ms: 20
+  c_flipper_left_hold:
+    number:
+    default_pulse_ms: 20
+    allow_enable: true
+  c_flipper_right_main:
+    number:
+  c_flipper_right_hold:
+    number:
+    allow_enable: true
+  c_trough_eject:
+    number:
+  c_retina_eject:
+    number:
+  c_bottom_popper:
+    number:
+  c_top_popper:
+    number:
+  c_left_slingshot:
+    number:
+  c_right_slingshot:
+    number:
+  c_top_slingshot:
+    number:
+  c_left_jet_bumper:
+    number:
+  c_right_jet_bumper:
+    number:
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    debug: true
+  bd_plunger:
+    ball_switches: s_plunger
+    mechanical_eject: true
+  bd_retina_hole:
+    ball_switches: s_eject
+    eject_coil: c_retina_eject
+    eject_timeouts: 1s
+  bd_lower_vuk:
+    ball_switches: s_bottom_popper
+    eject_coil: c_bottom_popper
+    eject_timeouts: 2s
+  bd_upper_vuk:
+    ball_switches: s_top_popper
+    eject_coil: c_top_popper
+    eject_timeouts: 2s
+  bd_elevator:
+    ball_switches: s_elevator_hold
+    mechanical_eject: true
+    eject_timeouts: 500ms
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_plunger
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+  right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_slingshot
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+  upper_slingshot:
+    coil: c_top_slingshot
+    switch: s_top_slingshot
+  left_jet:
+    coil: c_left_jet_bumper
+    switch: s_left_jet
+  right_jet:
+    coil: c_right_jet_bumper
+    switch: s_right_jet
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+
+slide_player:
+  init_done: welcome_slide

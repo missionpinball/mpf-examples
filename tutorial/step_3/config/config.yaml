@@ -1,0 +1,41 @@
+#config_version=5
+
+hardware:
+  platform: smart_virtual
+
+switches:
+  s_left_flipper:
+    number:
+    tags: left_flipper
+  s_right_flipper:
+    number:
+    tags: right_flipper
+
+coils:
+  c_flipper_left_main:
+    number: 
+  c_flipper_left_hold:
+    number:
+    allow_enable: true
+  c_flipper_right_main:
+    number:
+  c_flipper_right_hold:
+    number:
+    allow_enable: true
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: None  # use None in steps before 8
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+  right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3

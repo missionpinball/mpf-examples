@@ -1,0 +1,59 @@
+#config_version=5
+mode:
+  start_events: ball_started
+  priority: 100
+
+variable_player:
+  my_first_shot_my_first_profile_unlit_hit:
+    score: 100
+  my_first_shot_my_first_profile_flashing_hit:
+    score: 1000
+  s_flipper_lower_left_active:
+    score: 1000
+    potato: 1
+  s_flipper_lower_right_active:
+    potato: -2
+
+shot_profiles:
+  my_first_profile:
+    states:
+      - name: unlit  # step 1
+        show: off
+      - name: flashing  # step 2
+        show: flash
+      - name: lit  # step 3
+        show: on
+    loop: true
+
+shots:
+  my_first_shot:
+    switch: s_right_inlane  # pick a switch that's valid in your machine
+    show_tokens:
+      led: l_led1 # pick an LED that's valid in your machine
+    profile: my_first_profile
+
+slide_player:
+  mode_base_started:
+    widgets:
+      - type: text
+        text: (score)
+        number_grouping: true
+        min_digits: 2
+        font_size: 100
+      - type: text
+        text: PLAYER (number)
+        y: 10
+        x: 10
+        font_size: 50
+        anchor_x: left
+        anchor_y: bottom
+      - type: text
+        text: BALL (ball)
+        y: 10
+        x: right-10
+        anchor_x: right
+        anchor_y: bottom
+        font_size: 50
+      - type: text
+        text: 'POTATO VALUE: (potato)'
+        y: 40%

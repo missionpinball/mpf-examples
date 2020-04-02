@@ -17,10 +17,7 @@ step).
 
 Each of these steps also contains unit tests which you can run like this:
 
-   C:\mpf-examples\tutorial\step_2>python -m unittest
-
-Note that if you have both Python 2 and 3 installed, you'll need to use "python3" instead of
-"python" in the command above.
+   C:\mpf-examples\tutorial\step_2>python3 -m unittest
 
 A tutorial for these unit tests is available in the "Writing Tests" section of the developer
 documentation which is here:

@@ -1,0 +1,170 @@
+#config_version=5
+
+hardware:
+  platform: smart_virtual
+
+switches:
+  s_left_flipper:
+    number:
+    tags: left_flipper
+  s_right_flipper:
+    number:
+    tags: right_flipper
+  s_trough1:
+    number: 1
+  s_trough2:
+    number: 2
+  s_trough3:
+    number: 3
+  s_trough4:
+    number: 4
+  s_trough5:
+    number: 5
+  s_trough6:
+    number: 6
+  s_trough_jam:
+    number: 7
+  s_plunger:
+    number: 10
+  s_start:
+    number: 11
+    tags: start
+  s_right_inlane:
+    number: 12
+    tags: playfield_active
+  s_top_popper:
+    number: 13
+  s_elevator_hold:
+    number: 14
+  s_eject:
+    number: 15
+  s_bottom_popper:
+    number: 16
+
+virtual_platform_start_active_switches:
+  - s_trough1
+  - s_trough2
+  - s_trough3
+
+keyboard:
+  z:
+    switch: s_left_flipper
+  '?':
+    switch: s_right_flipper
+  s:
+    switch: s_start
+  q:
+    switch: s_right_inlane
+  1:
+    switch: s_trough1
+    toggle: true
+  2:
+    switch: s_trough2
+    toggle: true
+  3:
+    switch: s_trough3
+    toggle: true
+  4:
+    switch: s_trough4
+    toggle: true
+  5:
+    switch: s_trough5
+    toggle: true
+  p:
+    switch: s_plunger
+    toggle: true
+
+coils:
+  c_flipper_left_main:
+    number: 
+    default_pulse_ms: 20
+  c_flipper_left_hold:
+    number:
+    default_pulse_ms: 20
+    allow_enable: true
+  c_flipper_right_main:
+    number:
+  c_flipper_right_hold:
+    number:
+    allow_enable: true
+  c_trough_eject:
+    number: 3
+  c_retina_eject:
+    number: 4
+  c_bottom_popper:
+    number: 5
+  c_top_popper:
+    number: 6
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    debug: true
+  bd_plunger:
+    ball_switches: s_plunger
+    mechanical_eject: true
+  bd_retina_hole:
+    ball_switches: s_eject
+    eject_coil: c_retina_eject
+    eject_timeouts: 1s
+  bd_lower_vuk:
+    ball_switches: s_bottom_popper
+    eject_coil: c_bottom_popper
+    eject_timeouts: 2s
+  bd_upper_vuk:
+    ball_switches: s_top_popper
+    eject_coil: c_top_popper
+    eject_timeouts: 2s
+  bd_elevator:
+    ball_switches: s_elevator_hold
+    mechanical_eject: true
+    eject_timeouts: 500ms
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_plunger
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+  right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+  attract_started:
+    widgets:
+      - text: ATTRACT MODE
+        type: text
+
+slide_player:
+  init_done: welcome_slide
+  mode_attract_started: attract_started
+  ball_started:
+    widgets:
+      type: text
+      text: PLAYER (number) BALL (ball)
+
