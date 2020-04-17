@@ -35,7 +35,6 @@ switches:
     tags: start
   s_right_inlane:
     number:
-    tags: playfield_active
   s_top_popper:
     number:
   s_elevator_hold:
