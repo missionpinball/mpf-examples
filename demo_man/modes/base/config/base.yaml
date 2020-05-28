@@ -18,25 +18,25 @@ slide_player:
 sound_player:
 
   mode_base_started:
-    waiting to plunge loop:
+    waiting_to_plunge_loop:
       loops: -1
 
   sw_plunger:
-    waiting to plunge loop:
+    waiting_to_plunge_loop:
       action: stop
-    base background music:
+    base_background_music:
       loops: -1
 
   balldevice_elevator_ball_enter:
-    base background music:
+    base_background_music:
       loops: -1
 
-  sw_ramp_1: ramp 1
-  sw_ramp_2: ramp 2
-  shots_standups_lit_hit: standup hit lit
-  shots_standups_unlit_hit: standup hit unlit
-  sw_slingshot: little metal
-  sw_jet: medium metal
+  sw_ramp_1: ramp_1
+  sw_ramp_2: ramp_2
+  shots_standups_lit_hit: standup_hit_lit
+  shots_standups_unlit_hit: standup_hit_unlit
+  sw_slingshot: little_metal
+  sw_jet: medium_metal
 
 variable_player:
   left_orbit_hit:
