@@ -1,9 +1,9 @@
 """Claw controller Scriptlet for Demo Man"""
 
-from mpf.core.scriptlet import Scriptlet
+from mpf.core.custom_code import CustomCode
 
 
-class Claw(Scriptlet):
+class Claw(CustomCode):
 
     def on_load(self):
 
