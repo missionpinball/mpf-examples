@@ -16,7 +16,7 @@ class Claw(Scriptlet):
 
         # This is a one-time thing to check to see if there's a ball in
         # the elevator when MPF starts, and if so, we want to get it.
-        if self.machine.switch_controller.is_active(self.machine.switches['s_elevator_hold']):
+        if self.machine.switch_controller.is_active('s_elevator_hold'):
             self.auto_release_in_progress = True
             self.get_ball()
 
@@ -79,8 +79,8 @@ class Claw(Scriptlet):
         """Start the claw moving to the left."""
         # before we turn on the driver to move the claw, make sure we're not
         # at the left limit
-        if (self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_2']) and
-                self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_1'])):
+        if (self.machine.switch_controller.is_active('s_claw_position_2') and
+                self.machine.switch_controller.is_active('s_claw_position_1')):
             return
         self.machine.coils['c_claw_motor_left'].enable()
 
@@ -88,8 +88,8 @@ class Claw(Scriptlet):
         """Start the claw moving to the right."""
         # before we turn on the driver to move the claw, make sure we're not
         # at the right limit
-        if (self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_1']) and
-                self.machine.switch_controller.is_inactive(self.machine.switches['s_claw_position_2'])):
+        if (self.machine.switch_controller.is_active('s_claw_position_1') and
+                self.machine.switch_controller.is_inactive('s_claw_position_2')):
             return
         self.machine.coils['c_claw_motor_right'].enable()
 
@@ -113,8 +113,8 @@ class Claw(Scriptlet):
 
         # If we're at the left limit, we need to move right before we can
         # release the ball.
-        if (self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_2']) and
-                self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_1'])):
+        if (self.machine.switch_controller.is_active('s_claw_position_2') and
+                self.machine.switch_controller.is_active('s_claw_position_1')):
             self.machine.switch_controller.add_switch_handler(
                 's_claw_position_1', self.release, state=0)
             # move right, drop when switch 1 opens
@@ -122,8 +122,8 @@ class Claw(Scriptlet):
 
         # If we're at the right limit, we need to move left before we can
         # release the ball
-        elif (self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_1']) and
-                self.machine.switch_controller.is_inactive(self.machine.switches['s_claw_position_2'])):
+        elif (self.machine.switch_controller.is_active('s_claw_position_1') and
+                self.machine.switch_controller.is_inactive('s_claw_position_2')):
             self.machine.switch_controller.add_switch_handler(
                 's_claw_position_2', self.release)
             # move left, drop when switch 2 closes
@@ -144,8 +144,8 @@ class Claw(Scriptlet):
 
         # If the claw is not already in the ball pickup position, then move it
         # to the right.
-        if not (self.machine.switch_controller.is_active(self.machine.switches['s_claw_position_1']) and
-                self.machine.switch_controller.is_inactive(self.machine.switches['s_claw_position_2'])):
+        if not (self.machine.switch_controller.is_active('s_claw_position_1') and
+                self.machine.switch_controller.is_inactive('s_claw_position_2')):
             self.move_right()
 
             self.machine.switch_controller.add_switch_handler(
