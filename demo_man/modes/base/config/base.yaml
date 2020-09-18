@@ -2,7 +2,6 @@
 mode:
   start_events: ball_starting
   priority: 100
-  code: base.Base
 
 event_player:
   multiplayer_game: player_1_multiplayer_slide
