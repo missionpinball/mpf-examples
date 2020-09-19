@@ -9,7 +9,7 @@ class TestSimpleGame(FullMachineTestCase):
 
     def test_single_player_game(self):
         self.hit_and_release_switch("s_start")
-        self.advance_time_and_run(1)
+        self.advance_time_and_run(.1)
         # game should be running
         self.assertIsNotNone(self.machine.game)
         self.assertEqual(1, self.machine.game.player.ball)
@@ -18,12 +18,14 @@ class TestSimpleGame(FullMachineTestCase):
         # but its not there yet
         self.assertEqual(0, self.machine.playfield.balls)
 
-        self.advance_time_and_run(5)
+        self.advance_time_and_run(3)
         # player presses eject
         self.hit_and_release_switch("s_ball_launch")
 
-        # after 20 its there
-        self.advance_time_and_run(20)
+        # after 3 its there
+        self.advance_time_and_run(2)
+        self.hit_and_release_switch("s_right_ramp_enter")
+        self.advance_time_and_run(1)
         self.assertEqual(1, self.machine.playfield.balls)
 
         self.assertTextOnTopSlide("BALL 1    FREE PLAY")
@@ -37,6 +39,33 @@ class TestSimpleGame(FullMachineTestCase):
         self.assertEqual(4 * 75020, self.machine.game.player.score)
         self.assertTextOnTopSlide("300,080")
 
+        # test the claw
+        self.hit_switch_and_run("s_elevator_hold", 1)
+        self.assertEqual("enabled", self.machine.coils["c_claw_motor_right"].hw_driver.state)
+
+        self.hit_switch_and_run("s_claw_position_1", 1)
+        self.assertEqual("disabled", self.machine.coils["c_claw_motor_right"].hw_driver.state)
+
+        self.assertEqual("enabled", self.machine.coils["c_elevator_motor"].hw_driver.state)
+        self.assertEqual("enabled", self.machine.coils["c_claw_magnet"].hw_driver.state)
+        self.hit_switch_and_run("s_elevator_index", 1)
+        self.release_switch_and_run("s_elevator_hold", 1)
+
+        self.assertEqual("disabled", self.machine.coils["c_elevator_motor"].hw_driver.state)
+        self.assertEqual("enabled", self.machine.coils["c_claw_magnet"].hw_driver.state)
+
+        self.hit_switch_and_run("s_flipper_lower_left", 1)
+        self.assertEqual("enabled", self.machine.coils["c_claw_motor_left"].hw_driver.state)
+        self.assertEqual("disabled", self.machine.coils["c_claw_motor_right"].hw_driver.state)
+
+        self.hit_and_release_switch("s_ball_launch")
+        self.advance_time_and_run()
+        self.assertEqual("disabled", self.machine.coils["c_claw_magnet"].hw_driver.state)
+        self.assertEqual("disabled", self.machine.coils["c_claw_motor_left"].hw_driver.state)
+        self.assertEqual("disabled", self.machine.coils["c_claw_motor_right"].hw_driver.state)
+
+        self.release_switch_and_run("s_flipper_lower_left", 1)
+
         # ball drains
         self.machine.default_platform.add_ball_to_device(self.machine.ball_devices.trough)
         # wait for highscore display
@@ -49,7 +78,9 @@ class TestSimpleGame(FullMachineTestCase):
         self.hit_and_release_switch("s_ball_launch")
 
         # and it should eject a new ball to the pf
-        self.advance_time_and_run(20)
+        self.advance_time_and_run(2)
+        self.hit_and_release_switch("s_right_ramp_enter")
+        self.advance_time_and_run(1)
         self.assertEqual(1, self.machine.playfield.balls)
 
         # ball drains again
@@ -64,7 +95,9 @@ class TestSimpleGame(FullMachineTestCase):
         self.hit_and_release_switch("s_ball_launch")
 
         # and it should eject a new ball to the pf
-        self.advance_time_and_run(20)
+        self.advance_time_and_run(2)
+        self.hit_and_release_switch("s_right_ramp_enter")
+        self.advance_time_and_run(1)
         self.assertEqual(1, self.machine.playfield.balls)
 
         # ball drains again. game should end
