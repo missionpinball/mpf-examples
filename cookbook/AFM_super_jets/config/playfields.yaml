@@ -1,0 +1,6 @@
+#config_version=5
+
+playfields:
+    playfield:
+        tags: default
+        default_source_device: bd_trough

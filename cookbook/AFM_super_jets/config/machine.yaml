@@ -1,0 +1,5 @@
+#config_version=5
+
+machine:
+    balls_installed: 5
+    min_balls: 1

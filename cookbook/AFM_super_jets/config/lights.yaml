@@ -1,0 +1,12 @@
+#config_version=5
+
+lights:
+
+   l_right_rollover:
+        number: 5
+
+   l_left_rollover:
+        number: 7
+
+   l_super_jets:
+        number: 9

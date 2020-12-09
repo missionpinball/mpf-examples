@@ -1,0 +1,67 @@
+#config_version=5
+
+credits:
+  max_credits: 12
+  free_play: true
+  service_credits_switch: s_esc
+  switches:
+  - switch: s_left_coin
+    type: money
+    value: 0.25
+  - switch: s_center_coin
+    type: money
+    value: 0.25
+  - switch: s_right_coin
+    type: token
+    value: 1
+  - switch: s_fourth_coin
+    value: 1
+    type: money
+  pricing_tiers:
+  - price: 0.5
+    credits: 1
+  - price: 2
+    credits: 5
+  fractional_credit_expiration_time: 15m
+  credit_expiration_time: 2h
+  persist_credits_while_off_time: 1h
+  free_play_string: FREE PLAY
+  credits_string: CREDITS
+
+slide_player:
+  credits_added: slide_13
+  not_enough_credits: slide_14
+  enabling_free_play: slide_15
+  enabling_credit_play: slide_16
+slides:
+  slide_13:
+  - type: text
+    text: (machine|credits_string)
+  slide_14:
+  - type: text
+    text: (machine|credits_string)
+    style: small
+    anchor_y: bottom
+    y: bottom
+  - type: text
+    text: INSERT COINS
+    animations:
+      entrance:
+      - property: opacity
+        value: 1
+        duration: 0.1s
+      - property: opacity
+        value: 0
+        duration: 0.1s
+        repeat: true
+  slide_15:
+  - type: text
+    text: ENABLING FREE PLAY
+  slide_16:
+  - type: text
+    text: ENABLING CREDIT PLAY
+  - type: text
+    text: (machine|credits_string)
+    style: small
+    anchor_y: bottom
+    y: bottom

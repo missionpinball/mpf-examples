@@ -1,0 +1,27 @@
+#config_version=5
+keyboard:
+  s:
+    switch: s_credit
+  1:
+    switch: s_trough_1
+    toggle: true
+ 
+  z:
+    switch: s_left_flipper
+  /:
+    switch: s_right_flipper
+
+
+  r:
+    switch: s_left_rollover
+  t:
+    switch: s_right_rollover
+
+  
+  5:
+    switch: s_left_bumper
+  6:
+    switch: s_middle_bumper
+  7:
+    switch: s_right_bumper
+    

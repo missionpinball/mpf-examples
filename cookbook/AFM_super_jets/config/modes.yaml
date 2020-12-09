@@ -1,0 +1,13 @@
+#config_version=5
+
+modes:
+- base
+#- JAM_rollover
+#- AMP_Bonus_X
+#- HEAVY_made
+#- METAL_made
+- super_jets_setup
+- super_jets
+#- Setlist
+#- Light_Setlist_3s
+#- Light_Setlist
