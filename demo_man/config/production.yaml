@@ -1,0 +1,13 @@
+#config_version=5
+config:
+- config.yaml
+
+window:
+  width: 1024
+  height: 786
+  title: Mission Pinball Framework
+  resizable: false
+  borderless: true
+  fullscreen: false
+  exit_on_escape: true
+  source_display: window
