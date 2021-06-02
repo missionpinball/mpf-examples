@@ -9,6 +9,7 @@ services:
   - docker
 
 before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin;
   - git clone --recursive --branch ${TRAVIS_BRANCH} https://github.com/missionpinball/mpf.git /tmp/_mpf || git clone --recursive --branch dev https://github.com/missionpinball/mpf.git /tmp/_mpf;
   - git clone --recursive --branch ${TRAVIS_BRANCH} https://github.com/missionpinball/mpf-mc.git /tmp/_mpf-mc || git clone --recursive --branch dev https://github.com/missionpinball/mpf_mc.git /tmp/_mpf-mc;
   - git clone --branch ${TRAVIS_BRANCH} https://github.com/missionpinball/mpf-debian-installer.git /tmp/_mpf_installer || git clone --recursive --branch dev https://github.com/missionpinball/mpf-debian-installer.git /tmp/_mpf_installer;
