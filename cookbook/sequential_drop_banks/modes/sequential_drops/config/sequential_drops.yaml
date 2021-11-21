@@ -10,19 +10,17 @@ config:
 
 event_player:
   mode_sequential_drops_started: reset_drop_sequence
-  drop_sequence_complete: reset_drop_sequence
+  logicblock_drop_sequence_complete: reset_drop_sequence
   reset_drop_sequence: advance_drop_1
   # Immediately reset a target that's in the "off" state
   drop_1_off_hit: reset_drop_1
   drop_2_off_hit: reset_drop_2
   drop_3_off_hit: reset_drop_3
   drop_4_off_hit: reset_drop_4
-  
 
 sequences:
   drop_sequence:
     restart_events: reset_drop_sequence
-    events_when_complete: drop_sequence_complete
     events:
       - drop_1_lit_hit
       - drop_2_lit_hit
@@ -73,5 +71,5 @@ shot_profiles:
 variable_player:
   logicblock_drop_sequence_hit:
     score: 1000
-  drop_sequence_complete:
+  logicblock_drop_sequence_complete:
     score: 50_000
