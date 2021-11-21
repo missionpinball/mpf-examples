@@ -1,0 +1,77 @@
+#config_version=5
+
+mode:
+  start_events: start_mode_sequential_drops
+  stop_events: stop_mode_sequential_drops
+  priority: 200
+
+config:
+  - sequential_drop_slides.yaml
+
+event_player:
+  mode_sequential_drops_started: reset_drop_sequence
+  drop_sequence_complete: reset_drop_sequence
+  reset_drop_sequence: advance_drop_1
+  # Immediately reset a target that's in the "off" state
+  drop_1_off_hit: reset_drop_1
+  drop_2_off_hit: reset_drop_2
+  drop_3_off_hit: reset_drop_3
+  drop_4_off_hit: reset_drop_4
+  
+
+sequences:
+  drop_sequence:
+    restart_events: reset_drop_sequence
+    events_when_complete: drop_sequence_complete
+    events:
+      - drop_1_lit_hit
+      - drop_2_lit_hit
+      - drop_3_lit_hit
+      - drop_4_lit_hit
+
+shots:
+  drop_1:
+    advance_events: advance_drop_1, drop_1_lit_hit
+    reset_events: reset_drop_sequence
+    switch: s_drop_1
+    profile: drop_sequence
+    show_tokens:
+      led: l_drop_1
+  drop_2:
+    advance_events: drop_1_lit_hit, drop_2_lit_hit
+    reset_events: reset_drop_sequence
+    switch: s_drop_2
+    profile: drop_sequence
+    show_tokens:
+      led: l_drop_2
+  drop_3:
+    advance_events: drop_2_lit_hit, drop_3_lit_hit
+    reset_events: reset_drop_sequence
+    switch: s_drop_3
+    profile: drop_sequence
+    show_tokens:
+      led: l_drop_3
+  drop_4:
+    advance_events: drop_3_lit_hit
+    reset_events: reset_drop_sequence
+    switch: s_drop_4
+    profile: drop_sequence
+    show_tokens:
+      led: l_drop_4
+
+shot_profiles:
+  drop_sequence:
+    advance_on_hit: false
+    states:
+      - name: off
+        show: off
+      - name: lit
+        show: flash
+      - name: down
+        show: on
+
+variable_player:
+  logicblock_drop_sequence_hit:
+    score: 1000
+  drop_sequence_complete:
+    score: 50_000

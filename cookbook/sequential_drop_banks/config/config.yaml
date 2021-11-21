@@ -1,0 +1,123 @@
+#config_version=5
+
+config:
+  # The below config file includes all MC and slide behavior,
+  # kept separate from the main code for ease of use.
+  - mc.yaml
+
+modes:
+  - base
+  - sequential_drops
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain
+    eject_targets: bd_trough
+    tags: drain
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3
+    eject_coil: c_trough
+    eject_targets: bd_plunger_lane
+    tags: trough, home
+  bd_plunger_lane:
+    ball_switches: s_plunger_lane
+    mechanical_eject: true
+    eject_timeouts: 3s
+
+coils:
+  c_drain:
+    number: 05
+  c_trough:
+    number: 04
+  c_drop_1:
+    number:
+  c_drop_2:
+    number:
+  c_drop_3:
+    number:
+  c_drop_4:
+    number:
+
+drop_targets:
+  drop_1:
+    switch: s_drop_1
+    reset_coil: c_drop_1
+    reset_events: ball_starting, machine_reset_phase_3, reset_drop_1
+  drop_2:
+    switch: s_drop_1
+    reset_coil: c_drop_1
+    reset_events: ball_starting, machine_reset_phase_3, reset_drop_2
+  drop_3:
+    switch: s_drop_1
+    reset_coil: c_drop_1
+    reset_events: ball_starting, machine_reset_phase_3, reset_drop_3
+  drop_4:
+    switch: s_drop_1
+    reset_coil: c_drop_1
+    reset_events: ball_starting, machine_reset_phase_3, reset_drop_4
+  
+
+keyboard:
+  ",": 
+    switch: s_flipper_left
+  ".": 
+    switch: s_flipper_right
+  w:
+    switch: s_flipper_left
+  v:
+    switch: s_flipper_right
+  enter:
+    switch: s_start
+  1:
+    switch: s_drop_1
+  2: 
+    switch: s_drop_2
+  3:
+    switch: s_drop_3
+  4:
+    switch: s_drop_4
+
+lights:
+  l_drop_1:
+    number:
+  l_drop_2:
+    number:
+  l_drop_3:
+    number:
+  l_drop_4:
+    number:
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger_lane
+    tags: default
+
+switches:
+  s_start:
+    number:
+    tags: start
+  s_drain:
+    number:
+  s_trough1:
+    number: S15
+  s_trough2:
+    number: S16
+  s_trough3:
+    number: S17
+  s_plunger_lane:
+    number: S27
+  s_flipper_left:
+    number:
+  s_flipper_right:
+    number:
+  s_drop_1:
+    number:
+  s_drop_2:
+    number:
+  s_drop_3:
+    number:
+  s_drop_4:
+    number:
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
