@@ -15,14 +15,17 @@ shot_groups:
 shots:
   lane_change_left:
     switch: s_lane_left
+    profile: lane_change_profile
     show_tokens:
       led: l_lane_left
   lane_change_middle:
     switch: s_lane_middle
+    profile: lane_change_profile
     show_tokens:
       led: l_lane_middle
   lane_change_right:
     switch: s_lane_right
+    profile: lane_change_profile
     show_tokens:
       led: l_lane_right
 

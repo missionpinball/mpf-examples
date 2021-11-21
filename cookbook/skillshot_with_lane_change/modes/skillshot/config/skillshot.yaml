@@ -12,7 +12,7 @@ event_player:
   playfield_active: stop_mode_skillshot|3s
 
 random_event_player:
-  mode_skillshot_started: 
+  mode_skillshot_started:
     events:
       - advance_skillshot_left
       - advance_skillshot_middle
@@ -28,16 +28,19 @@ shot_groups:
 shots:
   skillshot_left:
     advance_events: advance_skillshot_left
+    profile: skillshot_profile
     switch: s_lane_left
     show_tokens:
       led: l_lane_left
   skillshot_middle:
     advance_events: advance_skillshot_middle
+    profile: skillshot_profile
     switch: s_lane_middle
     show_tokens:
       led: l_lane_middle
   skillshot_right:
     advance_events: advance_skillshot_right
+    profile: skillshot_profile
     switch: s_lane_right
     show_tokens:
       led: l_lane_right
@@ -54,4 +57,3 @@ shot_profiles:
 variable_player:
   skillshot_lit_hit:
     score: 20_000
-    
