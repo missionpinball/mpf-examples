@@ -1,0 +1,91 @@
+#config_version=5
+
+config:
+  # The below config file includes all MC and slide behavior,
+  # kept separate from the main code for ease of use.
+  - mc.yaml
+
+modes:
+  - base
+  - lane_change
+  - skillshot
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain
+    eject_targets: bd_trough
+    tags: drain
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3
+    eject_coil: c_trough
+    eject_targets: bd_plunger_lane
+    tags: trough, home
+  bd_plunger_lane:
+    ball_switches: s_plunger_lane
+    mechanical_eject: true
+    eject_timeouts: 3s
+
+coils:
+  c_drain:
+    number: 05
+  c_trough:
+    number: 04
+
+keyboard:
+  ",": 
+    switch: s_flipper_left
+  ".": 
+    switch: s_flipper_right
+  w:
+    switch: s_flipper_left
+  v:
+    switch: s_flipper_right
+  enter:
+    switch: s_start
+  1:
+    switch: s_lane_left
+  2: 
+    switch: s_lane_middle
+  3:
+    switch: s_lane_right
+
+lights:
+  l_lane_left:
+    number:
+  l_lane_middle:
+    number:
+  l_lane_right:
+    number:
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger_lane
+    tags: default
+
+switches:
+  s_start:
+    number:
+    tags: start
+  s_drain:
+    number:
+  s_trough1:
+    number: S15
+  s_trough2:
+    number: S16
+  s_trough3:
+    number: S17
+  s_plunger_lane:
+    number: S27
+  s_flipper_left:
+    number:
+  s_flipper_right:
+    number:
+  s_lane_left:
+    number:
+  s_lane_middle:
+    number:
+  s_lane_right:
+    number:
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
