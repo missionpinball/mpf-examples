@@ -1,0 +1,85 @@
+#config_version=5
+
+mode:
+  start_events: start_mode_skillshot
+  stop_events: stop_mode_skillshot, skillshot_hit
+  priority: 100
+
+config:
+  - skillshot_slides.yaml
+
+event_player:
+  playfield_active: stop_mode_skillshot|3s
+  timer_skillshot_rotate_stopped:
+    # Whichever skillshot is on when rotation stops, advance to lit (flashing)
+    - advance_skillshot_1{device.shots.skillshot_drop_1.state==1}
+    - advance_skillshot_2{device.shots.skillshot_drop_2.state==1}
+    - advance_skillshot_3{device.shots.skillshot_drop_3.state==1}
+    - advance_skillshot_4{device.shots.skillshot_drop_4.state==1}
+    - advance_skillshot_5{device.shots.skillshot_drop_5.state==1}
+
+shot_groups:
+  skillshot:
+    shots:
+      - skillshot_drop_1
+      - skillshot_drop_2
+      - skillshot_drop_3
+      - skillshot_drop_4
+      - skillshot_drop_5
+    rotate_events: timer_skillshot_rotate_tick
+
+shots:
+  skillshot_drop_1:
+    switch: s_dropbank_1
+    advance_events: mode_skillshot_started, advance_skillshot_1
+    profile: skillshot_profile
+    show_tokens:
+      leds: l_dropbank_1
+  skillshot_drop_2:
+    switch: s_dropbank_2
+    advance_events: advance_skillshot_2
+    profile: skillshot_profile
+    show_tokens:
+      leds: l_dropbank_2
+  skillshot_drop_3:
+    switch: s_dropbank_3
+    advance_events: advance_skillshot_3
+    profile: skillshot_profile
+    show_tokens:
+      leds: l_dropbank_3
+  skillshot_drop_4:
+    switch: s_dropbank_4
+    advance_events: advance_skillshot_4
+    profile: skillshot_profile
+    show_tokens:
+      leds: l_dropbank_4
+  skillshot_drop_5:
+    switch: s_dropbank_5
+    advance_events: advance_skillshot_5
+    profile: skillshot_profile
+    show_tokens:
+      leds: l_dropbank_5
+
+shot_profiles:
+  skillshot_profile:
+    advance_on_hit: false
+    states:
+      - name: off
+        show: off
+      - name: on
+        show: on
+      - name: lit
+        show: flash
+
+timers:
+  skillshot_rotate:
+    tick_interval: 500ms
+    start_running: true
+    control_events:
+      - event: s_plunger_lane_inactive
+        action: stop
+
+variable_player:
+  skillshot_lit_hit:
+    score: 20_000
+    

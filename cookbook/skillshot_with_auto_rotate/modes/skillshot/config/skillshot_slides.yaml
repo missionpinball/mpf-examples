@@ -1,0 +1,83 @@
+#config_version=5
+
+animations:
+  shot_off:
+    - property: opacity
+      value: 0.5
+      duration: 0
+  shot_on:
+    - property: opacity
+      value: 1.0
+      duration: 0
+  shot_flashing: 
+    - property: opacity
+      value: 1.0
+      duration: 250ms
+    - property: opacity
+      value: 0.5
+      duration: 250ms
+      repeat: true
+ 
+widget_player:
+  mode_skillshot_started:
+    skillshot_widget:
+      action: add
+      slide: base_slide
+  mode_skillshot_stopped:
+    skillshot_widget:
+      action: remove
+      slide: base_slide
+
+widgets:
+  skillshot_widget:
+    - type: ellipse
+      opacity: 1.0
+      width: 20
+      height: 20
+      y: 20
+      x: 200
+      animations:
+        player_shot_skillshot_drop_1{value==0}: shot_off
+        player_shot_skillshot_drop_1{value==1}: shot_on
+        player_shot_skillshot_drop_1{value==2}: shot_flashing
+    - type: ellipse
+      opacity: 0.5
+      width: 20
+      height: 20
+      y: 20
+      x: 260
+      animations:
+        player_shot_skillshot_drop_2{value==0}: shot_off
+        player_shot_skillshot_drop_2{value==1}: shot_on
+        player_shot_skillshot_drop_2{value==2}: shot_flashing            
+    - type: ellipse
+      opacity: 0.5
+      width: 20
+      height: 20
+      y: 20
+      x: 320
+      animations:
+        player_shot_skillshot_drop_3{value==0}: shot_off
+        player_shot_skillshot_drop_3{value==1}: shot_on
+        player_shot_skillshot_drop_3{value==2}: shot_flashing
+    - type: ellipse
+      opacity: 0.5
+      width: 20
+      height: 20
+      y: 20
+      x: 380
+      animations:
+        player_shot_skillshot_drop_4{value==0}: shot_off
+        player_shot_skillshot_drop_4{value==1}: shot_on
+        player_shot_skillshot_drop_4{value==2}: shot_flashing          
+    - type: ellipse
+      opacity: 0.5
+      width: 20
+      height: 20
+      y: 20
+      x: 440
+      animations:
+        player_shot_skillshot_drop_5{value==0}: shot_off
+        player_shot_skillshot_drop_5{value==1}: shot_on
+        player_shot_skillshot_drop_5{value==2}: shot_flashing
+ 

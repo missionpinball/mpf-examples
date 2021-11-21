@@ -1,0 +1,38 @@
+#config_version=5
+
+displays:
+  main:
+    width: 640
+    height: 480
+    default: true
+
+slide_player:
+  mode_attract_started: attract_slide
+  mode_base_started: base_slide
+  skillshot_lit_hit: skillshot_slide
+
+slides:
+  attract_slide:
+    - type: text
+      text: Attract Mode
+  base_slide:
+    - type: text
+      text: Base Mode
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: 100
+  skillshot_slide:
+    expire: 2s
+    priority: 100
+    widgets:
+      - type: text
+        text: Skillshot Hit!
+
+window: 
+  width: 640
+  height: 480
+  exit_on_escape: true
+  source_display: main
+  title: "MPF Cookbook: Skillshot with Lane Change"
