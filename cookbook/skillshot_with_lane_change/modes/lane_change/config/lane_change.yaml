@@ -1,0 +1,46 @@
+#config_version=5
+
+mode:
+  start_events: start_mode_lane_change
+  stop_events: stop_mode_lane_change
+  priority: 200
+
+shot_groups:
+  lane_change:
+    shots: lane_change_left, lane_change_middle, lane_change_right
+    reset_events: lane_change_on_complete
+    rotate_left_events: s_flipper_left_active
+    rotate_right_events: s_flipper_right_active
+
+shots:
+  lane_change_left:
+    switch: s_lane_left
+    profile: lane_change_profile
+    show_tokens:
+      led: l_lane_left
+  lane_change_middle:
+    switch: s_lane_middle
+    profile: lane_change_profile
+    show_tokens:
+      led: l_lane_middle
+  lane_change_right:
+    switch: s_lane_right
+    profile: lane_change_profile
+    show_tokens:
+      led: l_lane_right
+
+shot_profiles:
+  lane_change_profile:
+    states:
+      - name: off
+        show: off
+      - name: on
+        show: on
+
+variable_player:
+  lane_change_on_hit:
+    score: 100
+  lane_change_off_hit:
+    score: 500
+  lane_change_on_complete:
+    score: 5000

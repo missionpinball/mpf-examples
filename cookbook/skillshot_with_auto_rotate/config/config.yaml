@@ -1,0 +1,92 @@
+#config_version=5
+
+config:
+  # The below config file includes all MC and slide behavior,
+  # kept separate from the main code for ease of use.
+  - mc.yaml
+
+modes:
+  - base
+  - skillshot
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain
+    eject_targets: bd_trough
+    tags: drain
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3
+    eject_coil: c_trough
+    eject_targets: bd_plunger_lane
+    tags: trough, home
+  bd_plunger_lane:
+    ball_switches: s_plunger_lane
+    mechanical_eject: true
+    eject_timeouts: 3s
+
+coils:
+  c_drain:
+    number: 05
+  c_trough:
+    number: 04
+
+keyboard:
+  enter:
+    switch: s_start
+  \:
+    switch: s_plunger_lane
+  1:
+    switch: s_dropbank_1
+  2: 
+    switch: s_dropbank_2
+  3:
+    switch: s_dropbank_3
+  4: 
+    switch: s_dropbank_4
+  5:
+    switch: s_dropbank_5
+
+lights:
+  l_dropbank_1:
+    number:
+  l_dropbank_2:
+    number:
+  l_dropbank_3:
+    number:
+  l_dropbank_4:
+    number:
+  l_dropbank_5:
+    number:
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger_lane
+    tags: default
+
+switches:
+  s_start:
+    number:
+    tags: start
+  s_drain:
+    number:
+  s_trough1:
+    number: S15
+  s_trough2:
+    number: S16
+  s_trough3:
+    number: S17
+  s_plunger_lane:
+    number: S27
+  s_dropbank_1:
+    number:
+  s_dropbank_2:
+    number:
+  s_dropbank_3:
+    number:
+  s_dropbank_4:
+    number:
+  s_dropbank_5:
+    number:  
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3

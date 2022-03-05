@@ -1,0 +1,10 @@
+#config_version=5
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_will_stop
+  priority: 100
+
+event_player:
+  mode_base_started:
+    - start_mode_sequential_drops
