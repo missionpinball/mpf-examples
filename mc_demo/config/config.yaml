@@ -60,7 +60,7 @@ slides:
       text: I AM SLIDE 2. MY FONT SIZE IS 50
       font_size: 50  # Each type of widget has it's own settings. For example, font_size for text widgets
     - type: text
-      text: HIT THE RIGHT ARROW KEY TO CONTINUE (MY FONT SIZE IS 15) -->
+      text: HIT THE RIGHT ARROW KEY TO CONTINUE (YOU SHOULD HEAR A SOUND TOO) -->
       y: 33%
     - type: text
       text: 2
@@ -85,7 +85,7 @@ slides:
       x: 66%
       style: typewriter
     - type: text
-      text: ( <-- ALSO LEFT ARROW GOES BACK)
+      text: ( <-- ALSO LEFT ARROW GOES BACK, ALSO WITH SOUND)
       anchor_x: left
       y: 33%
       x: 7%
@@ -551,23 +551,6 @@ widget_styles:
     font_size: 30
 #    font_name: Courier New
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 mc_scriptlets:
   demo_driver.DemoDriver
 
@@ -599,3 +582,7 @@ assets:
             load: on_demand
         mode_start:
             load: mode_start
+
+sound_player:
+  next_slide: drum
+  prev_slide: cymbal
