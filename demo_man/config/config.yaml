@@ -1,11 +1,8 @@
 #config_version=5
 
-fast:
-  ports: COM3, COM4, COM5
-
 hardware:
-  driverboards: wpc
-  platform: p_roc
+  driverboards: virtual
+  platform: smart_virtual
 
 dmds:
   dmd:
@@ -17,11 +14,15 @@ config:
 - shots.yaml
 - keyboard.yaml
 
+bcp:
+    connections: None
+
 smart_virtual:
   file_log: full
 
 mpf:
   default_pulse_ms: 20
+  report_crashes: never
 
 game:
   balls_per_game: 3
@@ -38,8 +39,8 @@ modes:
 - service
 #  - credits
 
-scriptlets:
-  claw.Claw
+custom_code:
+  code.claw.Claw
 
 widget_styles:
   text_default:

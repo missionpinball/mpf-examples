@@ -7,9 +7,6 @@ machine:
 
 virtual_platform_start_active_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_coin_door_closed
 
-mpf-mc:
-  fps: 60
-
 window:
   width: 600
   height: 200
@@ -993,5 +990,3 @@ slide_player:
     window_slide_1:
       target: window
   loading_assets: asset_status
-
-
