@@ -1,6 +1,6 @@
 # This is a template file you can use to add Python code to a mode.
 
-# To use it, and it to <your_machine>/modes/<your_mode>/code/<your_mode>.py
+# To use it, add it to <your_machine>/modes/<your_mode>/code/<your_mode>.py
 
 # Also, add a blank file called __init__.py to your machine folder root, and
 # to your "modes" folder, and to your mode's "code" folder. (3 total)
