@@ -3,7 +3,7 @@
 This folder contains a functional MPF game to demonstrate a skillshot with lane change.
 
 For step-by-step instructions on how to use this example, see the MPF Cookbock Documentation.
-https://docs.missionpinball.org/en/dev/cookbook/skillshot_with_lane_change.html
+https://docs.missionpinball.org/cookbook/skillshot_with_lane_change.html
 
 ### Usage
 
