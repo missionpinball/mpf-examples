@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 animations:
   shot_off:
@@ -9,7 +9,7 @@ animations:
     - property: opacity
       value: 1.0
       duration: 0
-  shot_flashing: 
+  shot_flashing:
     - property: opacity
       value: 1.0
       duration: 250ms
@@ -17,7 +17,7 @@ animations:
       value: 0.5
       duration: 250ms
       repeat: true
-      
+
 displays:
   main:
     width: 640
@@ -48,7 +48,7 @@ slides:
       - type: text
         text: Drop Sequence Complete!
 
-window: 
+window:
   width: 640
   height: 480
   exit_on_escape: true

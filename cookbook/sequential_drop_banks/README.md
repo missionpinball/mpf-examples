@@ -2,8 +2,8 @@
 
 This folder contains a functional MPF game to demonstrate a drop target bank that must be hit sequentially.
 
-For step-by-step instructions on how to use this example, see the MPF Cookbock Documentation.
-https://docs.missionpinball.org/cookbook/sequential_drop_banks.html
+For step-by-step instructions on how to use this example, see the MPF Cookbook Documentation.
+https://missionpinball.org/cookbook/sequential_drop_banks/
 
 ### Usage
 

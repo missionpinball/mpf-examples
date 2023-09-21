@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 high_score:
   categories:  !!omap
@@ -10,4 +10,3 @@ high_score:
     - HIGH SCORE 4
   - loops:
     - MOST LOOPS
-

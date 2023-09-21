@@ -1,4 +1,4 @@
-"""Claw controller Scriptlet for Demo Man"""
+"""Claw controller custom code for Demo Man"""
 
 from mpf.core.custom_code import CustomCode
 

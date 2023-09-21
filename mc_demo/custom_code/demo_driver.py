@@ -1,7 +1,7 @@
-from mpfmc.core.scriptlet import Scriptlet
+from mpfmc.core.custom_code import CustomCode
 
 
-class DemoDriver(Scriptlet):
+class DemoDriver(CustomCode):
 
     def on_load(self):
         self.current_slide_index = 1

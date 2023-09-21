@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 config:
   # The below config file includes all MC and slide behavior,
@@ -38,11 +38,11 @@ keyboard:
     switch: s_plunger_lane
   1:
     switch: s_dropbank_1
-  2: 
+  2:
     switch: s_dropbank_2
   3:
     switch: s_dropbank_3
-  4: 
+  4:
     switch: s_dropbank_4
   5:
     switch: s_dropbank_5
@@ -87,6 +87,6 @@ switches:
   s_dropbank_4:
     number:
   s_dropbank_5:
-    number:  
+    number:
 
 virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3

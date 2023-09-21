@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 config:
   # The below config file includes all MC and slide behavior,
@@ -56,12 +56,12 @@ drop_targets:
     switch: s_drop_4
     reset_coil: c_drop_4
     reset_events: ball_starting, machine_reset_phase_3, reset_drop_4
-  
+
 
 keyboard:
-  ",": 
+  ",":
     switch: s_flipper_left
-  ".": 
+  ".":
     switch: s_flipper_right
   w:
     switch: s_flipper_left
@@ -71,7 +71,7 @@ keyboard:
     switch: s_start
   1:
     switch: s_drop_1
-  2: 
+  2:
     switch: s_drop_2
   3:
     switch: s_drop_3

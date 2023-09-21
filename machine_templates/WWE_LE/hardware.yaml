@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 hardware:
   platform: spike
@@ -475,14 +475,14 @@ autofire_coils:
   ac_bottom_pop_bumper:
     coil: c_bottom_pop_bumper
     switch: s_bottom_pop_bumper
-    
+
   ac_left_slingshot:
     coil: c_left_slingshot
     switch: s_left_slingshot
   ac_right_slingshot:
     coil: c_right_slingshot
     switch: s_right_slingshot
-    
+
   ac_left_ring_slingshot:
     coil: c_left_ring_slingshot
     switch: s_left_ring_slingshot

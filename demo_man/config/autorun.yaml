@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 config:
 - config.yaml
 
@@ -38,7 +38,7 @@ switch_player:
       switch: s_start
       action: hit
 
-    
+
       # Player 2 ball 1
     - time: 2.5s
       switch: s_trough_1
@@ -68,7 +68,7 @@ switch_player:
       switch: s_trough_1
       action: activate
 
-    
+
       # Player 1 ball 2
     - time: 2.5s
       switch: s_trough_1
@@ -89,7 +89,7 @@ switch_player:
       switch: s_right_inlane
       action: hit
 
-    
+
       # Player 2 ball 2
     - time: 2.5s
       switch: s_trough_1
@@ -110,7 +110,7 @@ switch_player:
       switch: s_right_inlane
       action: hit
 
-    
+
       # Player 1 ball 3
     - time: 2.5s
       switch: s_trough_1
@@ -131,7 +131,7 @@ switch_player:
       switch: s_right_inlane
       action: hit
 
-    
+
       # Player 2 ball 3
     - time: 2.5s
       switch: s_trough_1
@@ -152,13 +152,13 @@ switch_player:
       switch: s_right_inlane
       action: hit
 
-    
+
     # game end
     - time: 2.5s
       switch: s_trough_1
       action: activate
 
-    
+
     # new game
     - time: 2s
       switch: s_start

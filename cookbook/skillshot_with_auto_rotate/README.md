@@ -2,8 +2,8 @@
 
 This folder contains a functional MPF game to demonstrate a skillshot with automatically-rotating targets.
 
-For step-by-step instructions on how to use this example, see the MPF Cookbock Documentation.
-https://docs.missionpinball.org/cookbook/skillshot_with_auto_rotate.html
+For step-by-step instructions on how to use this example, see the MPF Cookbook Documentation.
+https://missionpinball.org/cookbook/skillshot_with_auto_rotate/
 
 ### Usage
 

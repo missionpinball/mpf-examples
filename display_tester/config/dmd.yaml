@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 window:
   height: 768
@@ -13,4 +13,3 @@ slides:
     widgets:
       type: text
       text: MC TESTER
-

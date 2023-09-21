@@ -9,7 +9,7 @@ a separate repo from the main MPF project so you can download this folder to an 
 The examples here are synchronized to work with the corresponding branches in MPF and the MPF-MC. (e.g. the "master"
 branch of mpf-examples works with the master branch of mpf, the dev branch works with the dev branch, etc.)
 
-If you're new to MPF, start with the tutorial at http://docs.missionpinball.org/en/latest/tutorial/.
+If you're new to MPF, start with the tutorial at https://missionpinball.org/tutorial/.
 
 More details about MPF are here: https://missionpinball.org.
 
@@ -42,7 +42,7 @@ A template you can use as a starting point for your own game. This is purely opt
 tutorial(s)
 -----------
 The tutorial folder (and all the folders that start with the name "tutorial") are companion files which you can use to
-follow along with the step-by-step tutorial at http://docs.missionpinball.org/en/latest/tutorial/.
+follow along with the step-by-step tutorial at https://missionpinball.org/tutorial/.
 
 wpc_template
 --------------------

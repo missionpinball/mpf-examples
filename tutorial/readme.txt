@@ -2,9 +2,7 @@ This folder contains the config files for the "your_machine" game which we build
 in our Step-by-Step tutorial which is available from the MPF documentation
 site:
 
-http://docs.missionpinball.org/
-
-(Click the "Tutorial" in the menu on the left.)
+https://missionpinball.org/tutorial/
 
 Each step in the tutorial corresponds to a subfolder in this tutorial folder.
 For example, to run the machine from Step 2 in the tutorial, you would open

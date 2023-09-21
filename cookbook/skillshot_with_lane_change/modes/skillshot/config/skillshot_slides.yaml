@@ -1,5 +1,5 @@
-#config_version=5
- 
+#config_version=6
+
 widget_player:
   mode_skillshot_started:
     skillshot_widget:
@@ -21,7 +21,7 @@ widgets:
       animations:
         add_to_slide{current_player.shot_skillshot_left==1}: shot_flashing
         player_shot_skillshot_left{value==0}: shot_off
-        player_shot_skillshot_left{value==1}: shot_flashing            
+        player_shot_skillshot_left{value==1}: shot_flashing
     - type: ellipse
       opacity: 0.5
       width: 20
@@ -41,5 +41,4 @@ widgets:
       animations:
         add_to_slide{current_player.shot_skillshot_right==1}: shot_flashing
         player_shot_skillshot_right{value==0}: shot_off
-        player_shot_skillshot_right{value==1}: shot_flashing 
-        
+        player_shot_skillshot_right{value==1}: shot_flashing

@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 hardware:
   platform: smart_virtual
@@ -34,7 +34,7 @@ keyboard:
 
 coils:
   c_flipper_left_main:
-    number: 
+    number:
     default_pulse_ms: 20
   c_flipper_left_hold:
     number:

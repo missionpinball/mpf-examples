@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 mode:
   start_events: ball_starting
   stop_events: start_mode1_acmag
@@ -29,4 +29,3 @@ show_player:
   balldevice_elevator_ball_enter:
     claw_lit:
       action: stop
-

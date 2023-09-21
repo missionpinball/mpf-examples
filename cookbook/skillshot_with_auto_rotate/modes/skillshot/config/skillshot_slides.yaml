@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 
 animations:
   shot_off:
@@ -9,7 +9,7 @@ animations:
     - property: opacity
       value: 1.0
       duration: 0
-  shot_flashing: 
+  shot_flashing:
     - property: opacity
       value: 1.0
       duration: 250ms
@@ -17,7 +17,7 @@ animations:
       value: 0.5
       duration: 250ms
       repeat: true
- 
+
 widget_player:
   mode_skillshot_started:
     skillshot_widget:
@@ -49,7 +49,7 @@ widgets:
       animations:
         player_shot_skillshot_drop_2{value==0}: shot_off
         player_shot_skillshot_drop_2{value==1}: shot_on
-        player_shot_skillshot_drop_2{value==2}: shot_flashing            
+        player_shot_skillshot_drop_2{value==2}: shot_flashing
     - type: ellipse
       opacity: 0.5
       width: 20
@@ -69,7 +69,7 @@ widgets:
       animations:
         player_shot_skillshot_drop_4{value==0}: shot_off
         player_shot_skillshot_drop_4{value==1}: shot_on
-        player_shot_skillshot_drop_4{value==2}: shot_flashing          
+        player_shot_skillshot_drop_4{value==2}: shot_flashing
     - type: ellipse
       opacity: 0.5
       width: 20
@@ -80,4 +80,3 @@ widgets:
         player_shot_skillshot_drop_5{value==0}: shot_off
         player_shot_skillshot_drop_5{value==1}: shot_on
         player_shot_skillshot_drop_5{value==2}: shot_flashing
- 

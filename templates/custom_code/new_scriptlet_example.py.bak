@@ -1,6 +1,6 @@
 """Example Scriptlet which shows different things you can do."""
 
-from mpf.core.scriptlet import Scriptlet  # This import is required
+from mpf.core.custom_code import CustomCode  # This import is required
 
 
 class YourScriptletName(Scriptlet):  # Change `YourScriptletName` to whatever you want!
