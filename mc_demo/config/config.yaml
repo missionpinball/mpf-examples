@@ -554,7 +554,7 @@ widget_styles:
 #    font_name: Courier New
 
 mc_custom_code:
-  demo_driver.DemoDriver
+  custom_code.demo_driver.DemoDriver
 
 keyboard:
   right:

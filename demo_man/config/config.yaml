@@ -14,9 +14,6 @@ config:
 - shots.yaml
 - keyboard.yaml
 
-bcp:
-    connections: None
-
 smart_virtual:
   file_log: full
 
