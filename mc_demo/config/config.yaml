@@ -375,7 +375,7 @@ slides:
       anchor_x: right
       x: 800
       y: 100
-      color: 00000088
+      color: "00000088"
       animations:
         event16:
           property: opacity
