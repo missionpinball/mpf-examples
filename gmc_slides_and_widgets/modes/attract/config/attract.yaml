@@ -1,0 +1,7 @@
+#config_version=6
+
+event_player:
+  mode_attract_started: test_event_here
+
+slide_player:
+  mode_attract_started: attract

@@ -7,3 +7,4 @@ data
 *.egg-info
 .DS_Store
 .vscode
+gmc_slides_and_widgets/addons

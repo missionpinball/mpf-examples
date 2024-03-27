@@ -1,0 +1,19 @@
+#config_version=6
+
+mpf:
+  report_crashes: never
+
+
+bcp:
+  connections:
+    local_display:
+      type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+      host: localhost
+      port: 5052
+      required: true
+      exit_on_close: true
+      debug: true
+
+
+modes:
+  - attract

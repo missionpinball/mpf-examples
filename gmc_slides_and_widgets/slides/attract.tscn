@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvcm2r4qr22u1"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_co8q6"]
+
+[node name="attract" type="Node2D"]
+script = ExtResource("1_co8q6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 726.0
+color = Color(1, 0.0705882, 1, 1)

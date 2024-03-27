@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GMC Slides And Widgets"
+run/main_scene="res://addons/mpf-gmc/slides/window.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0, 0.572549, 0.301961, 1)
+boot_splash/show_image=false
+boot_splash/image="res://addons/mpf-gmc/images/logo_mpf.png"
+config/icon="res://icon.svg"
+
+[autoload]
+
+MPF="*res://addons/mpf-gmc/mpf_gmc.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false
+
+[rendering]
+
+renderer/rendering_method="mobile"
