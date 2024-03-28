@@ -12,10 +12,9 @@ offset_bottom = 720.0
 color = Color(1, 0, 0.423529, 1)
 
 [node name="MPFVariable" type="Label" parent="."]
-offset_left = 410.0
-offset_top = 341.0
-offset_right = 863.0
-offset_bottom = 507.0
+offset_top = 309.0
+offset_right = 1276.0
+offset_bottom = 475.0
 theme_override_font_sizes/font_size = 100
 text = "1,000,000"
 horizontal_alignment = 1
@@ -23,3 +22,25 @@ script = ExtResource("1_jxki2")
 variable_name = "score"
 comma_separate = true
 min_digits = 2
+
+[node name="MPFVariable3" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 62.0
+offset_right = 162.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 30
+text = "Ball 1"
+script = ExtResource("1_jxki2")
+variable_name = "ball"
+template = "Ball %s"
+
+[node name="MPFVariable2" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 113.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 30
+text = "Player 1"
+script = ExtResource("1_jxki2")
+variable_name = "number"
+template = "Player %s"

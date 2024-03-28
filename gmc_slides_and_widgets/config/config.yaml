@@ -18,6 +18,7 @@ bcp:
 modes:
   - attract
   - base
+  - bonus
 
 ball_devices:
   bd_trough:
