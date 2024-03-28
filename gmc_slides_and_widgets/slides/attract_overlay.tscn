@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4jnnbgo541fo"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_uhk52"]
+[ext_resource type="Texture2D" uid="uid://doudapvxepc8e" path="res://icon.svg" id="1_wdjb5"]
+
+[node name="attract_overlay" type="Node2D"]
+script = ExtResource("1_uhk52")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(326, 192)
+texture = ExtResource("1_wdjb5")

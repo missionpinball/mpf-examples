@@ -17,3 +17,12 @@ bcp:
 
 modes:
   - attract
+
+switches:
+  s_start_button:
+    number:
+    tags: start
+  s_flipper_left:
+    number:
+  s_flipper_right:
+    number:

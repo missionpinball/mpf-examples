@@ -5,3 +5,14 @@ event_player:
 
 slide_player:
   mode_attract_started: attract
+  timer_attract_overlay_tick{ticks==5}: attract_overlay
+  timer_attract_overlay_complete:
+    attract_overlay:
+      action: remove
+
+
+timers:
+  attract_overlay:
+    end_value: 10
+    start_running: true
+    restart_on_complete: true
