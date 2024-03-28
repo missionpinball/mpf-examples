@@ -1,0 +1,16 @@
+#config_version=6
+# Copyright 2021 Paradigm Tilt
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_will_end
+  priority: 100
+
+slide_player:
+  mode_base_started: base
+
+variable_player:
+  s_switch_1_active:
+    score: 100
+  s_switch_2_active:
+    score: 1000
