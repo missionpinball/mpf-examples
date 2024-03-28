@@ -24,6 +24,7 @@ ball_devices:
   bd_trough:
     ball_switches: s_trough_1, s_trough_2, s_trough_3
     eject_coil: c_trough_eject
+    eject_timeouts: 2s
     tags: home, drain, trough
 
 coils:

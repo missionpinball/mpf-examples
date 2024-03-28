@@ -5,15 +5,33 @@ mode_settings:
   hurry_up_delay_ms: 0
   bonus_entries:
     # The order here is the order in which they will be shown
-    - event: bonus_quests_completed
+    - event: bonus_entry_one
       score: 10_000
       # player_score_entry: net_quests_completed
       # skip_if_zero: false
-    - event: bonus_avenger_runes
+    - event: bonus_entry_two
       score: 7000
       # player_score_entry: net_avenger_runes
       # skip_if_zero: false
-    - event: bonus_training
+    - event: bonus_entry_three
       score: 100
-      # player_score_entry: net_training_earned
-      # skip_if_zero: false
+      # player_score_entry: nfu:
+
+slide_player:
+  mode_bonus_started: bonus
+  bonus_entry_one:
+    bonus:
+      action: update
+      tokens:
+        title: "First Bonus"
+  bonus_entry_two:
+    bonus:
+      action: update
+      tokens:
+        title: "Second Bonus"
+
+
+widget_player:
+  bonus_entry_one:
+    bonus_entry_one:
+      slide: bonus

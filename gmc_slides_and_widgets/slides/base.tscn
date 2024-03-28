@@ -22,6 +22,7 @@ script = ExtResource("1_jxki2")
 variable_name = "score"
 comma_separate = true
 min_digits = 2
+initialize_empty = null
 
 [node name="MPFVariable3" type="Label" parent="."]
 offset_left = 13.0
@@ -33,6 +34,7 @@ text = "Ball 1"
 script = ExtResource("1_jxki2")
 variable_name = "ball"
 template = "Ball %s"
+initialize_empty = null
 
 [node name="MPFVariable2" type="Label" parent="."]
 offset_left = 13.0
@@ -44,3 +46,4 @@ text = "Player 1"
 script = ExtResource("1_jxki2")
 variable_name = "number"
 template = "Player %s"
+initialize_empty = null
