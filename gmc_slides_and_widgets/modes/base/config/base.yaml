@@ -8,6 +8,12 @@ mode:
 
 slide_player:
   mode_base_started: base
+  s_switch_3_active:
+    base:
+      action: method
+      method: show_text
+      tokens:
+        text: "Switch 3 Was Pressed!"
 
 variable_player:
   s_switch_1_active:
