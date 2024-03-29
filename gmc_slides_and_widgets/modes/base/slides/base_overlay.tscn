@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct5bhxxm48mvx"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ta2q7"]
+
+[node name="BaseOverlay" type="Node2D"]
+script = ExtResource("1_ta2q7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 4.0
+offset_top = 544.0
+offset_right = 1284.0
+offset_bottom = 712.0
+color = Color(0, 0.72549, 0.72549, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 430.0
+offset_top = 600.0
+offset_right = 935.0
+offset_bottom = 655.0
+theme_override_colors/font_color = Color(0.639216, 0.0470588, 0.764706, 1)
+theme_override_font_sizes/font_size = 40
+text = "This overlay has an expire!"

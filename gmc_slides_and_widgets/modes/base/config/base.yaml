@@ -14,6 +14,9 @@ slide_player:
       method: show_text
       tokens:
         text: "Switch 3 Was Pressed!"
+  s_switch_2_active:
+    base_overlay:
+      expire: 3s
 
 variable_player:
   s_switch_1_active:
