@@ -18,9 +18,22 @@ widget_player:
         switch_name: "Switch One"
   s_switch_2_active:
     switch_widget:
+      key: switch_1_widget
       slide: widget_example_slide
       expire: 10s
       x: 500
       y: 500
       tokens:
         switch_name: "Numero Dos"
+  s_switch_3_active:
+    switch_widget:
+      key: switch_3_widget
+      slide: widget_example_slide
+      x: 700
+      y: 500
+      tokens:
+        switch_name: "TRES COMMAS"
+  s_switch_3_inactive:
+    switch_3_widget:
+      slide: widget_example_slide
+      action: remove
