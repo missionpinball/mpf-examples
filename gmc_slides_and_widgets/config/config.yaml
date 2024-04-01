@@ -19,6 +19,7 @@ modes:
   - attract
   - base
   - bonus
+  - widget_examples
 
 ball_devices:
   bd_trough:

@@ -1,0 +1,10 @@
+#config_version=6
+mode:
+  start_events: start_mode_widget_examples
+  stop_events: stop_mode_widget_examples
+  priority: 100
+
+
+slide_player:
+  mode_widget_examples_started: widget_example_slide
+
