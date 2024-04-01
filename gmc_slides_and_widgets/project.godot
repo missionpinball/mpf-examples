@@ -32,6 +32,10 @@ window/size/resizable=false
 
 enabled=PackedStringArray("res://addons/mpf-gmc/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [rendering]
 
 renderer/rendering_method="mobile"
