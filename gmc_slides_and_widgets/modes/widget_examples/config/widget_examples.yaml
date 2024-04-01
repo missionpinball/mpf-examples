@@ -9,6 +9,12 @@ slide_player:
   mode_widget_examples_started: widget_example_slide
 
 widget_player:
+  mode_widget_examples_started: score_widget
+  s_switch_4_active:
+    score_widget:
+      slide: widget_example_slide
+      action: method
+      method: twirl
   s_switch_1_active:
     switch_widget:
       expire: 5s
@@ -16,11 +22,10 @@ widget_player:
       y: 500
       tokens:
         switch_name: "Switch One"
-  s_switch_2_active:
+  s_switch_2_inactive:
     switch_widget:
       key: switch_1_widget
-      slide: widget_example_slide
-      expire: 10s
+      slide: base_overlay
       x: 500
       y: 500
       tokens:

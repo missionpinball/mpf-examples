@@ -26,7 +26,6 @@ offset_left = -49.0
 offset_top = 17.0
 offset_right = 51.0
 offset_bottom = 40.0
-text = "stuff"
 horizontal_alignment = 1
 script = ExtResource("2_rr2gh")
 variable_type = "Event Arg"
