@@ -14,6 +14,7 @@ color = Color(1, 0.0705882, 1, 1)
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="MPFVariable" type="Label" parent="Node2D"]
+visible = false
 offset_left = 1090.0
 offset_top = 612.0
 offset_right = 1234.0
