@@ -8,3 +8,19 @@ mode:
 slide_player:
   mode_widget_examples_started: widget_example_slide
 
+widget_player:
+  s_switch_1_active:
+    switch_widget:
+      expire: 5s
+      x: 200
+      y: 500
+      tokens:
+        switch_name: "Switch One"
+  s_switch_2_active:
+    switch_widget:
+      slide: widget_example_slide
+      expire: 10s
+      x: 500
+      y: 500
+      tokens:
+        switch_name: "Numero Dos"
