@@ -10,6 +10,11 @@ slide_player:
     attract_overlay:
       action: remove
 
+sound_player:
+  mode_attract_started:
+    ARR.03.Station_Alert.wav:
+      track: music
+
 widget_player:
   slide_attract_active:
     timer_widget:
