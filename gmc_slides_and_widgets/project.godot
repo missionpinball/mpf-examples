@@ -12,7 +12,7 @@ config_version=5
 
 config/name="GMC Slides And Widgets"
 run/main_scene="res://addons/mpf-gmc/slides/window.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
+config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0, 0.572549, 0.301961, 1)
 boot_splash/show_image=false
 boot_splash/image="res://addons/mpf-gmc/images/logo_mpf.png"
