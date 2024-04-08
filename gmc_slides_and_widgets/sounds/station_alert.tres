@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MPFSoundAsset" load_steps=3 format=3 uid="uid://cvwqvf6tqsi5o"]
+
+[ext_resource type="AudioStream" uid="uid://lai1f1swh4ac" path="res://assets/music/ARR.03.Station_Alert.wav" id="1_32l0q"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_sound.gd" id="2_4jdi7"]
+
+[resource]
+script = ExtResource("2_4jdi7")
+file = ExtResource("1_32l0q")
+name = "station_alert"
+fade_in = 2.0
+fade_out = 0.0

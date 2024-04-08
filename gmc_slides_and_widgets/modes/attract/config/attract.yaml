@@ -12,7 +12,7 @@ slide_player:
 
 sound_player:
   mode_attract_started:
-    ARR.03.Station_Alert.wav:
+    station_alert:
       track: music
 
 widget_player:
