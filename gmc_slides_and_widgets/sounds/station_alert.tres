@@ -7,5 +7,6 @@
 script = ExtResource("2_oxlqq")
 file = ExtResource("1_8brqo")
 name = "station_alert"
+track = "music"
 fade_in = 2.0
 fade_out = 2.0

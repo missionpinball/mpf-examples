@@ -14,6 +14,9 @@ sound_player:
   mode_attract_started:
     station_alert:
       track: music
+  timer_attract_overlay_complete:
+    station_alert:
+      action: stop
 
 widget_player:
   slide_attract_active:
