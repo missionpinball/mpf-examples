@@ -3,7 +3,13 @@
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_uhk52"]
 [ext_resource type="Texture2D" uid="uid://doudapvxepc8e" path="res://icon.svg" id="1_wdjb5"]
 
-[node name="attract_overlay" type="Node2D"]
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 836.0
+offset_top = 280.0
+offset_right = 1004.0
+offset_bottom = 438.0
 script = ExtResource("1_uhk52")
 
 [node name="Icon" type="Sprite2D" parent="."]

@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ta2q7"]
 
-[node name="BaseOverlay" type="Node2D"]
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_ta2q7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 544.0
 offset_right = 1284.0
@@ -13,6 +18,7 @@ offset_bottom = 712.0
 color = Color(0, 0.72549, 0.72549, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 430.0
 offset_top = 600.0
 offset_right = 935.0

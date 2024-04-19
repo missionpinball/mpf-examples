@@ -3,10 +3,15 @@
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_co8q6"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_wxrj5"]
 
-[node name="attract" type="Node2D"]
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_co8q6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 726.0
 color = Color(1, 0.0705882, 1, 1)
@@ -14,7 +19,6 @@ color = Color(1, 0.0705882, 1, 1)
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="MPFVariable" type="Label" parent="Node2D"]
-visible = false
 offset_left = 1090.0
 offset_top = 612.0
 offset_right = 1234.0
@@ -22,6 +26,5 @@ offset_bottom = 695.0
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 script = ExtResource("2_wxrj5")
-variable_type = "Event Arg"
 variable_name = "ticks_remaining"
 update_event = "timer_attract_overlay_tick"

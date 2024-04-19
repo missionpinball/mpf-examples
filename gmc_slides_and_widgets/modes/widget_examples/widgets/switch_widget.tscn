@@ -3,10 +3,15 @@
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_ew1uw"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_rr2gh"]
 
-[node name="SwitchWidget" type="Node2D"]
+[node name="MPFWidget" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_ew1uw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = -50.0
 offset_top = -50.0
 offset_right = 50.0
@@ -14,6 +19,7 @@ offset_bottom = 50.0
 color = Color(0.117647, 0, 1, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = -33.0
 offset_top = -49.0
 offset_right = 35.0
@@ -22,11 +28,11 @@ PRESSED"
 horizontal_alignment = 1
 
 [node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
 offset_left = -49.0
 offset_top = 17.0
 offset_right = 51.0
 offset_bottom = 40.0
 horizontal_alignment = 1
 script = ExtResource("2_rr2gh")
-variable_type = "Event Arg"
 variable_name = "switch_name"
