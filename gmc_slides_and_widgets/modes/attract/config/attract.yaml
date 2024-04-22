@@ -13,10 +13,11 @@ slide_player:
 sound_player:
   mode_attract_started:
     station_alert:
-      track: music
+      bus: music
   timer_attract_overlay_complete:
     station_alert:
       action: stop
+      bus: music
 
 widget_player:
   slide_attract_active:
