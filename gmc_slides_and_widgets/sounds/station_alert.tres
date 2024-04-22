@@ -5,8 +5,9 @@
 
 [resource]
 script = ExtResource("2_oxlqq")
-file = ExtResource("1_8brqo")
-name = "station_alert"
-track = "music"
+stream = ExtResource("1_8brqo")
+bus = ""
 fade_in = 2.0
 fade_out = 2.0
+start_at = 0.0
+max_queue_time = 0.0

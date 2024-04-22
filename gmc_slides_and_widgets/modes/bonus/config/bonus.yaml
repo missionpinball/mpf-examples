@@ -5,33 +5,29 @@ mode_settings:
   hurry_up_delay_ms: 0
   bonus_entries:
     # The order here is the order in which they will be shown
-    - name: bonus_entry_one
+    - entry: big_stuff
+      text: Big Stuff
       score: 10_000
       # player_score_entry: net_quests_completed
       # skip_if_zero: false
-    - name: bonus_entry_two
+    - entry: bonus_too
+      text: "Bonus, Too"
       score: 7000
       # player_score_entry: net_avenger_runes
       # skip_if_zero: false
-    - name: bonus_entry_three
+    - entry: bonus_extra
+      text: Extra Bonus
       score: 100
       # player_score_entry: nfu:
 
 slide_player:
   mode_bonus_started: bonus
-  bonus_entry_one:
+  bonus_start:
     bonus:
       action: update
       tokens:
-        title: "First Bonus"
-  bonus_entry_two:
+        entry: initial
+  bonus_entry:
     bonus:
       action: update
-      tokens:
-        title: "Second Bonus"
 
-
-widget_player:
-  bonus_entry_one:
-    bonus_entry_one:
-      slide: bonus

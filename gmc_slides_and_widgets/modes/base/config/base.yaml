@@ -21,5 +21,7 @@ slide_player:
 variable_player:
   s_switch_1_active:
     score: 100
+    bonus_multiplier: 1
   s_switch_2_active:
     score: 1000
+    bonus_multiplier: 1
