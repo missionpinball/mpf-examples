@@ -6,6 +6,21 @@ mode:
   stop_events: ball_will_end
   priority: 100
 
+
+shots:
+  video_shot_1:
+    switch: s_switch_1
+  video_shot_2:
+    switch: s_switch_2
+  video_shot_3:
+    switch: s_switch_3
+
+
+shot_groups:
+  video_shots:
+    shots: video_shot_1, video_shot_2, video_shot_3
+
+
 slide_player:
   mode_base_started: base
   s_switch_3_active:
@@ -25,3 +40,8 @@ variable_player:
   s_switch_2_active:
     score: 1000
     bonus_multiplier: 1
+
+widget_player:
+  slide_base_active:
+    conditional_child_pools:
+      slide: base

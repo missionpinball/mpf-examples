@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxeqx1t77phrt"]
+[gd_scene load_steps=6 format=3 uid="uid://cxeqx1t77phrt"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_jrvee"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="2_3g42q"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_cesjg"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_j6pox"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_logger.gd" id="4_dco41"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_event_handler.gd" id="5_tpq8x"]
 
 [node name="MPFWidget" type="Control"]
 layout_mode = 3
@@ -15,26 +16,35 @@ script = ExtResource("1_jrvee")
 [node name="MPFLogger" type="Node" parent="." node_paths=PackedStringArray("loggers")]
 script = ExtResource("4_dco41")
 log_level = 10
-loggers = [NodePath("../target_carousel")]
+loggers = [NodePath("../MPFEventHandler/MPFConditionalChildren"), NodePath("../MPFEventHandler")]
 
-[node name="target_carousel" type="Node2D" parent="."]
-script = ExtResource("3_cesjg")
+[node name="MPFEventHandler" type="Node2D" parent="."]
+script = ExtResource("5_tpq8x")
+event_name = "video_shots_hit"
+handler_direction = 1
+call_method = "update"
 
-[node name="__default__" type="Node2D" parent="target_carousel"]
+[node name="MPFConditionalChildren" type="Node2D" parent="MPFEventHandler"]
+script = ExtResource("3_j6pox")
+variable_type = 1
+variable_name = "shot"
 
-[node name="foo" type="Node2D" parent="target_carousel"]
+[node name="__default__" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
+visible = false
+
+[node name="video_shot_1" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
 visible = false
 script = ExtResource("2_3g42q")
 playback_method = 2
 advance_on_show = true
 advance_when_showing = true
 
-[node name="ColorRect" type="ColorRect" parent="target_carousel/foo"]
+[node name="ColorRect" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1"]
 offset_right = 1920.0
 offset_bottom = 725.0
 color = Color(0, 0.396078, 0.172549, 1)
 
-[node name="Label" type="Label" parent="target_carousel/foo/ColorRect"]
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1/ColorRect"]
 layout_mode = 0
 offset_top = 280.0
 offset_right = 1916.0
@@ -43,12 +53,12 @@ theme_override_font_sizes/font_size = 80
 text = "FOO 1"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="target_carousel/foo"]
+[node name="ColorRect2" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1"]
 offset_right = 1920.0
 offset_bottom = 725.0
 color = Color(0.592157, 0.129412, 0, 1)
 
-[node name="Label" type="Label" parent="target_carousel/foo/ColorRect2"]
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1/ColorRect2"]
 layout_mode = 0
 offset_top = 280.0
 offset_right = 1916.0
@@ -57,12 +67,12 @@ theme_override_font_sizes/font_size = 80
 text = "FOO 2"
 horizontal_alignment = 1
 
-[node name="ColorRect3" type="ColorRect" parent="target_carousel/foo"]
+[node name="ColorRect3" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1"]
 offset_right = 1920.0
 offset_bottom = 725.0
 color = Color(0.529412, 0, 0.564706, 1)
 
-[node name="Label" type="Label" parent="target_carousel/foo/ColorRect3"]
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1/ColorRect3"]
 layout_mode = 0
 offset_top = 280.0
 offset_right = 1916.0
@@ -71,19 +81,20 @@ theme_override_font_sizes/font_size = 80
 text = "FOO 3"
 horizontal_alignment = 1
 
-[node name="bar" type="Node2D" parent="target_carousel"]
+[node name="video_shot_2" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
+visible = false
 script = ExtResource("2_3g42q")
 playback_method = 2
 advance_on_show = true
 advance_when_showing = true
 
-[node name="ColorRect" type="ColorRect" parent="target_carousel/bar"]
+[node name="ColorRect" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2"]
 visible = false
 offset_right = 1920.0
 offset_bottom = 725.0
 color = Color(0, 0.396078, 0.172549, 1)
 
-[node name="Label" type="Label" parent="target_carousel/bar/ColorRect"]
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2/ColorRect"]
 layout_mode = 0
 offset_top = 280.0
 offset_right = 1916.0
@@ -92,13 +103,13 @@ theme_override_font_sizes/font_size = 80
 text = "BAR 1"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="target_carousel/bar"]
+[node name="ColorRect2" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2"]
 visible = false
 offset_right = 1920.0
 offset_bottom = 725.0
 color = Color(0.592157, 0.129412, 0, 1)
 
-[node name="Label" type="Label" parent="target_carousel/bar/ColorRect2"]
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2/ColorRect2"]
 layout_mode = 0
 offset_top = 280.0
 offset_right = 1916.0
@@ -107,12 +118,12 @@ theme_override_font_sizes/font_size = 80
 text = "BAR 2"
 horizontal_alignment = 1
 
-[node name="ColorRect3" type="ColorRect" parent="target_carousel/bar"]
+[node name="ColorRect3" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2"]
 offset_right = 1920.0
 offset_bottom = 725.0
 color = Color(0.529412, 0, 0.564706, 1)
 
-[node name="Label" type="Label" parent="target_carousel/bar/ColorRect3"]
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2/ColorRect3"]
 layout_mode = 0
 offset_top = 280.0
 offset_right = 1916.0
