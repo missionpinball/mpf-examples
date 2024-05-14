@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_co8q6"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_wxrj5"]
 
-[node name="MPFSlide" type="Control"]
+[node name="Attract" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -18,7 +18,7 @@ color = Color(1, 0.0705882, 1, 1)
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="MPFVariable" type="Label" parent="Node2D"]
+[node name="attract-variable" type="Label" parent="Node2D"]
 offset_left = 1090.0
 offset_top = 612.0
 offset_right = 1234.0

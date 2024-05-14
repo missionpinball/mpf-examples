@@ -16,7 +16,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(1, 0, 0.423529, 1)
 
-[node name="MPFVariable" type="Label" parent="."]
+[node name="base_var_1" type="Label" parent="."]
 layout_mode = 0
 offset_top = 309.0
 offset_right = 1276.0
@@ -28,7 +28,7 @@ variable_name = "score"
 comma_separate = true
 min_digits = 2
 
-[node name="MPFVariable3" type="Label" parent="."]
+[node name="base_var_3" type="Label" parent="."]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 62.0
@@ -38,7 +38,7 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("1_jxki2")
 variable_name = "ball"
 
-[node name="MPFVariable2" type="Label" parent="."]
+[node name="base_var_2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 17.0

@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxeqx1t77phrt"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_jrvee"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="2_3g42q"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_cesjg"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_logger.gd" id="4_dco41"]
+
+[node name="MPFWidget" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jrvee")
+
+[node name="MPFLogger" type="Node" parent="." node_paths=PackedStringArray("loggers")]
+script = ExtResource("4_dco41")
+log_level = 10
+loggers = [NodePath("../target_carousel")]
+
+[node name="target_carousel" type="Node2D" parent="."]
+script = ExtResource("3_cesjg")
+
+[node name="__default__" type="Node2D" parent="target_carousel"]
+
+[node name="foo" type="Node2D" parent="target_carousel"]
+visible = false
+script = ExtResource("2_3g42q")
+playback_method = 2
+advance_on_show = true
+advance_when_showing = true
+
+[node name="ColorRect" type="ColorRect" parent="target_carousel/foo"]
+offset_right = 1920.0
+offset_bottom = 725.0
+color = Color(0, 0.396078, 0.172549, 1)
+
+[node name="Label" type="Label" parent="target_carousel/foo/ColorRect"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 1916.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 80
+text = "FOO 1"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="target_carousel/foo"]
+offset_right = 1920.0
+offset_bottom = 725.0
+color = Color(0.592157, 0.129412, 0, 1)
+
+[node name="Label" type="Label" parent="target_carousel/foo/ColorRect2"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 1916.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 80
+text = "FOO 2"
+horizontal_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="target_carousel/foo"]
+offset_right = 1920.0
+offset_bottom = 725.0
+color = Color(0.529412, 0, 0.564706, 1)
+
+[node name="Label" type="Label" parent="target_carousel/foo/ColorRect3"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 1916.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 80
+text = "FOO 3"
+horizontal_alignment = 1
+
+[node name="bar" type="Node2D" parent="target_carousel"]
+script = ExtResource("2_3g42q")
+playback_method = 2
+advance_on_show = true
+advance_when_showing = true
+
+[node name="ColorRect" type="ColorRect" parent="target_carousel/bar"]
+visible = false
+offset_right = 1920.0
+offset_bottom = 725.0
+color = Color(0, 0.396078, 0.172549, 1)
+
+[node name="Label" type="Label" parent="target_carousel/bar/ColorRect"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 1916.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 80
+text = "BAR 1"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="target_carousel/bar"]
+visible = false
+offset_right = 1920.0
+offset_bottom = 725.0
+color = Color(0.592157, 0.129412, 0, 1)
+
+[node name="Label" type="Label" parent="target_carousel/bar/ColorRect2"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 1916.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 80
+text = "BAR 2"
+horizontal_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="target_carousel/bar"]
+offset_right = 1920.0
+offset_bottom = 725.0
+color = Color(0.529412, 0, 0.564706, 1)
+
+[node name="Label" type="Label" parent="target_carousel/bar/ColorRect3"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 1916.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 80
+text = "BAR 3"
+horizontal_alignment = 1

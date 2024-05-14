@@ -2,6 +2,18 @@
 
 event_player:
   mode_attract_started: test_event_here
+  s_switch_1_active:
+    item_highlighted:
+      carousel: target_carousel
+      item: foo
+  s_switch_2_active:
+    item_highlighted:
+      carousel: target_carousel
+      item: bar
+  s_switch_3_active:
+    item_highlighted:
+      carousel: target_carousel
+      item: ""
 
 slide_player:
   mode_attract_started: attract
@@ -23,7 +35,8 @@ widget_player:
   slide_attract_active:
     timer_widget:
       slide: attract
-
+    conditional_child_pools:
+      slide: attract
 
 timers:
   attract_overlay:
