@@ -1,0 +1,56 @@
+#config_version=6
+
+mpf:
+  report_crashes: never
+
+modes:
+  - attract
+  - base
+  - bonus
+  - widget_examples
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough_1, s_trough_2, s_trough_3
+    eject_coil: c_trough_eject
+    eject_timeouts: 2s
+    tags: home, drain, trough
+
+coils:
+  c_trough_eject:
+    number:
+
+playfields:
+  playfield:
+    default_source_device: bd_trough
+    tags: default
+
+switches:
+  s_start_button:
+    number:
+    tags: start
+  s_flipper_left:
+    number:
+  s_flipper_right:
+    number:
+  s_switch_1:
+    number:
+  s_switch_2:
+    number:
+  s_switch_3:
+    number:
+  s_switch_4:
+    number:
+  s_trough_1:
+    number:
+  s_trough_2:
+    number:
+  s_trough_3:
+    number:
+
+
+virtual_platform_start_active_switches:
+  - s_trough_1
+  - s_trough_2
+  - s_trough_3
+

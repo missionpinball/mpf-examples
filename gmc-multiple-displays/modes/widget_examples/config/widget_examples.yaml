@@ -1,0 +1,44 @@
+#config_version=6
+mode:
+  start_events: start_mode_widget_examples
+  stop_events: stop_mode_widget_examples
+  priority: 100
+
+
+slide_player:
+  mode_widget_examples_started: widget_example_slide
+
+widget_player:
+  mode_widget_examples_started: score_widget
+  s_switch_4_active:
+    score_widget:
+      slide: widget_example_slide
+      action: method
+      method: twirl
+  s_switch_1_active:
+    switch_widget:
+      expire: 5s
+      x: 200
+      y: 500
+      tokens:
+        switch_name: "Switch One"
+  s_switch_2_inactive:
+    switch_widget:
+      key: switch_1_widget
+      slide: base_overlay
+      x: 500
+      y: 500
+      tokens:
+        switch_name: "Numero Dos"
+  s_switch_3_active:
+    switch_widget:
+      key: switch_3_widget
+      slide: widget_example_slide
+      x: 700
+      y: 500
+      tokens:
+        switch_name: "TRES COMMAS"
+  s_switch_3_inactive:
+    switch_3_widget:
+      slide: widget_example_slide
+      action: remove

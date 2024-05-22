@@ -1,0 +1,27 @@
+#config_version=6
+
+event_player:
+  mode_attract_started: test_event_here
+  # s_switch_1_active:
+  #   item_highlighted:
+  #     carousel: target_carousel
+  #     item: foo
+  # s_switch_2_active:
+  #   item_highlighted:
+  #     carousel: target_carousel
+  #     item: bar
+  # s_switch_3_active:
+  #   item_highlighted:
+  #     carousel: target_carousel
+  #     item: ""
+
+slide_player:
+  mode_attract_started:
+    attract-main:
+      target: display1
+    attract-secondary:
+      target: display2
+  # timer_attract_overlay_tick{ticks==5}: attract_overlay
+  # timer_attract_overlay_complete:
+  #   attract_overlay:
+  #     action: remove
