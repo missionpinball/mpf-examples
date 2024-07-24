@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://rujrt5b4vgoq"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="1_avpy6"]
+[ext_resource type="Material" uid="uid://c5606sl0e32qh" path="res://addons/mpf-gmc/resources/textinput_highlight_material.tres" id="1_wqypx"]
+
+[node name="Textinput" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="HFlowContainer"]
+material = ExtResource("1_wqypx")
+layout_mode = 2
+text = "B"
+
+[node name="MPFTextInput" type="HFlowContainer" parent="HFlowContainer/Label"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 56.0
+offset_right = 419.0
+offset_bottom = 219.0
+alignment = 1
+script = ExtResource("1_avpy6")
+grid_width = 20
+highlight_color = Color(1, 0.0196078, 0, 1)

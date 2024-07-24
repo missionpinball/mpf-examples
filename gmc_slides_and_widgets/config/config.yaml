@@ -3,11 +3,15 @@
 mpf:
   report_crashes: never
 
+game:
+  balls_per_game: 1
+
 modes:
   - attract
   - base
   - bonus
   - widget_examples
+  - high_score
 
 ball_devices:
   bd_trough:

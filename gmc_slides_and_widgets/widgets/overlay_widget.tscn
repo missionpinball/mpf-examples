@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwnmk3wyoinbe"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_bf4og"]
+
+[node name="OverlayWidget" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bf4og")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 281.0
+offset_bottom = 77.0
+color = Color(0.313726, 0.356863, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 281.0
+offset_bottom = 48.0
+text = "I'm an OVERLAY!"
+horizontal_alignment = 1

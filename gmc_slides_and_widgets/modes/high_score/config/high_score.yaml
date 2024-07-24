@@ -1,0 +1,48 @@
+#config_version=6
+mode:
+  code: mpf.modes.high_score.code.high_score.HighScore
+  priority: 1500
+  start_events: game_ending, start_high_score
+  game_mode: false
+  use_wait_queue: true
+
+event_player:
+  s_flipper_right_active:
+    text_input:
+      action: right
+  s_flipper_left_active:
+    text_input:
+      action: left
+  s_start_button_active:
+    text_input:
+      action: select
+
+high_score:
+  _overwrite: true
+  enter_initials_timeout: 600
+  categories: !!omap
+    - score:
+        - GRAND CHAMPION
+        - HIGH SCORE 1
+        - HIGH SCORE 2
+        - HIGH SCORE 3
+        - HIGH SCORE 4
+        - HIGH SCORE 5
+        - HIGH SCORE 6
+        - HIGH SCORE 7
+        - HIGH SCORE 8
+  defaults:
+    # These values are not parsed by python when copied to the default
+    # high_scores file, so do *not* underscore-separate them
+    score:
+      - LIONMAN: 20
+      - TAARNA: 16
+      - BALDAR: 12
+      - GEDREN: 10
+      - TRAIGON: 8
+      - KALGHARA: 6
+      - HUNDRA: 5
+      - DYALA: 4
+      - TASHINGA: 2
+  # yamllint disable-line rule:line-length
+  filler_initials: MIRA, MARA, PANDO, KANG, REENA, SULTANA, JAREK, AMETHEA, KRONA
