@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dob1qrbq4sc35"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_46x8k"]
+[ext_resource type="Script" path="res://slides/base.gd" id="1_4ymu3"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="1_jxki2"]
 
 [node name="MPFSlide" type="Control"]
@@ -8,7 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_46x8k")
+script = ExtResource("1_4ymu3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -16,7 +16,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(1, 0, 0.423529, 1)
 
-[node name="base_var_1" type="Label" parent="."]
+[node name="currentplayer_score" type="Label" parent="."]
 layout_mode = 0
 offset_top = 309.0
 offset_right = 1276.0
@@ -28,7 +28,7 @@ variable_name = "score"
 comma_separate = true
 min_digits = 2
 
-[node name="base_var_3" type="Label" parent="."]
+[node name="currentplayer_ball" type="Label" parent="."]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 62.0
@@ -37,8 +37,9 @@ offset_bottom = 104.0
 theme_override_font_sizes/font_size = 30
 script = ExtResource("1_jxki2")
 variable_name = "ball"
+template_string = "Ball %s"
 
-[node name="base_var_2" type="Label" parent="."]
+[node name="currentplayer_number" type="Label" parent="."]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 17.0
@@ -47,6 +48,7 @@ offset_bottom = 59.0
 theme_override_font_sizes/font_size = 30
 script = ExtResource("1_jxki2")
 variable_name = "number"
+template_string = "Player %s"
 
 [node name="message" type="Label" parent="."]
 layout_mode = 0
@@ -57,3 +59,22 @@ offset_bottom = 663.0
 theme_override_font_sizes/font_size = 16
 text = "this is where the message goes"
 horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 606.0
+offset_right = 163.0
+offset_bottom = 629.0
+text = "Player 1"
+
+[node name="player1_score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 631.0
+offset_right = 154.0
+offset_bottom = 654.0
+script = ExtResource("1_jxki2")
+variable_type = 4
+variable_name = "score"
+comma_separate = true

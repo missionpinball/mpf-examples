@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="MPFSoundAsset" load_steps=3 format=3 uid="uid://cvwqvf6tqsi5o"]
+[gd_resource type="Resource" script_class="MPFSoundAsset" load_steps=6 format=3 uid="uid://cvwqvf6tqsi5o"]
 
 [ext_resource type="AudioStream" uid="uid://lai1f1swh4ac" path="res://assets/music/ARR.03.Station_Alert.wav" id="1_8brqo"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_sound_marker.gd" id="1_rkk8w"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_sound.gd" id="2_oxlqq"]
+
+[sub_resource type="Resource" id="Resource_abf6i"]
+script = ExtResource("1_rkk8w")
+time = 3.5
+event = "sound_marker_one"
+
+[sub_resource type="Resource" id="Resource_kv52k"]
+script = ExtResource("1_rkk8w")
+time = 5.0
+event = "second_event"
 
 [resource]
 script = ExtResource("2_oxlqq")
@@ -11,3 +22,4 @@ fade_in = 2.0
 fade_out = 2.0
 start_at = 0.0
 max_queue_time = 0.0
+markers = Array[ExtResource("1_rkk8w")]([SubResource("Resource_abf6i"), SubResource("Resource_kv52k")])

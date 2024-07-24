@@ -15,6 +15,7 @@ script = ExtResource("1_jrvee")
 
 [node name="MPFLogger" type="Node" parent="." node_paths=PackedStringArray("loggers")]
 script = ExtResource("4_dco41")
+enabled = false
 log_level = 10
 loggers = [NodePath("../MPFEventHandler/MPFConditionalChildren"), NodePath("../MPFEventHandler")]
 

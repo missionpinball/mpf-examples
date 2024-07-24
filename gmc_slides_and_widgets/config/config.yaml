@@ -47,6 +47,14 @@ switches:
     number:
   s_trough_3:
     number:
+  s_spinner:
+    number:
+
+spinners:
+  spinny:
+    switch: s_spinner
+    idle_ms: 1000
+    max_events_per_second: 2
 
 
 virtual_platform_start_active_switches:
