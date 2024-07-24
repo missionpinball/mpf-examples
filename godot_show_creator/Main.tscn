@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=3 uid="uid://60d26dtviyx"]
+
+[ext_resource type="Texture2D" uid="uid://c4jnxgck2bcc1" path="res://monthly_07_2013_74aa529e62003c7ae241243a933aee30-swords-of-fury--williams-1988-.png" id="1_ucd82"]
+[ext_resource type="Script" path="res://Main.gd" id="2_f05bh"]
+[ext_resource type="Script" path="res://addons/mpf-show-creator/classes/MPFLight.gd" id="3_enwcu"]
+[ext_resource type="Texture2D" uid="uid://dib50yjjgk7vp" path="res://star-five-pointed-solid.svg" id="4_x3tcl"]
+[ext_resource type="Texture2D" uid="uid://dpbv1qy6f7lc8" path="res://circle-solid.svg" id="5_abvee"]
+
+[sub_resource type="Animation" id="Animation_upixl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4, -555)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1085, -12)]
+}
+
+[sub_resource type="Animation" id="Animation_cole0"]
+resource_name = "green"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-269, -5), Vector2(1085, -12)]
+}
+
+[sub_resource type="Animation" id="Animation_r361d"]
+resource_name = "pink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-4, -555), Vector2(-8, 1070)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_la1bs"]
+_data = {
+"RESET": SubResource("Animation_upixl"),
+"green": SubResource("Animation_cole0"),
+"pink": SubResource("Animation_r361d")
+}
+
+[node name="Monthly07201374Aa529e62003c7Ae241243a933Aee30-swords-of-fury--williams-1988-" type="Sprite2D" node_paths=PackedStringArray("animation_player")]
+position = Vector2(6, 5)
+texture = ExtResource("1_ucd82")
+centered = false
+script = ExtResource("2_f05bh")
+fps = 5
+animation_player = NodePath("AnimationPlayer")
+
+[node name="l_drop_5" type="Node2D" parent="."]
+position = Vector2(362, 128)
+script = ExtResource("3_enwcu")
+
+[node name="l_top_loop_right_advance" type="Node2D" parent="."]
+position = Vector2(641, 527)
+script = ExtResource("3_enwcu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -4.0
+offset_top = -555.0
+offset_right = 1092.0
+offset_bottom = -11.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 1085.0
+offset_top = -12.0
+offset_right = 1348.0
+offset_bottom = 1448.0
+color = Color(0, 1, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_la1bs")
+}
+
+[node name="Star-five-pointed-solid" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(-201.327, 194.75)
+scale = Vector2(3.1898, 3.1898)
+texture = ExtResource("4_x3tcl")
+
+[node name="Circle-solid" type="Sprite2D" parent="."]
+position = Vector2(-558, 787)
+texture = ExtResource("5_abvee")
