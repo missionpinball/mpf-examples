@@ -21,7 +21,7 @@ loggers = [NodePath("../MPFEventHandler/MPFConditionalChildren"), NodePath("../M
 
 [node name="MPFEventHandler" type="Node2D" parent="."]
 script = ExtResource("5_tpq8x")
-event_name = "video_shots_hit"
+event_name = "bumper_shots_hit"
 handler_direction = 1
 call_method = "update"
 
@@ -33,102 +33,231 @@ variable_name = "shot"
 [node name="__default__" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
 visible = false
 
-[node name="video_shot_1" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
-visible = false
+[node name="bumper_shot_1" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
 script = ExtResource("2_3g42q")
 playback_method = 2
 advance_on_show = true
 advance_when_showing = true
 
-[node name="ColorRect" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1"]
-offset_right = 1920.0
+[node name="ColorRect" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1"]
+offset_right = 1282.0
 offset_bottom = 725.0
 color = Color(0, 0.396078, 0.172549, 1)
 
-[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1/ColorRect"]
+[node name="instructions" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 24.0
+offset_right = 1059.0
+offset_bottom = 203.0
+text = "This is the Conditional Child Pools slide that will randomly pick a child from whichever shot is hit .
+
+It uses MPFEventHandler to listen to the \"bumper_shots_hit\" event and trigger the \"update\" method on the MPFConditionalChildren, which shows the child corresponding to the shot that was hit (the name of the child node is the event arg value that is matched).
+
+Each child is a ChildPool that will randomly show one of its children."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect"]
 layout_mode = 0
 offset_top = 280.0
-offset_right = 1916.0
+offset_right = 1284.0
 offset_bottom = 470.0
 theme_override_font_sizes/font_size = 80
-text = "FOO 1"
+text = "Shot A, Random 1"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1"]
-offset_right = 1920.0
+[node name="exitinst" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 671.0
+offset_right = 239.0
+offset_bottom = 694.0
+text = "Press D to remove this slide."
+
+[node name="ColorRect2" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1"]
+visible = false
+offset_right = 1280.0
 offset_bottom = 725.0
 color = Color(0.592157, 0.129412, 0, 1)
 
-[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1/ColorRect2"]
+[node name="instructions2" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect2"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 24.0
+offset_right = 1059.0
+offset_bottom = 203.0
+text = "This is the Conditional Child Pools slide that will randomly pick a child from whichever shot is hit .
+
+It uses MPFEventHandler to listen to the \"bumper_shots_hit\" event and trigger the \"update\" method on the MPFConditionalChildren, which shows the child corresponding to the shot that was hit (the name of the child node is the event arg value that is matched).
+
+Each child is a ChildPool that will randomly show one of its children."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="exitinst2" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect2"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 671.0
+offset_right = 239.0
+offset_bottom = 694.0
+text = "Press D to remove this slide."
+
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect2"]
 layout_mode = 0
 offset_top = 280.0
-offset_right = 1916.0
+offset_right = 1282.0
 offset_bottom = 470.0
 theme_override_font_sizes/font_size = 80
-text = "FOO 2"
+text = "Shot A, Random 2"
 horizontal_alignment = 1
 
-[node name="ColorRect3" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1"]
-offset_right = 1920.0
+[node name="ColorRect3" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1"]
+offset_right = 1282.0
 offset_bottom = 725.0
 color = Color(0.529412, 0, 0.564706, 1)
 
-[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_1/ColorRect3"]
+[node name="instructions3" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect3"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 24.0
+offset_right = 1059.0
+offset_bottom = 203.0
+text = "This is the Conditional Child Pools slide that will randomly pick a child from whichever shot is hit .
+
+It uses MPFEventHandler to listen to the \"bumper_shots_hit\" event and trigger the \"update\" method on the MPFConditionalChildren, which shows the child corresponding to the shot that was hit (the name of the child node is the event arg value that is matched).
+
+Each child is a ChildPool that will randomly show one of its children."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="exitinst3" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect3"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 671.0
+offset_right = 239.0
+offset_bottom = 694.0
+text = "Press D to remove this slide."
+
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_1/ColorRect3"]
 layout_mode = 0
 offset_top = 280.0
-offset_right = 1916.0
+offset_right = 1282.0
 offset_bottom = 470.0
 theme_override_font_sizes/font_size = 80
-text = "FOO 3"
+text = "Shot A, Random 3"
 horizontal_alignment = 1
 
-[node name="video_shot_2" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
-visible = false
+[node name="bumper_shot_2" type="Node2D" parent="MPFEventHandler/MPFConditionalChildren"]
 script = ExtResource("2_3g42q")
 playback_method = 2
 advance_on_show = true
 advance_when_showing = true
 
-[node name="ColorRect" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2"]
-visible = false
-offset_right = 1920.0
+[node name="ColorRect" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2"]
+offset_right = 1280.0
 offset_bottom = 725.0
-color = Color(0, 0.396078, 0.172549, 1)
+color = Color(0.803922, 0.733333, 0.172549, 1)
 
-[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2/ColorRect"]
+[node name="instructions4" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 24.0
+offset_right = 1059.0
+offset_bottom = 203.0
+text = "This is the Conditional Child Pools slide that will randomly pick a child from whichever shot is hit .
+
+It uses MPFEventHandler to listen to the \"bumper_shots_hit\" event and trigger the \"update\" method on the MPFConditionalChildren, which shows the child corresponding to the shot that was hit (the name of the child node is the event arg value that is matched).
+
+Each child is a ChildPool that will randomly show one of its children."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="exitinst4" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 671.0
+offset_right = 239.0
+offset_bottom = 694.0
+text = "Press D to remove this slide."
+
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect"]
 layout_mode = 0
 offset_top = 280.0
-offset_right = 1916.0
+offset_right = 1278.0
 offset_bottom = 470.0
 theme_override_font_sizes/font_size = 80
-text = "BAR 1"
+text = "Shot S, Random 1"
 horizontal_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2"]
-visible = false
-offset_right = 1920.0
+[node name="ColorRect2" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2"]
+offset_right = 1284.0
 offset_bottom = 725.0
-color = Color(0.592157, 0.129412, 0, 1)
+color = Color(0.278431, 0.592157, 0.509804, 1)
 
-[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2/ColorRect2"]
+[node name="instructions5" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect2"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 24.0
+offset_right = 1059.0
+offset_bottom = 203.0
+text = "This is the Conditional Child Pools slide that will randomly pick a child from whichever shot is hit .
+
+It uses MPFEventHandler to listen to the \"bumper_shots_hit\" event and trigger the \"update\" method on the MPFConditionalChildren, which shows the child corresponding to the shot that was hit (the name of the child node is the event arg value that is matched).
+
+Each child is a ChildPool that will randomly show one of its children."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="exitinst5" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect2"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 671.0
+offset_right = 239.0
+offset_bottom = 694.0
+text = "Press D to remove this slide."
+
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect2"]
 layout_mode = 0
 offset_top = 280.0
-offset_right = 1916.0
+offset_right = 1282.0
 offset_bottom = 470.0
 theme_override_font_sizes/font_size = 80
-text = "BAR 2"
+text = "Shot S, Random 2"
 horizontal_alignment = 1
 
-[node name="ColorRect3" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2"]
-offset_right = 1920.0
+[node name="ColorRect3" type="ColorRect" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2"]
+offset_right = 1282.0
 offset_bottom = 725.0
-color = Color(0.529412, 0, 0.564706, 1)
+color = Color(0.564706, 0.0627451, 0.384314, 1)
 
-[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/video_shot_2/ColorRect3"]
+[node name="instructions6" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect3"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 24.0
+offset_right = 1059.0
+offset_bottom = 203.0
+text = "This is the Conditional Child Pools slide that will randomly pick a child from whichever shot is hit .
+
+It uses MPFEventHandler to listen to the \"bumper_shots_hit\" event and trigger the \"update\" method on the MPFConditionalChildren, which shows the child corresponding to the shot that was hit (the name of the child node is the event arg value that is matched).
+
+Each child is a ChildPool that will randomly show one of its children."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="exitinst6" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect3"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 671.0
+offset_right = 239.0
+offset_bottom = 694.0
+text = "Press D to remove this slide."
+
+[node name="Label" type="Label" parent="MPFEventHandler/MPFConditionalChildren/bumper_shot_2/ColorRect3"]
 layout_mode = 0
 offset_top = 280.0
-offset_right = 1916.0
+offset_right = 1282.0
 offset_bottom = 470.0
 theme_override_font_sizes/font_size = 80
-text = "BAR 3"
+text = "Shot S, Random 3"
 horizontal_alignment = 1

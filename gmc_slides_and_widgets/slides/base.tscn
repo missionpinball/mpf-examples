@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dob1qrbq4sc35"]
 
-[ext_resource type="Script" path="res://slides/base.gd" id="1_4ymu3"]
+[ext_resource type="Script" path="res://slides/base.gd" id="1_djuko"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="1_jxki2"]
 
-[node name="MPFSlide" type="Control"]
+[node name="MPFSlide2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_4ymu3")
+script = ExtResource("1_djuko")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -27,6 +27,7 @@ script = ExtResource("1_jxki2")
 variable_name = "score"
 comma_separate = true
 min_digits = 2
+format_string = "Score {score}"
 
 [node name="currentplayer_ball" type="Label" parent="."]
 layout_mode = 0
@@ -57,7 +58,8 @@ offset_top = 599.0
 offset_right = 1213.0
 offset_bottom = 663.0
 theme_override_font_sizes/font_size = 16
-text = "this is where the message goes"
+text = "This text node can be updated by the slide's \"show_text\"
+method. Press 3 to trigger the event to change the text."
 horizontal_alignment = 2
 
 [node name="Label" type="Label" parent="."]

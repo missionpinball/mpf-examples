@@ -5,31 +5,24 @@
 [ext_resource type="PackedScene" uid="uid://belkug6sa4arr" path="res://addons/mpf-gmc/slides/startup.tscn" id="3_ky4p4"]
 
 [node name="Window" type="Control"]
-custom_minimum_size = Vector2(3600, 1080)
+custom_minimum_size = Vector2(1600, 600)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_sauxe")
 
 [node name="display1" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_right = 800.0
+offset_bottom = 600.0
 script = ExtResource("2_rtiyb")
 is_default = true
 initial_slide = ExtResource("3_ky4p4")
 
-[node name="Window" type="Window" parent="."]
-title = "aaaaa"
-position = Vector2i(1920, 0)
-size = Vector2i(1680, 1050)
-transient = true
-unresizable = true
-borderless = true
-
-[node name="display2" type="Control" parent="Window"]
-layout_mode = 3
+[node name="display2" type="Control" parent="."]
+layout_mode = 1
 anchors_preset = 0
-offset_right = 1680.0
-offset_bottom = 1050.0
+offset_left = 800.0
+offset_right = 1600.0
+offset_bottom = 400.0
 script = ExtResource("2_rtiyb")
 initial_slide = ExtResource("3_ky4p4")

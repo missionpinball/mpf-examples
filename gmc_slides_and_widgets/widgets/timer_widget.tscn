@@ -10,15 +10,32 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_1x7ka")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 170.0
+color = Color(1, 0.572549, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 120.0
+offset_right = 200.0
+offset_bottom = 143.0
+text = "This is a timer widget!"
+
 [node name="timer_variable" type="Label" parent="."]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 51.0
-offset_right = 205.0
-offset_bottom = 168.0
+offset_left = 48.0
+offset_top = 35.0
+offset_right = 186.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.364706, 0, 1, 1)
 theme_override_font_sizes/font_size = 50
+text = "10"
 horizontal_alignment = 1
 script = ExtResource("2_8y58g")
 variable_type = 1
 variable_name = "ticks_remaining"
+initialize_empty = false
 update_event = "timer_attract_overlay_tick"

@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwnmk3wyoinbe"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_bf4og"]
+
+[node name="OverlayWidget" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bf4og")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 428.0
+offset_bottom = 167.0
+color = Color(0.313726, 0.356863, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_top = 13.0
+offset_right = 416.0
+offset_bottom = 36.0
+text = "This is an OVERLAY widget."
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 428.0
+offset_bottom = 165.0
+text = "It uses slide: _overlay to show up on top of any slides.
+Press A or S to see a new slide show up underneath.
+
+This widget will expire in 10s."
+horizontal_alignment = 1
+autowrap_mode = 2

@@ -35,8 +35,6 @@ widget_player:
   slide_attract_active:
     timer_widget:
       slide: attract
-    conditional_child_pools:
-      slide: attract
 
 timers:
   attract_overlay:

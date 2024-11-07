@@ -41,6 +41,12 @@ switches:
     number:
   s_switch_4:
     number:
+  s_switch_a:
+    number:
+  s_switch_s:
+    number:
+  s_switch_d:
+    number:
   s_trough_1:
     number:
   s_trough_2:

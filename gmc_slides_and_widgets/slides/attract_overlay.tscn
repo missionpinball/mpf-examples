@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4jnnbgo541fo"]
+[gd_scene load_steps=5 format=3 uid="uid://d4jnnbgo541fo"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_uhk52"]
 [ext_resource type="Texture2D" uid="uid://doudapvxepc8e" path="res://icon.svg" id="1_wdjb5"]
+[ext_resource type="Shader" path="res://slides/attract_overlay.gdshader" id="2_6ivmh"]
 
-[node name="MPFSlide" type="Control"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rdu5h"]
+shader = ExtResource("2_6ivmh")
+shader_parameter/color_one = Color(0, 0.964706, 0.909804, 1)
+shader_parameter/color_two = Color(0, 0.8, 0.815686, 1)
+shader_parameter/angle = 45.0
+shader_parameter/line_count = 30.0
+shader_parameter/speed = 2.0
+shader_parameter/blur = 0.291011
+
+[node name="MPFSlide2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 836.0
@@ -12,6 +22,36 @@ offset_right = 1004.0
 offset_bottom = 438.0
 script = ExtResource("1_uhk52")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_rdu5h")
+layout_mode = 0
+offset_left = -835.0
+offset_top = 104.0
+offset_right = -490.0
+offset_bottom = 436.0
+color = Color(1, 0.054902, 0.619608, 1)
+
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(326, 192)
+position = Vector2(-674, 280)
 texture = ExtResource("1_wdjb5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -823.0
+offset_top = 115.0
+offset_right = -569.0
+offset_bottom = 208.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "This is the attract_overlay slide (not a widget!). It is added and removed from the slide_player."
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -763.0
+offset_top = 356.0
+offset_right = -503.0
+offset_bottom = 431.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Visit godotshaders.com to see more cool shaders like this background effect!"
+horizontal_alignment = 2
+autowrap_mode = 2

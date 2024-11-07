@@ -16,16 +16,45 @@ offset_right = 1280.0
 offset_bottom = 726.0
 color = Color(1, 0.0705882, 1, 1)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 53.0
+text = "This is the Attract Mode slide."
+horizontal_alignment = 1
 
-[node name="attract-variable" type="Label" parent="Node2D"]
-offset_left = 1090.0
-offset_top = 612.0
-offset_right = 1234.0
-offset_bottom = 695.0
+[node name="attract-variable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 26.497
+anchor_top = 14.35
+anchor_right = 31.575
+anchor_bottom = 17.82
+offset_left = -1.88007
+offset_top = -1.52588e-05
+offset_right = -3.05176e-05
+offset_bottom = -50.8001
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 script = ExtResource("2_wxrj5")
 variable_type = 1
 variable_name = "ticks_remaining"
 update_event = "timer_attract_overlay_tick"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1030.0
+offset_top = 665.0
+offset_right = 1273.0
+offset_bottom = 714.0
+text = "This is an MPFVariable that shows the value of the timer"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 576.0
+offset_right = 1278.0
+offset_bottom = 673.0
+bbcode_enabled = true
+text = "[center]Press [color=green]ENTER[/color] to start a game[/center]"

@@ -8,17 +8,16 @@ mode:
 
 
 shots:
-  video_shot_1:
-    switch: s_switch_1
-  video_shot_2:
-    switch: s_switch_2
-  video_shot_3:
-    switch: s_switch_3
+  bumper_shot_1:
+    switch: s_switch_a
+  bumper_shot_2:
+    switch: s_switch_s
+
 
 
 shot_groups:
-  video_shots:
-    shots: video_shot_1, video_shot_2, video_shot_3
+  bumper_shots:
+    shots: bumper_shot_1, bumper_shot_2
 
 
 slide_player:
@@ -45,3 +44,13 @@ widget_player:
   slide_base_active:
     conditional_child_pools:
       slide: base
+  s_switch_d_active:
+    conditional_child_pools:
+      action: remove
+      slide: base
+  mode_base_started:
+    overlay_widget:
+      slide: _overlay
+      expire: 5s
+      x: 100
+      y: 500
