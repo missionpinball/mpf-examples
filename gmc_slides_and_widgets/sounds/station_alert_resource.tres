@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MPFSoundAsset" load_steps=3 format=3 uid="uid://bgdtyeyx0la0m"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_sound.gd" id="1_1x55h"]
+[ext_resource type="AudioStream" uid="uid://lai1f1swh4ac" path="res://assets/music/ARR.03.Station_Alert.wav" id="2_ajbl6"]
+
+[resource]
+script = ExtResource("1_1x55h")
+stream = ExtResource("2_ajbl6")
+bus = "music"
+fade_in = 0.0
+fade_out = 0.0
+loops = 0
+start_at = 10.0
+max_queue_time = 0.0
+markers = Array[Resource("res://addons/mpf-gmc/classes/mpf_sound_marker.gd")]([])
