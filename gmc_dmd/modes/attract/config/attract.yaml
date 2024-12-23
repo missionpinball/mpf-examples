@@ -1,0 +1,17 @@
+#config_version=6
+
+# Attract mode that starts when the machine boots up, stops
+# whenever a game is started, and re-starts after the game ends.
+
+slide_player:
+  mode_attract_started: attract
+  timer_attract_overlay_tick{ticks==3}: attract_overlay
+  timer_attract_overlay_complete:
+    attract_overlay:
+      action: remove
+
+timers:
+  attract_overlay:
+    end_value: 6
+    start_running: true
+    restart_on_complete: true

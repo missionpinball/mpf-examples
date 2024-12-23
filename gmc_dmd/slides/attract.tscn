@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://uurkbgjps7bq"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_r2dpr"]
+
+[node name="Attract" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r2dpr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 32.0
+color = Color(1, 0, 0.0980392, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 88.0
+offset_bottom = 32.0
+color = Color(0, 1, 0.054902, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_right = 128.0
+offset_bottom = 32.0
+color = Color(0, 0.0901961, 1, 1)

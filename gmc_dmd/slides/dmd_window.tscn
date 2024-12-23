@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://nwaitmokb8mv"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_uh2dl"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_dmd_display.gd" id="2_l813t"]
+
+[node name="DmdWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uh2dl")
+
+[node name="MPFDMDDisplay" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_l813t")
+resolution = Vector2i(128, 32)
+is_default = true
