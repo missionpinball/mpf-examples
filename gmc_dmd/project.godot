@@ -12,7 +12,7 @@ config_version=5
 
 config/name="GMC-DMD"
 run/main_scene="res://slides/dmd_window.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
