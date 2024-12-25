@@ -10,3 +10,18 @@
 modes:
   - attract
   - base
+
+hardware:
+  platform: virtual
+  rgb_dmd: smartmatrix
+
+
+smartmatrix:
+  fast_rgb_dmd:
+    port: /dev/tty.usbserial-3100
+    baud: 3000000
+
+rgb_dmds:
+  fast_rgb_dmd:
+    hardware_brightness: 0.1
+    source_display: main
