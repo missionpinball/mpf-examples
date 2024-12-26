@@ -4,25 +4,58 @@
 
 [node name="Attract" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_r2dpr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 32.0
-color = Color(1, 0, 0.0980392, 1)
+offset_right = 525.0
+offset_bottom = 318.0
+color = Color(1, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 40.0
-offset_right = 88.0
-offset_bottom = 32.0
-color = Color(0, 1, 0.054902, 1)
+offset_left = 527.0
+offset_top = -4.0
+offset_right = 846.0
+offset_bottom = 314.0
+color = Color(0, 1, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 88.0
-offset_right = 128.0
-offset_bottom = 32.0
-color = Color(0, 0.0901961, 1, 1)
+offset_left = 849.0
+offset_right = 1277.0
+offset_bottom = 318.0
+color = Color(0, 0, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 523.0
+offset_bottom = 316.0
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_right = 836.0
+offset_bottom = 324.0
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 155.0
+offset_right = 1098.0
+offset_bottom = 187.0
+text = "B
+"
+horizontal_alignment = 1
+vertical_alignment = 1

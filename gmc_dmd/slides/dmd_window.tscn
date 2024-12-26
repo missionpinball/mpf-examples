@@ -1,13 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://nwaitmokb8mv"]
+[gd_scene load_steps=5 format=3 uid="uid://nwaitmokb8mv"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_uh2dl"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_dmd_display.gd" id="2_l813t"]
+[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/rgb_shift_rbg.gdshader" id="3_osxc0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6psgm"]
+shader = ExtResource("3_osxc0")
 
 [node name="DmdWindow" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uh2dl")
@@ -17,8 +23,23 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 897.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_l813t")
 resolution = Vector2i(128, 32)
+pixel_order = 1
+use_gpu = 1
 is_default = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = 4096
+material = SubResource("ShaderMaterial_6psgm")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

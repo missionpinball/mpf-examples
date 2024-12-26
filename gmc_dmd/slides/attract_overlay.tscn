@@ -12,17 +12,43 @@ layout_mode = 0
 offset_left = 40.0
 offset_right = 80.0
 offset_bottom = 32.0
-color = Color(1, 0, 0.0980392, 1)
+color = Color(1, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 128.0
 offset_bottom = 32.0
-color = Color(0, 1, 0.054902, 1)
+color = Color(0, 1, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 32.0
-color = Color(0, 0.0901961, 1, 1)
+color = Color(0, 0, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 32.0
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 32.0
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 128.0
+offset_bottom = 32.0
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
